@@ -2,8 +2,8 @@ import streamlit as st
 import os
 
 IMAGE_WIDTHS = {
-    "Standings": 500,
-    "Schedule (League)": 500,
+    "Standings": 1000,
+    "Schedule (League)": 1000,
     "Schedule (Team)": 500,
     "Performance (Team)": 500,
     "Lineups (Team)": 500,
@@ -43,7 +43,7 @@ if view == "Standings":
 
 # Team filter (only show for team-specific views)
 selected_team = None
-if view in ["Schedule (Team)", "Lineups (Team)"]:
+if view in ["Schedule (Team)","Performance (Team)", "Lineups (Team)"]:
     st.sidebar.header("Team Filter")
     selected_team = st.sidebar.selectbox("Select Team:", teams)
 
