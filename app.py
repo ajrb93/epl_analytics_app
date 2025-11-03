@@ -2,11 +2,6 @@ import streamlit as st
 import os
 
 IMAGE_WIDTHS = {
-    "Standings": 1000,
-    "Schedule (League)": 1000,
-    "Schedule (Team)": 500,
-    "Performance (Team)": 500,
-    "Lineups (Team)": 500,
     "MVP": 500
 }
 
@@ -60,31 +55,31 @@ if view == "Standings":
     image_path = f'images/standings_{period_map[standings_period]}.png'
     
     if os.path.exists(image_path):
-        st.image(image_path, width=IMAGE_WIDTHS[view])
+        st.image(image_path, use_container_width=True)
     else:
         st.error(f"Image not found: {image_path}")
 
 elif view == "Schedule (League)":
-    st.image('images/schedule.png', width=IMAGE_WIDTHS[view])
+    st.image('images/schedule.png', use_container_width=True)
 
 elif view == "Schedule (Team)":
     image_path = f'images/schedule/{selected_team}.png'
     if os.path.exists(image_path):
-        st.image(image_path, width=IMAGE_WIDTHS[view])
+        st.image(image_path, use_container_width=True)
     else:
         st.error(f"Image not found for {selected_team}")
 
 elif view == "Performance (Team)":
     image_path = f'images/performance/{selected_team}.png'
     if os.path.exists(image_path):
-        st.image(image_path, width=IMAGE_WIDTHS[view])
+        st.image(image_path, use_container_width=True)
     else:
         st.error(f"Image not found for {selected_team}")
 
 elif view == "Lineups (Team)":
     image_path = f'images/lineups/{selected_team}.png'
     if os.path.exists(image_path):
-        st.image(image_path, width=IMAGE_WIDTHS[view])
+        st.image(image_path, use_container_width=True)
     else:
         st.error(f"Image not found for {selected_team}")
 
