@@ -2,10 +2,10 @@ import streamlit as st
 import os
 
 # Page config
-st.set_page_config(page_title="NSL Projections", layout="wide")
+st.set_page_config(page_title="EPL Projections", layout="wide")
 
 # Title
-st.title("NSL Analytics")
+st.title("EPL Analytics")
 
 # Get list of teams from the schedule folder (or hardcode them)
 team_folders = ['schedule', 'performance', 'lineups']
