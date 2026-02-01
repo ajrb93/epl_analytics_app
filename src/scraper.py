@@ -15,7 +15,7 @@ os.makedirs(MATCH_DIR, exist_ok=True)
 os.makedirs(PLAYER_DIR, exist_ok=True)
 os.makedirs(SHOTS_DIR, exist_ok=True)
 
-config = pd.read_csv('C:/Users/ajbuc/OneDrive/Documents/GitHub/epl_analytics_app/config.txt',sep='=').set_index('Type')
+config = pd.read_csv('config.txt',sep='=').set_index('Type')
 league = config.loc['League']['Value']
 season = config.loc['Season']['Value']
 season_name = config.loc['SeasonName']['Value']
