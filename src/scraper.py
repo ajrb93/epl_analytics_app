@@ -20,6 +20,18 @@ league = config.loc['League']['Value']
 season = config.loc['Season']['Value']
 season_name = config.loc['SeasonName']['Value']
 
+def make_columns_unique(columns):
+    counts = {}
+    new_cols = []
+    for col in columns:
+        if col not in counts:
+            counts[col] = 0
+            new_cols.append(col)
+        else:
+            counts[col] += 1
+            new_cols.append(f"{col}_{counts[col]}")
+    return new_cols
+
 def get_website(url):
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
@@ -172,8 +184,8 @@ def get_stats(match):
             columns.append(temp[c].apply(pd.Series, dtype=object))
         else:
             columns.append(temp[c])
-    df = pd.concat(columns, axis=1)[['teamLoc','name','id','position','position1','proposedMarketValueRaw','substitute','minutesPlayed','rating',
-                                      'goalAssist','goals','penaltyConceded','expectedGoals','expectedAssists','goalsPrevented','ownGoals','saves']]
+    df = pd.concat(columns, axis=1)
+    df.columns = make_columns_unique(df.columns)
     df.reset_index(drop=True).to_feather(PLAYER_DIR + '/' + match + '.ftr')
 
 def get_shots(match):
@@ -243,7 +255,7 @@ def summarize_players(player_stats):
         temp = pd.read_feather(PLAYER_DIR + '/' + str(i) + '.ftr')
         temp['match_id'] = i
         player_data[i] = temp
-    player_data = pd.concat(player_data)[['teamLoc','name','id','position','position1','proposedMarketValueRaw','substitute','minutesPlayed','rating',
+    player_data = pd.concat(player_data)[['teamLoc','name','id','position','position_1','proposedMarketValueRaw','substitute','minutesPlayed','rating',
                                           'goalAssist','goals','penaltyConceded','expectedGoals','expectedAssists','goalsPrevented','ownGoals','saves']]
     player_data = player_data.reset_index().rename(columns={'level_0':'match_id'})
     return player_data
