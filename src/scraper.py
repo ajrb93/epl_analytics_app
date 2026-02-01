@@ -149,6 +149,8 @@ def extract_match_summaries(match):
     temp_df = [temp_id,temp_gametime,temp_hometeamname,temp_hometeamid,temp_hometeamcolorsprimary,temp_hometeamcolorssecondary,temp_hometeamcolorstext,
                temp_awayteamname,temp_awayteamid,temp_awayteamcolorsprimary,temp_awayteamcolorssecondary,temp_awayteamcolorstext,temp_hometeamscore,
                temp_awayteamscore,temp_status,home_xg,away_xg]
+    temp_df = pd.DataFrame(temp_df,columns=['match_id','game_date','home','home_id','home_primary','home_secondary','home_text''away',
+                                                      'away_id','away_primary','away_secondary','away_text','home_score','away_score','status','home_xg','away_xg'])
     temp_df.reset_index(drop=True).to_feather(MATCH_DIR + '/' + temp_id + '.ftr')
 
 def get_stats(match):
@@ -218,8 +220,7 @@ def summarize_matches(league,season_name,match_summaries):
         temp = pd.read_feather(MATCH_DIR+'/'+str(i)+'.ftr')
         summary_data.append(temp)
 
-    summary_data = pd.DataFrame(summary_data,columns=['match_id','game_date','home','home_id','home_primary','home_secondary','home_text''away',
-                                                      'away_id','away_primary','away_secondary','away_text','home_score','away_score','status','home_xg','away_xg'])
+    summary_data = pd.concat(summary_data)
     summary_data['league'] = league
     summary_data['season'] = season_name
     summary_data.season = summary_data.season.str.split('/').str[1].fillna(summary_data.season.str[2:])
