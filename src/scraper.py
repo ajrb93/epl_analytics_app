@@ -255,8 +255,9 @@ def summarize_players(player_stats):
         temp = pd.read_feather(PLAYER_DIR + '/' + str(i) + '.ftr')
         temp['match_id'] = i
         player_data[i] = temp
-    player_data = pd.concat(player_data)[['teamLoc','name','id','position','position_1','proposedMarketValueRaw','substitute','minutesPlayed','rating',
-                                          'goalAssist','goals','penaltyConceded','expectedGoals','expectedAssists','goalsPrevented','ownGoals','saves']]
+    cols = ['teamLoc','name','id','position','position_1','proposedMarketValueRaw','substitute','minutesPlayed','rating',
+                                          'goalAssist','goals','penaltyConceded','expectedGoals','expectedAssists','goalsPrevented','ownGoals','saves']
+    player_data = pd.concat(player_data).reindex(columns=cols)
     player_data = player_data.reset_index().rename(columns={'level_0':'match_id'})
     return player_data
 
@@ -266,9 +267,10 @@ def summarize_shots(shots):
         temp = pd.read_feather(SHOTS_DIR + '/' + str(i) + '.ftr')
         temp['match_id'] = i
         shot_data.append(temp)
-    shot_data = pd.concat(shot_data)[['match_id','isHome','player','shotType','goalType','situation','playerCoordinates','bodyPart','goalMouthLocation',
+    cols = ['match_id','isHome','player','shotType','goalType','situation','playerCoordinates','bodyPart','goalMouthLocation',
                                       'goalMouthCoordinates','xg','xgot','id','time','timeSeconds','draw','periodTimeSeconds','blockCoordinates',
-                                      'incidentType']]
+                                      'incidentType']
+    shot_data = pd.concat(shot_data).reindex(columns=cols)
     shot_data[['xg','xgot']] = shot_data[['xg','xgot']].fillna(0)
     shot_data.loc[shot_data.goalType == 'own','own'] = 1
     shot_data.own = shot_data.own.fillna(0)
