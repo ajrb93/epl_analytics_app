@@ -1,1 +1,8 @@
 streamlit
+pandas
+numpy
+os
+collections
+json
+bs4
+playwright
