@@ -335,15 +335,18 @@ def run_pipeline():
         get_shots(i)
 
 def transform_final_dataset():
-    match_summaries = list(map(int,os.listdir(MATCH_DIR)))
+    match_summaries = [x.replace(".ftr", "") for x in os.listdir(MATCH_DIR) if ".ftr" in x]
+    match_summaries = list(map(int,match_summaries))
     print(len(match_summaries))
     match_stats = summarize_matches(league,season_name,match_summaries)
     
-    player_stats = list(map(int,os.listdir(PLAYER_DIR)))
+    player_stats = [x.replace(".ftr", "") for x in os.listdir(PLAYER_DIR) if ".ftr" in x]
+    player_stats = list(map(int,player_stats))
     print(len(player_stats))
     player_stats = summarize_players(player_stats)
     
-    shots = list(map(int,os.listdir(SHOTS_DIR)))
+    shots = [x.replace(".ftr", "") for x in os.listdir(SHOTS_DIR) if ".ftr" in x]
+    shots = list(map(int,shots))
     print(len(shots))
     shots = summarize_shots(shots)
 
