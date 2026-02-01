@@ -341,16 +341,19 @@ def transform_final_dataset():
     match_summaries = list(map(int,match_summaries))
     print(len(match_summaries))
     match_stats = summarize_matches(league,season_name,match_summaries)
+    match_stats.match_id = match_stats.match_id.astype('int')
     
     player_stats = [x.replace(".ftr", "") for x in os.listdir(PLAYER_DIR) if ".ftr" in x]
     player_stats = list(map(int,player_stats))
     print(len(player_stats))
     player_stats = summarize_players(player_stats)
+    player_stats.match_id = player_stats.match_id.astype('int')
     
     shots = [x.replace(".ftr", "") for x in os.listdir(SHOTS_DIR) if ".ftr" in x]
     shots = list(map(int,shots))
     print(len(shots))
     shots = summarize_shots(shots)
+    shots.match_id = shots.match_id.astype('int')
 
     finalize_players(match_stats,player_stats)
     finalize_shots(match_stats,shots)
