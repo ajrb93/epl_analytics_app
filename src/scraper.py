@@ -172,7 +172,8 @@ def get_stats(match):
             columns.append(temp[c].apply(pd.Series, dtype=object))
         else:
             columns.append(temp[c])
-    df = pd.concat(columns, axis=1)
+    df = pd.concat(columns, axis=1)[['teamLoc','name','id','position','position1','proposedMarketValueRaw','substitute','minutesPlayed','rating',
+                                      'goalAssist','goals','penaltyConceded','expectedGoals','expectedAssists','goalsPrevented','ownGoals','saves']]
     df.reset_index(drop=True).to_feather(PLAYER_DIR + '/' + match + '.ftr')
 
 def get_shots(match):
