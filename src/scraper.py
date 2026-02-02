@@ -94,10 +94,10 @@ def create_schedule(league,season):
                               temp_hometeamcolorssecondary,
                               temp_hometeamcolorstext,temp_awayteamname,temp_awayteamid,temp_awayteamcolorsprimary,temp_awayteamcolorssecondary,
                               temp_awayteamcolorstext])
-        schedule_list = pd.DataFrame(schedule_list,columns=['league','season','match_id','game_date','home','home_id','home_primary','home_secondary',
+    schedule_list = pd.DataFrame(schedule_list,columns=['league','season','match_id','game_date','home','home_id','home_primary','home_secondary',
                                                     'home_text','away','away_id','away_primary','away_secondary','away_text'])
-        schedule_list.season = schedule_list.season.str.split('/').str[1].fillna(schedule_list.season.str[2:])
-        schedule_list.to_csv('data/Schedule.csv')
+    schedule_list.season = schedule_list.season.str.split('/').str[1].fillna(schedule_list.season.str[2:])
+    schedule_list.to_csv('data/Schedule.csv')
 
 def create_results(league,season):
     results_list = []
