@@ -355,6 +355,7 @@ def transform_final_dataset():
     shots = summarize_shots(shots)
     shots.match_id = shots.match_id.astype('int')
 
+    finalize_matches(match_stats,shots)
     finalize_players(match_stats,player_stats)
     finalize_shots(match_stats,shots)
 
