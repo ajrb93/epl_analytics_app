@@ -1,148 +1,144 @@
 ,league,season,match_id,game_date,home,home_id,home_primary,home_secondary,home_text,away,away_id,away_primary,away_secondary,away_text
-0,17,986,15129444,1770062400,Sunderland,41,#ffffff,#ca0000,#ca0000,Burnley,6,#81204c,#8fd2f4,#8fd2f4
-1,17,986,14025170,1770408000,Leeds United,34,#ffffff,#1d4189,#1d4189,Nottingham Forest,14,#cc0000,#cc0000,#cc0000
-2,17,986,14025176,1770467400,Manchester United,35,#ff0000,#373737,#373737,Tottenham Hotspur,33,#ffffff,#000066,#000066
-3,17,986,14025158,1770476400,Arsenal,42,#cc0000,#ffffff,#ffffff,Sunderland,41,#ffffff,#ca0000,#ca0000
-4,17,986,14025182,1770476400,Wolverhampton,3,#ff9900,#000000,#000000,Chelsea,38,#0310a7,#ffffff,#ffffff
-5,17,986,14025155,1770476400,Bournemouth,60,#000000,#cc0000,#cc0000,Aston Villa,40,#670e36,#94bee5,#94bee5
-6,17,986,14025167,1770476400,Fulham,43,#ffffff,#000000,#000000,Everton,48,#274488,#ffffff,#ffffff
-7,17,986,14025164,1770476400,Burnley,6,#81204c,#8fd2f4,#8fd2f4,West Ham United,37,#66192c,#59b3e4,#59b3e4
-8,17,986,14025179,1770485400,Newcastle United,39,#000000,#ffffff,#ffffff,Brentford,50,#ffffff,#ff0000,#ff0000
-9,17,986,14025161,1770559200,Brighton & Hove Albion,30,#0054a6,#ffffff,#ffffff,Crystal Palace,7,#0033ff,#b90d2b,#b90d2b
-10,17,986,14025173,1770568200,Liverpool,44,#cc0000,#ffffff,#ffffff,Manchester City,17,#66ccff,#ffffff,#ffffff
-11,17,986,14025188,1770751800,Chelsea,38,#0310a7,#ffffff,#ffffff,Leeds United,34,#ffffff,#1d4189,#1d4189
-12,17,986,14025200,1770751800,Tottenham Hotspur,33,#ffffff,#000066,#000066,Newcastle United,39,#000000,#ffffff,#ffffff
-13,17,986,14025191,1770751800,Everton,48,#274488,#ffffff,#ffffff,Bournemouth,60,#000000,#cc0000,#cc0000
-14,17,986,14025203,1770754500,West Ham United,37,#66192c,#59b3e4,#59b3e4,Manchester United,35,#ff0000,#373737,#373737
-15,17,986,14025212,1770838200,Manchester City,17,#66ccff,#ffffff,#ffffff,Fulham,43,#ffffff,#000000,#000000
-16,17,986,14025206,1770838200,Aston Villa,40,#670e36,#94bee5,#94bee5,Brighton & Hove Albion,30,#0054a6,#ffffff,#ffffff
-17,17,986,14025194,1770838200,Nottingham Forest,14,#cc0000,#cc0000,#cc0000,Wolverhampton,3,#ff9900,#000000,#000000
-18,17,986,14025209,1770838200,Crystal Palace,7,#0033ff,#b90d2b,#b90d2b,Burnley,6,#81204c,#8fd2f4,#8fd2f4
-19,17,986,14025197,1770840900,Sunderland,41,#ffffff,#ca0000,#ca0000,Liverpool,44,#cc0000,#ffffff,#ffffff
-20,17,986,14025185,1770926400,Brentford,50,#ffffff,#ff0000,#ff0000,Arsenal,42,#cc0000,#ffffff,#ffffff
-21,17,986,14024010,1771677000,Manchester City,17,#66ccff,#ffffff,#ffffff,Newcastle United,39,#000000,#ffffff,#ffffff
-22,17,986,14024013,1771686000,Nottingham Forest,14,#cc0000,#cc0000,#cc0000,Liverpool,44,#cc0000,#ffffff,#ffffff
-23,17,986,14024009,1771686000,Everton,48,#274488,#ffffff,#ffffff,Manchester United,35,#ff0000,#373737,#373737
-24,17,986,14024007,1771686000,Chelsea,38,#0310a7,#ffffff,#ffffff,Burnley,6,#81204c,#8fd2f4,#8fd2f4
-25,17,986,14025215,1771686000,Aston Villa,40,#670e36,#94bee5,#94bee5,Leeds United,34,#ffffff,#1d4189,#1d4189
-26,17,986,14024006,1771686000,Brentford,50,#ffffff,#ff0000,#ff0000,Brighton & Hove Albion,30,#0054a6,#ffffff,#ffffff
-27,17,986,14023969,1771695000,West Ham United,37,#66192c,#59b3e4,#59b3e4,Bournemouth,60,#000000,#cc0000,#cc0000
-28,17,986,14024008,1771768800,Crystal Palace,7,#0033ff,#b90d2b,#b90d2b,Wolverhampton,3,#ff9900,#000000,#000000
-29,17,986,14024011,1771768800,Sunderland,41,#ffffff,#ca0000,#ca0000,Fulham,43,#ffffff,#000000,#000000
-30,17,986,14024012,1771777800,Tottenham Hotspur,33,#ffffff,#000066,#000066,Arsenal,42,#cc0000,#ffffff,#ffffff
-31,17,986,15238290,1771876800,Everton,48,#274488,#ffffff,#ffffff,Manchester United,35,#ff0000,#373737,#373737
-32,17,986,14023979,1772222400,Wolverhampton,3,#ff9900,#000000,#000000,Aston Villa,40,#670e36,#94bee5,#94bee5
-33,17,986,14023970,1772281800,Bournemouth,60,#000000,#cc0000,#cc0000,Sunderland,41,#ffffff,#ca0000,#ca0000
-34,17,986,14023976,1772290800,Liverpool,44,#cc0000,#ffffff,#ffffff,West Ham United,37,#66192c,#59b3e4,#59b3e4
-35,17,986,14023977,1772290800,Newcastle United,39,#000000,#ffffff,#ffffff,Everton,48,#274488,#ffffff,#ffffff
-36,17,986,14023972,1772290800,Brighton & Hove Albion,30,#0054a6,#ffffff,#ffffff,Nottingham Forest,14,#cc0000,#cc0000,#cc0000
-37,17,986,14023975,1772290800,Burnley,6,#81204c,#8fd2f4,#8fd2f4,Brentford,50,#ffffff,#ff0000,#ff0000
-38,17,986,14023974,1772299800,Leeds United,34,#ffffff,#1d4189,#1d4189,Manchester City,17,#66ccff,#ffffff,#ffffff
-39,17,986,14023978,1772373600,Manchester United,35,#ff0000,#373737,#373737,Crystal Palace,7,#0033ff,#b90d2b,#b90d2b
-40,17,986,14023973,1772373600,Fulham,43,#ffffff,#000000,#000000,Tottenham Hotspur,33,#ffffff,#000066,#000066
-41,17,986,14023971,1772382600,Arsenal,42,#cc0000,#ffffff,#ffffff,Chelsea,38,#0310a7,#ffffff,#ffffff
-42,17,986,14023980,1772566200,Bournemouth,60,#000000,#cc0000,#cc0000,Brentford,50,#ffffff,#ff0000,#ff0000
-43,17,986,14023941,1772566200,Everton,48,#274488,#ffffff,#ffffff,Burnley,6,#81204c,#8fd2f4,#8fd2f4
-44,17,986,14023982,1772566200,Leeds United,34,#ffffff,#1d4189,#1d4189,Sunderland,41,#ffffff,#ca0000,#ca0000
-45,17,986,14023985,1772568900,Wolverhampton,3,#ff9900,#000000,#000000,Liverpool,44,#cc0000,#ffffff,#ffffff
-46,17,986,14023984,1772652600,Manchester City,17,#66ccff,#ffffff,#ffffff,Nottingham Forest,14,#cc0000,#cc0000,#cc0000
-47,17,986,14023986,1772652600,Aston Villa,40,#670e36,#94bee5,#94bee5,Chelsea,38,#0310a7,#ffffff,#ffffff
-48,17,986,14023933,1772652600,Brighton & Hove Albion,30,#0054a6,#ffffff,#ffffff,Arsenal,42,#cc0000,#ffffff,#ffffff
-49,17,986,14023947,1772652600,Fulham,43,#ffffff,#000000,#000000,West Ham United,37,#66192c,#59b3e4,#59b3e4
-50,17,986,14023983,1772655300,Newcastle United,39,#000000,#ffffff,#ffffff,Manchester United,35,#ff0000,#373737,#373737
-51,17,986,14023981,1772740800,Tottenham Hotspur,33,#ffffff,#000066,#000066,Crystal Palace,7,#0033ff,#b90d2b,#b90d2b
-52,17,986,14023993,1773491400,West Ham United,37,#66192c,#59b3e4,#59b3e4,Manchester City,17,#66ccff,#ffffff,#ffffff
-53,17,986,14023994,1773500400,Manchester United,35,#ff0000,#373737,#373737,Aston Villa,40,#670e36,#94bee5,#94bee5
-54,17,986,14023995,1773500400,Nottingham Forest,14,#cc0000,#cc0000,#cc0000,Fulham,43,#ffffff,#000000,#000000
-55,17,986,14023989,1773500400,Brentford,50,#ffffff,#ff0000,#ff0000,Wolverhampton,3,#ff9900,#000000,#000000
-56,17,986,14023991,1773500400,Crystal Palace,7,#0033ff,#b90d2b,#b90d2b,Leeds United,34,#ffffff,#1d4189,#1d4189
-57,17,986,14023996,1773500400,Sunderland,41,#ffffff,#ca0000,#ca0000,Brighton & Hove Albion,30,#0054a6,#ffffff,#ffffff
-58,17,986,14023988,1773500400,Burnley,6,#81204c,#8fd2f4,#8fd2f4,Bournemouth,60,#000000,#cc0000,#cc0000
-59,17,986,14023990,1773509400,Chelsea,38,#0310a7,#ffffff,#ffffff,Newcastle United,39,#000000,#ffffff,#ffffff
-60,17,986,14023991,1773500400,Crystal Palace,7,#0033ff,#b90d2b,#b90d2b,Leeds United,34,#ffffff,#1d4189,#1d4189
-61,17,986,14023996,1773500400,Sunderland,41,#ffffff,#ca0000,#ca0000,Brighton & Hove Albion,30,#0054a6,#ffffff,#ffffff
-62,17,986,14023988,1773500400,Burnley,6,#81204c,#8fd2f4,#8fd2f4,Bournemouth,60,#000000,#cc0000,#cc0000
-63,17,986,14023990,1773509400,Chelsea,38,#0310a7,#ffffff,#ffffff,Newcastle United,39,#000000,#ffffff,#ffffff
-64,17,986,14023987,1773583200,Arsenal,42,#cc0000,#ffffff,#ffffff,Everton,48,#274488,#ffffff,#ffffff
-65,17,986,14023992,1773592200,Liverpool,44,#cc0000,#ffffff,#ffffff,Tottenham Hotspur,33,#ffffff,#000066,#000066
-66,17,986,15408501,1773691200,Brentford,50,#ffffff,#ff0000,#ff0000,Wolverhampton,3,#ff9900,#000000,#000000
-67,17,986,14023997,1774036800,Bournemouth,60,#000000,#cc0000,#cc0000,Manchester United,35,#ff0000,#373737,#373737
-68,17,986,14024015,1774096200,Brighton & Hove Albion,30,#0054a6,#ffffff,#ffffff,Liverpool,44,#cc0000,#ffffff,#ffffff
-69,17,986,14024019,1774105200,Manchester City,17,#66ccff,#ffffff,#ffffff,Crystal Palace,7,#0033ff,#b90d2b,#b90d2b
-70,17,986,14025018,1774105200,Wolverhampton,3,#ff9900,#000000,#000000,Arsenal,42,#cc0000,#ffffff,#ffffff
-71,17,986,14024014,1774105200,Aston Villa,40,#670e36,#94bee5,#94bee5,West Ham United,37,#66192c,#59b3e4,#59b3e4
-72,17,986,14024016,1774105200,Fulham,43,#ffffff,#000000,#000000,Burnley,6,#81204c,#8fd2f4,#8fd2f4
-73,17,986,14024017,1774114200,Everton,48,#274488,#ffffff,#ffffff,Chelsea,38,#0310a7,#ffffff,#ffffff
-74,17,986,14024018,1774123200,Leeds United,34,#ffffff,#1d4189,#1d4189,Brentford,50,#ffffff,#ff0000,#ff0000
-75,17,986,14024021,1774180800,Newcastle United,39,#000000,#ffffff,#ffffff,Sunderland,41,#ffffff,#ca0000,#ca0000
-76,17,986,14024020,1774188900,Tottenham Hotspur,33,#ffffff,#000066,#000066,Nottingham Forest,14,#cc0000,#cc0000,#cc0000
-77,17,986,14023998,1775916000,Chelsea,38,#0310a7,#ffffff,#ffffff,Manchester City,17,#66ccff,#ffffff,#ffffff
-78,17,986,14024000,1775916000,Liverpool,44,#cc0000,#ffffff,#ffffff,Fulham,43,#ffffff,#000000,#000000
-79,17,986,14025024,1775916000,Manchester United,35,#ff0000,#373737,#373737,Leeds United,34,#ffffff,#1d4189,#1d4189
-80,17,986,14025021,1775916000,Arsenal,42,#cc0000,#ffffff,#ffffff,Bournemouth,60,#000000,#cc0000,#cc0000
-81,17,986,14025026,1775916000,Sunderland,41,#ffffff,#ca0000,#ca0000,Tottenham Hotspur,33,#ffffff,#000066,#000066
-82,17,986,14025025,1775916000,Nottingham Forest,14,#cc0000,#cc0000,#cc0000,Aston Villa,40,#670e36,#94bee5,#94bee5
-83,17,986,14023999,1775916000,Crystal Palace,7,#0033ff,#b90d2b,#b90d2b,Newcastle United,39,#000000,#ffffff,#ffffff
-84,17,986,14025029,1775916000,West Ham United,37,#66192c,#59b3e4,#59b3e4,Wolverhampton,3,#ff9900,#000000,#000000
-85,17,986,14025022,1775916000,Brentford,50,#ffffff,#ff0000,#ff0000,Everton,48,#274488,#ffffff,#ffffff
-86,17,986,14024002,1775916000,Burnley,6,#81204c,#8fd2f4,#8fd2f4,Brighton & Hove Albion,30,#0054a6,#ffffff,#ffffff
-87,17,986,14025039,1776520800,Manchester City,17,#66ccff,#ffffff,#ffffff,Arsenal,42,#cc0000,#ffffff,#ffffff
-88,17,986,14025032,1776520800,Chelsea,38,#0310a7,#ffffff,#ffffff,Manchester United,35,#ff0000,#373737,#373737
-89,17,986,14025035,1776520800,Everton,48,#274488,#ffffff,#ffffff,Liverpool,44,#cc0000,#ffffff,#ffffff
-90,17,986,14025042,1776520800,Tottenham Hotspur,33,#ffffff,#000066,#000066,Brighton & Hove Albion,30,#0054a6,#ffffff,#ffffff
-91,17,986,14025040,1776520800,Newcastle United,39,#000000,#ffffff,#ffffff,Bournemouth,60,#000000,#cc0000,#cc0000
-92,17,986,14025030,1776520800,Aston Villa,40,#670e36,#94bee5,#94bee5,Sunderland,41,#ffffff,#ca0000,#ca0000
-93,17,986,14025034,1776520800,Crystal Palace,7,#0033ff,#b90d2b,#b90d2b,West Ham United,37,#66192c,#59b3e4,#59b3e4
-94,17,986,14025031,1776520800,Brentford,50,#ffffff,#ff0000,#ff0000,Fulham,43,#ffffff,#000000,#000000
-95,17,986,14025036,1776520800,Leeds United,34,#ffffff,#1d4189,#1d4189,Wolverhampton,3,#ff9900,#000000,#000000
-96,17,986,14025041,1776520800,Nottingham Forest,14,#cc0000,#cc0000,#cc0000,Burnley,6,#81204c,#8fd2f4,#8fd2f4
-97,17,986,14025045,1777125600,Arsenal,42,#cc0000,#ffffff,#ffffff,Newcastle United,39,#000000,#ffffff,#ffffff
-98,17,986,14024005,1777125600,Liverpool,44,#cc0000,#ffffff,#ffffff,Crystal Palace,7,#0033ff,#b90d2b,#b90d2b
-99,17,986,14024003,1777125600,Burnley,6,#81204c,#8fd2f4,#8fd2f4,Manchester City,17,#66ccff,#ffffff,#ffffff
-100,17,986,14023926,1777125600,Manchester United,35,#ff0000,#373737,#373737,Brentford,50,#ffffff,#ff0000,#ff0000
-101,17,986,14024001,1777125600,Brighton & Hove Albion,30,#0054a6,#ffffff,#ffffff,Chelsea,38,#0310a7,#ffffff,#ffffff
-102,17,986,14024022,1777125600,Wolverhampton,3,#ff9900,#000000,#000000,Tottenham Hotspur,33,#ffffff,#000066,#000066
-103,17,986,14024004,1777125600,Fulham,43,#ffffff,#000000,#000000,Aston Villa,40,#670e36,#94bee5,#94bee5
-104,17,986,14023934,1777125600,West Ham United,37,#66192c,#59b3e4,#59b3e4,Everton,48,#274488,#ffffff,#ffffff
-105,17,986,14025044,1777125600,Bournemouth,60,#000000,#cc0000,#cc0000,Leeds United,34,#ffffff,#1d4189,#1d4189
-106,17,986,14023932,1777125600,Sunderland,41,#ffffff,#ca0000,#ca0000,Nottingham Forest,14,#cc0000,#cc0000,#cc0000
-107,17,986,14023939,1777730400,Manchester United,35,#ff0000,#373737,#373737,Liverpool,44,#cc0000,#ffffff,#ffffff
-108,17,986,14023930,1777730400,Everton,48,#274488,#ffffff,#ffffff,Manchester City,17,#66ccff,#ffffff,#ffffff
-109,17,986,14023931,1777730400,Arsenal,42,#cc0000,#ffffff,#ffffff,Fulham,43,#ffffff,#000000,#000000
-110,17,986,14023925,1777730400,Chelsea,38,#0310a7,#ffffff,#ffffff,Nottingham Forest,14,#cc0000,#cc0000,#cc0000
-111,17,986,14023927,1777730400,Aston Villa,40,#670e36,#94bee5,#94bee5,Tottenham Hotspur,33,#ffffff,#000066,#000066
-112,17,986,14023949,1777730400,Newcastle United,39,#000000,#ffffff,#ffffff,Brighton & Hove Albion,30,#0054a6,#ffffff,#ffffff
-113,17,986,14023945,1777730400,Brentford,50,#ffffff,#ff0000,#ff0000,West Ham United,37,#66192c,#59b3e4,#59b3e4
-114,17,986,14024023,1777730400,Bournemouth,60,#000000,#cc0000,#cc0000,Crystal Palace,7,#0033ff,#b90d2b,#b90d2b
-115,17,986,14023951,1777730400,Wolverhampton,3,#ff9900,#000000,#000000,Sunderland,41,#ffffff,#ca0000,#ca0000
-116,17,986,14023940,1777730400,Leeds United,34,#ffffff,#1d4189,#1d4189,Burnley,6,#81204c,#8fd2f4,#8fd2f4
-117,17,986,14024024,1778335200,Liverpool,44,#cc0000,#ffffff,#ffffff,Chelsea,38,#0310a7,#ffffff,#ffffff
-118,17,986,14023946,1778335200,Manchester City,17,#66ccff,#ffffff,#ffffff,Brentford,50,#ffffff,#ff0000,#ff0000
-119,17,986,14023942,1778335200,West Ham United,37,#66192c,#59b3e4,#59b3e4,Arsenal,42,#cc0000,#ffffff,#ffffff
-120,17,986,14023938,1778335200,Sunderland,41,#ffffff,#ca0000,#ca0000,Manchester United,35,#ff0000,#373737,#373737
-121,17,986,14023944,1778335200,Tottenham Hotspur,33,#ffffff,#000066,#000066,Leeds United,34,#ffffff,#1d4189,#1d4189
-122,17,986,14023943,1778335200,Nottingham Forest,14,#cc0000,#cc0000,#cc0000,Newcastle United,39,#000000,#ffffff,#ffffff
-123,17,986,14023929,1778335200,Burnley,6,#81204c,#8fd2f4,#8fd2f4,Aston Villa,40,#670e36,#94bee5,#94bee5
-124,17,986,14023935,1778335200,Brighton & Hove Albion,30,#0054a6,#ffffff,#ffffff,Wolverhampton,3,#ff9900,#000000,#000000
-125,17,986,14023937,1778335200,Crystal Palace,7,#0033ff,#b90d2b,#b90d2b,Everton,48,#274488,#ffffff,#ffffff
-126,17,986,14023948,1778335200,Fulham,43,#ffffff,#000000,#000000,Bournemouth,60,#000000,#cc0000,#cc0000
-127,17,986,14023928,1779026400,Aston Villa,40,#670e36,#94bee5,#94bee5,Liverpool,44,#cc0000,#ffffff,#ffffff
-128,17,986,14023952,1779026400,Chelsea,38,#0310a7,#ffffff,#ffffff,Tottenham Hotspur,33,#ffffff,#000066,#000066
-129,17,986,14023936,1779026400,Bournemouth,60,#000000,#cc0000,#cc0000,Manchester City,17,#66ccff,#ffffff,#ffffff
-130,17,986,14023956,1779026400,Manchester United,35,#ff0000,#373737,#373737,Nottingham Forest,14,#cc0000,#cc0000,#cc0000
-131,17,986,14023950,1779026400,Arsenal,42,#cc0000,#ffffff,#ffffff,Burnley,6,#81204c,#8fd2f4,#8fd2f4
-132,17,986,14023957,1779026400,Newcastle United,39,#000000,#ffffff,#ffffff,West Ham United,37,#66192c,#59b3e4,#59b3e4
-133,17,986,14023954,1779026400,Leeds United,34,#ffffff,#1d4189,#1d4189,Brighton & Hove Albion,30,#0054a6,#ffffff,#ffffff
-134,17,986,14023958,1779026400,Wolverhampton,3,#ff9900,#000000,#000000,Fulham,43,#ffffff,#000000,#000000
-135,17,986,14023953,1779026400,Brentford,50,#ffffff,#ff0000,#ff0000,Crystal Palace,7,#0033ff,#b90d2b,#b90d2b
-136,17,986,14023955,1779026400,Everton,48,#274488,#ffffff,#ffffff,Sunderland,41,#ffffff,#ca0000,#ca0000
-137,17,986,14023961,1779634800,Manchester City,17,#66ccff,#ffffff,#ffffff,Aston Villa,40,#670e36,#94bee5,#94bee5
-138,17,986,14023959,1779634800,Brighton & Hove Albion,30,#0054a6,#ffffff,#ffffff,Manchester United,35,#ff0000,#373737,#373737
-139,17,986,14023962,1779634800,Liverpool,44,#cc0000,#ffffff,#ffffff,Brentford,50,#ffffff,#ff0000,#ff0000
-140,17,986,14023963,1779634800,Crystal Palace,7,#0033ff,#b90d2b,#b90d2b,Arsenal,42,#cc0000,#ffffff,#ffffff
-141,17,986,14023966,1779634800,Sunderland,41,#ffffff,#ca0000,#ca0000,Chelsea,38,#0310a7,#ffffff,#ffffff
-142,17,986,14023967,1779634800,Tottenham Hotspur,33,#ffffff,#000066,#000066,Everton,48,#274488,#ffffff,#ffffff
-143,17,986,14023965,1779634800,Fulham,43,#ffffff,#000000,#000000,Newcastle United,39,#000000,#ffffff,#ffffff
-144,17,986,14023968,1779634800,West Ham United,37,#66192c,#59b3e4,#59b3e4,Leeds United,34,#ffffff,#1d4189,#1d4189
-145,17,986,14023964,1779634800,Nottingham Forest,14,#cc0000,#cc0000,#cc0000,Bournemouth,60,#000000,#cc0000,#cc0000
-146,17,986,14023960,1779634800,Burnley,6,#81204c,#8fd2f4,#8fd2f4,Wolverhampton,3,#ff9900,#000000,#000000
+0,17,986,14025170,1770408000,Leeds United,34,#ffffff,#1d4189,#1d4189,Nottingham Forest,14,#cc0000,#cc0000,#cc0000
+1,17,986,14025176,1770467400,Manchester United,35,#ff0000,#373737,#373737,Tottenham Hotspur,33,#ffffff,#000066,#000066
+2,17,986,14025158,1770476400,Arsenal,42,#cc0000,#ffffff,#ffffff,Sunderland,41,#ffffff,#ca0000,#ca0000
+3,17,986,14025182,1770476400,Wolverhampton,3,#ff9900,#000000,#000000,Chelsea,38,#0310a7,#ffffff,#ffffff
+4,17,986,14025155,1770476400,Bournemouth,60,#000000,#cc0000,#cc0000,Aston Villa,40,#670e36,#94bee5,#94bee5
+5,17,986,14025167,1770476400,Fulham,43,#ffffff,#000000,#000000,Everton,48,#274488,#ffffff,#ffffff
+6,17,986,14025164,1770476400,Burnley,6,#81204c,#8fd2f4,#8fd2f4,West Ham United,37,#66192c,#59b3e4,#59b3e4
+7,17,986,14025179,1770485400,Newcastle United,39,#000000,#ffffff,#ffffff,Brentford,50,#ffffff,#ff0000,#ff0000
+8,17,986,14025161,1770559200,Brighton & Hove Albion,30,#0054a6,#ffffff,#ffffff,Crystal Palace,7,#0033ff,#b90d2b,#b90d2b
+9,17,986,14025173,1770568200,Liverpool,44,#cc0000,#ffffff,#ffffff,Manchester City,17,#66ccff,#ffffff,#ffffff
+10,17,986,14025188,1770751800,Chelsea,38,#0310a7,#ffffff,#ffffff,Leeds United,34,#ffffff,#1d4189,#1d4189
+11,17,986,14025200,1770751800,Tottenham Hotspur,33,#ffffff,#000066,#000066,Newcastle United,39,#000000,#ffffff,#ffffff
+12,17,986,14025191,1770751800,Everton,48,#274488,#ffffff,#ffffff,Bournemouth,60,#000000,#cc0000,#cc0000
+13,17,986,14025203,1770754500,West Ham United,37,#66192c,#59b3e4,#59b3e4,Manchester United,35,#ff0000,#373737,#373737
+14,17,986,14025212,1770838200,Manchester City,17,#66ccff,#ffffff,#ffffff,Fulham,43,#ffffff,#000000,#000000
+15,17,986,14025206,1770838200,Aston Villa,40,#670e36,#94bee5,#94bee5,Brighton & Hove Albion,30,#0054a6,#ffffff,#ffffff
+16,17,986,14025194,1770838200,Nottingham Forest,14,#cc0000,#cc0000,#cc0000,Wolverhampton,3,#ff9900,#000000,#000000
+17,17,986,14025209,1770838200,Crystal Palace,7,#0033ff,#b90d2b,#b90d2b,Burnley,6,#81204c,#8fd2f4,#8fd2f4
+18,17,986,14025197,1770840900,Sunderland,41,#ffffff,#ca0000,#ca0000,Liverpool,44,#cc0000,#ffffff,#ffffff
+19,17,986,14025185,1770926400,Brentford,50,#ffffff,#ff0000,#ff0000,Arsenal,42,#cc0000,#ffffff,#ffffff
+20,17,986,14024009,1771686000,Everton,48,#274488,#ffffff,#ffffff,Manchester United,35,#ff0000,#373737,#373737
+21,17,986,14024007,1771686000,Chelsea,38,#0310a7,#ffffff,#ffffff,Burnley,6,#81204c,#8fd2f4,#8fd2f4
+22,17,986,14025215,1771686000,Aston Villa,40,#670e36,#94bee5,#94bee5,Leeds United,34,#ffffff,#1d4189,#1d4189
+23,17,986,14024006,1771686000,Brentford,50,#ffffff,#ff0000,#ff0000,Brighton & Hove Albion,30,#0054a6,#ffffff,#ffffff
+24,17,986,14023969,1771695000,West Ham United,37,#66192c,#59b3e4,#59b3e4,Bournemouth,60,#000000,#cc0000,#cc0000
+25,17,986,14024010,1771704000,Manchester City,17,#66ccff,#ffffff,#ffffff,Newcastle United,39,#000000,#ffffff,#ffffff
+26,17,986,14024013,1771768800,Nottingham Forest,14,#cc0000,#cc0000,#cc0000,Liverpool,44,#cc0000,#ffffff,#ffffff
+27,17,986,14024008,1771768800,Crystal Palace,7,#0033ff,#b90d2b,#b90d2b,Wolverhampton,3,#ff9900,#000000,#000000
+28,17,986,14024011,1771768800,Sunderland,41,#ffffff,#ca0000,#ca0000,Fulham,43,#ffffff,#000000,#000000
+29,17,986,14024012,1771777800,Tottenham Hotspur,33,#ffffff,#000066,#000066,Arsenal,42,#cc0000,#ffffff,#ffffff
+30,17,986,15238290,1771876800,Everton,48,#274488,#ffffff,#ffffff,Manchester United,35,#ff0000,#373737,#373737
+31,17,986,14023979,1772222400,Wolverhampton,3,#ff9900,#000000,#000000,Aston Villa,40,#670e36,#94bee5,#94bee5
+32,17,986,14023970,1772281800,Bournemouth,60,#000000,#cc0000,#cc0000,Sunderland,41,#ffffff,#ca0000,#ca0000
+33,17,986,14023976,1772290800,Liverpool,44,#cc0000,#ffffff,#ffffff,West Ham United,37,#66192c,#59b3e4,#59b3e4
+34,17,986,14023977,1772290800,Newcastle United,39,#000000,#ffffff,#ffffff,Everton,48,#274488,#ffffff,#ffffff
+35,17,986,14023975,1772290800,Burnley,6,#81204c,#8fd2f4,#8fd2f4,Brentford,50,#ffffff,#ff0000,#ff0000
+36,17,986,14023974,1772299800,Leeds United,34,#ffffff,#1d4189,#1d4189,Manchester City,17,#66ccff,#ffffff,#ffffff
+37,17,986,14023978,1772373600,Manchester United,35,#ff0000,#373737,#373737,Crystal Palace,7,#0033ff,#b90d2b,#b90d2b
+38,17,986,14023973,1772373600,Fulham,43,#ffffff,#000000,#000000,Tottenham Hotspur,33,#ffffff,#000066,#000066
+39,17,986,14023972,1772373600,Brighton & Hove Albion,30,#0054a6,#ffffff,#ffffff,Nottingham Forest,14,#cc0000,#cc0000,#cc0000
+40,17,986,14023971,1772382600,Arsenal,42,#cc0000,#ffffff,#ffffff,Chelsea,38,#0310a7,#ffffff,#ffffff
+41,17,986,14023980,1772566200,Bournemouth,60,#000000,#cc0000,#cc0000,Brentford,50,#ffffff,#ff0000,#ff0000
+42,17,986,14023941,1772566200,Everton,48,#274488,#ffffff,#ffffff,Burnley,6,#81204c,#8fd2f4,#8fd2f4
+43,17,986,14023982,1772566200,Leeds United,34,#ffffff,#1d4189,#1d4189,Sunderland,41,#ffffff,#ca0000,#ca0000
+44,17,986,14023985,1772568900,Wolverhampton,3,#ff9900,#000000,#000000,Liverpool,44,#cc0000,#ffffff,#ffffff
+45,17,986,14023984,1772652600,Manchester City,17,#66ccff,#ffffff,#ffffff,Nottingham Forest,14,#cc0000,#cc0000,#cc0000
+46,17,986,14023986,1772652600,Aston Villa,40,#670e36,#94bee5,#94bee5,Chelsea,38,#0310a7,#ffffff,#ffffff
+47,17,986,14023933,1772652600,Brighton & Hove Albion,30,#0054a6,#ffffff,#ffffff,Arsenal,42,#cc0000,#ffffff,#ffffff
+48,17,986,14023947,1772652600,Fulham,43,#ffffff,#000000,#000000,West Ham United,37,#66192c,#59b3e4,#59b3e4
+49,17,986,14023983,1772655300,Newcastle United,39,#000000,#ffffff,#ffffff,Manchester United,35,#ff0000,#373737,#373737
+50,17,986,14023981,1772740800,Tottenham Hotspur,33,#ffffff,#000066,#000066,Crystal Palace,7,#0033ff,#b90d2b,#b90d2b
+51,17,986,14023993,1773491400,West Ham United,37,#66192c,#59b3e4,#59b3e4,Manchester City,17,#66ccff,#ffffff,#ffffff
+52,17,986,14023994,1773500400,Manchester United,35,#ff0000,#373737,#373737,Aston Villa,40,#670e36,#94bee5,#94bee5
+53,17,986,14023995,1773500400,Nottingham Forest,14,#cc0000,#cc0000,#cc0000,Fulham,43,#ffffff,#000000,#000000
+54,17,986,14023989,1773500400,Brentford,50,#ffffff,#ff0000,#ff0000,Wolverhampton,3,#ff9900,#000000,#000000
+55,17,986,14023991,1773500400,Crystal Palace,7,#0033ff,#b90d2b,#b90d2b,Leeds United,34,#ffffff,#1d4189,#1d4189
+56,17,986,14023996,1773500400,Sunderland,41,#ffffff,#ca0000,#ca0000,Brighton & Hove Albion,30,#0054a6,#ffffff,#ffffff
+57,17,986,14023988,1773500400,Burnley,6,#81204c,#8fd2f4,#8fd2f4,Bournemouth,60,#000000,#cc0000,#cc0000
+58,17,986,14023990,1773509400,Chelsea,38,#0310a7,#ffffff,#ffffff,Newcastle United,39,#000000,#ffffff,#ffffff
+59,17,986,14023987,1773583200,Arsenal,42,#cc0000,#ffffff,#ffffff,Everton,48,#274488,#ffffff,#ffffff
+60,17,986,14023987,1773583200,Arsenal,42,#cc0000,#ffffff,#ffffff,Everton,48,#274488,#ffffff,#ffffff
+61,17,986,14023992,1773592200,Liverpool,44,#cc0000,#ffffff,#ffffff,Tottenham Hotspur,33,#ffffff,#000066,#000066
+62,17,986,15408501,1773691200,Brentford,50,#ffffff,#ff0000,#ff0000,Wolverhampton,3,#ff9900,#000000,#000000
+63,17,986,14023997,1774036800,Bournemouth,60,#000000,#cc0000,#cc0000,Manchester United,35,#ff0000,#373737,#373737
+64,17,986,14024015,1774096200,Brighton & Hove Albion,30,#0054a6,#ffffff,#ffffff,Liverpool,44,#cc0000,#ffffff,#ffffff
+65,17,986,14024019,1774105200,Manchester City,17,#66ccff,#ffffff,#ffffff,Crystal Palace,7,#0033ff,#b90d2b,#b90d2b
+66,17,986,14025018,1774105200,Wolverhampton,3,#ff9900,#000000,#000000,Arsenal,42,#cc0000,#ffffff,#ffffff
+67,17,986,14024014,1774105200,Aston Villa,40,#670e36,#94bee5,#94bee5,West Ham United,37,#66192c,#59b3e4,#59b3e4
+68,17,986,14024016,1774105200,Fulham,43,#ffffff,#000000,#000000,Burnley,6,#81204c,#8fd2f4,#8fd2f4
+69,17,986,14024017,1774114200,Everton,48,#274488,#ffffff,#ffffff,Chelsea,38,#0310a7,#ffffff,#ffffff
+70,17,986,14024018,1774123200,Leeds United,34,#ffffff,#1d4189,#1d4189,Brentford,50,#ffffff,#ff0000,#ff0000
+71,17,986,14024021,1774180800,Newcastle United,39,#000000,#ffffff,#ffffff,Sunderland,41,#ffffff,#ca0000,#ca0000
+72,17,986,14024020,1774188900,Tottenham Hotspur,33,#ffffff,#000066,#000066,Nottingham Forest,14,#cc0000,#cc0000,#cc0000
+73,17,986,14023998,1775916000,Chelsea,38,#0310a7,#ffffff,#ffffff,Manchester City,17,#66ccff,#ffffff,#ffffff
+74,17,986,14024000,1775916000,Liverpool,44,#cc0000,#ffffff,#ffffff,Fulham,43,#ffffff,#000000,#000000
+75,17,986,14025024,1775916000,Manchester United,35,#ff0000,#373737,#373737,Leeds United,34,#ffffff,#1d4189,#1d4189
+76,17,986,14025021,1775916000,Arsenal,42,#cc0000,#ffffff,#ffffff,Bournemouth,60,#000000,#cc0000,#cc0000
+77,17,986,14025026,1775916000,Sunderland,41,#ffffff,#ca0000,#ca0000,Tottenham Hotspur,33,#ffffff,#000066,#000066
+78,17,986,14025025,1775916000,Nottingham Forest,14,#cc0000,#cc0000,#cc0000,Aston Villa,40,#670e36,#94bee5,#94bee5
+79,17,986,14023999,1775916000,Crystal Palace,7,#0033ff,#b90d2b,#b90d2b,Newcastle United,39,#000000,#ffffff,#ffffff
+80,17,986,14025029,1775916000,West Ham United,37,#66192c,#59b3e4,#59b3e4,Wolverhampton,3,#ff9900,#000000,#000000
+81,17,986,14025022,1775916000,Brentford,50,#ffffff,#ff0000,#ff0000,Everton,48,#274488,#ffffff,#ffffff
+82,17,986,14024002,1775916000,Burnley,6,#81204c,#8fd2f4,#8fd2f4,Brighton & Hove Albion,30,#0054a6,#ffffff,#ffffff
+83,17,986,14025039,1776520800,Manchester City,17,#66ccff,#ffffff,#ffffff,Arsenal,42,#cc0000,#ffffff,#ffffff
+84,17,986,14025032,1776520800,Chelsea,38,#0310a7,#ffffff,#ffffff,Manchester United,35,#ff0000,#373737,#373737
+85,17,986,14025035,1776520800,Everton,48,#274488,#ffffff,#ffffff,Liverpool,44,#cc0000,#ffffff,#ffffff
+86,17,986,14025042,1776520800,Tottenham Hotspur,33,#ffffff,#000066,#000066,Brighton & Hove Albion,30,#0054a6,#ffffff,#ffffff
+87,17,986,14025040,1776520800,Newcastle United,39,#000000,#ffffff,#ffffff,Bournemouth,60,#000000,#cc0000,#cc0000
+88,17,986,14025030,1776520800,Aston Villa,40,#670e36,#94bee5,#94bee5,Sunderland,41,#ffffff,#ca0000,#ca0000
+89,17,986,14025034,1776520800,Crystal Palace,7,#0033ff,#b90d2b,#b90d2b,West Ham United,37,#66192c,#59b3e4,#59b3e4
+90,17,986,14025031,1776520800,Brentford,50,#ffffff,#ff0000,#ff0000,Fulham,43,#ffffff,#000000,#000000
+91,17,986,14025036,1776520800,Leeds United,34,#ffffff,#1d4189,#1d4189,Wolverhampton,3,#ff9900,#000000,#000000
+92,17,986,14025041,1776520800,Nottingham Forest,14,#cc0000,#cc0000,#cc0000,Burnley,6,#81204c,#8fd2f4,#8fd2f4
+93,17,986,14025045,1777125600,Arsenal,42,#cc0000,#ffffff,#ffffff,Newcastle United,39,#000000,#ffffff,#ffffff
+94,17,986,14024005,1777125600,Liverpool,44,#cc0000,#ffffff,#ffffff,Crystal Palace,7,#0033ff,#b90d2b,#b90d2b
+95,17,986,14024003,1777125600,Burnley,6,#81204c,#8fd2f4,#8fd2f4,Manchester City,17,#66ccff,#ffffff,#ffffff
+96,17,986,14023926,1777125600,Manchester United,35,#ff0000,#373737,#373737,Brentford,50,#ffffff,#ff0000,#ff0000
+97,17,986,14024001,1777125600,Brighton & Hove Albion,30,#0054a6,#ffffff,#ffffff,Chelsea,38,#0310a7,#ffffff,#ffffff
+98,17,986,14024022,1777125600,Wolverhampton,3,#ff9900,#000000,#000000,Tottenham Hotspur,33,#ffffff,#000066,#000066
+99,17,986,14024004,1777125600,Fulham,43,#ffffff,#000000,#000000,Aston Villa,40,#670e36,#94bee5,#94bee5
+100,17,986,14023934,1777125600,West Ham United,37,#66192c,#59b3e4,#59b3e4,Everton,48,#274488,#ffffff,#ffffff
+101,17,986,14025044,1777125600,Bournemouth,60,#000000,#cc0000,#cc0000,Leeds United,34,#ffffff,#1d4189,#1d4189
+102,17,986,14023932,1777125600,Sunderland,41,#ffffff,#ca0000,#ca0000,Nottingham Forest,14,#cc0000,#cc0000,#cc0000
+103,17,986,14023939,1777730400,Manchester United,35,#ff0000,#373737,#373737,Liverpool,44,#cc0000,#ffffff,#ffffff
+104,17,986,14023930,1777730400,Everton,48,#274488,#ffffff,#ffffff,Manchester City,17,#66ccff,#ffffff,#ffffff
+105,17,986,14023931,1777730400,Arsenal,42,#cc0000,#ffffff,#ffffff,Fulham,43,#ffffff,#000000,#000000
+106,17,986,14023925,1777730400,Chelsea,38,#0310a7,#ffffff,#ffffff,Nottingham Forest,14,#cc0000,#cc0000,#cc0000
+107,17,986,14023927,1777730400,Aston Villa,40,#670e36,#94bee5,#94bee5,Tottenham Hotspur,33,#ffffff,#000066,#000066
+108,17,986,14023949,1777730400,Newcastle United,39,#000000,#ffffff,#ffffff,Brighton & Hove Albion,30,#0054a6,#ffffff,#ffffff
+109,17,986,14023945,1777730400,Brentford,50,#ffffff,#ff0000,#ff0000,West Ham United,37,#66192c,#59b3e4,#59b3e4
+110,17,986,14024023,1777730400,Bournemouth,60,#000000,#cc0000,#cc0000,Crystal Palace,7,#0033ff,#b90d2b,#b90d2b
+111,17,986,14023951,1777730400,Wolverhampton,3,#ff9900,#000000,#000000,Sunderland,41,#ffffff,#ca0000,#ca0000
+112,17,986,14023940,1777730400,Leeds United,34,#ffffff,#1d4189,#1d4189,Burnley,6,#81204c,#8fd2f4,#8fd2f4
+113,17,986,14024024,1778335200,Liverpool,44,#cc0000,#ffffff,#ffffff,Chelsea,38,#0310a7,#ffffff,#ffffff
+114,17,986,14023946,1778335200,Manchester City,17,#66ccff,#ffffff,#ffffff,Brentford,50,#ffffff,#ff0000,#ff0000
+115,17,986,14023942,1778335200,West Ham United,37,#66192c,#59b3e4,#59b3e4,Arsenal,42,#cc0000,#ffffff,#ffffff
+116,17,986,14023938,1778335200,Sunderland,41,#ffffff,#ca0000,#ca0000,Manchester United,35,#ff0000,#373737,#373737
+117,17,986,14023944,1778335200,Tottenham Hotspur,33,#ffffff,#000066,#000066,Leeds United,34,#ffffff,#1d4189,#1d4189
+118,17,986,14023943,1778335200,Nottingham Forest,14,#cc0000,#cc0000,#cc0000,Newcastle United,39,#000000,#ffffff,#ffffff
+119,17,986,14023929,1778335200,Burnley,6,#81204c,#8fd2f4,#8fd2f4,Aston Villa,40,#670e36,#94bee5,#94bee5
+120,17,986,14023935,1778335200,Brighton & Hove Albion,30,#0054a6,#ffffff,#ffffff,Wolverhampton,3,#ff9900,#000000,#000000
+121,17,986,14023937,1778335200,Crystal Palace,7,#0033ff,#b90d2b,#b90d2b,Everton,48,#274488,#ffffff,#ffffff
+122,17,986,14023948,1778335200,Fulham,43,#ffffff,#000000,#000000,Bournemouth,60,#000000,#cc0000,#cc0000
+123,17,986,14023928,1779026400,Aston Villa,40,#670e36,#94bee5,#94bee5,Liverpool,44,#cc0000,#ffffff,#ffffff
+124,17,986,14023952,1779026400,Chelsea,38,#0310a7,#ffffff,#ffffff,Tottenham Hotspur,33,#ffffff,#000066,#000066
+125,17,986,14023936,1779026400,Bournemouth,60,#000000,#cc0000,#cc0000,Manchester City,17,#66ccff,#ffffff,#ffffff
+126,17,986,14023956,1779026400,Manchester United,35,#ff0000,#373737,#373737,Nottingham Forest,14,#cc0000,#cc0000,#cc0000
+127,17,986,14023950,1779026400,Arsenal,42,#cc0000,#ffffff,#ffffff,Burnley,6,#81204c,#8fd2f4,#8fd2f4
+128,17,986,14023957,1779026400,Newcastle United,39,#000000,#ffffff,#ffffff,West Ham United,37,#66192c,#59b3e4,#59b3e4
+129,17,986,14023954,1779026400,Leeds United,34,#ffffff,#1d4189,#1d4189,Brighton & Hove Albion,30,#0054a6,#ffffff,#ffffff
+130,17,986,14023958,1779026400,Wolverhampton,3,#ff9900,#000000,#000000,Fulham,43,#ffffff,#000000,#000000
+131,17,986,14023953,1779026400,Brentford,50,#ffffff,#ff0000,#ff0000,Crystal Palace,7,#0033ff,#b90d2b,#b90d2b
+132,17,986,14023955,1779026400,Everton,48,#274488,#ffffff,#ffffff,Sunderland,41,#ffffff,#ca0000,#ca0000
+133,17,986,14023961,1779634800,Manchester City,17,#66ccff,#ffffff,#ffffff,Aston Villa,40,#670e36,#94bee5,#94bee5
+134,17,986,14023959,1779634800,Brighton & Hove Albion,30,#0054a6,#ffffff,#ffffff,Manchester United,35,#ff0000,#373737,#373737
+135,17,986,14023962,1779634800,Liverpool,44,#cc0000,#ffffff,#ffffff,Brentford,50,#ffffff,#ff0000,#ff0000
+136,17,986,14023963,1779634800,Crystal Palace,7,#0033ff,#b90d2b,#b90d2b,Arsenal,42,#cc0000,#ffffff,#ffffff
+137,17,986,14023966,1779634800,Sunderland,41,#ffffff,#ca0000,#ca0000,Chelsea,38,#0310a7,#ffffff,#ffffff
+138,17,986,14023967,1779634800,Tottenham Hotspur,33,#ffffff,#000066,#000066,Everton,48,#274488,#ffffff,#ffffff
+139,17,986,14023965,1779634800,Fulham,43,#ffffff,#000000,#000000,Newcastle United,39,#000000,#ffffff,#ffffff
+140,17,986,14023968,1779634800,West Ham United,37,#66192c,#59b3e4,#59b3e4,Leeds United,34,#ffffff,#1d4189,#1d4189
+141,17,986,14023964,1779634800,Nottingham Forest,14,#cc0000,#cc0000,#cc0000,Bournemouth,60,#000000,#cc0000,#cc0000
+142,17,986,14023960,1779634800,Burnley,6,#81204c,#8fd2f4,#8fd2f4,Wolverhampton,3,#ff9900,#000000,#000000
