@@ -1,0 +1,30 @@
+team,season,ORtg,DRtg
+Arsenal,23,63.39/38,48.39/38
+Aston Villa,23,43.13/38,53.1/38
+Bournemouth,23,70.3/46*0.6,41.2/46*1.8
+Brentford,23,52.89/38,49.50/38
+Brighton & Hove Albion,23,49.57/38,47.21/38
+Chelsea,23,69.30/38,35.12/38
+Crystal Palace,23,48.84/38,41.33/38
+Everton,23,44.47/38,60.69/38
+Fulham,23,90.4/46*0.6,40.1/46*1.8
+Leeds United,23,51.19/38,71.31/38
+Leicester City,23,49.49/38,66.11/38
+Liverpool,23,93.02/38,32.73/38
+Manchester City,23,93.40/38,25.21/38
+Manchester United,23,57.21/38,56.85/38,
+Newcastle United,23,41.53/38,62.71/38,
+Nottingham Forest,23,62.8/46*0.6,50.5/48*1.8,
+Southampton,23,47.35/38,64.56/38,
+Tottenham Hotspur,23,67.95/38,43.70/38,
+West Ham United,23,54.98/38,53.88/38,
+Wolverhampton,23,39.04/38,58.48/38,
+Burnley,24,67/46*0.6,39.1/46*1.8,
+Luton Town,24,58.9/46*0.6,44.6/46*1.8,
+Sheffield United,24,73/46*0.6,44.7/46*1.8,
+Ipswich Town,25,75.1/46*0.6,47.5/46*1.8,
+Leicester City,25,85.8/46*0.6,43.3/46*1.8,
+Southampton,25,81/46*0.6,50.2/46*1.8,
+Burnley,26,58.6/46*0.6,38.3/46*1.8,
+Leeds United,26,91.4/46*0.6,30.4/46*1.8,
+Sunderland,26,59.9/46*0.6,49.7/46*1.8

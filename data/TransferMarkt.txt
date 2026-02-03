@@ -1,0 +1,81 @@
+season,Date,team,Value
+23,2022-08-05,Arsenal,672.7
+23,2022-08-05,Aston Villa,499.6
+23,2022-08-05,Bournemouth,160.4
+23,2022-08-05,Brentford,293.45
+23,2022-08-05,Brighton & Hove Albion,246.9
+23,2022-08-05,Chelsea,823.7
+23,2022-08-05,Crystal Palace,268.8
+23,2022-08-05,Everton,415.95
+23,2022-08-05,Fulham,202.5
+23,2022-08-05,Leeds United,275.3
+23,2022-08-05,Leicester City,508.3
+23,2022-08-05,Liverpool,870
+23,2022-08-05,Manchester City,1010
+23,2022-08-05,Manchester United,708.8
+23,2022-08-05,Newcastle United,333.6
+23,2022-08-05,Nottingham Forest,192.3
+23,2022-08-05,Southampton,271.45
+23,2022-08-05,Tottenham Hotspur,727.3
+23,2022-08-05,West Ham United,362
+23,2022-08-05,Wolverhampton,350.95
+24,2023-08-11,Arsenal,1180
+24,2023-08-11,Aston Villa,588.5
+24,2023-08-11,Bournemouth,308.6
+24,2023-08-11,Brentford,393.8
+24,2023-08-11,Brighton & Hove Albion,350.1
+24,2023-08-11,Burnley,205.65
+24,2023-08-11,Chelsea,961.95
+24,2023-08-11,Crystal Palace,308.45
+24,2023-08-11,Everton,390.15
+24,2023-08-11,Fulham,273.5
+24,2023-08-11,Liverpool,794.8
+24,2023-08-11,Luton Town,72.9
+24,2023-08-11,Manchester City,1250
+24,2023-08-11,Manchester United,872.1
+24,2023-08-11,Newcastle United,599
+24,2023-08-11,Nottingham Forest,337.38
+24,2023-08-11,Sheffield United,90.5
+24,2023-08-11,Tottenham Hotspur,715.3
+24,2023-08-11,West Ham United,397.15
+24,2023-08-11,Wolverhampton,353.18
+25,2024-08-16,Arsenal,1170
+25,2024-08-16,Aston Villa,648.5
+25,2024-08-16,Bournemouth,350.65
+25,2024-08-16,Brentford,433.73
+25,2024-08-16,Brighton & Hove Albion,555.2
+25,2024-08-16,Chelsea,1140
+25,2024-08-16,Crystal Palace,437
+25,2024-08-16,Everton,323.8
+25,2024-08-16,Fulham,279.5
+25,2024-08-16,Ipswich Town,91.15
+25,2024-08-16,Leicester City,201.2
+25,2024-08-16,Liverpool,926.3
+25,2024-08-16,Manchester City,1320
+25,2024-08-16,Manchester United,893.35
+25,2024-08-16,Newcastle United,659.65
+25,2024-08-16,Nottingham Forest,363.3
+25,2024-08-16,Southampton,230.8
+25,2024-08-16,Tottenham Hotspur,806.7
+25,2024-08-16,West Ham United,561.5
+25,2024-08-16,Wolverhampton,362.1
+26,2025-08-15,Arsenal,1320
+26,2025-08-15,Aston Villa,565
+26,2025-08-15,Bournemouth,420.45
+26,2025-08-15,Brentford,386.7
+26,2025-08-15,Brighton & Hove Albion,576.6
+26,2025-08-15,Burnley,235.9
+26,2025-08-15,Chelsea,1170
+26,2025-08-15,Crystal Palace,456.2
+26,2025-08-15,Everton,340.2
+26,2025-08-15,Fulham,331.6
+26,2025-08-15,Leeds United,272.3
+26,2025-08-15,Liverpool,1040
+26,2025-08-15,Manchester City,1320
+26,2025-08-15,Manchester United,892.2
+26,2025-08-15,Newcastle United,689.9
+26,2025-08-15,Nottingham Forest,446
+26,2025-08-15,Sunderland,251.2
+26,2025-08-15,Tottenham Hotspur,832.1
+26,2025-08-15,West Ham United,386.65
+26,2025-08-15,Wolverhampton,319
