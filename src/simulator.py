@@ -65,7 +65,7 @@ def team_rating(xg,xga):
 
 def define_dates_ratings(results):
     past_dates = results.game_date.drop_duplicates().sort_values().values
-    years = results.game_date.dt.year.drop_duplicates().sort_values()
+    years = results.game_date.year.drop_duplicates().sort_values()
     for year in years:
         past_dates = np.append(past_dates,pd.to_datetime(str(year)+'-08-01').date())
     past_dates = np.sort(past_dates)
@@ -184,7 +184,7 @@ def calculate_ratings(past_dates,transfer_vals,team_initializations,season_mappi
 
 def define_dates_sims(results):
     past_dates = results.game_date.drop_duplicates().sort_values().values
-    years = results.game_date.dt.year.drop_duplicates().sort_values()
+    years = results.game_date.year.drop_duplicates().sort_values()
     for year in years:
         past_dates = np.append(past_dates,pd.to_datetime(str(year)+'-08-01').date())
         past_dates = np.append(past_dates,pd.to_datetime(str(year)+'-08-02').date())
