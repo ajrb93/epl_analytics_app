@@ -64,8 +64,8 @@ def team_rating(xg,xga):
     return np.round(win_rate,6)
 
 def define_dates_ratings(results):
-    past_dates = results.game_date.drop_duplicates().sort_values().values
-    years = results.game_date.year.drop_duplicates().sort_values()
+    past_dates = results.game_date.drop_duplicates().sort_values().dt.date.values
+    years = results.game_date.dt.year.drop_duplicates().sort_values()
     for year in years:
         past_dates = np.append(past_dates,pd.to_datetime(str(year)+'-08-01').date())
     past_dates = np.sort(past_dates)
@@ -183,8 +183,8 @@ def calculate_ratings(past_dates,transfer_vals,team_initializations,season_mappi
     return team_ratings
 
 def define_dates_sims(results):
-    past_dates = results.game_date.drop_duplicates().sort_values().values
-    years = results.game_date.year.drop_duplicates().sort_values()
+    past_dates = results.game_date.drop_duplicates().sort_values().dt.date.values
+    years = results.game_date.dt.year.drop_duplicates().sort_values()
     for year in years:
         past_dates = np.append(past_dates,pd.to_datetime(str(year)+'-08-01').date())
         past_dates = np.append(past_dates,pd.to_datetime(str(year)+'-08-02').date())
@@ -427,10 +427,10 @@ def simulate_season(sim_dates,matches,total_goals,home_field,n_sims,update_rate,
 
 def run_main(update_rate = 2/38,n_sims = 10000):
     schedule = pd.read_csv('data/Schedule.csv')
-    schedule.game_date = pd.to_datetime(schedule.game_date,unit='s').dt.date
+    schedule.game_date = pd.to_datetime(pd.to_datetime(schedule.game_date,unit='s').dt.date)
 
     results = pd.read_feather('data/match_stats.ftr')
-    results.game_date = pd.to_datetime(results.game_date,unit='s').dt.date
+    results.game_date = pd.to_datetime(pd.to_datetime(results.game_date,unit='s').dt.date)
     results = results.sort_values(['season','game_date'])
     results['home_P'] = (results.home_score > results.away_score).astype('int') * 3 + (results.home_score == results.away_score).astype('int')
     results['away_P'] = (results.home_score < results.away_score).astype('int') * 3 + (results.home_score == results.away_score).astype('int')
