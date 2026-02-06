@@ -64,7 +64,7 @@ def team_rating(xg,xga):
     return np.round(win_rate,6)
 
 def define_dates_ratings(results):
-    past_dates = results.game_date.drop_duplicates().sort_values().dt.date.values
+    past_dates = results.game_date.drop_duplicates().sort_values().date.values
     years = results.game_date.dt.year.drop_duplicates().sort_values()
     for year in years:
         past_dates = np.append(past_dates,pd.to_datetime(str(year)+'-08-01').date())
