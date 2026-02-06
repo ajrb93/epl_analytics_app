@@ -443,6 +443,7 @@ def run_main(update_rate = 2/38,n_sims = 10000):
 
     initial_ratings = pd.read_csv('data/Initializations.txt')
     initial_ratings.season = initial_ratings.season.astype('int').astype('str')
+    initial_ratings['WinRate'] = initial_ratings.apply(lambda row: team_rating(row['ORtg'], row['DRtg']), axis=1)
 
     ##'https://www.transfermarkt.com/major-league-soccer/marktwerteverein/wettbewerb/MLS1/plus/1?stichtag=2023-08-01'
     transfer_values = pd.read_csv('data/TransferMarkt.txt')
