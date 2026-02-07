@@ -428,9 +428,11 @@ def simulate_season(sim_dates,matches,total_goals,home_field,n_sims,update_rate,
 def run_main(update_rate = 2/38,n_sims = 10000):
     schedule = pd.read_csv('data/Schedule.csv')
     schedule.game_date = pd.to_datetime(pd.to_datetime(schedule.game_date,unit='s').dt.date)
+    schedule.season = schedule.season.astype('str')
 
     results = pd.read_feather('data/match_stats.ftr')
     results.game_date = pd.to_datetime(pd.to_datetime(results.game_date,unit='s').dt.date)
+    results.season = results.season.astype('str')
     results = results.sort_values(['season','game_date'])
     results['home_P'] = (results.home_score > results.away_score).astype('int') * 3 + (results.home_score == results.away_score).astype('int')
     results['away_P'] = (results.home_score < results.away_score).astype('int') * 3 + (results.home_score == results.away_score).astype('int')
@@ -466,6 +468,7 @@ def run_main(update_rate = 2/38,n_sims = 10000):
     prev_sims = os.listdir('data/Sim_States/')
     prev_sims = list(filter(lambda k: '_matches' not in k, prev_sims))
     prev_sims = [s.replace('.ftr', '') for s in prev_sims]
+    prev_sims = list(filter(lambda k: '.ftr' in k, prev_sims))
     prev_sims = pd.to_datetime(prev_sims).date
     sim_dates = sorted(list(set(past_dates) - set(prev_sims)))
     simulate_season(sim_dates,matches,tg,hf,n_sims,update_rate,team_ratings)
