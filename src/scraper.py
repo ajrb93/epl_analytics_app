@@ -48,9 +48,9 @@ def get_website(url):
 
 def get_matches(league,season):
     matches = list()
-    i = 0
+    i = 1
     while 1:
-        url = 'https://api.sofascore.com/api/v1/unique-tournament/'+ league + '/season/' + season + '/events/last/' + str(i)
+        url = 'https://api.sofascore.com/api/v1/unique-tournament/'+ league + '/season/' + season + '/events/round/' + str(i)
         try:
             returned = get_website(url)['events']
             matches += returned
@@ -60,54 +60,34 @@ def get_matches(league,season):
             
     return matches
 
-def get_schedule(league,season):
-    schedule = list()
-    i = 0
-    while 1:
-        url = 'https://api.sofascore.com/api/v1/unique-tournament/'+ league + '/season/' + season + '/events/next/' + str(i)
-        try:
-            returned = get_website(url)['events']
-            schedule += returned
-            i += 1
-        except:
-            break
-            
-    return schedule
-
-def create_schedule(league,season):
-    schedule_list = []
-    schedule = get_schedule(league,season)
-    for match in schedule:
-        match_id = match['id']
-        game_time = match['startTimestamp']
-        temp_hometeamname = match['homeTeam']['name']
-        temp_hometeamid = match['homeTeam']['id']
-        temp_hometeamcolorsprimary = match['homeTeam']['teamColors']['primary']
-        temp_hometeamcolorssecondary = match['homeTeam']['teamColors']['secondary']
-        temp_hometeamcolorstext = match['homeTeam']['teamColors']['text']
-        temp_awayteamname = match['awayTeam']['name']
-        temp_awayteamid = match['awayTeam']['id']
-        temp_awayteamcolorsprimary = match['awayTeam']['teamColors']['primary']
-        temp_awayteamcolorssecondary = match['awayTeam']['teamColors']['secondary']
-        temp_awayteamcolorstext = match['awayTeam']['teamColors']['text']     
-        schedule_list.append([league,match_id,game_time,temp_hometeamname,temp_hometeamid,temp_hometeamcolorsprimary,
-                              temp_hometeamcolorssecondary,
-                              temp_hometeamcolorstext,temp_awayteamname,temp_awayteamid,temp_awayteamcolorsprimary,temp_awayteamcolorssecondary,
-                              temp_awayteamcolorstext])
-    schedule_list = pd.DataFrame(schedule_list,columns=['league','match_id','game_date','home','home_id','home_primary','home_secondary',
-                                                    'home_text','away','away_id','away_primary','away_secondary','away_text'])
-    schedule_list['season'] = (pd.to_datetime(schedule_list.game_date,unit='s').dt.month > 7).astype('int') + pd.to_datetime(schedule_list.game_date,unit='s').dt.year - 2000
-    schedule_list.to_csv('data/Schedule.csv')
-
 def create_results(league,season):
     results_list = []
+    schedule_list = []
     results = get_matches(league,season)
     for match in results:
         match_id = match['id']
         status = match['status']['type']
-        results_list.append([match_id,status])
+        if (status == 'notstarted') | (status == 'inprogress'):
+            game_time = match['startTimestamp']
+            temp_hometeamname = match['homeTeam']['name']
+            temp_hometeamid = match['homeTeam']['id']
+            temp_hometeamcolorsprimary = match['homeTeam']['teamColors']['primary']
+            temp_hometeamcolorssecondary = match['homeTeam']['teamColors']['secondary']
+            temp_hometeamcolorstext = match['homeTeam']['teamColors']['text']
+            temp_awayteamname = match['awayTeam']['name']
+            temp_awayteamid = match['awayTeam']['id']
+            temp_awayteamcolorsprimary = match['awayTeam']['teamColors']['primary']
+            temp_awayteamcolorssecondary = match['awayTeam']['teamColors']['secondary']
+            temp_awayteamcolorstext = match['awayTeam']['teamColors']['text'] 
+            schedule_list.append([league,match_id,game_time,temp_hometeamname,temp_hometeamid,temp_hometeamcolorsprimary,temp_hometeamcolorssecondary,
+                                  temp_hometeamcolorstext,temp_awayteamname,temp_awayteamid,temp_awayteamcolorsprimary,temp_awayteamcolorssecondary,temp_awayteamcolorstext])             
+        else:
+            results_list.append([match_id,status])
     results_list = pd.DataFrame(results_list,columns=['match_id','status'])
     results_list = results_list[results_list.status == 'finished'].match_id.astype('str').values
+    schedule_list = pd.DataFrame(schedule_list,columns=['league','match_id','game_date','home','home_id','home_primary','home_secondary','home_text','away','away_id','away_primary','away_secondary','away_text'])
+    schedule_list['season'] = (pd.to_datetime(schedule_list.game_date,unit='s').dt.month > 7).astype('int') + pd.to_datetime(schedule_list.game_date,unit='s').dt.year - 2000
+    schedule_list.to_csv('data/Schedule.csv')
     return results_list
 
 def get_match(match):
@@ -318,7 +298,6 @@ def finalize_matches(summary_data,shot_data):
     match_stats.to_feather('data/match_stats.ftr')
 
 def run_pipeline():
-    create_schedule(league,season)
     results_list = create_results(league,season)
     completed_results = [x.replace(".ftr", "") for x in os.listdir(MATCH_DIR) if ".ftr" in x]
     results_process = list(set(results_list) - set(completed_results))
