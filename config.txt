@@ -1,5 +1,5 @@
 Type=Value
 League=17
 Season=76986
-SeasonName='25/26'
+SeasonName=25/26
 Seasons={76986:'25/26',61627:'24/25',52186:'23/24',41886:'22/23'}

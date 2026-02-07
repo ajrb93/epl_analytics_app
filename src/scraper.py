@@ -74,7 +74,7 @@ def get_schedule(league,season):
             
     return schedule
 
-def create_schedule(league,season):
+def create_schedule(league,season,season_name):
     schedule_list = []
     schedule = get_schedule(league,season)
     for match in schedule:
@@ -90,13 +90,13 @@ def create_schedule(league,season):
         temp_awayteamcolorsprimary = match['awayTeam']['teamColors']['primary']
         temp_awayteamcolorssecondary = match['awayTeam']['teamColors']['secondary']
         temp_awayteamcolorstext = match['awayTeam']['teamColors']['text']     
-        schedule_list.append([league,season,match_id,game_time,temp_hometeamname,temp_hometeamid,temp_hometeamcolorsprimary,
+        schedule_list.append([league,season_name,match_id,game_time,temp_hometeamname,temp_hometeamid,temp_hometeamcolorsprimary,
                               temp_hometeamcolorssecondary,
                               temp_hometeamcolorstext,temp_awayteamname,temp_awayteamid,temp_awayteamcolorsprimary,temp_awayteamcolorssecondary,
                               temp_awayteamcolorstext])
     schedule_list = pd.DataFrame(schedule_list,columns=['league','season','match_id','game_date','home','home_id','home_primary','home_secondary',
                                                     'home_text','away','away_id','away_primary','away_secondary','away_text'])
-    schedule_list.season = schedule_list.season.str.split('/').str[1].fillna(schedule_list.season.str[2:])
+    schedule_list.season = schedule_list.season.str.split('/').str[1].astype('int')
     schedule_list.to_csv('data/Schedule.csv')
 
 def create_results(league,season):
@@ -236,7 +236,7 @@ def summarize_matches(league,season_name,match_summaries):
     summary_data = pd.concat(summary_data)
     summary_data['league'] = league
     summary_data['season'] = season_name
-    summary_data.season = summary_data.season.str.split('/').str[1].fillna(summary_data.season.str[2:])
+    summary_data.season = summary_data.season.str.split('/').str[1].astype('int')
     return summary_data
 
 class ColumnRenamer:
