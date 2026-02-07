@@ -190,6 +190,7 @@ def get_stats(match):
 
 def get_shots(match):
     url = 'https://api.sofascore.com/api/v1/event/' + str(match) + '/shotmap'
+    print(url)
     response = get_website(url)
     shotmap = response['shotmap']
     temp_shotdf = []
