@@ -96,7 +96,7 @@ def create_schedule(league,season):
                               temp_awayteamcolorstext])
     schedule_list = pd.DataFrame(schedule_list,columns=['league','match_id','game_date','home','home_id','home_primary','home_secondary',
                                                     'home_text','away','away_id','away_primary','away_secondary','away_text'])
-    schedule_list['season'] = (pd.to_datetime(schedule_list.game_date).dt.month > 7).astype('int') + pd.to_datetime(schedule_list.game_date).dt.year - 2000
+    schedule_list['season'] = (pd.to_datetime(schedule_list.game_date,unit='s').dt.month > 7).astype('int') + pd.to_datetime(schedule_list.game_date,unit='s').dt.year - 2000
     schedule_list.to_csv('data/Schedule.csv')
 
 def create_results(league,season):
@@ -238,7 +238,7 @@ def summarize_matches(league,match_summaries):
 
     summary_data = pd.concat(summary_data)
     summary_data['league'] = league
-    summary_data['season'] = (pd.to_datetime(summary_data.game_date).dt.month > 7).astype('int') + pd.to_datetime(summary_data.game_date).dt.year - 2000
+    summary_data['season'] = (pd.to_datetime(summary_data.game_date,unit='s').dt.month > 7).astype('int') + pd.to_datetime(summary_data.game_date,unit='s').dt.year - 2000
     return summary_data
 
 class ColumnRenamer:
