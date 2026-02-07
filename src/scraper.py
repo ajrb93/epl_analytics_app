@@ -316,7 +316,7 @@ def finalize_matches(summary_data,shot_data):
     match_stats.to_feather('data/match_stats.ftr')
 
 def run_pipeline():
-    create_schedule(league,season)
+    create_schedule(league,season,season_name)
     results_list = create_results(league,season)
     completed_results = [x.replace(".ftr", "") for x in os.listdir(MATCH_DIR) if ".ftr" in x]
     results_process = list(set(results_list) - set(completed_results))
