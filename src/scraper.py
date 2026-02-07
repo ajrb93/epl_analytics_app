@@ -190,43 +190,45 @@ def get_stats(match):
 
 def get_shots(match):
     url = 'https://api.sofascore.com/api/v1/event/' + str(match) + '/shotmap'
-    print(url)
     response = get_website(url)
-    shotmap = response['shotmap']
-    temp_shotdf = []
-    for i in range(0,len(shotmap)):
-        temp_shot = shotmap[i]
-        player = temp_shot['player']['id']
-        isHome = temp_shot['isHome']
-        try:
-            xg = temp_shot['xg']
-        except:
-            xg = np.nan
-        try:
-            xgot = temp_shot['xgot']
-        except:
-            xgot = np.nan
-        timeSeconds = temp_shot['timeSeconds']
-        shotType = temp_shot['shotType']
-        try:
-            goalType = temp_shot['goalType']
-        except:
-            goalType = np.nan
-        situation = temp_shot['situation']
-        playerCoordinates = temp_shot['playerCoordinates']
-        bodyPart = temp_shot['bodyPart']
-        goalMouthLocation = temp_shot['goalMouthLocation']
-        goalMouthCoordinates = temp_shot['goalMouthCoordinates']
-        try:
-            blockCoordinates = temp_shot['blockCoordinates']
-        except:
-            blockCoordinates = np.nan
-        incidentType = temp_shot['incidentType']
-        temp_shotdf.append([match,temp_shot,player,isHome,xg,xgot,timeSeconds,shotType,situation,playerCoordinates,bodyPart,goalMouthLocation,
-                            goalMouthCoordinates,blockCoordinates,incidentType])
-    df = pd.DataFrame(temp_shotdf,columns = ['match','temp_shot','player','isHome','xg','xgot','timeSeconds','shotType','situation','playerCoordinates',
-                                             'bodyPart','goalMouthLocation','goalMouthCoordinates','blockCoordinates','incidentType'])
-    df.reset_index(drop=True).to_feather(SHOTS_DIR + '/' + match + '.ftr')
+    try:
+        shotmap = response['shotmap']
+        temp_shotdf = []
+        for i in range(0,len(shotmap)):
+            temp_shot = shotmap[i]
+            player = temp_shot['player']['id']
+            isHome = temp_shot['isHome']
+            try:
+                xg = temp_shot['xg']
+            except:
+                xg = np.nan
+            try:
+                xgot = temp_shot['xgot']
+            except:
+                xgot = np.nan
+            timeSeconds = temp_shot['timeSeconds']
+            shotType = temp_shot['shotType']
+            try:
+                goalType = temp_shot['goalType']
+            except:
+                goalType = np.nan
+            situation = temp_shot['situation']
+            playerCoordinates = temp_shot['playerCoordinates']
+            bodyPart = temp_shot['bodyPart']
+            goalMouthLocation = temp_shot['goalMouthLocation']
+            goalMouthCoordinates = temp_shot['goalMouthCoordinates']
+            try:
+                blockCoordinates = temp_shot['blockCoordinates']
+            except:
+                blockCoordinates = np.nan
+            incidentType = temp_shot['incidentType']
+            temp_shotdf.append([match,temp_shot,player,isHome,xg,xgot,timeSeconds,shotType,situation,playerCoordinates,bodyPart,goalMouthLocation,
+                                goalMouthCoordinates,blockCoordinates,incidentType])
+        df = pd.DataFrame(temp_shotdf,columns = ['match','temp_shot','player','isHome','xg','xgot','timeSeconds','shotType','situation','playerCoordinates',
+                                                'bodyPart','goalMouthLocation','goalMouthCoordinates','blockCoordinates','incidentType'])
+        df.reset_index(drop=True).to_feather(SHOTS_DIR + '/' + match + '.ftr')
+    except:
+        print(url)
 
 def summarize_matches(league,season_name,match_summaries):
     summary_data = []
