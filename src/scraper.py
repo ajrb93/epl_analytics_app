@@ -74,7 +74,7 @@ def get_schedule(league,season):
             
     return schedule
 
-def create_schedule(league,season,season_name):
+def create_schedule(league,season):
     schedule_list = []
     schedule = get_schedule(league,season)
     for match in schedule:
@@ -90,13 +90,13 @@ def create_schedule(league,season,season_name):
         temp_awayteamcolorsprimary = match['awayTeam']['teamColors']['primary']
         temp_awayteamcolorssecondary = match['awayTeam']['teamColors']['secondary']
         temp_awayteamcolorstext = match['awayTeam']['teamColors']['text']     
-        schedule_list.append([league,season_name,match_id,game_time,temp_hometeamname,temp_hometeamid,temp_hometeamcolorsprimary,
+        schedule_list.append([league,match_id,game_time,temp_hometeamname,temp_hometeamid,temp_hometeamcolorsprimary,
                               temp_hometeamcolorssecondary,
                               temp_hometeamcolorstext,temp_awayteamname,temp_awayteamid,temp_awayteamcolorsprimary,temp_awayteamcolorssecondary,
                               temp_awayteamcolorstext])
-    schedule_list = pd.DataFrame(schedule_list,columns=['league','season','match_id','game_date','home','home_id','home_primary','home_secondary',
+    schedule_list = pd.DataFrame(schedule_list,columns=['league','match_id','game_date','home','home_id','home_primary','home_secondary',
                                                     'home_text','away','away_id','away_primary','away_secondary','away_text'])
-    schedule_list.season = schedule_list.season.str.split('/').str[1].astype('int')
+    schedule_list['season'] = (schedule_list.game_date.dt.month > 7).astype('int') + schedule_list.game_date.dt.year - 2000
     schedule_list.to_csv('data/Schedule.csv')
 
 def create_results(league,season):
@@ -230,7 +230,7 @@ def get_shots(match):
     except:
         print(url)
 
-def summarize_matches(league,season_name,match_summaries):
+def summarize_matches(league,match_summaries):
     summary_data = []
     for i in match_summaries:
         temp = pd.read_feather(MATCH_DIR+'/'+str(i)+'.ftr')
@@ -238,8 +238,7 @@ def summarize_matches(league,season_name,match_summaries):
 
     summary_data = pd.concat(summary_data)
     summary_data['league'] = league
-    summary_data['season'] = season_name
-    summary_data.season = summary_data.season.str.split('/').str[1].astype('int')
+    summary_data['season'] = (summary_data.game_date.dt.month > 7).astype('int') + summary_data.game_date.dt.year - 2000
     return summary_data
 
 class ColumnRenamer:
@@ -319,7 +318,7 @@ def finalize_matches(summary_data,shot_data):
     match_stats.to_feather('data/match_stats.ftr')
 
 def run_pipeline():
-    create_schedule(league,season,season_name)
+    create_schedule(league,season)
     results_list = create_results(league,season)
     completed_results = [x.replace(".ftr", "") for x in os.listdir(MATCH_DIR) if ".ftr" in x]
     results_process = list(set(results_list) - set(completed_results))
@@ -343,7 +342,7 @@ def transform_final_dataset():
     match_summaries = [x.replace(".ftr", "") for x in os.listdir(MATCH_DIR) if ".ftr" in x]
     match_summaries = list(map(int,match_summaries))
     print(len(match_summaries))
-    match_stats = summarize_matches(league,season_name,match_summaries)
+    match_stats = summarize_matches(league,match_summaries)
     match_stats.match_id = match_stats.match_id.astype('int')
     
     player_stats = [x.replace(".ftr", "") for x in os.listdir(PLAYER_DIR) if ".ftr" in x]
