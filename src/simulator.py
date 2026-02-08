@@ -471,6 +471,7 @@ def run_main(update_rate = 2/38,n_sims = 10000):
     prev_sims = list(filter(lambda k: '.ftr' in k, prev_sims))
     prev_sims = pd.to_datetime(prev_sims).date
     sim_dates = sorted(list(set(past_dates) - set(prev_sims)))
+    print(len(past_dates,prev_sims,sim_dates))
     simulate_season(sim_dates,matches,tg,hf,n_sims,update_rate,team_ratings)
     simulate_matchups(sim_dates,matches,team_ratings,tg,hf,n_sims)
 
