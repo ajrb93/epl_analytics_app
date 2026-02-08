@@ -426,10 +426,12 @@ def simulate_season(sim_dates,matches,total_goals,home_field,n_sims,update_rate,
         sim_results.to_feather(f'data/Sim_States/{date}.ftr')
 
 def run_main(update_rate = 2/38,n_sims = 10000):
+    print('a')
     schedule = pd.read_csv('data/Schedule.csv')
     schedule.game_date = pd.to_datetime(pd.to_datetime(schedule.game_date,unit='s').dt.date)
     schedule.season = schedule.season.astype('str')
 
+    print('b')
     results = pd.read_feather('data/match_stats.ftr')
     results.game_date = pd.to_datetime(pd.to_datetime(results.game_date,unit='s').dt.date)
     results.season = results.season.astype('str')
@@ -439,15 +441,18 @@ def run_main(update_rate = 2/38,n_sims = 10000):
     results['home_perf'] = results.home_xg * 0.7 + results.home_score * 0.3
     results['away_perf'] = results.away_xg * 0.7 + results.away_score * 0.3
 
+    print('c')
     player_stats = pd.read_feather('data/player_stats.ftr')
 
     color_map = results[['home','home_primary','home_secondary','home_text']].drop_duplicates().sort_values('home').set_index('home').to_dict(orient='index')
 
+    print('d')
     initial_ratings = pd.read_csv('data/Initializations.txt')
     initial_ratings.season = initial_ratings.season.astype('int').astype('str')
     initial_ratings['WinRate'] = initial_ratings.apply(lambda row: team_rating(row['ORtg'], row['DRtg']), axis=1)
 
     ##'https://www.transfermarkt.com/major-league-soccer/marktwerteverein/wettbewerb/MLS1/plus/1?stichtag=2023-08-01'
+    print('e')
     transfer_values = pd.read_csv('data/TransferMarkt.txt')
     transfer_values.season = transfer_values.season.astype('str')
     transfer_values['mean'] = transfer_values.groupby('season').Value.transform('mean')
@@ -455,15 +460,18 @@ def run_main(update_rate = 2/38,n_sims = 10000):
     transfer_values.Value = (transfer_values.Value - transfer_values['mean'])/transfer_values['std']
     transfer_values.Value = (transfer_values.Value * 0.3 + 1.5)/3
 
+    print('f')
     hf, tg = calculate_parameters(results)
     results, standings = calculate_standings(results)
 
+    print('g')
     matches = pd.concat((results,schedule)).sort_values(['season','game_date'])
     season_mapping = matches[['season','game_date']].drop_duplicates()
     season_mapping = season_mapping.set_index('game_date').to_dict()['season']
     past_dates = define_dates_ratings(results)
     team_ratings = calculate_ratings(past_dates,transfer_values,initial_ratings,season_mapping,tg,hf,results,update_rate)
 
+    print('h')
     past_dates = define_dates_sims(results)
     prev_sims = os.listdir('data/Sim_States/')
     prev_sims = list(filter(lambda k: '_matches' not in k, prev_sims))
