@@ -3,6 +3,7 @@ import numpy as np
 import os
 from scipy.stats import skellam
 from scipy.optimize import minimize_scalar
+import pickle
 
 def calculate_parameters(results):
     results['hf'] = results.home_perf - results.away_perf
@@ -473,8 +474,11 @@ def run_main(update_rate = 2/38,n_sims = 10000):
     prev_sims = pd.to_datetime(prev_sims).date
     sim_dates = sorted(list(set(past_dates) - set(prev_sims)))
     print(len(past_dates),len(prev_sims),len(sim_dates))
-##    simulate_season(sim_dates,matches,tg,hf,n_sims,update_rate,team_ratings)
-##    simulate_matchups(sim_dates,matches,team_ratings,tg,hf,n_sims)
+    simulate_season(sim_dates,matches,tg,hf,n_sims,update_rate,team_ratings)
+    simulate_matchups(sim_dates,matches,team_ratings,tg,hf,n_sims)
+    matches.to_feather('data/matches.ftr')
+    pickle.dump(team_ratings, open('team_ratings', 'wb'))
+    standings.reset_index().to_feather('data/standings.ftr')
 
 if __name__ == "__main__":
     run_main()
