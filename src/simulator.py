@@ -3,7 +3,6 @@ import numpy as np
 import os
 from scipy.stats import skellam
 from scipy.optimize import minimize_scalar
-import pickle
 
 def calculate_parameters(results):
     results['hf'] = results.home_perf - results.away_perf
