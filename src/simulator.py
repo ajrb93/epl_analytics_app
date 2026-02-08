@@ -491,7 +491,7 @@ def run_main(update_rate = 2/38,n_sims = 10000):
     print(len(past_dates),len(prev_sims),len(sim_dates))
     simulate_season(sim_dates,matches,tg,hf,n_sims,update_rate,team_ratings)
     simulate_matchups(sim_dates,matches,team_ratings,tg,hf,n_sims)
-    matches.to_feather('data/matches.ftr')
+    matches.reset_index(drop=True).drop(columns = ['Unnamed: 0','league']).to_feather('data/matches.ftr')
     clean_team_ratings(team_ratings).to_feather('data/team_ratings.ftr')
     standings.reset_index().to_feather('data/standings.ftr')
 
