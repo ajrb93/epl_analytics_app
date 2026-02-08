@@ -426,6 +426,22 @@ def simulate_season(sim_dates,matches,total_goals,home_field,n_sims,update_rate,
                 
         sim_results.to_feather(f'data/Sim_States/{date}.ftr')
 
+def clean_team_ratings(team_ratings):
+    rows = []
+    for team, seasons in team_ratings.items():
+        for season, dates in seasons.items():
+            for date, values in dates.items():
+                rows.append({
+                    'Team': team,
+                    'Season': season,
+                    'Date': date,
+                    'A': values[0],
+                    'B': values[1],
+                    'C': values[2]
+                })
+    clean_team_ratings = pd.DataFrame(rows)
+    return clean_team_ratings
+
 def run_main(update_rate = 2/38,n_sims = 10000):
     schedule = pd.read_csv('data/Schedule.csv')
     schedule.game_date = pd.to_datetime(pd.to_datetime(schedule.game_date,unit='s').dt.date)
@@ -477,7 +493,7 @@ def run_main(update_rate = 2/38,n_sims = 10000):
     simulate_season(sim_dates,matches,tg,hf,n_sims,update_rate,team_ratings)
     simulate_matchups(sim_dates,matches,team_ratings,tg,hf,n_sims)
     matches.to_feather('data/matches.ftr')
-    pickle.dump(team_ratings, open('team_ratings', 'wb'))
+    clean_team_ratings(team_ratings).to_feather('data/team_ratings.ftr')
     standings.reset_index().to_feather('data/standings.ftr')
 
 if __name__ == "__main__":
