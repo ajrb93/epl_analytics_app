@@ -441,7 +441,7 @@ def run_main(update_rate = 2/38,n_sims = 10000):
 
     player_stats = pd.read_feather('data/player_stats.ftr')
 
-    color_map = results[['home','home_primary','home_secondary','home_text']].drop_duplicates().sort_values('home').set_index('home').to_dict(orient='index')
+    color_map = results[['home','home_primary','home_secondary','home_text']].drop_duplicates().sort_values('home').set_index('home')
     color_map.to_feather('data/color_map.ftr')
 
     initial_ratings = pd.read_csv('data/Initializations.txt')
