@@ -475,8 +475,8 @@ def run_main(update_rate = 2/38,n_sims = 10000):
     past_dates = define_dates_sims(results)
     prev_sims = os.listdir('data/Sim_States')
     prev_sims = list(filter(lambda k: '_matches' not in k, prev_sims))
-    prev_sims = [s.replace('.ftr', '') for s in prev_sims]
     prev_sims = list(filter(lambda k: '.ftr' in k, prev_sims))
+    prev_sims = [s.replace('.ftr', '') for s in prev_sims]
     prev_sims = pd.to_datetime(prev_sims).date
     sim_dates = sorted(list(set(past_dates) - set(prev_sims)))
     print(past_dates)
