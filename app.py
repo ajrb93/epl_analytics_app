@@ -100,20 +100,17 @@ st.markdown("""
         font-size: 8px !important;
     }
     
-    /* Target the canvas/data-grid specifically */
-    .stDataFrame div[data-testid="data-grid-canvas"] {
+    /* --- ST.TABLE (Streamlit 1.54) --- */
+    div[data-testid="stTable"] div[data-testid="stMarkdownContainer"] table {
         font-size: 8px !important;
-    }
-            
-    /* Target st.table specifically */
-    div[data-testid="stTable"] table {
-        font-size: 8px !important;
+        border-collapse: collapse !important;
     }
 
-    div[data-testid="stTable"] th,
-    div[data-testid="stTable"] td {
+    div[data-testid="stTable"] div[data-testid="stMarkdownContainer"] th,
+    div[data-testid="stTable"] div[data-testid="stMarkdownContainer"] td {
         font-size: 8px !important;
         padding: 2px 4px !important;
+        line-height: 1.1 !important;
     }
     </style>
     """, unsafe_allow_html=True)
