@@ -33,7 +33,7 @@ st.markdown("""
     .stDataFrame div { font-size: 10px !important; }
     
     /* Condense Expander headers */
-    div[data-testid="stExpander"] div[role="button"] p { font-size: 12px !important; font-weight: bold; }
+    div[data-testid="stExpander"] div[role="button"] p { font-size: 14px !important; font-weight: bold; }
     
     /* Reduce gap between elements */
     [data-testid="stVerticalBlock"] { gap: 0.2rem !important; }
@@ -88,7 +88,9 @@ def create_standings_file(standings,standings_sims,team_ratings,season,max_date,
     temp = temp.merge(temp_sim.reset_index(),left_on='F',right_on='index').merge(temp_sim2.reset_index(),left_on='F',right_on='index',suffixes=['','_c']).merge(
         temp_sim3.reset_index(),left_on='F',right_on='Team').merge(temp_sim4.reset_index(),left_on='F',right_on='Team',suffixes=['','_c'])
     temp = temp[['season','Team','F_score','F_xg','oRTG','A','A_c','A_score','A_xg','dRTG','B','B_c','GD','xGD','F_P','F_xPts','nRTG',
-                 'Points','Points_c','C','C_c','Champ','Champ_c','CL','CL_c','Rel','Rel_c','range']]
+                 'Points','Points_c','C','C_c','Champ','Champ_c','CL','CL_c','Rel','Rel_c','range']].rename(
+                     columns={'F_score':'G','F_xg':'xG','A':'oPRE','A_c':'oPREΔ','A_score':'A','A_xg':'xGA','B':'dPRE','B_c':'dPREΔ','F_P':'P','F_xPts':'xPts',
+                              'Points':'Proj','Points_c':'ProjΔ','C':'nPRE','C_c':'nPREΔ'})
     return temp
 
 standings = pd.read_feather('data/standings.ftr')
@@ -120,10 +122,10 @@ with tab_standings:
             selected_end_date = st.selectbox("Select Date",options=dates,index=0, key="end_date_picker",label_visibility='collapsed')
         with subcol3:
             start_dates = sorted(standings_sims[(standings_sims['season'] == selected_season) & (standings_sims['Sim_Date'] < selected_end_date)]['Sim_Date'].unique(),reverse=True)
-            selected_start_date = st.selectbox("Select Relative Date",options=start_dates,index=0, key='start_date_picker',label_visibility='collapsed')
+            selected_start_date = st.selectbox("Select Relative Date",options=start_dates,index=-1, key='start_date_picker',label_visibility='collapsed')
 
         st.markdown("### Standings")
         standings_df = create_standings_file(standings,standings_sims,team_ratings,selected_season,selected_end_date,selected_start_date).sort_values('Points',ascending=False)
-        st.dataframe(standings_df,hide_index=True, use_container_width=True, height=180)
+        st.dataframe(standings_df.drop(columns=['season']),hide_index=True, use_container_width=True, height=180)
 
 
