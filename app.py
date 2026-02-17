@@ -8,64 +8,104 @@ st.set_page_config(layout="wide", page_title="English Premier League")
 
 # CUSTOM CSS: Shrinks headers, table padding, and overall container gaps
 st.markdown("""
-<style>
-
-/* -------------------- */
-/* TABS = 12px */
-/* -------------------- */
-button[data-baseweb="tab"] {
-    font-size: 12px !important;
-    font-weight: 600 !important;
-}
-
-/* -------------------- */
-/* SELECTBOXES = 10px */
-/* -------------------- */
-
-/* Selected value */
-div[data-baseweb="select"] > div {
-    font-size: 10px !important;
-    min-height: 28px !important;
-}
-
-/* Dropdown menu items */
-div[role="listbox"] li {
-    font-size: 10px !important;
-}
-
-/* -------------------- */
-/* DATAFRAMES = 8px */
-/* -------------------- */
-
-/* Entire dataframe container */
-div[data-testid="stDataFrame"] {
-    font-size: 8px !important;
-}
-
-/* Header cells */
-div[data-testid="stDataFrame"] [role="columnheader"] {
-    font-size: 8px !important;
-    padding: 2px 4px !important;
-}
-
-/* Data cells */
-div[data-testid="stDataFrame"] [role="gridcell"] {
-    font-size: 8px !important;
-    padding: 2px 4px !important;
-}
-
-/* Remove extra row height */
-div[data-testid="stDataFrame"] div[role="row"] {
-    min-height: 20px !important;
-}
-
-/* Remove excessive padding around dataframe */
-div[data-testid="stDataFrame"] > div {
-    padding: 0px !important;
-}
-
-</style>
-""", unsafe_allow_html=True)
+    <style>
+    /* Reduce top/side margins */
+    .block-container {
+        padding-top: 2rem !important; 
+        padding-bottom: 0rem !important; 
+        padding-left: 1rem !important; 
+        padding-right: 1rem !important;
+    }
+    
+    /* Tab labels */
+    button[data-baseweb="tab"] p {
+        font-size: 12px !important;
+        font-weight: bold !important;
+    }
+    
+    /* Expander headers */
+    .streamlit-expanderHeader {
+        font-size: 10px !important;
+        padding-top: 1px !important;
+        padding-bottom: 1px !important;
+    }
+    
+    div[data-testid="stExpander"] div[role="button"] p { 
+        font-size: 12px !important; 
+        font-weight: bold !important; 
+    }
+    
+    /* Headers */
+    h1 { 
+        font-size: 12px !important; 
+        margin-bottom: 0.2rem !important; 
+    }
+    
+    h3 { 
+        font-size: 12px !important; 
+        margin-top: 0.2rem !important; 
+        margin-bottom: 0.2rem !important; 
+    }
+    
+    /* Reduce gap between elements */
+    [data-testid="stVerticalBlock"] > [style*="flex-direction: column;"] > [data-testid="stVerticalBlock"] {
+        gap: 0.2rem !important;
+    }
+    
+    /* DATAFRAME STYLING - More aggressive */
+    
+    /* Target the entire dataframe container */
+    [data-testid="stDataFrame"] {
+        font-size: 8px !important;
+    }
+    
+    /* Target all text within dataframe */
+    [data-testid="stDataFrame"] * {
+        font-size: 8px !important;
+    }
+    
+    /* Table cells - reduce padding and font size */
+    [data-testid="stDataFrame"] table tbody tr td,
+    [data-testid="stDataFrame"] table thead tr th {
+        font-size: 8px !important;
+        padding: 2px 2px !important;
+        line-height: 1 !important;
+    }
+    
+    /* Header cells specifically */
+    [data-testid="stDataFrame"] table thead tr th {
+        font-size: 8px !important;
+        font-weight: 600 !important;
+        padding: 2px 2px !important;
+    }
+    
+    /* Column headers in the dataframe */
+    [data-testid="stDataFrame"] [role="columnheader"] {
+        font-size: 8px !important;
+        padding: 2px 2px !important;
+    }
+    
+    /* Data cells */
+    [data-testid="stDataFrame"] [role="gridcell"] {
+        font-size: 8px !important;
+        padding: 2px 2px !important;
+    }
+    
+    /* Remove extra spacing from dataframe wrapper */
+    .stDataFrame {
+        font-size: 8px !important;
+    }
+    
+    .stDataFrame > div {
+        font-size: 8px !important;
+    }
+    
+    /* Target the canvas/data-grid specifically */
+    .stDataFrame div[data-testid="data-grid-canvas"] {
+        font-size: 8px !important;
+    }
+    </style>
+    """, unsafe_allow_html=True)
 
 # Load All Data
 def credible_range_str(row, level=0.9):
@@ -154,4 +194,5 @@ with tab_standings:
 
     with col2:
         standings_df = create_standings_file(standings,standings_sims,team_ratings,selected_season,selected_end_date,selected_start_date).sort_values(['P','GD'],ascending=False)
-        st.dataframe(standings_df.drop(columns='season').style.format(fmt_dict),hide_index=True, use_container_width=True, height=520)
+        st.dataframe(standings_df.drop(columns='season').style.format(fmt_dict).set_properties(**{'font-size': '8px','padding': '2px 2px'
+                                                                                                  }),hide_index=True, use_container_width=True, height=520)
