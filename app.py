@@ -156,7 +156,8 @@ def create_standings_file(standings,standings_sims,team_ratings,season,max_date,
         temp_sim3.reset_index(),left_on='F',right_on='Team').merge(temp_sim4.reset_index(),left_on='F',right_on='Team',suffixes=['','_c'])
     temp = temp[['season','Team','C','C_c','A','A_c','B','B_c','nRTG','oRTG','dRTG','Points','Points_c','F_P','F_xPts','GD','xGD','Champ','Champ_c','CL','CL_c','Rel',
                  'Rel_c','range']].rename(
-                     columns={'A':'oPRE','A_c':'oPREΔ','B':'dPRE','B_c':'dPREΔ','F_P':'P','F_xPts':'xPts','Points':'Proj','Points_c':'ProjΔ','C':'nPRE','C_c':'nPREΔ'})
+                     columns={'A':'oPRE','A_c':'oPREΔ','B':'dPRE','B_c':'dPREΔ','F_P':'P','F_xPts':'xPts','Points':'Proj','Points_c':'ProjΔ','C':'nPRE','C_c':'nPREΔ',
+                               'Champ':'Win','Champ_c':'WinΔ','CL_c':'CLΔ','Rel_c':'RelΔ'})
     return temp
 
 standings = pd.read_feather('data/standings.ftr')
@@ -170,9 +171,8 @@ team_ratings[['A','B','C']] = team_ratings.groupby(['Season','Team'])[['A','B','
 standings_sims = load_standings_sims()
 
 # Formatting Helper: 1 decimal for FPoints, 0 for the rest
-fmt_dict = {'nPRE': '{:.1%}', 'nPREΔ': '{:.1%}', 'oPRE': '{:.2f}','oPREΔ':'{:.1%}', 'dPRE': '{:.2f}','dPREΔ':'{:.1%}','nRTG':'{:.2f}','oRTG':'{:.2f}','dRTG':'{:.2f}',
-            'Proj':'{:.1f}','ProjΔ':'{:.1f}',
-             'xGD': '{:.1f}', 'xPts': '{:.1f}',}
+fmt_dict = {'nPRE': '{:.1%}', 'nPREΔ': '{:.1%}', 'oPRE': '{:.2f}','oPREΔ':'{:.0%}', 'dPRE': '{:.2f}','dPREΔ':'{:.0%}','nRTG':'{:.2f}','oRTG':'{:.2f}','dRTG':'{:.2f}',
+            'Proj':'{:.1f}','ProjΔ':'{:.1f}','xGD': '{:.1f}', 'xPts': '{:.1f}','Win':'{:.0%}','WinΔ':'{:.0%}','CL':'{:.0%}','CLΔ':'{:.0%}','Rel':'{:.0%}','RelΔ':'{:.0%}'}
 
 # --- MAIN DASHBOARD ---
 tab_standings, tab_team = st.tabs([f"Standings", "Team Profile"])
@@ -193,5 +193,5 @@ with tab_standings:
             selected_start_date = st.selectbox("Select Relative Date",options=start_dates,index=len(start_dates)-1, key='start_date_picker',label_visibility='collapsed')
 
     with col2:
-        standings_df = create_standings_file(standings,standings_sims,team_ratings,selected_season,selected_end_date,selected_start_date).sort_values('P',ascending=False)
-        st.dataframe(standings_df.drop(columns='season').style.format(fmt_dict),hide_index=True, use_container_width=True, height=540)
+        standings_df = create_standings_file(standings,standings_sims,team_ratings,selected_season,selected_end_date,selected_start_date).sort_values(['P','GD'],ascending=False)
+        st.dataframe(standings_df.drop(columns='season').style.format(fmt_dict),hide_index=True, use_container_width=True, height=560)
