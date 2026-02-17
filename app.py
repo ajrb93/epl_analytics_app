@@ -10,61 +10,100 @@ st.set_page_config(layout="wide", page_title="English Premier League")
 st.markdown("""
     <style>
     /* Reduce top/side margins */
-    .block-container {padding-top: 2.8rem; padding-bottom: 0rem; padding-left: 1rem; padding-right: 2rem;}
-            
-    /* Make dataframe text smaller */
-    .stDataFrame, .stDataFrame * {
-        font-size: 9px !important;
+    .block-container {
+        padding-top: 2.8rem !important; 
+        padding-bottom: 0rem !important; 
+        padding-left: 1rem !important; 
+        padding-right: 2rem !important;
     }
     
-    /* Also target the table cells directly */
-    [data-testid="stDataFrame"] table {
-        font-size: 9px !important;
-    }
-    
-    [data-testid="stDataFrame"] th,
-    [data-testid="stDataFrame"] td {
-        font-size: 9px !important;
-        padding: 2px 4px !important;
-    }
-            
-    /* Reduce cell padding in dataframes */
-    [data-testid="stDataFrame"] td,
-    [data-testid="stDataFrame"] th {
-        padding: 1px 3px !important;
-        font-size: 9px !important;
-        line-height: 1.2 !important;
-    }
-    /* Make header text smaller too */
-    [data-testid="stDataFrame"] th {
-        font-size: 9px !important;
-        font-weight: 600 !important;}
-            
-    /* Ensure the Tab labels stay readable */
+    /* Tab labels */
     button[data-baseweb="tab"] p {
         font-size: 14px !important;
         font-weight: bold !important;
     }
-            
-    /* Shrinks the expander header text and reduces the vertical padding */
-            .streamlit-expanderHeader {
-            font-size: 12px !important;
-            padding-top: 1px !important;
-            padding-bottom: 1px !important;
+    
+    /* Expander headers */
+    .streamlit-expanderHeader {
+        font-size: 12px !important;
+        padding-top: 1px !important;
+        padding-bottom: 1px !important;
     }
-            
-    /* Shrink Header sizes */
-    h1 { font-size: 14px !important; margin-bottom: 0.2rem !important; }
-    h3 { font-size: 14px !important; margin-top: 0.2rem !important; margin-bottom: 0.2rem !important; }
     
-    /* Global font size for Dataframes */
-    .stDataFrame div { font-size: 9px !important; }
+    div[data-testid="stExpander"] div[role="button"] p { 
+        font-size: 14px !important; 
+        font-weight: bold !important; 
+    }
     
-    /* Condense Expander headers */
-    div[data-testid="stExpander"] div[role="button"] p { font-size: 14px !important; font-weight: bold; }
+    /* Headers */
+    h1 { 
+        font-size: 14px !important; 
+        margin-bottom: 0.2rem !important; 
+    }
+    
+    h3 { 
+        font-size: 14px !important; 
+        margin-top: 0.2rem !important; 
+        margin-bottom: 0.2rem !important; 
+    }
     
     /* Reduce gap between elements */
-    [data-testid="stVerticalBlock"] { gap: 0.2rem !important; }
+    [data-testid="stVerticalBlock"] > [style*="flex-direction: column;"] > [data-testid="stVerticalBlock"] {
+        gap: 0.2rem !important;
+    }
+    
+    /* DATAFRAME STYLING - More aggressive */
+    
+    /* Target the entire dataframe container */
+    [data-testid="stDataFrame"] {
+        font-size: 9px !important;
+    }
+    
+    /* Target all text within dataframe */
+    [data-testid="stDataFrame"] * {
+        font-size: 9px !important;
+    }
+    
+    /* Table cells - reduce padding and font size */
+    [data-testid="stDataFrame"] table tbody tr td,
+    [data-testid="stDataFrame"] table thead tr th {
+        font-size: 9px !important;
+        padding: 2px 4px !important;
+        line-height: 1.1 !important;
+    }
+    
+    /* Header cells specifically */
+    [data-testid="stDataFrame"] table thead tr th {
+        font-size: 9px !important;
+        font-weight: 600 !important;
+        padding: 3px 4px !important;
+    }
+    
+    /* Column headers in the dataframe */
+    [data-testid="stDataFrame"] [role="columnheader"] {
+        font-size: 9px !important;
+        padding: 2px 4px !important;
+    }
+    
+    /* Data cells */
+    [data-testid="stDataFrame"] [role="gridcell"] {
+        font-size: 9px !important;
+        padding: 2px 4px !important;
+    }
+    
+    /* Remove extra spacing from dataframe wrapper */
+    .stDataFrame {
+        font-size: 9px !important;
+    }
+    
+    .stDataFrame > div {
+        font-size: 9px !important;
+    }
+    
+    /* Target the canvas/data-grid specifically */
+    .stDataFrame div[data-testid="data-grid-canvas"] {
+        font-size: 9px !important;
+    }
     </style>
     """, unsafe_allow_html=True)
 
