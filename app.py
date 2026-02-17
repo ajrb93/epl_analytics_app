@@ -154,10 +154,9 @@ def create_standings_file(standings,standings_sims,team_ratings,season,max_date,
     temp_sim4 = temp_sim3 - temp_sim4
     temp = temp.merge(temp_sim.reset_index(),left_on='F',right_on='index').merge(temp_sim2.reset_index(),left_on='F',right_on='index',suffixes=['','_c']).merge(
         temp_sim3.reset_index(),left_on='F',right_on='Team').merge(temp_sim4.reset_index(),left_on='F',right_on='Team',suffixes=['','_c'])
-    temp = temp[['season','Team','F_score','F_xg','oRTG','A','A_c','A_score','A_xg','dRTG','B','B_c','GD','xGD','F_P','F_xPts','nRTG',
-                 'Points','Points_c','C','C_c','Champ','Champ_c','CL','CL_c','Rel','Rel_c','range']].rename(
-                     columns={'F_score':'G','F_xg':'xG','A':'oPRE','A_c':'oPREΔ','A_score':'A','A_xg':'xGA','B':'dPRE','B_c':'dPREΔ','F_P':'P','F_xPts':'xPts',
-                              'Points':'Proj','Points_c':'ProjΔ','C':'nPRE','C_c':'nPREΔ'})
+    temp = temp[['season','Team','C','C_c','A','A_c','B','B_c','nRTG','oRTG','dRTG','Points','Points_c','F_P','F_xPts','GD','xGD','Champ','Champ_c','CL','CL_c','Rel',
+                 'Rel_c','range']].rename(
+                     columns={'A':'oPRE','A_c':'oPREΔ','B':'dPRE','B_c':'dPREΔ','F_P':'P','F_xPts':'xPts','Points':'Proj','Points_c':'ProjΔ','C':'nPRE','C_c':'nPREΔ'})
     return temp
 
 standings = pd.read_feather('data/standings.ftr')
@@ -177,7 +176,7 @@ fmt_dict = {'xG': '{:.1f}', 'xGA': '{:.1f}', 'oPRE': '{:.2f}', 'dPRE': '{:.2f}',
 tab_standings, tab_team = st.tabs([f"Standings", "Team Profile"])
 
 with tab_standings:
-    col1, col2 = st.columns([3,2])
+    col1, col2 = st.columns([2,3])
     # --- COLUMN 1: LEFT ---
     with col1:
         subcol1, subcol2, subcol3 = st.columns([1,1,1])
@@ -191,7 +190,6 @@ with tab_standings:
             start_dates = sorted(standings_sims[(standings_sims['season'] == selected_season) & (standings_sims['Sim_Date'] < selected_end_date)]['Sim_Date'].unique(),reverse=True)
             selected_start_date = st.selectbox("Select Relative Date",options=start_dates,index=len(start_dates)-1, key='start_date_picker',label_visibility='collapsed')
 
-        st.markdown("### Standings")
+    with col2:
         standings_df = create_standings_file(standings,standings_sims,team_ratings,selected_season,selected_end_date,selected_start_date).sort_values('P',ascending=False)
-        st.dataframe(standings_df.drop(columns=['season']).style.format(fmt_dict),
-                     hide_index=True, use_container_width=True, height=500)
+        st.dataframe(standings_df.style.format(fmt_dict),hide_index=True, use_container_width=True, height=540)
