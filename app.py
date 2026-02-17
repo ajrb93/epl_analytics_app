@@ -104,6 +104,17 @@ st.markdown("""
     .stDataFrame div[data-testid="data-grid-canvas"] {
         font-size: 8px !important;
     }
+            
+    /* Target st.table specifically */
+    div[data-testid="stTable"] table {
+        font-size: 8px !important;
+    }
+
+    div[data-testid="stTable"] th,
+    div[data-testid="stTable"] td {
+        font-size: 8px !important;
+        padding: 2px 4px !important;
+    }
     </style>
     """, unsafe_allow_html=True)
 
@@ -194,5 +205,4 @@ with tab_standings:
 
     with col2:
         standings_df = create_standings_file(standings,standings_sims,team_ratings,selected_season,selected_end_date,selected_start_date).sort_values(['P','GD'],ascending=False)
-        st.table(standings_df.drop(columns='season').style.format(fmt_dict).set_properties(**{'font-size': '8px','padding': '2px 2px'
-                                                                                                  }))
+        st.table(standings_df.drop(columns='season').style.format(fmt_dict))
