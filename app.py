@@ -122,10 +122,8 @@ with tab_standings:
             selected_end_date = st.selectbox("Select Date",options=dates,index=0, key="end_date_picker",label_visibility='collapsed')
         with subcol3:
             start_dates = sorted(standings_sims[(standings_sims['season'] == selected_season) & (standings_sims['Sim_Date'] < selected_end_date)]['Sim_Date'].unique(),reverse=True)
-            selected_start_date = st.selectbox("Select Relative Date",options=start_dates,index=-1, key='start_date_picker',label_visibility='collapsed')
+            selected_start_date = st.selectbox("Select Relative Date",options=start_dates,index=len(start_dates), key='start_date_picker',label_visibility='collapsed')
 
         st.markdown("### Standings")
         standings_df = create_standings_file(standings,standings_sims,team_ratings,selected_season,selected_end_date,selected_start_date).sort_values('Points',ascending=False)
-        st.dataframe(standings_df.drop(columns=['season']),hide_index=True, use_container_width=True, height=180)
-
-
+        st.dataframe(standings_df.drop(columns=['season']),hide_index=True, width=True, height=180)
