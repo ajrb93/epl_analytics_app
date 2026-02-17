@@ -12,6 +12,34 @@ st.markdown("""
     /* Reduce top/side margins */
     .block-container {padding-top: 2.8rem; padding-bottom: 0rem; padding-left: 1rem; padding-right: 2rem;}
             
+    /* Make dataframe text smaller */
+    .stDataFrame, .stDataFrame * {
+        font-size: 9px !important;
+    }
+    
+    /* Also target the table cells directly */
+    [data-testid="stDataFrame"] table {
+        font-size: 9px !important;
+    }
+    
+    [data-testid="stDataFrame"] th,
+    [data-testid="stDataFrame"] td {
+        font-size: 9px !important;
+        padding: 2px 4px !important;
+    }
+            
+    /* Reduce cell padding in dataframes */
+    [data-testid="stDataFrame"] td,
+    [data-testid="stDataFrame"] th {
+        padding: 1px 3px !important;
+        font-size: 9px !important;
+        line-height: 1.2 !important;
+    }
+    /* Make header text smaller too */
+    [data-testid="stDataFrame"] th {
+        font-size: 9px !important;
+        font-weight: 600 !important;}
+            
     /* Ensure the Tab labels stay readable */
     button[data-baseweb="tab"] p {
         font-size: 14px !important;
@@ -30,7 +58,7 @@ st.markdown("""
     h3 { font-size: 14px !important; margin-top: 0.2rem !important; margin-bottom: 0.2rem !important; }
     
     /* Global font size for Dataframes */
-    .stDataFrame div { font-size: 10px !important; }
+    .stDataFrame div { font-size: 9px !important; }
     
     /* Condense Expander headers */
     div[data-testid="stExpander"] div[role="button"] p { font-size: 14px !important; font-weight: bold; }
@@ -104,13 +132,13 @@ team_ratings[['A','B','C']] = team_ratings.groupby(['Season','Team'])[['A','B','
 standings_sims = load_standings_sims()
 
 # Formatting Helper: 1 decimal for FPoints, 0 for the rest
-##fmt_dict = {'FPoints': '{:.1f}', 'g': '{:.0f}', 'a': '{:.0f}', 'gwg': '{:.0f}'}
+fmt_dict = {'xG': '{:.1f}', 'xGA': '{:.1f}', 'oPRE': '{:.2f}', 'dPRE': '{:.2f}', 'xGD': '{:.1f}', 'xPts': '{:.1f}','Proj':'{:.1f}'}
 
 # --- MAIN DASHBOARD ---
 tab_standings, tab_team = st.tabs([f"Standings", "Team Profile"])
 
 with tab_standings:
-    col1, col2 = st.columns([3,1])
+    col1, col2 = st.columns([3,2])
     # --- COLUMN 1: LEFT ---
     with col1:
         subcol1, subcol2, subcol3 = st.columns([1,1,1])
@@ -126,4 +154,5 @@ with tab_standings:
 
         st.markdown("### Standings")
         standings_df = create_standings_file(standings,standings_sims,team_ratings,selected_season,selected_end_date,selected_start_date).sort_values('P',ascending=False)
-        st.dataframe(standings_df.drop(columns=['season']),hide_index=True, use_container_width=True, height=180)
+        st.dataframe(standings_df.drop(columns=['season']).style.format(fmt_dict),
+                     hide_index=True, use_container_width=True, height=540)
