@@ -1,6 +1,5 @@
 pandas
 numpy
-os
 collections
 json
 bs4
