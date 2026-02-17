@@ -110,7 +110,7 @@ standings_sims = load_standings_sims()
 tab_standings, tab_team = st.tabs([f"Standings", "Team Profile"])
 
 with tab_standings:
-    col1, col2 = st.columns([2,2])
+    col1, col2 = st.columns([3,1])
     # --- COLUMN 1: LEFT ---
     with col1:
         subcol1, subcol2, subcol3 = st.columns([1,1,1])
@@ -126,4 +126,4 @@ with tab_standings:
 
         st.markdown("### Standings")
         standings_df = create_standings_file(standings,standings_sims,team_ratings,selected_season,selected_end_date,selected_start_date).sort_values('P',ascending=False)
-        st.dataframe(standings_df.drop(columns=['season']),hide_index=True, width=True, height=180)
+        st.dataframe(standings_df.drop(columns=['season']),hide_index=True, use_container_width=True, height=180)
