@@ -170,7 +170,9 @@ team_ratings[['A','B','C']] = team_ratings.groupby(['Season','Team'])[['A','B','
 standings_sims = load_standings_sims()
 
 # Formatting Helper: 1 decimal for FPoints, 0 for the rest
-fmt_dict = {'xG': '{:.1f}', 'xGA': '{:.1f}', 'oPRE': '{:.2f}', 'dPRE': '{:.2f}', 'xGD': '{:.1f}', 'xPts': '{:.1f}','Proj':'{:.1f}','oRTG':'{:.2f}','dRTG':'{:.2f}'}
+fmt_dict = {'nPRE': '{:.1%}', 'nPREΔ': '{:.1%}', 'oPRE': '{:.2f}','oPREΔ':'{:.1%}', 'dPRE': '{:.2f}','dPREΔ':'{:.1%}','nRTG':'{:.2f}','oRTG':'{:.2f}','dRTG':'{:.2f}',
+            'Proj':'{:.1f}','ProjΔ':'{:.1f}',
+             'xGD': '{:.1f}', 'xPts': '{:.1f}',}
 
 # --- MAIN DASHBOARD ---
 tab_standings, tab_team = st.tabs([f"Standings", "Team Profile"])
@@ -192,4 +194,4 @@ with tab_standings:
 
     with col2:
         standings_df = create_standings_file(standings,standings_sims,team_ratings,selected_season,selected_end_date,selected_start_date).sort_values('P',ascending=False)
-        st.dataframe(standings_df.style.format(fmt_dict),hide_index=True, use_container_width=True, height=540)
+        st.dataframe(standings_df.drop(columns='season').style.format(fmt_dict),hide_index=True, use_container_width=True, height=540)
