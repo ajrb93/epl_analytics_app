@@ -113,19 +113,15 @@ def show_standings_table(df, fmt_dict):
         resizable=True,
         sortable=True,
         filterable=False,
-        cellStyle={'fontSize': '9px', 'padding': '2px 2px'},
+        cellStyle={'fontSize': '11px', 'padding': '2px 2px'},
+        headerComponentParams={'template': '<div style="font-size:11px; font-weight:bold;">$col.displayName</div>'},
         suppressMenu=True,
-        width=60  # narrow default width to fit all columns
+        width=100  # narrow default width to fit all columns
     )
     
     # Freeze team column and give it more space
-    gb.configure_column('Team', pinned='left', width=110, cellStyle={'fontSize': '9px', 'fontWeight': 'bold', 'padding': '2px 2px'})
+    gb.configure_column('Team', pinned='left', width=110, cellStyle={'fontSize': '11px', 'fontWeight': 'bold', 'padding': '2px 2px'})
     
-    # Slightly wider for certain columns
-    for col in ['range', 'nRTG', 'oRTG', 'dRTG']:
-        if col in display_df.columns:
-            gb.configure_column(col, width=75)
-
     grid_options = gb.build()
     
     # Override to fit all columns in available width
