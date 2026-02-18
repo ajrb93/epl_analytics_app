@@ -130,8 +130,8 @@ def show_standings_table(df, fmt_dict):
     
     # Override to fit all columns in available width
     grid_options['suppressSizeToFit'] = False
-    grid_options['rowHeight'] = 15
-    grid_options['headerHeight'] = 10
+    grid_options['rowHeight'] = 25
+    grid_options['headerHeight'] = 25
 
     AgGrid(
         display_df,
