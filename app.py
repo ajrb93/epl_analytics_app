@@ -127,11 +127,17 @@ def show_standings_table(df, fmt_dict):
     grid_options['suppressSizeToFit'] = False
     grid_options['rowHeight'] = 25
     grid_options['headerHeight'] = 30
-    grid_options['defaultColDef'] = {**grid_options.get('defaultColDef', {}),'headerComponentParams': {
-        'template': '<span style="font-size:9px; font-weight:bold;">$col.displayName</span>'}}
-    for col in grid_options['columnDefs']:
-        col['headerStyle'] = {'fontSize': '9px', 'fontWeight': 'bold'}
-
+    grid_options['defaultColDef'] = {
+        **grid_options.get('defaultColDef', {}),
+        'headerComponentParams': {
+            'template': '''<div class="ag-cell-label-container" role="presentation">
+                <div ref="eLabel" class="ag-header-cell-label" role="presentation">
+                    <span ref="eText" class="ag-header-cell-text" style="font-size:9px; font-weight:bold;"></span>
+                </div>
+            </div>'''
+        }
+    }
+    
     AgGrid(
         display_df,
         gridOptions=grid_options,
