@@ -119,7 +119,7 @@ def show_standings_table(df, fmt_dict):
     )
     
     # Freeze team column and give it more space
-    gb.configure_column('Team', pinned='left', width=340, cellStyle={'fontSize': '10px',"font-weight": "bold", 'padding': '0.5px 0.5px'})
+    gb.configure_column('Team', pinned='left', width=300, cellStyle={'fontSize': '10px',"font-weight": "bold", 'padding': '0.5px 0.5px'})
     
     grid_options = gb.build()
     
@@ -161,7 +161,7 @@ fmt_dict = {'nPRE': '{:.1%}', 'nPREΔ': '{:.1%}', 'oPRE': '{:.2f}','oPREΔ':'{:.
 tab_standings, tab_team = st.tabs([f"Standings", "Team Profile"])
 
 with tab_standings:
-    col1, col2 = st.columns([1,2])
+    col1, col2 = st.columns([2.5,1])
     # --- COLUMN 1: LEFT ---
     with col1:
         subcol1, subcol2, subcol3 = st.columns([1,1,1])
@@ -175,6 +175,5 @@ with tab_standings:
             start_dates = sorted(standings_sims[(standings_sims['season'] == selected_season) & (standings_sims['Sim_Date'] < selected_end_date)]['Sim_Date'].unique(),reverse=True)
             selected_start_date = st.selectbox("Select Relative Date",options=start_dates,index=len(start_dates)-1, key='start_date_picker',label_visibility='collapsed')
 
-    with col2:
         standings_df = create_standings_file(standings,standings_sims,team_ratings,selected_season,selected_end_date,selected_start_date).sort_values(['P','GD'],ascending=False)
         show_standings_table(standings_df.drop(columns='season'), fmt_dict)
