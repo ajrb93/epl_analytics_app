@@ -31,28 +31,6 @@ st.markdown("""
         font-size: 12px !important; 
         font-weight: bold !important; 
     }
-            
-    /* AG Grid */
-    .ag-theme-streamlit .ag-row {
-        height: 15px !important;
-        min-height: 15px !important;
-    }
-    .ag-theme-streamlit .ag-cell {
-        line-height: 15px !important;
-        padding-top: 0px !important;
-        padding-bottom: 0px !important;
-        font-size: 11px !important;
-    }
-    .ag-theme-streamlit .ag-header-cell-text {
-        font-size: 4px !important;
-        font-weight: bold !important;
-    }
-    .ag-theme-streamlit .ag-header-row {
-        height: 15px !important;
-    }
-    .ag-theme-streamlit .ag-header {
-        min-height: 15px !important;
-    }
     </style>
 """, unsafe_allow_html=True)
 
@@ -135,7 +113,7 @@ def show_standings_table(df, fmt_dict):
         resizable=True,
         sortable=True,
         filterable=False,
-        cellStyle={'fontSize': '9px', 'padding': '0.5px 0.5px'},
+        cellStyle={'fontSize': '10px', 'padding': '0.5px 0.5px'},
         custom_css = {".ag-header-cell-text": {"font-size": "4px !important"},
                       ".ag-header-row": {"height": "25px !important"},
                       ".ag-header": {"min-height": "25px !important"},
@@ -146,12 +124,14 @@ def show_standings_table(df, fmt_dict):
     )
     
     # Freeze team column and give it more space
-    gb.configure_column('Team', pinned='left', width=350, cellStyle={'fontSize': '10px',"font-weight": "bold", 'padding': '0.5px 0.5px'})
+    gb.configure_column('Team', pinned='left', width=320, cellStyle={'fontSize': '10px',"font-weight": "bold", 'padding': '0.5px 0.5px'})
     
     grid_options = gb.build()
     
     # Override to fit all columns in available width
     grid_options['suppressSizeToFit'] = False
+    grid_options['rowHeight'] = 15
+    grid_options['headerHeight'] = 10
 
     AgGrid(
         display_df,
