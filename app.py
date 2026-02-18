@@ -126,7 +126,7 @@ def show_standings_table(df, fmt_dict):
     # Override to fit all columns in available width
     grid_options['suppressSizeToFit'] = False
     grid_options['rowHeight'] = 25
-    grid_options['headerHeight'] = 30
+    grid_options['headerHeight'] = 20
     grid_options['defaultColDef'] = {
         **grid_options.get('defaultColDef', {}),
         'wrapHeaderText': True,
