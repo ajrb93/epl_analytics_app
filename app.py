@@ -139,7 +139,7 @@ def show_standings_table(df, fmt_dict):
         fit_columns_on_grid_load=True,
         allow_unsafe_jscode=True,
         rowHeight = 5,
-        theme='streamlit'  # matches streamlit's look
+        theme='alpine'  # matches streamlit's look
     )
 
 standings = pd.read_feather('data/standings.ftr')
