@@ -113,14 +113,14 @@ def show_standings_table(df, fmt_dict):
         resizable=True,
         sortable=True,
         filterable=False,
-        cellStyle={'fontSize': '10px', 'padding': '2px 2px'},
+        cellStyle={'fontSize': '10px', 'padding': '0.5px 0.5px'},
         custom_css = {".ag-header-cell-text": {"font-size": "10px !important","font-weight": "bold !important"}},
         suppressMenu=True,
         width=100  # narrow default width to fit all columns
     )
     
     # Freeze team column and give it more space
-    gb.configure_column('Team', pinned='left', width=250, cellStyle={'fontSize': '10px', 'fontWeight': 'bold', 'padding': '2px 2px'})
+    gb.configure_column('Team', pinned='left', width=350, cellStyle={'fontSize': '10px', 'padding': '0.5px 0.5px'})
     
     grid_options = gb.build()
     
@@ -134,6 +134,7 @@ def show_standings_table(df, fmt_dict):
         width='100%',
         fit_columns_on_grid_load=True,
         allow_unsafe_jscode=True,
+        rowHeight = 25,
         theme='streamlit'  # matches streamlit's look
     )
 
@@ -149,7 +150,8 @@ standings_sims = load_standings_sims()
 
 # Formatting Helper: 1 decimal for FPoints, 0 for the rest
 fmt_dict = {'nPRE': '{:.1%}', 'nPREΔ': '{:.1%}', 'oPRE': '{:.2f}','oPREΔ':'{:.0%}', 'dPRE': '{:.2f}','dPREΔ':'{:.0%}','nRTG':'{:.2f}','oRTG':'{:.2f}','dRTG':'{:.2f}',
-            'Proj':'{:.1f}','ProjΔ':'{:.1f}','xGD': '{:.1f}', 'xPts': '{:.1f}','Win':'{:.0%}','WinΔ':'{:.0%}','CL':'{:.0%}','CLΔ':'{:.0%}','Rel':'{:.0%}','RelΔ':'{:.0%}'}
+            'Proj':'{:.1f}','ProjΔ':'{:.1f}','xGD': '{:.1f}', 'xPts': '{:.1f}','Win':'{:.0%}','WinΔ':'{:.0%}','CL':'{:.0%}','CLΔ':'{:.0%}','Rel':'{:.0%}','RelΔ':'{:.0%}',
+             'P':'{:.0f}','GD':'{:.0f}'}
 
 # --- MAIN DASHBOARD ---
 tab_standings, tab_team = st.tabs([f"Standings", "Team Profile"])
