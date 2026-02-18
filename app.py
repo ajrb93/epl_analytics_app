@@ -127,17 +127,16 @@ def show_standings_table(df, fmt_dict):
     grid_options['suppressSizeToFit'] = False
     grid_options['rowHeight'] = 25
     grid_options['headerHeight'] = 30
-    grid_options['defaultColDef'] = {**grid_options.get('defaultColDef', {}),'headerComponentParams': {
-        'template': '<div class="ag-cell-label-container" style="font-size:10px; font-weight:bold;">$col.displayName</div>'}}
+    for col in grid_options['columnDefs']:
+        col['headerComponentParams'] = {'style': 'font-size: 10px; font-weight: bold;'}
 
     AgGrid(
         display_df,
         gridOptions=grid_options,
-        height=530,
+        height=532,
         width='100%',
         fit_columns_on_grid_load=True,
         allow_unsafe_jscode=True,
-        rowHeight = 5,
         theme='streamlit'  # matches streamlit's look
     )
 
