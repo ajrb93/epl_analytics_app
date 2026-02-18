@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import os
+from st_aggrid import AgGrid, GridOptionsBuilder, JsCode
 
 # --- 1. CONFIG & COMPACT STYLING ---
 st.set_page_config(layout="wide", page_title="English Premier League")
@@ -9,111 +10,29 @@ st.set_page_config(layout="wide", page_title="English Premier League")
 # CUSTOM CSS: Shrinks headers, table padding, and overall container gaps
 st.markdown("""
     <style>
-    /* Reduce top/side margins */
+    /* Page margins */
     .block-container {
-        padding-top: 2rem !important; 
-        padding-bottom: 0rem !important; 
-        padding-left: 1rem !important; 
+        padding-top: 2rem !important;
+        padding-bottom: 0rem !important;
+        padding-left: 1rem !important;
         padding-right: 1rem !important;
     }
     
     /* Tab labels */
-    button[data-baseweb="tab"] p {
-        font-size: 12px !important;
-        font-weight: bold !important;
+    button[data-baseweb="tab"] {
+        font-size: 14px !important;
     }
-    
+    button[data-baseweb="tab"] div {
+        font-size: 14px !important;
+    }
+
     /* Expander headers */
-    .streamlit-expanderHeader {
-        font-size: 10px !important;
-        padding-top: 1px !important;
-        padding-bottom: 1px !important;
-    }
-    
     div[data-testid="stExpander"] div[role="button"] p { 
         font-size: 12px !important; 
         font-weight: bold !important; 
     }
-    
-    /* Headers */
-    h1 { 
-        font-size: 12px !important; 
-        margin-bottom: 0.2rem !important; 
-    }
-    
-    h3 { 
-        font-size: 12px !important; 
-        margin-top: 0.2rem !important; 
-        margin-bottom: 0.2rem !important; 
-    }
-    
-    /* Reduce gap between elements */
-    [data-testid="stVerticalBlock"] > [style*="flex-direction: column;"] > [data-testid="stVerticalBlock"] {
-        gap: 0.2rem !important;
-    }
-    
-    /* DATAFRAME STYLING - More aggressive */
-    
-    /* Target the entire dataframe container */
-    [data-testid="stDataFrame"] {
-        font-size: 8px !important;
-    }
-    
-    /* Target all text within dataframe */
-    [data-testid="stDataFrame"] * {
-        font-size: 8px !important;
-    }
-    
-    /* Table cells - reduce padding and font size */
-    [data-testid="stDataFrame"] table tbody tr td,
-    [data-testid="stDataFrame"] table thead tr th {
-        font-size: 8px !important;
-        padding: 2px 2px !important;
-        line-height: 1 !important;
-    }
-    
-    /* Header cells specifically */
-    [data-testid="stDataFrame"] table thead tr th {
-        font-size: 8px !important;
-        font-weight: 600 !important;
-        padding: 2px 2px !important;
-    }
-    
-    /* Column headers in the dataframe */
-    [data-testid="stDataFrame"] [role="columnheader"] {
-        font-size: 8px !important;
-        padding: 2px 2px !important;
-    }
-    
-    /* Data cells */
-    [data-testid="stDataFrame"] [role="gridcell"] {
-        font-size: 8px !important;
-        padding: 2px 2px !important;
-    }
-    
-    /* Remove extra spacing from dataframe wrapper */
-    .stDataFrame {
-        font-size: 8px !important;
-    }
-    
-    .stDataFrame > div {
-        font-size: 8px !important;
-    }
-    
-    /* --- ST.TABLE (Streamlit 1.54) --- */
-    div[data-testid="stTable"] div[data-testid="stMarkdownContainer"] table {
-        font-size: 8px !important;
-        border-collapse: collapse !important;
-    }
-
-    div[data-testid="stTable"] div[data-testid="stMarkdownContainer"] th,
-    div[data-testid="stTable"] div[data-testid="stMarkdownContainer"] td {
-        font-size: 8px !important;
-        padding: 2px 4px !important;
-        line-height: 1.1 !important;
-    }
     </style>
-    """, unsafe_allow_html=True)
+""", unsafe_allow_html=True)
 
 # Load All Data
 def credible_range_str(row, level=0.9):
@@ -168,6 +87,57 @@ def create_standings_file(standings,standings_sims,team_ratings,season,max_date,
                                'Champ':'Win','Champ_c':'WinΔ','CL_c':'CLΔ','Rel_c':'RelΔ'})
     return temp
 
+def format_value(value, fmt):
+    if pd.isna(value):
+        return ''
+    if '%' in fmt:
+        decimals = int(fmt.replace('{:.','').replace('%}','').replace('0',''))
+        return f"{value:.{decimals}%}"
+    else:
+        decimals = int(fmt.replace('{:.','').replace('f}',''))
+        return f"{value:.{decimals}f}"
+
+def show_standings_table(df, fmt_dict):
+    # Apply formatting to a display copy
+    display_df = df.copy()
+    for col, fmt in fmt_dict.items():
+        if col in display_df.columns:
+            display_df[col] = display_df[col].apply(lambda x: format_value(x, fmt))
+
+    gb = GridOptionsBuilder.from_dataframe(display_df)
+    
+    gb.configure_default_column(
+        resizable=True,
+        sortable=True,
+        filterable=False,
+        cellStyle={'fontSize': '9px', 'padding': '2px 2px'},
+        suppressMenu=True,
+        width=60  # narrow default width to fit all columns
+    )
+    
+    # Freeze team column and give it more space
+    gb.configure_column('Team', pinned='left', width=110, cellStyle={'fontSize': '9px', 'fontWeight': 'bold', 'padding': '2px 2px'})
+    
+    # Slightly wider for certain columns
+    for col in ['range', 'nRTG', 'oRTG', 'dRTG']:
+        if col in display_df.columns:
+            gb.configure_column(col, width=75)
+
+    grid_options = gb.build()
+    
+    # Override to fit all columns in available width
+    grid_options['suppressSizeToFit'] = False
+
+    AgGrid(
+        display_df,
+        gridOptions=grid_options,
+        height=540,
+        width='100%',
+        fit_columns_on_grid_load=True,
+        allow_unsafe_jscode=True,
+        theme='streamlit'  # matches streamlit's look
+    )
+
 standings = pd.read_feather('data/standings.ftr')
 #color_map = pd.read_feather('data/color_map.ftr')
 #matches = pd.read_feather('data/matches.ftr')
@@ -202,4 +172,4 @@ with tab_standings:
 
     with col2:
         standings_df = create_standings_file(standings,standings_sims,team_ratings,selected_season,selected_end_date,selected_start_date).sort_values(['P','GD'],ascending=False)
-        st.table(standings_df.drop(columns='season').style.format(fmt_dict))
+        show_standings_table(standings_df.drop(columns='season'), fmt_dict)
