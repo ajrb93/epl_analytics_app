@@ -129,6 +129,8 @@ def show_standings_table(df, fmt_dict):
     grid_options['headerHeight'] = 30
     grid_options['defaultColDef'] = {**grid_options.get('defaultColDef', {}),'headerComponentParams': {
         'template': '<span style="font-size:9px; font-weight:bold;">$col.displayName</span>'}}
+    for col in grid_options['columnDefs']:
+        col['headerStyle'] = {'fontSize': '9px', 'fontWeight': 'bold'}
 
     AgGrid(
         display_df,
