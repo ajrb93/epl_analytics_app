@@ -90,12 +90,15 @@ def create_standings_file(standings,standings_sims,team_ratings,season,max_date,
 def format_value(value, fmt):
     if pd.isna(value):
         return ''
-    if '%' in fmt:
-        decimals = int(fmt.replace('{:.','').replace('%}','').replace('0',''))
-        return f"{value:.{decimals}%}"
-    else:
-        decimals = int(fmt.replace('{:.','').replace('f}',''))
-        return f"{value:.{decimals}f}"
+    try:
+        if '%' in fmt:
+            decimals = int(fmt.replace('{:.','').replace('%}','') or '0')
+            return f"{value:.{decimals}%}"
+        else:
+            decimals = int(fmt.replace('{:.','').replace('f}','') or '0')
+            return f"{value:.{decimals}f}"
+    except (ValueError, TypeError):
+        return str(value)
 
 def show_standings_table(df, fmt_dict):
     # Apply formatting to a display copy
