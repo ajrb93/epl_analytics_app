@@ -129,8 +129,7 @@ def show_standings_table(df, fmt_dict):
     grid_options['headerHeight'] = 20
     grid_options['defaultColDef'] = {
         **grid_options.get('defaultColDef', {}),
-        'wrapHeaderText': True,
-        'autoHeaderHeight': True,
+        'wrapHeaderText': False
     }
     
     AgGrid(
@@ -162,7 +161,7 @@ fmt_dict = {'nPRE': '{:.1%}', 'nPREΔ': '{:.1%}', 'oPRE': '{:.2f}','oPREΔ':'{:.
 tab_standings, tab_team = st.tabs([f"Standings", "Team Profile"])
 
 with tab_standings:
-    col1, col2 = st.columns([2,3])
+    col1, col2 = st.columns([1,2])
     # --- COLUMN 1: LEFT ---
     with col1:
         subcol1, subcol2, subcol3 = st.columns([1,1,1])
