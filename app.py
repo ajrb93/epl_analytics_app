@@ -114,11 +114,6 @@ def show_standings_table(df, fmt_dict):
         sortable=True,
         filterable=False,
         cellStyle={'fontSize': '10px', 'padding': '0.5px 0.5px'},
-        custom_css = {".ag-header-cell-text": {"font-size": "4px !important"},
-                      ".ag-header-row": {"height": "25px !important"},
-                      ".ag-header": {"min-height": "25px !important"},
-                      ".ag-row": {"height": "5px !important"},
-                      ".ag-cell": {"line-height": "5px !important","padding-top": "0px !important","padding-bottom": "0px !important"}},
         suppressMenu=True,
         width=100  # narrow default width to fit all columns
     )
@@ -132,11 +127,13 @@ def show_standings_table(df, fmt_dict):
     grid_options['suppressSizeToFit'] = False
     grid_options['rowHeight'] = 25
     grid_options['headerHeight'] = 30
+    grid_options['defaultColDef'] = {**grid_options.get('defaultColDef', {}),'headerComponentParams': {
+        'template': '<div class="ag-cell-label-container" style="font-size:10px; font-weight:bold;">$col.displayName</div>'}}
 
     AgGrid(
         display_df,
         gridOptions=grid_options,
-        height=535,
+        height=530,
         width='100%',
         fit_columns_on_grid_load=True,
         allow_unsafe_jscode=True,
