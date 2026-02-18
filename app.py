@@ -31,6 +31,28 @@ st.markdown("""
         font-size: 12px !important; 
         font-weight: bold !important; 
     }
+            
+    /* AG Grid */
+    .ag-theme-streamlit .ag-row {
+        height: 22px !important;
+        min-height: 22px !important;
+    }
+    .ag-theme-streamlit .ag-cell {
+        line-height: 22px !important;
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+        font-size: 11px !important;
+    }
+    .ag-theme-streamlit .ag-header-cell-text {
+        font-size: 9px !important;
+        font-weight: bold !important;
+    }
+    .ag-theme-streamlit .ag-header-row {
+        height: 25px !important;
+    }
+    .ag-theme-streamlit .ag-header {
+        min-height: 25px !important;
+    }
     </style>
 """, unsafe_allow_html=True)
 
@@ -139,7 +161,7 @@ def show_standings_table(df, fmt_dict):
         fit_columns_on_grid_load=True,
         allow_unsafe_jscode=True,
         rowHeight = 5,
-        theme='alpine'  # matches streamlit's look
+        theme='streamlit'  # matches streamlit's look
     )
 
 standings = pd.read_feather('data/standings.ftr')
