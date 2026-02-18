@@ -134,7 +134,7 @@ def show_standings_table(df, fmt_dict):
         width='100%',
         fit_columns_on_grid_load=True,
         allow_unsafe_jscode=True,
-        rowHeight = 15,
+        rowHeight = 5,
         theme='streamlit'  # matches streamlit's look
     )
 
