@@ -113,14 +113,14 @@ def show_standings_table(df, fmt_dict):
         resizable=True,
         sortable=True,
         filterable=False,
-        cellStyle={'fontSize': '10px', 'padding': '0.5px 0.5px'},
-        custom_css = {".ag-header-cell-text": {"font-size": "10px !important","font-weight": "bold !important"}},
+        cellStyle={'fontSize': '9px', 'padding': '0.5px 0.5px'},
+        custom_css = {".ag-header-cell-text": {"font-size": "9px !important",}},
         suppressMenu=True,
         width=100  # narrow default width to fit all columns
     )
     
     # Freeze team column and give it more space
-    gb.configure_column('Team', pinned='left', width=350, cellStyle={'fontSize': '10px', 'padding': '0.5px 0.5px'})
+    gb.configure_column('Team', pinned='left', width=350, cellStyle={'fontSize': '9px',"font-weight": "bold !important", 'padding': '0.5px 0.5px'})
     
     grid_options = gb.build()
     
@@ -134,7 +134,7 @@ def show_standings_table(df, fmt_dict):
         width='100%',
         fit_columns_on_grid_load=True,
         allow_unsafe_jscode=True,
-        rowHeight = 25,
+        rowHeight = 15,
         theme='streamlit'  # matches streamlit's look
     )
 
