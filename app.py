@@ -34,24 +34,24 @@ st.markdown("""
             
     /* AG Grid */
     .ag-theme-streamlit .ag-row {
-        height: 22px !important;
-        min-height: 22px !important;
+        height: 15px !important;
+        min-height: 15px !important;
     }
     .ag-theme-streamlit .ag-cell {
-        line-height: 22px !important;
+        line-height: 15px !important;
         padding-top: 0px !important;
         padding-bottom: 0px !important;
         font-size: 11px !important;
     }
     .ag-theme-streamlit .ag-header-cell-text {
-        font-size: 9px !important;
+        font-size: 4px !important;
         font-weight: bold !important;
     }
     .ag-theme-streamlit .ag-header-row {
-        height: 25px !important;
+        height: 15px !important;
     }
     .ag-theme-streamlit .ag-header {
-        min-height: 25px !important;
+        min-height: 15px !important;
     }
     </style>
 """, unsafe_allow_html=True)
