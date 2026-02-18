@@ -113,14 +113,14 @@ def show_standings_table(df, fmt_dict):
         resizable=True,
         sortable=True,
         filterable=False,
-        cellStyle={'fontSize': '11px', 'padding': '2px 2px'},
-        headerComponentParams={'template': '<div style="font-size:11px; font-weight:bold;">$col.displayName</div>'},
+        cellStyle={'fontSize': '10px', 'padding': '2px 2px'},
+        custom_css = {".ag-header-cell-text": {"font-size": "10px !important","font-weight": "bold !important"}},
         suppressMenu=True,
         width=100  # narrow default width to fit all columns
     )
     
     # Freeze team column and give it more space
-    gb.configure_column('Team', pinned='left', width=110, cellStyle={'fontSize': '11px', 'fontWeight': 'bold', 'padding': '2px 2px'})
+    gb.configure_column('Team', pinned='left', width=250, cellStyle={'fontSize': '10px', 'fontWeight': 'bold', 'padding': '2px 2px'})
     
     grid_options = gb.build()
     
