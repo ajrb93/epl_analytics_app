@@ -124,19 +124,19 @@ def show_standings_table(df, fmt_dict):
     )
     
     # Freeze team column and give it more space
-    gb.configure_column('Team', pinned='left', width=320, cellStyle={'fontSize': '10px',"font-weight": "bold", 'padding': '0.5px 0.5px'})
+    gb.configure_column('Team', pinned='left', width=340, cellStyle={'fontSize': '10px',"font-weight": "bold", 'padding': '0.5px 0.5px'})
     
     grid_options = gb.build()
     
     # Override to fit all columns in available width
     grid_options['suppressSizeToFit'] = False
     grid_options['rowHeight'] = 25
-    grid_options['headerHeight'] = 25
+    grid_options['headerHeight'] = 30
 
     AgGrid(
         display_df,
         gridOptions=grid_options,
-        height=540,
+        height=535,
         width='100%',
         fit_columns_on_grid_load=True,
         allow_unsafe_jscode=True,
