@@ -91,7 +91,7 @@ def create_standings_file(standings,standings_sims,team_ratings,season,max_date,
     return temp
 
 def plot_standings_table(standings_df):
-    fig, ax = plt.subplots(figsize=(15, 10))
+    fig, ax = plt.subplots(figsize=(15, 9))
     ax.set_xlim(0, 1)
     ax.set_ylim(0, 1)
     ax.axis('off')
