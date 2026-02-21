@@ -133,7 +133,7 @@ norm_w = mcolors.TwoSlopeNorm(vmin=0,vcenter=1/3,vmax=1)
 norm_perf = mcolors.TwoSlopeNorm(vmin=-1.5, vcenter=0, vmax=1.5)
 
 def plot_standings_table(standings_df):
-    fig, ax = plt.subplots(figsize=(10,10/2.33333333))
+    fig, ax = plt.subplots(figsize=(12,12/2.33333333))
     ax.set_xlim(0, 1)
     ax.set_ylim(0, 1)
     ax.axis('off')
@@ -521,6 +521,7 @@ with tab_standings:
             selected_start_date = st.selectbox("Select Relative Date",options=start_dates,index=len(start_dates)-1, key='start_date_picker',label_visibility='collapsed')
         matches_df = create_matches_df(match_sims,matches,team_ratings,selected_season,selected_end_date)
         fig = create_results_figure(matches_df)
+        st.markdown("### Results")
         scrollable_plot(fig, height=200)
 
     with col2:
