@@ -311,6 +311,45 @@ def plot_ratings_scatter(standings_df, team_colors):
 
     return fig
 
+def plot_position_heatmap(standings_sims, standings_df, selected_end_date, team_colors):
+    # Get position probabilities for selected date, ordered by current standings
+    sim_data = standings_sims[standings_sims.Sim_Date == selected_end_date].set_index('index')
+    position_cols = [str(i) for i in range(1, 21)]
+    
+    # Order teams by current points (same order as standings table)
+    teams_ordered = standings_df['Team'].tolist()
+    
+    heatmap_data = sim_data.loc[teams_ordered, position_cols].astype(float)
+
+    fig = go.Figure(data=go.Heatmap(
+        z=heatmap_data.values,
+        x=list(range(1, 21)),
+        y=teams_ordered,
+        colorscale='RdYlGn',
+        showscale=False,
+        hovertemplate='<b>%{y}</b><br>Position %{x}: %{z:.1%}<extra></extra>',
+        zmin=0,
+        zmax=1  # cap at 50% so colors spread better
+    ))
+
+    fig.update_layout(
+        xaxis=dict(
+            title='Position',
+            tickvals=list(range(1, 21)),
+            ticktext=[str(i) for i in range(1, 21)],
+            side='top'
+        ),
+        yaxis=dict(
+            autorange='reversed',  # keep standings order top to bottom
+            tickfont=dict(size=10)
+        ),
+        margin=dict(l=120, r=20, t=40, b=20),
+        width=520,  # 400px plot + room for team names on left
+        height=400
+    )
+
+    return fig
+
 standings = pd.read_feather('data/standings.ftr')
 color_map = pd.read_feather('data/color_map.ftr')
 color_map['home_secondary'] = color_map.apply(lambda row: '#FFFFFF' if row['home_primary'] == row['home_secondary'] else row['home_secondary'],axis=1)
@@ -349,3 +388,6 @@ with tab_standings:
         with subcol1:
             fig = plot_ratings_scatter(standings_df.drop(columns='season'), team_colors)
             st.plotly_chart(fig, use_container_width=False)
+        with subcol2:
+            fig_heatmap = plot_position_heatmap(standings_sims, standings_df, selected_end_date, team_colors)
+            st.plotly_chart(fig_heatmap)
