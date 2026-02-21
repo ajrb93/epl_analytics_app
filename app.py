@@ -305,7 +305,8 @@ def plot_ratings_scatter(standings_df, team_colors):
         ),
         plot_bgcolor='gainsboro',
         margin=dict(l=20, r=20, t=20, b=20),
-        height=200
+        height = 400,
+        width = 400
     )
 
     return fig
@@ -344,5 +345,7 @@ with tab_standings:
         fig = plot_standings_table(standings_df.drop(columns='season'))
         st.pyplot(fig, use_container_width=True)
 
-        fig = plot_ratings_scatter(standings_df.drop(columns='season'), team_colors)
-        st.plotly_chart(fig, use_container_width=False)
+        subcol1, subcol2 = st.columns([1,1])
+        with subcol1:
+            fig = plot_ratings_scatter(standings_df.drop(columns='season'), team_colors)
+            st.plotly_chart(fig, use_container_width=False)
