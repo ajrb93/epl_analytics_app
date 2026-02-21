@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+import plotly.graph_objects as go
 import os
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
@@ -233,6 +234,80 @@ def plot_standings_table(standings_df):
     plt.tight_layout()
     return fig
 
+def plot_ratings_scatter(standings_df, team_colors):
+    fig = go.Figure()
+
+    off_mean = standings_df['oPRE'].mean()
+    def_mean = standings_df['dPRE'].mean()
+
+    # Diagonal reference lines (equivalent to your matplotlib lines)
+    for offset in [-2/3, -1/3, 0, 1/3, 2/3]:
+        x_start = def_mean * 1.5
+        x_end = def_mean * 0.5
+        fig.add_trace(go.Scatter(
+            x=[x_start, x_end],
+            y=[x_start + offset * off_mean, x_end + offset * off_mean],
+            mode='lines',
+            line=dict(color='black', width=1, dash='dash'),
+            showlegend=False,
+            hoverinfo='skip'
+        ))
+
+    # Arrows showing movement
+    for _, row in standings_df.iterrows():
+        team = row['Team']
+        primary = team_colors[team]['home_primary']
+        x_start = row['dPRE'] - row['dPREΔ']
+        y_start = row['oPRE'] - row['oPREΔ']
+        x_end = row['dPRE']
+        y_end = row['oPRE']
+
+        # Arrow line
+        fig.add_trace(go.Scatter(
+            x=[x_start, x_end],
+            y=[y_start, y_end],
+            mode='lines',
+            line=dict(color=primary, width=2),
+            showlegend=False,
+            hoverinfo='skip'
+        ))
+
+    # Scatter points at current position
+    fig.add_trace(go.Scatter(
+        x=standings_df['dPRE'],
+        y=standings_df['oPRE'],
+        mode='markers',
+        marker=dict(
+            color=[team_colors[t]['home_primary'] for t in standings_df['Team']],
+            size=12,
+            line=dict(
+                color=[team_colors[t]['home_secondary'] for t in standings_df['Team']],
+                width=2
+            )
+        ),
+        text=standings_df['Team'],
+        hovertemplate='<b>%{text}</b><br>Off: %{y:.2f}<br>Def: %{x:.2f}<extra></extra>',
+        showlegend=False
+    ))
+
+    fig.update_layout(
+        xaxis=dict(
+            range=[def_mean * 1.5, def_mean * 0.5],  # inverted — lower def is better
+            title='Defensive Rating',
+            showgrid=False
+        ),
+        yaxis=dict(
+            range=[off_mean * 0.5, off_mean * 1.5],
+            title='Offensive Rating',
+            showgrid=False
+        ),
+        plot_bgcolor='gainsboro',
+        margin=dict(l=20, r=20, t=20, b=20),
+        height=400
+    )
+
+    return fig
+
 standings = pd.read_feather('data/standings.ftr')
 color_map = pd.read_feather('data/color_map.ftr')
 color_map['home_secondary'] = color_map.apply(lambda row: '#FFFFFF' if row['home_primary'] == row['home_secondary'] else row['home_secondary'],axis=1)
@@ -266,3 +341,6 @@ with tab_standings:
         standings_df = create_standings_file(standings,standings_sims,team_ratings,selected_season,selected_end_date,selected_start_date).sort_values(['P','GD'],ascending=False)
         fig = plot_standings_table(standings_df.drop(columns='season'))
         st.pyplot(fig, use_container_width=True)
+
+        fig = plot_ratings_scatter(standings_df.drop(columns='season'), team_colors)
+        st.plotly_chart(fig, use_container_width=True)
