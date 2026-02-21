@@ -133,7 +133,7 @@ norm_w = mcolors.TwoSlopeNorm(vmin=0,vcenter=1/3,vmax=1)
 norm_perf = mcolors.TwoSlopeNorm(vmin=-1.5, vcenter=0, vmax=1.5)
 
 def plot_standings_table(standings_df):
-    fig, ax = plt.subplots(figsize=(14,6))
+    fig, ax = plt.subplots(figsize=(10,10/2.33333333))
     ax.set_xlim(0, 1)
     ax.set_ylim(0, 1)
     ax.axis('off')
@@ -433,10 +433,10 @@ def create_results_figure(plot_df):
         ax.vlines(x-0.005, bottom_margin, top, color='black', linewidth=0.5)
 
     for _, row in results.iterrows():
-        home_primary = 'blue'#team_colors[row['Home']]['home_primary']
-        home_text = 'red'##team_colors[row['Home']]['home_text']
-        away_primary = 'blue'#team_colors[row['Away']]['home_primary']
-        away_text = 'red'#team_colors[row['Away']]['home_text']
+        home_primary = team_colors[row['Home']]['home_primary']
+        home_text = team_colors[row['Home']]['home_secondary']
+        away_primary = team_colors[row['Away']]['home_primary']
+        away_text = team_colors[row['Away']]['home_secondary']
 
         # Home team background
         ax.add_patch(Rectangle((0.13-0.005, i_loc - space/2), 0.30, space, facecolor=home_primary))
@@ -521,7 +521,7 @@ with tab_standings:
             selected_start_date = st.selectbox("Select Relative Date",options=start_dates,index=len(start_dates)-1, key='start_date_picker',label_visibility='collapsed')
         matches_df = create_matches_df(match_sims,matches,team_ratings,selected_season,selected_end_date)
         fig = create_results_figure(matches_df)
-        scrollable_plot(fig, height=350)
+        scrollable_plot(fig, height=200)
 
     with col2:
         standings_df = create_standings_file(standings,standings_sims,team_ratings,selected_season,selected_end_date,selected_start_date).sort_values(['P','GD'],ascending=False)
