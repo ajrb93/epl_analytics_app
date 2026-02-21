@@ -115,8 +115,8 @@ def plot_standings_table(standings_df):
 
     # --- ROWS ---
     n_teams = len(standings_df)
-    top = 0.93
-    bottom_margin = 0.02
+    top = 0.95
+    bottom_margin = 0.01
     total_height = top - bottom_margin
     space = total_height / n_teams
     i_loc = top - space / 2
@@ -133,21 +133,21 @@ def plot_standings_table(standings_df):
 
         # Skill (nPRE)
         ax.add_patch(Rectangle((1.15/10, i_loc - space/2), 0.5/10, space, facecolor='lightgray'))  # placeholder for cmap
-        ax.annotate(f"{row['nPRE']:.1%}", (1.4/10, i_loc), va='center', ha='center', size=9)
+        ax.annotate(f"{row['nPRE']:.0%}", (1.4/10, i_loc), va='center', ha='center', size=9)
         delta_color = 'darkgreen' if row['nPREΔ'] > 0 else 'darkred'
-        ax.annotate(f"({'+' if row['nPREΔ'] > 0 else ''}{row['nPREΔ']:.1%})", (1.9/10, i_loc), va='center', ha='center', size=9, color=delta_color)
+        ax.annotate(f"({'+' if row['nPREΔ'] > 0 else ''}{row['nPREΔ']:.0%})", (1.9/10, i_loc), va='center', ha='center', size=9, color=delta_color)
 
         # Offensive (oPRE)
         ax.add_patch(Rectangle((2.15/10, i_loc - space/2), 0.5/10, space, facecolor='lightgray'))  # placeholder
-        ax.annotate(f"{row['oPRE']:.3f}", (2.4/10, i_loc), va='center', ha='center', size=9)
+        ax.annotate(f"{row['oPRE']:.2f}", (2.4/10, i_loc), va='center', ha='center', size=9)
         delta_color = 'darkgreen' if row['oPREΔ'] > 0 else 'darkred'
         ax.annotate(f"({'+' if row['oPREΔ'] > 0 else ''}{row['oPREΔ']:.0%})", (2.9/10, i_loc), va='center', ha='center', size=9, color=delta_color)
 
         # Defensive (dPRE)
         ax.add_patch(Rectangle((3.15/10, i_loc - space/2), 0.5/10, space, facecolor='lightgray'))  # placeholder
-        ax.annotate(f"{row['dPRE']:.3f}", (3.4/10, i_loc), va='center', ha='center', size=9)
+        ax.annotate(f"{row['dPRE']:.2f}", (3.4/10, i_loc), va='center', ha='center', size=9)
         delta_color = 'darkgreen' if row['dPREΔ'] < 0 else 'darkred'
-        ax.annotate(f"({'+' if row['dPREΔ'] < 0 else ''}{abs(row['dPREΔ']):.0%})", (3.9/10, i_loc), va='center', ha='center', size=9, color=delta_color)
+        ax.annotate(f"({'+' if row['dPREΔ'] < 0 else ''}{row['dPREΔ']*-1:.0%})", (3.9/10, i_loc), va='center', ha='center', size=9, color=delta_color)
 
         # Performance (nRTG, oRTG, dRTG)
         ax.annotate(f"{row['nRTG']:.2f}", (4.35/10, i_loc), va='center', ha='center', size=9)
@@ -155,9 +155,9 @@ def plot_standings_table(standings_df):
         ax.annotate(f"{row['dRTG']:.2f}", (4.95/10, i_loc), va='center', ha='center', size=9)
 
         # Proj + ProjΔ
-        ax.annotate(f"{row['Proj']:.1f}", (5.3/10, i_loc), va='center', ha='center', size=9)
+        ax.annotate(f"{row['Proj']:.0f}", (5.3/10, i_loc), va='center', ha='center', size=9)
         delta_color = 'darkgreen' if row['ProjΔ'] > 0 else 'darkred'
-        ax.annotate(f"({'+' if row['ProjΔ'] > 0 else ''}{row['ProjΔ']:.1f})", (5.65/10, i_loc), va='center', ha='center', size=9, color=delta_color)
+        ax.annotate(f"({'+' if row['ProjΔ'] > 0 else ''}{row['ProjΔ']:.0f})", (5.65/10, i_loc), va='center', ha='center', size=9, color=delta_color)
 
         # Points + xPts
         ax.annotate(f"{int(row['P'])}", (6.0/10, i_loc), va='center', ha='center', size=9)
@@ -180,7 +180,7 @@ def plot_standings_table(standings_df):
         # Rel + RelΔ
         ax.annotate(f"{row['Rel']:.1%}", (8.85/10, i_loc), va='center', ha='center', size=9)
         delta_color = 'darkgreen' if row['RelΔ'] < 0 else 'darkred'
-        ax.annotate(f"({'+' if row['RelΔ'] < 0 else ''}{row['RelΔ']:.0%})", (9.25/10, i_loc), va='center', ha='center', size=9, color=delta_color)
+        ax.annotate(f"({'+' if row['RelΔ'] < 0 else ''}{row['RelΔ']*-1:.0%})", (9.25/10, i_loc), va='center', ha='center', size=9, color=delta_color)
 
         # Range
         ax.annotate(row['range'], (9.75/10, i_loc), va='center', ha='center', size=9)
