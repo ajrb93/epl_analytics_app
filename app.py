@@ -521,7 +521,7 @@ with tab_standings:
             selected_start_date = st.selectbox("Select Relative Date",options=start_dates,index=len(start_dates)-1, key='start_date_picker',label_visibility='collapsed')
         matches_df = create_matches_df(match_sims,matches,team_ratings,selected_season,selected_end_date)
         fig = create_results_figure(matches_df)
-        st.markdown("### Results")
+        st.markdown("<p style='font-size:12px; font-weight:bold; margin-bottom:2px;'>Results</p>", unsafe_allow_html=True)
         scrollable_plot(fig, height=200)
 
     with col2:
