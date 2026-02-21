@@ -119,6 +119,7 @@ norm_o = mcolors.TwoSlopeNorm(vmin=0,vcenter=1.3,vmax=2.6)
 norm_r = mcolors.TwoSlopeNorm(vmin=0,vcenter=1,vmax=3)
 norm_p = mcolors.TwoSlopeNorm(vmin=0,vcenter=1.5,vmax=3)
 norm_w = mcolors.TwoSlopeNorm(vmin=0,vcenter=1/3,vmax=1)
+norm_perf = mcolors.TwoSlopeNorm(vmin=-1.5, vcenter=0, vmax=1.5)
 
 def plot_standings_table(standings_df):
     fig, ax = plt.subplots(figsize=(14,6))
@@ -143,6 +144,8 @@ def plot_standings_table(standings_df):
     # --- VERTICAL DIVIDERS ---
     for x in [1.15, 2.15, 3.15, 4.15, 5.15, 5.85, 6.45, 7.05, 7.85, 8.65, 9.50]:
         ax.axvline(x/10, color='black', linewidth=0.5)
+    ax.vlines(4.35/10, bottom_margin, top, color='black', linewidth=0.3, linestyle='--')
+    ax.vlines(4.65/10, bottom_margin, top, color='black', linewidth=0.3, linestyle='--')
 
     # --- ROWS ---
     n_teams = len(standings_df)
@@ -184,6 +187,9 @@ def plot_standings_table(standings_df):
         ax.annotate(f"{row['nRTG']:.2f}", (4.35/10, i_loc), va='center', ha='center', size=9)
         ax.annotate(f"{row['oRTG']:.2f}", (4.65/10, i_loc), va='center', ha='center', size=9)
         ax.annotate(f"{row['dRTG']:.2f}", (4.95/10, i_loc), va='center', ha='center', size=9)
+        ax.add_patch(Rectangle((4.15/10, i_loc - space/2), 0.5/10, space,facecolor=cmap(norm_perf(row['nRTG']))))
+        ax.add_patch(Rectangle((4.65/10, i_loc - space/2), 0.5/10, space,facecolor=cmap(norm_o(row['oRTG']))))
+        ax.add_patch(Rectangle((5.15/10, i_loc - space/2), 0.5/10, space,facecolor=cmap(1 - norm_o(row['dRTG']))))
 
         # Proj + ProjΔ
         ax.annotate(f"{row['Proj']:.0f}", (5.3/10, i_loc), va='center', ha='center', size=9)
@@ -199,17 +205,17 @@ def plot_standings_table(standings_df):
         ax.annotate(f"{row['xGD']:.1f}", (6.85/10, i_loc), va='center', ha='center', size=9)
 
         # Champ + WinΔ
-        ax.annotate(f"{row['Win']:.1%}", (7.25/10, i_loc), va='center', ha='center', size=9)
+        ax.annotate(f"{row['Win']:.0%}", (7.25/10, i_loc), va='center', ha='center', size=9)
         delta_color = 'darkgreen' if row['WinΔ'] > 0 else 'darkred'
         ax.annotate(f"({'+' if row['WinΔ'] > 0 else ''}{row['WinΔ']:.0%})", (7.65/10, i_loc), va='center', ha='center', size=9, color=delta_color)
 
         # CL + CLΔ
-        ax.annotate(f"{row['CL']:.1%}", (8.05/10, i_loc), va='center', ha='center', size=9)
+        ax.annotate(f"{row['CL']:.0%}", (8.05/10, i_loc), va='center', ha='center', size=9)
         delta_color = 'darkgreen' if row['CLΔ'] > 0 else 'darkred'
         ax.annotate(f"({'+' if row['CLΔ'] > 0 else ''}{row['CLΔ']:.0%})", (8.45/10, i_loc), va='center', ha='center', size=9, color=delta_color)
 
         # Rel + RelΔ
-        ax.annotate(f"{row['Rel']:.1%}", (8.85/10, i_loc), va='center', ha='center', size=9)
+        ax.annotate(f"{row['Rel']:.0%}", (8.85/10, i_loc), va='center', ha='center', size=9)
         delta_color = 'darkgreen' if row['RelΔ'] < 0 else 'darkred'
         ax.annotate(f"({'+' if row['RelΔ'] < 0 else ''}{row['RelΔ']*-1:.0%})", (9.25/10, i_loc), va='center', ha='center', size=9, color=delta_color)
 
