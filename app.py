@@ -5,6 +5,7 @@ import os
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 from matplotlib.patches import Rectangle
+import matplotlib.colors as mcolors
 
 # --- 1. CONFIG & COMPACT STYLING ---
 st.set_page_config(layout="wide", page_title="English Premier League")
@@ -89,6 +90,36 @@ def create_standings_file(standings,standings_sims,team_ratings,season,max_date,
                                'Champ':'Win','Champ_c':'WinΔ','CL_c':'CLΔ','Rel_c':'RelΔ'})
     return temp
 
+def hex_to_rgb(value):
+    value = value.lstrip('#')
+    lv = len(value)
+    return tuple(int(value[i:i + lv // 3],16) for i in range(0,lv,lv//3))
+
+def rgb_to_hex(rgb):
+    return '%02x%02x%02x' % rgb
+
+def mean_color(color1,color2):
+    rgb1 = hex_to_rgb(color1)
+    rgb2 = hex_to_rgb(color2)
+    
+    avg = lambda x,y: round((x+y)/2)
+    new_rgb = ()
+    for i in range(len(rgb1)):
+        new_rgb += (avg(rgb1[i],rgb2[i]),)
+    
+    return '#' + rgb_to_hex(new_rgb)
+
+#colormap
+colors = [(0.75,0,0),(1,1,1),(0,0.75,0)]
+colors_r = [(0,0.75,0),(1,1,1),(0.75,0,0),]
+n_bins = 100
+cmap = mcolors.LinearSegmentedColormap.from_list('redwhitegreen',colors,N=n_bins)
+cmap_r = mcolors.LinearSegmentedColormap.from_list('redwhitegreen_r',colors_r,N=n_bins)
+norm_o = mcolors.TwoSlopeNorm(vmin=0,vcenter=1.3,vmax=2.6)
+norm_r = mcolors.TwoSlopeNorm(vmin=0,vcenter=1,vmax=3)
+norm_p = mcolors.TwoSlopeNorm(vmin=0,vcenter=1.5,vmax=3)
+norm_w = mcolors.TwoSlopeNorm(vmin=0,vcenter=1/3,vmax=1)
+
 def plot_standings_table(standings_df):
     fig, ax = plt.subplots(figsize=(14,6))
     ax.set_xlim(0, 1)
@@ -132,22 +163,22 @@ def plot_standings_table(standings_df):
         ax.add_patch(Rectangle((1.15/10, i_loc - space/2), 1, space, facecolor='whitesmoke'))
 
         # Skill (nPRE)
-        ax.add_patch(Rectangle((1.15/10, i_loc - space/2), 0.5/10, space, facecolor='lightgray'))  # placeholder for cmap
         ax.annotate(f"{row['nPRE']:.0%}", (1.4/10, i_loc), va='center', ha='center', size=9)
         delta_color = 'darkgreen' if row['nPREΔ'] > 0 else 'darkred'
         ax.annotate(f"({'+' if row['nPREΔ'] > 0 else ''}{row['nPREΔ']:.0%})", (1.9/10, i_loc), va='center', ha='center', size=9, color=delta_color)
+        ax.add_patch(Rectangle((1.15/10, i_loc - space/2), 0.5/10, space,facecolor=cmap(row['nPRE'])))
 
         # Offensive (oPRE)
-        ax.add_patch(Rectangle((2.15/10, i_loc - space/2), 0.5/10, space, facecolor='lightgray'))  # placeholder
         ax.annotate(f"{row['oPRE']:.2f}", (2.4/10, i_loc), va='center', ha='center', size=9)
         delta_color = 'darkgreen' if row['oPREΔ'] > 0 else 'darkred'
         ax.annotate(f"({'+' if row['oPREΔ'] > 0 else ''}{row['oPREΔ']:.0%})", (2.9/10, i_loc), va='center', ha='center', size=9, color=delta_color)
+        ax.add_patch(Rectangle((2.15/10, i_loc - space/2), 0.5/10, space,facecolor=cmap(norm_o(row['oPRE']))))
 
         # Defensive (dPRE)
-        ax.add_patch(Rectangle((3.15/10, i_loc - space/2), 0.5/10, space, facecolor='lightgray'))  # placeholder
         ax.annotate(f"{row['dPRE']:.2f}", (3.4/10, i_loc), va='center', ha='center', size=9)
         delta_color = 'darkgreen' if row['dPREΔ'] < 0 else 'darkred'
         ax.annotate(f"({'+' if row['dPREΔ'] < 0 else ''}{row['dPREΔ']*-1:.0%})", (3.9/10, i_loc), va='center', ha='center', size=9, color=delta_color)
+        ax.add_patch(Rectangle((3.15/10, i_loc - space/2), 0.5/10, space,facecolor=cmap(1 - norm_o(row['dPRE']))))
 
         # Performance (nRTG, oRTG, dRTG)
         ax.annotate(f"{row['nRTG']:.2f}", (4.35/10, i_loc), va='center', ha='center', size=9)
@@ -195,10 +226,6 @@ def plot_standings_table(standings_df):
 
     plt.tight_layout()
     return fig
-
-fmt_dict = {'nPRE': '{:.0%}', 'nPREΔ': '{:.0%}', 'oPRE': '{:.2f}','oPREΔ':'{:.0%}', 'dPRE': '{:.2f}','dPREΔ':'{:.0%}','nRTG':'{:.2f}','oRTG':'{:.2f}','dRTG':'{:.2f}',
-            'Proj':'{:.0f}','ProjΔ':'{:.0f}','xGD': '{:.0f}', 'xPts': '{:.0f}','Win':'{:.0%}','WinΔ':'{:.0%}','CL':'{:.0%}','CLΔ':'{:.0%}','Rel':'{:.0%}','RelΔ':'{:.0%}'}
-
 
 standings = pd.read_feather('data/standings.ftr')
 #color_map = pd.read_feather('data/color_map.ftr')
