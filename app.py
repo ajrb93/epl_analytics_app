@@ -115,16 +115,16 @@ def show_standings_table(df, fmt_dict):
         filter=False,
         filterable=False,
         suppressMenu=True,
-        cellStyle={'fontSize': '11px', 'padding': '2px 4px'},
+        cellStyle={'fontSize': '11px', 'padding': '2px 2px','textAlign': 'center'},
         suppressSizeToFit=False
     )
     
-    gb.configure_column('Team', pinned='left', width=150,
-                        cellStyle={'fontSize': '11px', 'fontWeight': 'bold', 'padding': '2px 4px'})
+    gb.configure_column('Team', pinned='left', width=200,
+                        cellStyle={'fontSize': '11px', 'fontWeight': 'bold', 'padding': '2px 2px','textAlign': 'left'})
 
     grid_options = gb.build()
     
-    grid_options['rowHeight'] = 22
+    grid_options['rowHeight'] = 23
     grid_options['headerHeight'] = 25
     grid_options['onFirstDataRendered'] = JsCode("""
         function(params) {
@@ -135,13 +135,13 @@ def show_standings_table(df, fmt_dict):
     AgGrid(
         display_df,
         gridOptions=grid_options,
-        height=800,
+        height=540,
         width='100%',
         allow_unsafe_jscode=True,
         theme='streamlit'
     )
 
-fmt_dict = {'nPRE': '{:.0%}', 'nPREΔ': '{:.0%}', 'oPRE': '{:.2f}','oPREΔ':'{:.0%}', 'dPRE': '{:.2f}','dPREΔ':'{:.0%}','nRTG':'{:.1f}','oRTG':'{:.1f}','dRTG':'{:.1f}',
+fmt_dict = {'nPRE': '{:.0%}', 'nPREΔ': '{:.0%}', 'oPRE': '{:.2f}','oPREΔ':'{:.0%}', 'dPRE': '{:.2f}','dPREΔ':'{:.0%}','nRTG':'{:.2f}','oRTG':'{:.2f}','dRTG':'{:.2f}',
             'Proj':'{:.0f}','ProjΔ':'{:.0f}','xGD': '{:.0f}', 'xPts': '{:.0f}','Win':'{:.0%}','WinΔ':'{:.0%}','CL':'{:.0%}','CLΔ':'{:.0%}','Rel':'{:.0%}','RelΔ':'{:.0%}'}
 
 
