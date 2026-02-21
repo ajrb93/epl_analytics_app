@@ -115,7 +115,7 @@ def plot_standings_table(standings_df):
 
     # --- ROWS ---
     n_teams = len(standings_df)
-    top = 0.94
+    top = 0.93
     bottom_margin = 0.01
     total_height = top - bottom_margin
     space = total_height / n_teams
@@ -191,7 +191,7 @@ def plot_standings_table(standings_df):
         i_loc -= space
 
     # Top border
-    ax.axhline(top + space/2, color='black', linewidth=0.5)
+    ax.axhline(0.94, color='black', linewidth=0.5)
 
     plt.tight_layout()
     return fig
