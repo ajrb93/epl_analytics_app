@@ -299,11 +299,13 @@ def plot_ratings_scatter(standings_df, team_colors):
         yaxis=dict(
             range=[off_mean * 0.5, off_mean * 1.5],
             title='Offensive Rating',
-            showgrid=False
+            showgrid=False,
+            scaleanchor='x',
+            scaleratio=1
         ),
         plot_bgcolor='gainsboro',
         margin=dict(l=20, r=20, t=20, b=20),
-        height=400
+        height=200
     )
 
     return fig
