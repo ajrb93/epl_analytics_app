@@ -343,4 +343,4 @@ with tab_standings:
         st.pyplot(fig, use_container_width=True)
 
         fig = plot_ratings_scatter(standings_df.drop(columns='season'), team_colors)
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, use_container_width=False)
