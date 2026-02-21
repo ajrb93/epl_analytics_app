@@ -162,7 +162,7 @@ def plot_standings_table(standings_df):
         # Team name
         ax.annotate(team, (0.01, i_loc), va='center', ha='left', size=9, fontweight='bold',color=team_colors[team]['home_secondary'])
         ax.add_patch(Rectangle((0,i_loc+space/2),1.15/10,-space,facecolor=team_colors[team]['home_primary']))
-        ax.add_patch(Rectangle((1.15/10, i_loc - space/2), 1, space, mean_color(mean_color(team_colors[team]['home_primary'],'#FFFFFF'),'#FFFFFF')))
+        ax.add_patch(Rectangle((1.15/10, i_loc - space/2), 1, space, facecolor = mean_color(mean_color(team_colors[team]['home_primary'],'#FFFFFF'),'#FFFFFF')))
 
         # Skill (nPRE)
         ax.annotate(f"{row['nPRE']:.0%}", (1.4/10, i_loc), va='center', ha='center', size=9)
