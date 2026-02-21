@@ -116,10 +116,10 @@ def show_standings_table(df, fmt_dict):
         filterable=False,
         suppressMenu=True,
         cellStyle={'fontSize': '11px', 'padding': '2px 2px','textAlign': 'center'},
-        suppressSizeToFit=False
+        headerStyle={'textAlign': 'center'}
     )
     
-    gb.configure_column('Team', pinned='left', width=200,
+    gb.configure_column('Team', pinned='left', width=300,
                         cellStyle={'fontSize': '11px', 'fontWeight': 'bold', 'padding': '2px 2px','textAlign': 'left'})
 
     grid_options = gb.build()
@@ -130,12 +130,13 @@ def show_standings_table(df, fmt_dict):
         function(params) {
             params.api.autoSizeAllColumns();
         }
+                                                 
     """)
 
     AgGrid(
         display_df,
         gridOptions=grid_options,
-        height=540,
+        height=500,
         width='100%',
         allow_unsafe_jscode=True,
         theme='streamlit'
