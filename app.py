@@ -144,8 +144,6 @@ def plot_standings_table(standings_df):
     # --- VERTICAL DIVIDERS ---
     for x in [1.15, 2.15, 3.15, 4.15, 5.15, 5.85, 6.45, 7.05, 7.85, 8.65, 9.50]:
         ax.axvline(x/10, color='black', linewidth=0.5)
-    ax.vlines(4.35/10, bottom_margin, top, color='black', linewidth=0.3, linestyle='--')
-    ax.vlines(4.65/10, bottom_margin, top, color='black', linewidth=0.3, linestyle='--')
 
     # --- ROWS ---
     n_teams = len(standings_df)
@@ -154,6 +152,9 @@ def plot_standings_table(standings_df):
     total_height = top - bottom_margin
     space = total_height / n_teams
     i_loc = top - space / 2
+
+    ax.vlines(4.35/10, bottom_margin, top, color='black', linewidth=0.3, linestyle='--')
+    ax.vlines(4.65/10, bottom_margin, top, color='black', linewidth=0.3, linestyle='--')
 
     for _, row in standings_df.iterrows():
         team = row['Team']
