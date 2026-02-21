@@ -191,7 +191,7 @@ def plot_standings_table(standings_df):
         i_loc -= space
 
     # Top border
-    ax.axhline(0.94, color='black', linewidth=0.5)
+    ax.axhline(0.935, color='black', linewidth=0.5)
 
     plt.tight_layout()
     return fig
