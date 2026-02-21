@@ -330,7 +330,7 @@ def plot_position_heatmap(standings_sims, standings_df, selected_end_date, team_
         hovertemplate='<b>%{y}</b><br>Position %{x}: %{z:.0%}<extra></extra>',
         zmin=0,
         zmax=1,
-        text=[[f"{val:.0%}" if val >= 0.005 else "" for val in row] for row in heatmap_data.values]
+        text=[[f"{val:.0%}" if val >= 0.005 else "" for val in row] for row in heatmap_data.values],
         texttemplate="%{text}",
         textfont=dict(size=7)
     ))
