@@ -357,7 +357,7 @@ def plot_position_heatmap(standings_sims, standings_df, selected_end_date, team_
             tickfont=dict(size=10)
         ),
         margin=dict(l=100, r=20, t=20, b=20),
-        width=520,  # 400px plot + room for team names on left
+        width=620,  # 400px plot + room for team names on left
         height=420
     )
 
