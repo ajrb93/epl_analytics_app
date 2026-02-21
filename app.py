@@ -342,7 +342,7 @@ def plot_position_heatmap(standings_sims, standings_df, selected_end_date, team_
         zmax=1,
         text=[[f"{val:.0%}" if val >= 0.005 else "" for val in row] for row in heatmap_data.values],
         texttemplate="%{text}",
-        textfont=dict(size=7)
+        textfont=dict(size=9)
     ))
 
     fig.update_layout(
