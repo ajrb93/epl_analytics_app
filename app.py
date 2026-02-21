@@ -3,9 +3,6 @@ import pandas as pd
 import plotly.express as px
 import os
 from st_aggrid import AgGrid, GridOptionsBuilder, JsCode
-import matplotlib.pyplot as plt
-import matplotlib.patches as mpatches
-from matplotlib.patches import Rectangle
 
 # --- 1. CONFIG & COMPACT STYLING ---
 st.set_page_config(layout="wide", page_title="English Premier League")
@@ -90,112 +87,69 @@ def create_standings_file(standings,standings_sims,team_ratings,season,max_date,
                                'Champ':'Win','Champ_c':'WinΔ','CL_c':'CLΔ','Rel_c':'RelΔ'})
     return temp
 
-def plot_standings_table(standings_df):
-    fig, ax = plt.subplots(figsize=(15, 9))
-    ax.set_xlim(0, 1)
-    ax.set_ylim(0, 1)
-    ax.axis('off')
 
-    # --- HEADERS ---
-    ax.annotate('Team',       (0.01,  0.97), va='center', ha='left',   size=10, weight='bold')
-    ax.annotate('Skill',      (1.65/10, 0.97), va='center', ha='center', size=10, weight='bold')
-    ax.annotate('Off',        (2.65/10, 0.97), va='center', ha='center', size=10, weight='bold')
-    ax.annotate('Def',        (3.65/10, 0.97), va='center', ha='center', size=10, weight='bold')
-    ax.annotate('Performance',(4.65/10, 0.97), va='center', ha='center', size=10, weight='bold')
-    ax.annotate('Proj',       (5.5/10,  0.97), va='center', ha='center', size=10, weight='bold')
-    ax.annotate('Points',     (6.15/10, 0.97), va='center', ha='center', size=10, weight='bold')
-    ax.annotate('GD',         (6.7/10,  0.97), va='center', ha='center', size=10, weight='bold')
-    ax.annotate('Champ',      (7.45/10, 0.97), va='center', ha='center', size=10, weight='bold')
-    ax.annotate('CL',         (8.3/10,  0.97), va='center', ha='center', size=10, weight='bold')
-    ax.annotate('Rele.',      (9.1/10,  0.97), va='center', ha='center', size=10, weight='bold')
-    ax.annotate('Range',      (9.75/10, 0.97), va='center', ha='center', size=10, weight='bold')
+def format_value(value, fmt):
+    if pd.isna(value):
+        return ''
+    try:
+        if '%' in fmt:
+            decimals = int(fmt.replace('{:.','').replace('%}','') or '0')
+            return f"{value:.{decimals}%}"
+        else:
+            decimals = int(fmt.replace('{:.','').replace('f}','') or '0')
+            return f"{value:.{decimals}f}"
+    except (ValueError, TypeError):
+        return str(value)
 
-    # --- VERTICAL DIVIDERS ---
-    for x in [1.15, 2.15, 3.15, 4.15, 5.15, 5.85, 6.45, 7.05, 7.85, 8.65, 9.50]:
-        ax.axvline(x/10, color='black', linewidth=0.5)
+def show_standings_table(df, fmt_dict):
+    display_df = df.copy()
+    for col, fmt in fmt_dict.items():
+        if col in display_df.columns:
+            display_df[col] = display_df[col].apply(lambda x: format_value(x, fmt))
 
-    # --- ROWS ---
-    n_teams = len(standings_df)
-    top = 0.93
-    bottom_margin = 0.02
-    total_height = top - bottom_margin
-    space = total_height / n_teams
-    i_loc = top - space / 2
+    gb = GridOptionsBuilder.from_dataframe(display_df)
+    
+    gb.configure_default_column(
+        resizable=True,
+        sortable=True,
+        filter=False,
+        filterable=False,
+        suppressMenu=True,
+        cellStyle={'fontSize': '11px', 'padding': '2px 4px'},
+        width=60
+    )
+    
+    gb.configure_column('Team', pinned='left', width=110, 
+                        cellStyle={'fontSize': '11px', 'fontWeight': 'bold', 'padding': '2px 4px'})
 
-    for _, row in standings_df.iterrows():
-        team = row['Team']
+    grid_options = gb.build()
+    
+    grid_options['rowHeight'] = 22
+    grid_options['headerHeight'] = 25
+    grid_options['defaultColDef'] = {
+        **grid_options.get('defaultColDef', {}),
+        'headerComponentParams': {
+            'template': '<div class="ag-cell-label-container" role="presentation"><div ref="eLabel" class="ag-header-cell-label" role="presentation"><span ref="eText" class="ag-header-cell-text" style="font-size:9px; font-weight:bold;"></span></div></div>'
+        }
+    }
+    grid_options['onFirstDataRendered'] = JsCode("""
+        function(params) {
+            params.api.autoSizeAllColumns();
+        }
+    """)
 
-        # Team name
-        ax.annotate(team, (0.01, i_loc), va='center', ha='left', size=9, fontweight='bold')
+    AgGrid(
+        display_df,
+        gridOptions=grid_options,
+        height=650,
+        width='100%',
+        allow_unsafe_jscode=True,
+        theme='streamlit'
+    )
 
-        # Background placeholder (replace with team colors later)
-        ax.add_patch(Rectangle((0, i_loc - space/2), 1.15/10, space, facecolor='lightgray'))
-        ax.add_patch(Rectangle((1.15/10, i_loc - space/2), 1, space, facecolor='whitesmoke'))
+fmt_dict = {'nPRE': '{:.1%}', 'nPREΔ': '{:.1%}', 'oPRE': '{:.2f}','oPREΔ':'{:.0%}', 'dPRE': '{:.2f}','dPREΔ':'{:.0%}','nRTG':'{:.2f}','oRTG':'{:.2f}','dRTG':'{:.2f}',
+            'Proj':'{:.1f}','ProjΔ':'{:.1f}','xGD': '{:.1f}', 'xPts': '{:.1f}','Win':'{:.0%}','WinΔ':'{:.0%}','CL':'{:.0%}','CLΔ':'{:.0%}','Rel':'{:.0%}','RelΔ':'{:.0%}'}
 
-        # Skill (nPRE)
-        ax.add_patch(Rectangle((1.15/10, i_loc - space/2), 0.5/10, space, facecolor='lightgray'))  # placeholder for cmap
-        ax.annotate(f"{row['nPRE']:.1%}", (1.4/10, i_loc), va='center', ha='center', size=9)
-        delta_color = 'darkgreen' if row['nPREΔ'] > 0 else 'darkred'
-        ax.annotate(f"({'+' if row['nPREΔ'] > 0 else ''}{row['nPREΔ']:.1%})", (1.9/10, i_loc), va='center', ha='center', size=9, color=delta_color)
-
-        # Offensive (oPRE)
-        ax.add_patch(Rectangle((2.15/10, i_loc - space/2), 0.5/10, space, facecolor='lightgray'))  # placeholder
-        ax.annotate(f"{row['oPRE']:.3f}", (2.4/10, i_loc), va='center', ha='center', size=9)
-        delta_color = 'darkgreen' if row['oPREΔ'] > 0 else 'darkred'
-        ax.annotate(f"({'+' if row['oPREΔ'] > 0 else ''}{row['oPREΔ']:.0%})", (2.9/10, i_loc), va='center', ha='center', size=9, color=delta_color)
-
-        # Defensive (dPRE)
-        ax.add_patch(Rectangle((3.15/10, i_loc - space/2), 0.5/10, space, facecolor='lightgray'))  # placeholder
-        ax.annotate(f"{row['dPRE']:.3f}", (3.4/10, i_loc), va='center', ha='center', size=9)
-        delta_color = 'darkgreen' if row['dPREΔ'] < 0 else 'darkred'
-        ax.annotate(f"({'+' if row['dPREΔ'] < 0 else ''}{abs(row['dPREΔ']):.0%})", (3.9/10, i_loc), va='center', ha='center', size=9, color=delta_color)
-
-        # Performance (nRTG, oRTG, dRTG)
-        ax.annotate(f"{row['nRTG']:.2f}", (4.35/10, i_loc), va='center', ha='center', size=9)
-        ax.annotate(f"{row['oRTG']:.2f}", (4.65/10, i_loc), va='center', ha='center', size=9)
-        ax.annotate(f"{row['dRTG']:.2f}", (4.95/10, i_loc), va='center', ha='center', size=9)
-
-        # Proj + ProjΔ
-        ax.annotate(f"{row['Proj']:.1f}", (5.3/10, i_loc), va='center', ha='center', size=9)
-        delta_color = 'darkgreen' if row['ProjΔ'] > 0 else 'darkred'
-        ax.annotate(f"({'+' if row['ProjΔ'] > 0 else ''}{row['ProjΔ']:.1f})", (5.65/10, i_loc), va='center', ha='center', size=9, color=delta_color)
-
-        # Points + xPts
-        ax.annotate(f"{int(row['P'])}", (6.0/10, i_loc), va='center', ha='center', size=9)
-        ax.annotate(f"{row['xPts']:.1f}", (6.25/10, i_loc), va='center', ha='center', size=9)
-
-        # GD + xGD
-        ax.annotate(f"{int(row['GD'])}", (6.6/10, i_loc), va='center', ha='center', size=9)
-        ax.annotate(f"{row['xGD']:.1f}", (6.85/10, i_loc), va='center', ha='center', size=9)
-
-        # Champ + WinΔ
-        ax.annotate(f"{row['Win']:.1%}", (7.25/10, i_loc), va='center', ha='center', size=9)
-        delta_color = 'darkgreen' if row['WinΔ'] > 0 else 'darkred'
-        ax.annotate(f"({'+' if row['WinΔ'] > 0 else ''}{row['WinΔ']:.0%})", (7.65/10, i_loc), va='center', ha='center', size=9, color=delta_color)
-
-        # CL + CLΔ
-        ax.annotate(f"{row['CL']:.1%}", (8.05/10, i_loc), va='center', ha='center', size=9)
-        delta_color = 'darkgreen' if row['CLΔ'] > 0 else 'darkred'
-        ax.annotate(f"({'+' if row['CLΔ'] < 0 else ''}{row['CLΔ']:.0%})", (8.45/10, i_loc), va='center', ha='center', size=9, color=delta_color)
-
-        # Rel + RelΔ
-        ax.annotate(f"{row['Rel']:.1%}", (8.85/10, i_loc), va='center', ha='center', size=9)
-        delta_color = 'darkgreen' if row['RelΔ'] < 0 else 'darkred'
-        ax.annotate(f"({'+' if row['RelΔ'] < 0 else ''}{row['RelΔ']:.0%})", (9.25/10, i_loc), va='center', ha='center', size=9, color=delta_color)
-
-        # Range
-        ax.annotate(row['range'], (9.75/10, i_loc), va='center', ha='center', size=9)
-
-        # Row divider
-        ax.axhline(i_loc - space/2, color='black', linewidth=0.5)
-
-        i_loc -= space
-
-    # Top border
-    ax.axhline(top + space/2, color='black', linewidth=0.5)
-
-    plt.tight_layout()
-    return fig
 
 standings = pd.read_feather('data/standings.ftr')
 #color_map = pd.read_feather('data/color_map.ftr')
@@ -226,5 +180,4 @@ with tab_standings:
             selected_start_date = st.selectbox("Select Relative Date",options=start_dates,index=len(start_dates)-1, key='start_date_picker',label_visibility='collapsed')
 
         standings_df = create_standings_file(standings,standings_sims,team_ratings,selected_season,selected_end_date,selected_start_date).sort_values(['P','GD'],ascending=False)
-        fig = plot_standings_table(standings_df.drop(columns='season'))
-        st.pyplot(fig, use_container_width=True)
+        show_standings_table(standings_df.drop(columns='season'), fmt_dict)
