@@ -188,9 +188,9 @@ def plot_standings_table(standings_df):
         ax.annotate(f"{row['nRTG']:.2f}", (4.35/10, i_loc), va='center', ha='center', size=9)
         ax.annotate(f"{row['oRTG']:.2f}", (4.65/10, i_loc), va='center', ha='center', size=9)
         ax.annotate(f"{row['dRTG']:.2f}", (4.95/10, i_loc), va='center', ha='center', size=9)
-        ax.add_patch(Rectangle((4.15/10, i_loc - space/2), (1/3)/10, space,facecolor=cmap(norm_perf(row['nRTG']))))
-        ax.add_patch(Rectangle((4.483/10, i_loc - space/2), (1/3)/10, space,facecolor=cmap(norm_o(row['oRTG']))))
-        ax.add_patch(Rectangle((4.816/10, i_loc - space/2), (1/3)/10, space,facecolor=cmap(1 - norm_o(row['dRTG']))))
+        #ax.add_patch(Rectangle((4.15/10, i_loc - space/2), (1/3)/10, space,facecolor=cmap(norm_perf(row['nRTG']))))
+        #ax.add_patch(Rectangle((4.483/10, i_loc - space/2), (1/3)/10, space,facecolor=cmap(norm_o(row['oRTG']))))
+        #ax.add_patch(Rectangle((4.816/10, i_loc - space/2), (1/3)/10, space,facecolor=cmap(1 - norm_o(row['dRTG']))))
 
         # Proj + ProjΔ
         ax.annotate(f"{row['Proj']:.0f}", (5.3/10, i_loc), va='center', ha='center', size=9)
