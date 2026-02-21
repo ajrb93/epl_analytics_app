@@ -327,24 +327,27 @@ def plot_position_heatmap(standings_sims, standings_df, selected_end_date, team_
         y=teams_ordered,
         colorscale='RdYlGn',
         showscale=False,
-        hovertemplate='<b>%{y}</b><br>Position %{x}: %{z:.1%}<extra></extra>',
+        hovertemplate='<b>%{y}</b><br>Position %{x}: %{z:.0%}<extra></extra>',
         zmin=0,
-        zmax=1  # cap at 50% so colors spread better
+        zmax=1,
+        text=[[f"{val:.0%}" for val in row] for row in heatmap_data.values],
+        texttemplate="%{text}",
+        textfont=dict(size=7)
     ))
 
     fig.update_layout(
         xaxis=dict(
-            title='Position',
+            title='',
             tickvals=list(range(1, 21)),
             ticktext=[str(i) for i in range(1, 21)],
-            side='top'
+            side='bottom'
         ),
         yaxis=dict(
             autorange='reversed',  # keep standings order top to bottom
             tickfont=dict(size=10)
         ),
-        margin=dict(l=120, r=20, t=40, b=20),
-        width=520,  # 400px plot + room for team names on left
+        margin=dict(l=100, r=20, t=20, b=20),
+        width=500,  # 400px plot + room for team names on left
         height=400
     )
 
