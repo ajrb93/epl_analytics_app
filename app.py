@@ -244,8 +244,8 @@ def show_standings_table(df, fmt_dict):
         theme='streamlit'
     )
 
-fmt_dict = {'nPRE': '{:.1%}', 'nPREΔ': '{:.1%}', 'oPRE': '{:.2f}','oPREΔ':'{:.0%}', 'dPRE': '{:.2f}','dPREΔ':'{:.0%}','nRTG':'{:.2f}','oRTG':'{:.2f}','dRTG':'{:.2f}',
-            'Proj':'{:.1f}','ProjΔ':'{:.1f}','xGD': '{:.1f}', 'xPts': '{:.1f}','Win':'{:.0%}','WinΔ':'{:.0%}','CL':'{:.0%}','CLΔ':'{:.0%}','Rel':'{:.0%}','RelΔ':'{:.0%}'}
+fmt_dict = {'nPRE': '{:.0%}', 'nPREΔ': '{:.0%}', 'oPRE': '{:.2f}','oPREΔ':'{:.0%}', 'dPRE': '{:.2f}','dPREΔ':'{:.0%}','nRTG':'{:.1f}','oRTG':'{:.1f}','dRTG':'{:.1f}',
+            'Proj':'{:.0f}','ProjΔ':'{:.0f}','xGD': '{:.0f}', 'xPts': '{:.0f}','Win':'{:.0%}','WinΔ':'{:.0%}','CL':'{:.0%}','CLΔ':'{:.0%}','Rel':'{:.0%}','RelΔ':'{:.0%}'}
 
 
 standings = pd.read_feather('data/standings.ftr')
