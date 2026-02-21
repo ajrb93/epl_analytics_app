@@ -115,8 +115,8 @@ def plot_standings_table(standings_df):
 
     # --- ROWS ---
     n_teams = len(standings_df)
-    top = 0.95
-    bottom_margin = 0.02
+    top = 0.94
+    bottom_margin = 0.01
     total_height = top - bottom_margin
     space = total_height / n_teams
     i_loc = top - space / 2
