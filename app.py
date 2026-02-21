@@ -7,6 +7,9 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 from matplotlib.patches import Rectangle
 import matplotlib.colors as mcolors
+import base64
+from io import BytesIO
+import numpy as np
 
 # --- 1. CONFIG & COMPACT STYLING ---
 st.set_page_config(layout="wide", page_title="English Premier League")
@@ -71,7 +74,14 @@ def load_standings_sims():
 
     standings_sims['range'] = standings_sims[['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20']].apply(credible_range_str, axis=1)
     standings_sims['season'] = (pd.to_datetime(standings_sims.Sim_Date).dt.year + (pd.to_datetime(standings_sims.Sim_Date).dt.month >= 8).astype('int')).astype('str').str[2:]
-    return standings_sims
+    
+    match_sims = []
+    for file in match_files:
+        temp = pd.read_feather('data/Sim_States/'+file)
+        match_sims.append(temp)
+    match_sims = pd.concat((match_sims))
+
+    return standings_sims, match_sims
 
 def create_standings_file(standings,standings_sims,team_ratings,season,max_date,min_date):
     temp = standings[standings.season == season][['season','F','F_score','A_score','F_P','F_xg','A_xg','F_xPts','oRTG','dRTG','nRTG']].reset_index(drop=True)
@@ -353,17 +363,144 @@ def plot_position_heatmap(standings_sims, standings_df, selected_end_date, team_
 
     return fig
 
+def create_matches_df(match_sims,matches,team_ratings,selected_season,selected_end_date):
+    match_sims = match_sims[match_sims.Sim_Date <= selected_end_date].sort_values('Sim_Date').groupby(['game_date','Home','Away']).tail(1)
+    match_sims = match_sims[['Sim_Date','game_date','Home','Away','h_exp','a_exp','h_win','d_win','a_win']]
+    matches = matches[matches.season == selected_season]
+    matches = matches[['game_date','home','away','home_score','away_score','home_xg','away_xg','home_P','away_P','home_perf','away_perf','home_xPts','away_xPts']]
+    matches.loc[matches.game_date.dt.date > selected_end_date,('home_score','away_score','home_xg','away_xg','home_P','away_P','home_perf','away_perf',
+                                                       'home_xPts','away_xPts')] = np.nan
+    matches = matches.merge(match_sims,left_on=['game_date','home','away'],right_on=['game_date','Home','Away']).drop(columns=['Home','Away'])
+
+    plot_df = matches.merge(
+        team_ratings.drop(columns=['Season','A','B']), left_on=['Sim_Date','home'], right_on=['Date','Team']).merge(
+        team_ratings.drop(columns=['Season','A','B']), left_on=['Sim_Date','away'], right_on=['Date','Team'], suffixes=['_H','_A']).drop(
+        columns=['Sim_Date','Date_H','Date_A'])
+    plot_df['Pre_Pts_H'] = plot_df.h_win * 3 + plot_df.d_win
+    plot_df['Pre_Pts_A'] = plot_df.a_win * 3 + plot_df.d_win
+    return plot_df.sort_values('game_date').reset_index(drop=True)
+
+def create_results_figure(plot_df):
+    results = plot_df[~plot_df.home_score.isna()].reset_index(drop=True).sort_values('game_date',ascending=False)
+    results[' '] = ''
+    results['score'] = results.home_score.astype('int').astype('str') + ' - ' + results.away_score.astype('int').astype('str')
+    results = results[['game_date','home','Pre_Pts_H','score','Pre_Pts_A','away',' ','home_xPts','away_xPts',' ','home_xg','away_xg']].rename(
+        columns={'game_date':'Date','home':'Home','Pre_Pts_H':'H_F','Pre_Pts_A':'A_F','away':'Away','home_xPts':'Per_H','away_xPts':'Per_A',
+                 'home_xg':'xG_H','away_xg':'xG_A'})
+
+    fig_height = max(4, len(results) * 0.2)
+    fig, ax = plt.subplots(figsize=(7,fig_height))
+    ax.set_xlim(0, 1)
+    ax.set_ylim(0, 1)
+    ax.axis('off')
+
+    # Column x positions
+    col_x = {
+        'Date':   0.01,
+        'Home':   0.13,
+        'H':    0.38,
+        '':  0.43,
+        'A':    0.48,
+        'Away':   0.53,
+        '1':0.78,
+        'HPer':  0.79,
+        'APer':  0.84,
+        '2':0.89,
+        'HxG':   0.90,
+        'AxG':   0.95
+    }
+
+    # Headers
+    header_y = (len(results)+0.5)/(len(results)+1)
+    for col, x in col_x.items():
+        if (col == '1') | (col == '2'):
+            pass
+        else:
+            ha = 'left'
+            shift = 0.015 if col in ['H','A'] else 0
+            ax.annotate(col, (x + shift , header_y), va='center', ha=ha, size=7, weight='bold')
+
+    # Row layout
+    top = len(results)/(len(results)+1)
+    ax.axhline(top, color='black', linewidth=0.8)
+    bottom_margin = 1/(len(results)+1)/10
+    total_height = top - bottom_margin
+    space = total_height / len(results)
+    i_loc = top - space / 2
+
+    # Vertical dividers (between groups)
+    for x in col_x.values():
+        ax.vlines(x-0.005, bottom_margin, top, color='black', linewidth=0.5)
+
+    for _, row in results.iterrows():
+        home_primary = 'blue'#team_colors[row['Home']]['home_primary']
+        home_text = 'red'##team_colors[row['Home']]['home_text']
+        away_primary = 'blue'#team_colors[row['Away']]['home_primary']
+        away_text = 'red'#team_colors[row['Away']]['home_text']
+
+        # Home team background
+        ax.add_patch(Rectangle((0.13-0.005, i_loc - space/2), 0.30, space, facecolor=home_primary))
+        # Away team background
+        ax.add_patch(Rectangle((0.48-0.005, i_loc - space/2), 0.30, space, facecolor=away_primary))
+
+        # Performance color rectangles
+        ax.add_patch(Rectangle((0.79-0.005, i_loc - space/2), 0.05, space,
+            facecolor=cmap(norm_p(row['Per_H'])) if pd.notna(row['Per_H']) else 'lightgray'))
+        ax.add_patch(Rectangle((0.84-0.005, i_loc - space/2), 0.05, space,
+            facecolor=cmap(norm_p(row['Per_A'])) if pd.notna(row['Per_A']) else 'lightgray'))
+        ax.add_patch(Rectangle((0.9-0.005, i_loc - space/2), 0.05, space,
+            facecolor=cmap(norm_o(row['xG_H'])) if pd.notna(row['xG_H']) else 'lightgray'))
+        ax.add_patch(Rectangle((0.95-0.005, i_loc - space/2), 0.05, space,
+            facecolor=cmap(norm_o(row['xG_A'])) if pd.notna(row['xG_A']) else 'lightgray'))
+
+        # Text annotations
+        ax.annotate(str(row['Date'])[:10], (col_x['Date'], i_loc), va='center', ha='left', size=7)
+        ax.annotate(row['Home'], (col_x['Home'], i_loc), va='center', ha='left', size=7, 
+                    color=home_text, fontweight='bold')
+        ax.annotate(f"{row['H_F']:.2f}", (col_x['H'], i_loc), va='center', ha='left', size=7,
+                    color=home_text)
+        ax.annotate(row['score'], (col_x[''], i_loc), va='center', ha='left', size=7, fontweight='bold')
+        ax.annotate(f"{row['A_F']:.2f}", (col_x['A'], i_loc), va='center', ha='left', size=7,
+                    color=away_text)
+        ax.annotate(row['Away'], (col_x['Away'], i_loc), va='center', ha='left', size=7,
+                    color=away_text, fontweight='bold')
+        ax.annotate(f"{row['Per_H']:.2f}" if pd.notna(row['Per_H']) else '', 
+                    (col_x['HPer'], i_loc), va='center', ha='left', size=7)
+        ax.annotate(f"{row['Per_A']:.2f}" if pd.notna(row['Per_A']) else '', 
+                    (col_x['APer'], i_loc), va='center', ha='left', size=7)
+        ax.annotate(f"{row['xG_H']:.2f}" if pd.notna(row['xG_H']) else '', 
+                    (col_x['HxG'], i_loc), va='center', ha='left', size=7)
+        ax.annotate(f"{row['xG_A']:.2f}" if pd.notna(row['xG_A']) else '', 
+                    (col_x['AxG'], i_loc), va='center', ha='left', size=7)
+
+        # Row divider
+        ax.axhline(i_loc - space/2, color='black', linewidth=0.3)
+        i_loc -= space
+    return fig
+
+def scrollable_plot(fig, height=400):
+    buf = BytesIO()
+    fig.savefig(buf, format='png', bbox_inches='tight', dpi=150)
+    buf.seek(0)
+    img_base64 = base64.b64encode(buf.read()).decode()
+    
+    st.markdown(f"""
+        <div style="height:{height}px; overflow-y:scroll; overflow-x:hidden;">
+            <img src="data:image/png;base64,{img_base64}" style="width:100%;">
+        </div>
+    """, unsafe_allow_html=True)
+
 standings = pd.read_feather('data/standings.ftr')
 color_map = pd.read_feather('data/color_map.ftr')
 color_map['home_secondary'] = color_map.apply(lambda row: '#FFFFFF' if row['home_primary'] == row['home_secondary'] else row['home_secondary'],axis=1)
 team_colors = color_map.to_dict('index')
-#matches = pd.read_feather('data/matches.ftr')
+matches = pd.read_feather('data/matches.ftr')
 #player_stats = pd.read_feather('data/player_stats.ftr')
 team_ratings = pd.read_feather('data/team_ratings.ftr')
 team_ratings = team_ratings[['Season','Date']].drop_duplicates().merge(team_ratings[['Season','Team']].drop_duplicates()).merge(
     team_ratings,how='outer').sort_values(['Team','Date'])
 team_ratings[['A','B','C']] = team_ratings.groupby(['Season','Team'])[['A','B','C']].ffill()
-standings_sims = load_standings_sims()
+standings_sims, match_sims = load_standings_sims()
 
 # --- MAIN DASHBOARD ---
 tab_standings, tab_team = st.tabs([f"Standings", "Team Profile"])
@@ -382,6 +519,10 @@ with tab_standings:
         with subcol3:
             start_dates = sorted(standings_sims[(standings_sims['season'] == selected_season) & (standings_sims['Sim_Date'] < selected_end_date)]['Sim_Date'].unique(),reverse=True)
             selected_start_date = st.selectbox("Select Relative Date",options=start_dates,index=len(start_dates)-1, key='start_date_picker',label_visibility='collapsed')
+        matches_df = create_matches_df(match_sims,matches,team_ratings,selected_season,selected_end_date)
+        fig = create_results_figure(matches_df)
+        scrollable_plot(fig, height=350)
+
     with col2:
         standings_df = create_standings_file(standings,standings_sims,team_ratings,selected_season,selected_end_date,selected_start_date).sort_values(['P','GD'],ascending=False)
         fig = plot_standings_table(standings_df.drop(columns='season'))
