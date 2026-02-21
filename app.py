@@ -235,6 +235,7 @@ def plot_standings_table(standings_df):
 
 standings = pd.read_feather('data/standings.ftr')
 color_map = pd.read_feather('data/color_map.ftr')
+color_map['home_secondary'] = color_map.apply(lambda row: '#FFFFFF' if row['home_primary'] == row['home_secondary'] else row['home_secondary'],axis=1)
 team_colors = color_map.to_dict('index')
 #matches = pd.read_feather('data/matches.ftr')
 #player_stats = pd.read_feather('data/player_stats.ftr')
