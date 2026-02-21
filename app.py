@@ -160,11 +160,9 @@ def plot_standings_table(standings_df):
         team = row['Team']
 
         # Team name
-        ax.annotate(team, (0.01, i_loc), va='center', ha='left', size=9, fontweight='bold')
-
-        # Background placeholder (replace with team colors later)
-        ax.add_patch(Rectangle((0, i_loc - space/2), 1.15/10, space, facecolor='lightgray'))
-        ax.add_patch(Rectangle((1.15/10, i_loc - space/2), 1, space, facecolor='whitesmoke'))
+        ax.annotate(team, (0.01, i_loc), va='center', ha='left', size=9, fontweight='bold',color=team_colors[team]['home_secondary'])
+        ax.add_patch(Rectangle((0,i_loc+space/2),1.15/10,-space,facecolor=team_colors[team]['home_primary']))
+        ax.add_patch(Rectangle((1.15/10, i_loc - space/2), 1, space, mean_color(mean_color(team_colors[team]['home_primary'],'#FFFFFF'),'#FFFFFF')))
 
         # Skill (nPRE)
         ax.annotate(f"{row['nPRE']:.0%}", (1.4/10, i_loc), va='center', ha='center', size=9)
@@ -236,7 +234,8 @@ def plot_standings_table(standings_df):
     return fig
 
 standings = pd.read_feather('data/standings.ftr')
-#color_map = pd.read_feather('data/color_map.ftr')
+color_map = pd.read_feather('data/color_map.ftr')
+team_colors = color_map.set_index('Team').to_dict('index')
 #matches = pd.read_feather('data/matches.ftr')
 #player_stats = pd.read_feather('data/player_stats.ftr')
 team_ratings = pd.read_feather('data/team_ratings.ftr')
