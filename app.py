@@ -571,9 +571,9 @@ def create_schedule_figure(plot_df):
         ax.annotate(str(row['Date'])[:10], (col_x['Date'], i_loc), va='center', ha='left', size=7)
         ax.annotate(row['Home'], (col_x['Home'], i_loc), va='center', ha='left', size=7, 
                     color=home_text, fontweight='bold')
-        ax.annotate(f"{row['h_win']:.2%}", (col_x['H'], i_loc), va='center', ha='left', size=7)
-        ax.annotate(f"{row['d_win']:.2%}", (col_x['D'], i_loc), va='center', ha='left', size=7)
-        ax.annotate(f"{row['a_win']:.2%}", (col_x['A'], i_loc), va='center', ha='left', size=7)
+        ax.annotate(f"{row['h_win']:.0%}", (col_x['H'], i_loc), va='center', ha='left', size=7)
+        ax.annotate(f"{row['d_win']:.0%}", (col_x['D'], i_loc), va='center', ha='left', size=7)
+        ax.annotate(f"{row['a_win']:.0%}", (col_x['A'], i_loc), va='center', ha='left', size=7)
         ax.annotate(f"{row['H_F']:.2f}", (col_x['HExp'], i_loc), va='center', ha='left', size=7)
         ax.annotate(f"{row['A_F']:.2f}", (col_x['AExp'], i_loc), va='center', ha='left', size=7)
         ax.annotate(row['Away'], (col_x['Away'], i_loc), va='center', ha='left', size=7,
