@@ -638,7 +638,7 @@ def create_mvp_figure(plot_df,position):
         # Text annotations
         ax.annotate(row['name'], (col_x[''], i_loc), va='center', ha='left', size=7)
         ax.annotate(row['team'], (col_x['Team'], i_loc), va='center', ha='left', size=7)
-        ax.annotate(row['Rtg'], (col_x['MVPRtg'], i_loc), va='center', ha='left', size=7)
+        ax.annotate(row['MVPRtg'], (col_x['Rtg'], i_loc), va='center', ha='left', size=7)
         # Row divider
         ax.axhline(i_loc - space/2, color='black', linewidth=0.3)
         i_loc -= space
@@ -683,7 +683,6 @@ with tab_standings:
         scrollable_plot(fig, height=200)
         st.markdown("")
         mvp_df = create_player_mvps(player_stats,matches_df,int(selected_season),selected_end_date)
-        st.markdown(str(len(mvp_df)), unsafe_allow_html=True)
         subcol1, subcol2, subcol3, subcol4 = st.columns([1,1,1,1])
         with subcol1:
             st.markdown("<p style='font-size:14px; font-weight:bold; margin-bottom:2px;'>Goalkeeper</p>", unsafe_allow_html=True)
