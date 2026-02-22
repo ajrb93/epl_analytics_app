@@ -557,9 +557,9 @@ def create_schedule_figure(plot_df):
                     color=away_text)
         ax.annotate(row['Away'], (col_x['Away'], i_loc), va='center', ha='left', size=7,
                     color=away_text, fontweight='bold')
-        ax.annotate(f"{row['HRtg']:.2f}" if pd.notna(row['HRtg']) else '', 
+        ax.annotate(f"{row['HRtg']:.0%}" if pd.notna(row['HRtg']) else '', 
                     (col_x['HRtg'], i_loc), va='center', ha='left', size=7)
-        ax.annotate(f"{row['ARtg']:.2f}" if pd.notna(row['ARtg']) else '', 
+        ax.annotate(f"{row['ARtg']:.0%}" if pd.notna(row['ARtg']) else '', 
                     (col_x['ARtg'], i_loc), va='center', ha='left', size=7)
         ax.annotate(f"{row['HpG']:.2f}" if pd.notna(row['HpG']) else '', 
                     (col_x['HpG'], i_loc), va='center', ha='left', size=7)
@@ -614,10 +614,12 @@ with tab_standings:
             selected_start_date = st.selectbox("Select Relative Date",options=start_dates,index=len(start_dates)-1, key='start_date_picker',label_visibility='collapsed')
         matches_df = create_matches_df(match_sims,matches,team_ratings,selected_season,selected_end_date)
         fig = create_results_figure(matches_df)
-        st.markdown("<p style='font-size:12px; font-weight:bold; margin-bottom:2px;'>Results</p>", unsafe_allow_html=True)
+        st.markdown("<p style='font-size:14px; font-weight:bold; margin-bottom:2px;'>Results</p>", unsafe_allow_html=True)
         scrollable_plot(fig, height=200)
         fig = create_schedule_figure(matches_df)
-        st.markdown("<p style='font-size:12px; font-weight:bold; margin-bottom:2px;'>Schedule</p>", unsafe_allow_html=True)
+        st.markdown("")
+        st.markdown("")
+        st.markdown("<p style='font-size:14px; font-weight:bold; margin-bottom:2px;'>Schedule</p>", unsafe_allow_html=True)
         scrollable_plot(fig, height=200)
 
     with col2:
