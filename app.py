@@ -392,13 +392,14 @@ def create_results_figure(plot_df):
     # Column x positions
     col_x = {
         'Date':   0.01,
-        'Home':   0.13,
-        'H':    0.38,
-        '':  0.43,
-        'A':    0.48,
-        'Away':   0.53,
-        '1':0.78,
-        'HPer':  0.79,
+        'Home':   0.12,
+        '':    0.37,
+        'Away':   0.42,
+        '1':0.67,
+        'HExp':0.68,
+        'HPer':  0.73,
+        '3':0.78,
+        'AExp':0.79,
         'APer':  0.84,
         '2':0.89,
         'HxG':   0.90,
@@ -434,13 +435,17 @@ def create_results_figure(plot_df):
         away_text = team_colors[row['Away']]['home_secondary']
 
         # Home team background
-        ax.add_patch(Rectangle((0.13-0.005, i_loc - space/2), 0.30, space, facecolor=home_primary))
+        ax.add_patch(Rectangle((0.12-0.005, i_loc - space/2), 0.25, space, facecolor=home_primary))
         # Away team background
-        ax.add_patch(Rectangle((0.48-0.005, i_loc - space/2), 0.30, space, facecolor=away_primary))
+        ax.add_patch(Rectangle((0.42-0.005, i_loc - space/2), 0.25, space, facecolor=away_primary))
 
         # Performance color rectangles
-        ax.add_patch(Rectangle((0.79-0.005, i_loc - space/2), 0.05, space,
+        ax.add_patch(Rectangle((0.68-0.005, i_loc - space/2), 0.05, space,
+            facecolor=cmap(norm_p(row['Pre_Pts_H'])) if pd.notna(row['Pre_Pts_H']) else 'lightgray'))
+        ax.add_patch(Rectangle((0.73-0.005, i_loc - space/2), 0.05, space,
             facecolor=cmap(norm_p(row['Per_H'])) if pd.notna(row['Per_H']) else 'lightgray'))
+        ax.add_patch(Rectangle((0.79-0.005, i_loc - space/2), 0.05, space,
+            facecolor=cmap(norm_p(row['Pre_Pts_A'])) if pd.notna(row['Pre_Pts_A']) else 'lightgray'))
         ax.add_patch(Rectangle((0.84-0.005, i_loc - space/2), 0.05, space,
             facecolor=cmap(norm_p(row['Per_A'])) if pd.notna(row['Per_A']) else 'lightgray'))
         ax.add_patch(Rectangle((0.9-0.005, i_loc - space/2), 0.05, space,
@@ -452,10 +457,10 @@ def create_results_figure(plot_df):
         ax.annotate(str(row['Date'])[:10], (col_x['Date'], i_loc), va='center', ha='left', size=7)
         ax.annotate(row['Home'], (col_x['Home'], i_loc), va='center', ha='left', size=7, 
                     color=home_text, fontweight='bold')
-        ax.annotate(f"{row['H_F']:.2f}", (col_x['H'], i_loc), va='center', ha='left', size=7,
+        ax.annotate(f"{row['H_F']:.2f}", (col_x['HExp'], i_loc), va='center', ha='left', size=7,
                     color=home_text)
         ax.annotate(row['score'], (col_x[''], i_loc), va='center', ha='left', size=7, fontweight='bold')
-        ax.annotate(f"{row['A_F']:.2f}", (col_x['A'], i_loc), va='center', ha='left', size=7,
+        ax.annotate(f"{row['A_F']:.2f}", (col_x['AExp'], i_loc), va='center', ha='left', size=7,
                     color=away_text)
         ax.annotate(row['Away'], (col_x['Away'], i_loc), va='center', ha='left', size=7,
                     color=away_text, fontweight='bold')
