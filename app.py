@@ -595,9 +595,9 @@ def create_player_mvps(player_stats,matches_df,selected_season,selected_end_date
     return player_stats.reset_index()[['name','position','team','MVPRtg']]
 
 def create_mvp_figure(plot_df):
-    mvps = plot_df.head(10)
+    mvps = plot_df.sort_values('MVPRtg',ascending=False).head(10)
 
-    fig, ax = plt.subplots(figsize=(7,4))
+    fig, ax = plt.subplots(figsize=(5,4))
     ax.set_xlim(0, 1)
     ax.set_ylim(0, 1)
     ax.axis('off')
@@ -605,8 +605,8 @@ def create_mvp_figure(plot_df):
     # Column x positions
     col_x = {
         '':   0.01,
-        'Team':0.4,
-        'Rtg':   0.75}
+        'Team':0.3,
+        'Rtg':   0.9}
 
     # Headers
     header_y = (len(mvps)+0.5)/(len(mvps)+1)
@@ -627,7 +627,7 @@ def create_mvp_figure(plot_df):
         ax.vlines(x-0.005, bottom_margin, top, color='black', linewidth=0.5)
 
     for _, row in mvps.iterrows():
-        if len(mvps) > 1:
+        if len(row['team']) > 1:
             primary = 'white'
             secondary = 'black'
         else:
