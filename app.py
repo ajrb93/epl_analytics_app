@@ -637,10 +637,10 @@ def create_mvp_figure(plot_df):
 
         ax.add_patch(Rectangle((0, i_loc - space/2),1, space, facecolor=primary))
         # Text annotations
-        ax.annotate(row['name'], (col_x[''], i_loc), va='center', ha='left', size=7,color = secondary)
+        ax.annotate(row['name'], (col_x[''], i_loc), va='center', ha='left', size=7,color = secondary,fontweight='bold')
         ax.annotate(row['position'], (col_x['Pos'], i_loc), va='center', ha='left', size=7,color = secondary)
         ax.annotate(row['team'][0], (col_x['Team'], i_loc), va='center', ha='left', size=7,color = secondary)
-        ax.annotate(f"{row['MVPRtg']:.2f}" if pd.notna(row['MVPRtg']) else '', (col_x['Rtg'], i_loc), va='center', ha='center', size=7,color = secondary)
+        ax.annotate(f"{row['MVPRtg']:.2f}" if pd.notna(row['MVPRtg']) else '', (col_x['Rtg'], i_loc), va='center', ha='left', size=7,color = secondary)
         # Row divider
         ax.axhline(i_loc - space/2, color='black', linewidth=0.3)
         i_loc -= space
@@ -687,12 +687,7 @@ with tab_standings:
         mvp_df = create_player_mvps(player_stats,matches_df,int(selected_season),selected_end_date)
         st.markdown("<p style='font-size:14px; font-weight:bold; margin-bottom:2px;'>Best Players</p>", unsafe_allow_html=True)
         fig = create_mvp_figure(mvp_df)
-        buf = BytesIO()
-        fig.savefig(buf, format='png', bbox_inches='tight', dpi=150)
-        buf.seek(0)
-        img_base64 = base64.b64encode(buf.read()).decode()
-        st.markdown(f'<img src="data:image/png;base64,{img_base64}" style="width:75%;">', unsafe_allow_html=True)
-        plt.close(fig)
+        scrollable_plot(fig, height=150)
 
     with col2:
         standings_df = create_standings_file(standings,standings_sims,team_ratings,selected_season,selected_end_date,selected_start_date).sort_values(['P','GD'],ascending=False)
