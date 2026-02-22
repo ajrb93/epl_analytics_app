@@ -595,9 +595,9 @@ def create_player_mvps(player_stats,matches_df,selected_season,selected_end_date
     return player_stats.reset_index()[['name','position','team','MVPRtg']]
 
 def create_mvp_figure(plot_df):
-    mvps = plot_df.sort_values('MVPRtg',ascending=False).head(50)
+    mvps = plot_df.sort_values('MVPRtg',ascending=False).head(100)
 
-    fig, ax = plt.subplots(figsize=(10,50))
+    fig, ax = plt.subplots(figsize=(5,25))
     ax.set_xlim(0, 1)
     ax.set_ylim(0, 1)
     ax.axis('off')
