@@ -349,11 +349,11 @@ def plot_position_heatmap(standings_sims, standings_df, selected_end_date, team_
         xaxis=dict(visible=False),
         yaxis=dict(
             autorange='reversed',  # keep standings order top to bottom
-            tickfont=dict(size=9.5)
+            tickfont=dict(size=10)
         ),
         margin=dict(l=10, r=10, t=10, b=10),
         width=820,  # 400px plot + room for team names on left
-        height=420
+        height=400
     )
 
     return fig
@@ -524,7 +524,7 @@ with tab_standings:
         fig = plot_standings_table(standings_df.drop(columns='season'))
         st.pyplot(fig, use_container_width=True)
 
-        subcol1, subcol2 = st.columns([0.4,0.6])
+        subcol1, subcol2 = st.columns([0.45,0.55])
         with subcol1:
             fig = plot_ratings_scatter(standings_df.drop(columns='season'), team_colors)
             st.plotly_chart(fig, use_container_width=False)
