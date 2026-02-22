@@ -597,7 +597,7 @@ def create_player_mvps(player_stats,matches_df,selected_season,selected_end_date
 def create_mvp_figure(plot_df):
     mvps = plot_df.sort_values('MVPRtg',ascending=False).head(10)
 
-    fig, ax = plt.subplots(figsize=(4,4/(5/4)))
+    fig, ax = plt.subplots(figsize=(5,4))
     ax.set_xlim(0, 1)
     ax.set_ylim(0, 1)
     ax.axis('off')
@@ -605,9 +605,9 @@ def create_mvp_figure(plot_df):
     # Column x positions
     col_x = {
         '':   0.01,
-        'Pos':0.3,
-        'Team':0.35,
-        'Rtg':   0.95}
+        'Pos':0.35,
+        'Team':0.4,
+        'Rtg':   0.9}
 
     # Headers
     header_y = (len(mvps)+0.5)/(len(mvps)+1)
@@ -691,7 +691,7 @@ with tab_standings:
         fig.savefig(buf, format='png', bbox_inches='tight', dpi=150)
         buf.seek(0)
         img_base64 = base64.b64encode(buf.read()).decode()
-        st.markdown(f'<img src="data:image/png;base64,{img_base64}" style="width:80%;">', unsafe_allow_html=True)
+        st.markdown(f'<img src="data:image/png;base64,{img_base64}" style="width:75%;">', unsafe_allow_html=True)
         plt.close(fig)
 
     with col2:
