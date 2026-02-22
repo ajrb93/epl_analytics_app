@@ -594,10 +594,10 @@ def create_player_mvps(player_stats,matches_df,selected_season,selected_end_date
     player_stats['MVPRtg'] = (player_stats.Rtg * player_stats.minutesPlayed + avg * (player_stats.minutesPlayed.max() - player_stats.minutesPlayed)) / player_stats.minutesPlayed.max()
     return player_stats.reset_index()[['name','position','team','MVPRtg']]
 
-def create_mvp_figure(plot_df,position):
-    mvps = plot_df[plot_df.position == position].head(10)
+def create_mvp_figure(plot_df):
+    mvps = plot_df.head(10)
 
-    fig, ax = plt.subplots(figsize=(1.5,4))
+    fig, ax = plt.subplots(figsize=(7,4))
     ax.set_xlim(0, 1)
     ax.set_ylim(0, 1)
     ax.axis('off')
@@ -638,7 +638,7 @@ def create_mvp_figure(plot_df,position):
         # Text annotations
         ax.annotate(row['name'], (col_x[''], i_loc), va='center', ha='left', size=7)
         ax.annotate(row['team'], (col_x['Team'], i_loc), va='center', ha='left', size=7)
-        ax.annotate(row['MVPRtg'], (col_x['Rtg'], i_loc), va='center', ha='left', size=7)
+        ax.annotate(f"{row['MVPRtg']:.2f}" if pd.notna(row['HRtg']) else '', (col_x['Rtg'], i_loc), va='center', ha='left', size=7)
         # Row divider
         ax.axhline(i_loc - space/2, color='black', linewidth=0.3)
         i_loc -= space
@@ -683,22 +683,14 @@ with tab_standings:
         scrollable_plot(fig, height=200)
         st.markdown("")
         mvp_df = create_player_mvps(player_stats,matches_df,int(selected_season),selected_end_date)
-        subcol1, subcol2, subcol3, subcol4 = st.columns([1,1,1,1])
-        with subcol1:
-            st.markdown("<p style='font-size:14px; font-weight:bold; margin-bottom:2px;'>Goalkeeper</p>", unsafe_allow_html=True)
-            fig = create_mvp_figure(mvp_df,'G')
-            buf = BytesIO()
-            fig.savefig(buf, format='png', bbox_inches='tight', dpi=150)
-            buf.seek(0)
-            img_base64 = base64.b64encode(buf.read()).decode()
-            st.markdown(f'<img src="data:image/png;base64,{img_base64}" style="width:100%;">', unsafe_allow_html=True)
-            plt.close(fig)
-        with subcol2:
-            st.markdown("<p style='font-size:14px; font-weight:bold; margin-bottom:2px;'>Defenders</p>", unsafe_allow_html=True)
-        with subcol3:
-            st.markdown("<p style='font-size:14px; font-weight:bold; margin-bottom:2px;'>Midfielders</p>", unsafe_allow_html=True)
-        with subcol4:
-            st.markdown("<p style='font-size:14px; font-weight:bold; margin-bottom:2px;'>Forwards</p>", unsafe_allow_html=True)
+        st.markdown("<p style='font-size:14px; font-weight:bold; margin-bottom:2px;'>Best Players</p>", unsafe_allow_html=True)
+        fig = create_mvp_figure(mvp_df)
+        buf = BytesIO()
+        fig.savefig(buf, format='png', bbox_inches='tight', dpi=150)
+        buf.seek(0)
+        img_base64 = base64.b64encode(buf.read()).decode()
+        st.markdown(f'<img src="data:image/png;base64,{img_base64}" style="width:100%;">', unsafe_allow_html=True)
+        plt.close(fig)
 
     with col2:
         standings_df = create_standings_file(standings,standings_sims,team_ratings,selected_season,selected_end_date,selected_start_date).sort_values(['P','GD'],ascending=False)
