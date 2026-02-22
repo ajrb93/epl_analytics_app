@@ -473,6 +473,104 @@ def create_results_figure(plot_df):
         i_loc -= space
     return fig
 
+def create_schedule_figure(plot_df):
+    results = plot_df[plot_df.home_score.isna()].reset_index(drop=True).sort_values('game_date',ascending=True)
+    results[' '] = ''
+    results['score'] = ''
+    results = results[['game_date','home','Pre_Pts_H','score','Pre_Pts_A','away',' ','C_H','C_A',' ','h_exp','a_exp']].rename(
+        columns={'game_date':'Date','home':'Home','Pre_Pts_H':'H_F','Pre_Pts_A':'A_F','away':'Away','C_H':'HRtg','C_A':'ARtg',
+                 'h_exp':'HpG','a_exp':'ApG'})
+
+    fig_height = max(4, len(results) * 0.2)
+    fig, ax = plt.subplots(figsize=(7,fig_height))
+    ax.set_xlim(0, 1)
+    ax.set_ylim(0, 1)
+    ax.axis('off')
+
+    # Column x positions
+    col_x = {
+        'Date':   0.01,
+        'Home':   0.13,
+        'H':    0.38,
+        '' : 0.43,
+        'A':    0.48,
+        'Away':   0.53,
+        '1':0.78,
+        'HRtg':  0.79,
+        'ARtg':  0.84,
+        '2':0.89,
+        'HpG':   0.90,
+        'ApG':   0.95
+    }
+
+    # Headers
+    header_y = (len(results)+0.5)/(len(results)+1)
+    for col, x in col_x.items():
+        if (col == '1') | (col == '2'):
+            pass
+        else:
+            ha = 'left'
+            shift = 0.015 if col in ['H','A'] else 0
+            ax.annotate(col, (x + shift , header_y), va='center', ha=ha, size=7, weight='bold')
+
+    # Row layout
+    top = len(results)/(len(results)+1)
+    ax.axhline(top, color='black', linewidth=0.8)
+    bottom_margin = 1/(len(results)+1)/10
+    total_height = top - bottom_margin
+    space = total_height / len(results)
+    i_loc = top - space / 2
+
+    # Vertical dividers (between groups)
+    for x in col_x.values():
+        ax.vlines(x-0.005, bottom_margin, top, color='black', linewidth=0.5)
+
+    for _, row in results.iterrows():
+        home_primary = team_colors[row['Home']]['home_primary']
+        home_text = team_colors[row['Home']]['home_secondary']
+        away_primary = team_colors[row['Away']]['home_primary']
+        away_text = team_colors[row['Away']]['home_secondary']
+
+        # Home team background
+        ax.add_patch(Rectangle((0.13-0.005, i_loc - space/2), 0.30, space, facecolor=home_primary))
+        # Away team background
+        ax.add_patch(Rectangle((0.48-0.005, i_loc - space/2), 0.30, space, facecolor=away_primary))
+
+        # Performance color rectangles
+        ax.add_patch(Rectangle((0.79-0.005, i_loc - space/2), 0.05, space,
+            facecolor=cmap(row['HRtg']) if pd.notna(row['HRtg']) else 'lightgray'))
+        ax.add_patch(Rectangle((0.84-0.005, i_loc - space/2), 0.05, space,
+            facecolor=cmap(row['ARtg']) if pd.notna(row['ARtg']) else 'lightgray'))
+        ax.add_patch(Rectangle((0.9-0.005, i_loc - space/2), 0.05, space,
+            facecolor=cmap(norm_o(row['HpG'])) if pd.notna(row['HpG']) else 'lightgray'))
+        ax.add_patch(Rectangle((0.95-0.005, i_loc - space/2), 0.05, space,
+            facecolor=cmap(norm_o(row['ApG'])) if pd.notna(row['ApG']) else 'lightgray'))
+
+        # Text annotations
+        ax.annotate(str(row['Date'])[:10], (col_x['Date'], i_loc), va='center', ha='left', size=7)
+        ax.annotate(row['Home'], (col_x['Home'], i_loc), va='center', ha='left', size=7, 
+                    color=home_text, fontweight='bold')
+        ax.annotate(f"{row['H_F']:.2f}", (col_x['H'], i_loc), va='center', ha='left', size=7,
+                    color=home_text)
+        ax.annotate(row['score'], (col_x[''], i_loc), va='center', ha='left', size=7, fontweight='bold')
+        ax.annotate(f"{row['A_F']:.2f}", (col_x['A'], i_loc), va='center', ha='left', size=7,
+                    color=away_text)
+        ax.annotate(row['Away'], (col_x['Away'], i_loc), va='center', ha='left', size=7,
+                    color=away_text, fontweight='bold')
+        ax.annotate(f"{row['HRtg']:.2f}" if pd.notna(row['HRtg']) else '', 
+                    (col_x['HRtg'], i_loc), va='center', ha='left', size=7)
+        ax.annotate(f"{row['ARtg']:.2f}" if pd.notna(row['ARtg']) else '', 
+                    (col_x['ARtg'], i_loc), va='center', ha='left', size=7)
+        ax.annotate(f"{row['HpG']:.2f}" if pd.notna(row['HpG']) else '', 
+                    (col_x['HpG'], i_loc), va='center', ha='left', size=7)
+        ax.annotate(f"{row['ApG']:.2f}" if pd.notna(row['ApG']) else '', 
+                    (col_x['ApG'], i_loc), va='center', ha='left', size=7)
+
+        # Row divider
+        ax.axhline(i_loc - space/2, color='black', linewidth=0.3)
+        i_loc -= space
+    return fig
+
 def scrollable_plot(fig, height=400):
     buf = BytesIO()
     fig.savefig(buf, format='png', bbox_inches='tight', dpi=150)
@@ -517,6 +615,9 @@ with tab_standings:
         matches_df = create_matches_df(match_sims,matches,team_ratings,selected_season,selected_end_date)
         fig = create_results_figure(matches_df)
         st.markdown("<p style='font-size:12px; font-weight:bold; margin-bottom:2px;'>Results</p>", unsafe_allow_html=True)
+        scrollable_plot(fig, height=200)
+        fig = create_schedule_figure(matches_df)
+        st.markdown("<p style='font-size:12px; font-weight:bold; margin-bottom:2px;'>Schedule</p>", unsafe_allow_html=True)
         scrollable_plot(fig, height=200)
 
     with col2:
