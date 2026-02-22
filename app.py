@@ -723,3 +723,14 @@ with tab_standings:
         with subcol2:
             fig_heatmap = plot_position_heatmap(standings_sims, standings_df, selected_end_date, team_colors)
             st.plotly_chart(fig_heatmap)
+
+with tab_team:
+    col1, col2 = st.columns([2,3])
+    with col1:
+        subcol1, subcol2 = st.columns([1,2])
+        with subcol1:
+            season = sorted(standings_sims['season'].unique(), reverse=True)
+            selected_season = st.selectbox("Select Year", options=season, index=0, key="season_picker",label_visibility="collapsed")
+        with subcol2:
+            teams = sorted(standings[standings.season == selected_season].F.unique())
+            selected_team = st.selectbox('Select Team',options=teams,key='team_picker',label_visibility='collapsed')
