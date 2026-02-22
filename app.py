@@ -420,7 +420,7 @@ def create_results_figure(plot_df):
     ax.axhline(top, color='black', linewidth=0.8)
     bottom_margin = 1/(len(results)+1)/10
     total_height = top - bottom_margin
-    space = total_height / len(results)
+    space = total_height / max(4, len(results))
     i_loc = top - space / 2
 
     # Vertical dividers (between groups)
@@ -518,7 +518,7 @@ def create_schedule_figure(plot_df):
     ax.axhline(top, color='black', linewidth=0.8)
     bottom_margin = 1/(len(results)+1)/10
     total_height = top - bottom_margin
-    space = total_height / len(results)
+    space = total_height / max(4,len(results))
     i_loc = top - space / 2
 
     # Vertical dividers (between groups)
@@ -620,7 +620,7 @@ def create_mvp_figure(plot_df):
     ax.axhline(top, color='black', linewidth=0.8)
     bottom_margin = 1/(len(mvps)+1)/10
     total_height = top - bottom_margin
-    space = total_height / len(mvps)
+    space = total_height / max(4,len(mvps))
     i_loc = top - space / 2
 
     # Vertical dividers (between groups)
