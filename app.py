@@ -634,11 +634,11 @@ def create_mvp_figure(plot_df):
             primary = team_colors[row['team'][0]]['home_primary']
             secondary = team_colors[row['team'][0]]['home_secondary']
 
-        ax.add_patch(Rectangle((0.01, i_loc - space/2), 0.30, space, facecolor=primary))
+        ax.add_patch(Rectangle((0.01, i_loc - space/2),1, space, facecolor=primary))
         # Text annotations
-        ax.annotate(row['name'], (col_x[''], i_loc), va='center', ha='left', size=7)
-        ax.annotate(row['team'], (col_x['Team'], i_loc), va='center', ha='left', size=7)
-        ax.annotate(f"{row['MVPRtg']:.2f}" if pd.notna(row['MVPRtg']) else '', (col_x['Rtg'], i_loc), va='center', ha='left', size=7)
+        ax.annotate(row['name'], (col_x[''], i_loc), va='center', ha='left', size=7,fontcolor = secondary)
+        ax.annotate(row['team'], (col_x['Team'], i_loc), va='center', ha='left', size=7,fontcolor = secondary)
+        ax.annotate(f"{row['MVPRtg']:.2f}" if pd.notna(row['MVPRtg']) else '', (col_x['Rtg'], i_loc), va='center', ha='left', size=7,fontcolor = secondary)
         # Row divider
         ax.axhline(i_loc - space/2, color='black', linewidth=0.3)
         i_loc -= space
@@ -689,7 +689,7 @@ with tab_standings:
         fig.savefig(buf, format='png', bbox_inches='tight', dpi=150)
         buf.seek(0)
         img_base64 = base64.b64encode(buf.read()).decode()
-        st.markdown(f'<img src="data:image/png;base64,{img_base64}" style="width:100%;">', unsafe_allow_html=True)
+        st.markdown(f'<img src="data:image/png;base64,{img_base64}" style="width:50%;">', unsafe_allow_html=True)
         plt.close(fig)
 
     with col2:
