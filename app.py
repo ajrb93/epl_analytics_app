@@ -441,11 +441,11 @@ def create_results_figure(plot_df):
 
         # Performance color rectangles
         ax.add_patch(Rectangle((0.68-0.005, i_loc - space/2), 0.05, space,
-            facecolor=cmap(norm_p(row['Pre_Pts_H'])) if pd.notna(row['Pre_Pts_H']) else 'lightgray'))
+            facecolor=cmap(norm_p(row['H_F'])) if pd.notna(row['H_F']) else 'lightgray'))
         ax.add_patch(Rectangle((0.73-0.005, i_loc - space/2), 0.05, space,
             facecolor=cmap(norm_p(row['Per_H'])) if pd.notna(row['Per_H']) else 'lightgray'))
         ax.add_patch(Rectangle((0.79-0.005, i_loc - space/2), 0.05, space,
-            facecolor=cmap(norm_p(row['Pre_Pts_A'])) if pd.notna(row['Pre_Pts_A']) else 'lightgray'))
+            facecolor=cmap(norm_p(row['A_F'])) if pd.notna(row['A_F']) else 'lightgray'))
         ax.add_patch(Rectangle((0.84-0.005, i_loc - space/2), 0.05, space,
             facecolor=cmap(norm_p(row['Per_A'])) if pd.notna(row['Per_A']) else 'lightgray'))
         ax.add_patch(Rectangle((0.9-0.005, i_loc - space/2), 0.05, space,
