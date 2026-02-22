@@ -691,7 +691,7 @@ with tab_standings:
         fig.savefig(buf, format='png', bbox_inches='tight', dpi=150)
         buf.seek(0)
         img_base64 = base64.b64encode(buf.read()).decode()
-        st.markdown(f'<img src="data:image/png;base64,{img_base64}" style="width:50%;">', unsafe_allow_html=True)
+        st.markdown(f'<img src="data:image/png;base64,{img_base64}" style="width:80%;">', unsafe_allow_html=True)
         plt.close(fig)
 
     with col2:
