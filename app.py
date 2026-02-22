@@ -682,8 +682,8 @@ with tab_standings:
         st.markdown("<p style='font-size:14px; font-weight:bold; margin-bottom:2px;'>Schedule</p>", unsafe_allow_html=True)
         scrollable_plot(fig, height=200)
         st.markdown("")
-        mvp_df = create_player_mvps(player_stats,matches_df,selected_season,selected_end_date)
-        print(len(mvp_df))
+        mvp_df = create_player_mvps(player_stats,matches_df,int(selected_season),selected_end_date)
+        st.markdown(str(len(mvp_df)), unsafe_allow_html=True)
         subcol1, subcol2, subcol3, subcol4 = st.columns([1,1,1,1])
         with subcol1:
             st.markdown("<p style='font-size:14px; font-weight:bold; margin-bottom:2px;'>Goalkeeper</p>", unsafe_allow_html=True)
