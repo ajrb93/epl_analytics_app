@@ -409,7 +409,7 @@ def create_results_figure(plot_df):
     # Headers
     header_y = (len(results)+0.5)/(len(results)+1)
     for col, x in col_x.items():
-        if (col == '1') | (col == '2') | (col == '2'):
+        if (col == '1') | (col == '2') | (col == '3'):
             pass
         else:
             ha = 'left'
@@ -491,7 +491,7 @@ def create_schedule_figure(plot_df):
     results = plot_df[plot_df.home_score.isna()].reset_index(drop=True).sort_values('game_date',ascending=True)
     results[' '] = ''
     results['score'] = ''
-    results = results[['game_date','home','Pre_Pts_H','score','Pre_Pts_A','away',' ','C_H','C_A',' ','h_exp','a_exp']].rename(
+    results = results[['game_date','home','Pre_Pts_H','score','Pre_Pts_A','away',' ','C_H','C_A',' ','h_win','d_win','a_win']].rename(
         columns={'game_date':'Date','home':'Home','Pre_Pts_H':'H_F','Pre_Pts_A':'A_F','away':'Away','C_H':'HRtg','C_A':'ARtg',
                  'h_exp':'HpG','a_exp':'ApG'})
 
@@ -504,17 +504,17 @@ def create_schedule_figure(plot_df):
     # Column x positions
     col_x = {
         'Date':   0.01,
-        'Home':   0.13,
-        'H':    0.38,
-        '' : 0.43,
-        'A':    0.48,
-        'Away':   0.53,
+        'Home':   0.12,
+        'H':0.37,
+        'D':0.43,
+        'A':0.48,
+        'Away':0.53,
         '1':0.78,
-        'HRtg':  0.79,
-        'ARtg':  0.84,
+        'HRtg':0.79,
+        'ARtg':0.84,
         '2':0.89,
-        'HpG':   0.90,
-        'ApG':   0.95
+        'HExp':0.90,
+        'AExp':0.95
     }
 
     # Headers
@@ -524,7 +524,7 @@ def create_schedule_figure(plot_df):
             pass
         else:
             ha = 'left'
-            shift = 0.015 if col in ['H','A'] else 0
+            shift = 0.015 if col in ['H','A','D'] else 0
             ax.annotate(col, (x + shift , header_y), va='center', ha=ha, size=7, weight='bold')
 
     # Row layout
@@ -546,28 +546,33 @@ def create_schedule_figure(plot_df):
         away_text = team_colors[row['Away']]['home_secondary']
 
         # Home team background
-        ax.add_patch(Rectangle((0.13-0.005, i_loc - space/2), 0.30, space, facecolor=home_primary))
+        ax.add_patch(Rectangle((0.12-0.005, i_loc - space/2), 0.25, space, facecolor=home_primary))
         # Away team background
-        ax.add_patch(Rectangle((0.48-0.005, i_loc - space/2), 0.30, space, facecolor=away_primary))
+        ax.add_patch(Rectangle((0.53-0.005, i_loc - space/2), 0.25, space, facecolor=away_primary))
 
         # Performance color rectangles
+
+
+
         ax.add_patch(Rectangle((0.79-0.005, i_loc - space/2), 0.05, space,
             facecolor=cmap(row['HRtg']) if pd.notna(row['HRtg']) else 'lightgray'))
         ax.add_patch(Rectangle((0.84-0.005, i_loc - space/2), 0.05, space,
             facecolor=cmap(row['ARtg']) if pd.notna(row['ARtg']) else 'lightgray'))
         ax.add_patch(Rectangle((0.9-0.005, i_loc - space/2), 0.05, space,
-            facecolor=cmap(norm_o(row['HpG'])) if pd.notna(row['HpG']) else 'lightgray'))
+            facecolor=cmap(norm_p(row['H_F'])) if pd.notna(row['H_F']) else 'lightgray'))
         ax.add_patch(Rectangle((0.95-0.005, i_loc - space/2), 0.05, space,
-            facecolor=cmap(norm_o(row['ApG'])) if pd.notna(row['ApG']) else 'lightgray'))
+            facecolor=cmap(norm_p(row['A_F'])) if pd.notna(row['A_F']) else 'lightgray'))
 
         # Text annotations
         ax.annotate(str(row['Date'])[:10], (col_x['Date'], i_loc), va='center', ha='left', size=7)
         ax.annotate(row['Home'], (col_x['Home'], i_loc), va='center', ha='left', size=7, 
                     color=home_text, fontweight='bold')
-        ax.annotate(f"{row['H_F']:.2f}", (col_x['H'], i_loc), va='center', ha='left', size=7,
+        ax.annotate(f"{row['h_win']:.2f}", (col_x['H'], i_loc), va='center', ha='left', size=7)
+        ax.annotate(f"{row['d_win']:.2f}", (col_x['D'], i_loc), va='center', ha='left', size=7)
+        ax.annotate(f"{row['a_win']:.2f}", (col_x['A'], i_loc), va='center', ha='left', size=7)
+        ax.annotate(f"{row['H_F']:.2f}", (col_x['HExp'], i_loc), va='center', ha='left', size=7,
                     color=home_text)
-        ax.annotate(row['score'], (col_x[''], i_loc), va='center', ha='left', size=7, fontweight='bold')
-        ax.annotate(f"{row['A_F']:.2f}", (col_x['A'], i_loc), va='center', ha='left', size=7,
+        ax.annotate(f"{row['A_F']:.2f}", (col_x['AExp'], i_loc), va='center', ha='left', size=7,
                     color=away_text)
         ax.annotate(row['Away'], (col_x['Away'], i_loc), va='center', ha='left', size=7,
                     color=away_text, fontweight='bold')
@@ -575,10 +580,6 @@ def create_schedule_figure(plot_df):
                     (col_x['HRtg'], i_loc), va='center', ha='left', size=7)
         ax.annotate(f"{row['ARtg']:.0%}" if pd.notna(row['ARtg']) else '', 
                     (col_x['ARtg'], i_loc), va='center', ha='left', size=7)
-        ax.annotate(f"{row['HpG']:.2f}" if pd.notna(row['HpG']) else '', 
-                    (col_x['HpG'], i_loc), va='center', ha='left', size=7)
-        ax.annotate(f"{row['ApG']:.2f}" if pd.notna(row['ApG']) else '', 
-                    (col_x['ApG'], i_loc), va='center', ha='left', size=7)
 
         # Row divider
         ax.axhline(i_loc - space/2, color='black', linewidth=0.3)
