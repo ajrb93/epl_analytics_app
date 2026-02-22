@@ -638,7 +638,7 @@ def create_mvp_figure(plot_df):
         # Text annotations
         ax.annotate(row['name'], (col_x[''], i_loc), va='center', ha='left', size=7)
         ax.annotate(row['team'], (col_x['Team'], i_loc), va='center', ha='left', size=7)
-        ax.annotate(f"{row['MVPRtg']:.2f}" if pd.notna(row['HRtg']) else '', (col_x['Rtg'], i_loc), va='center', ha='left', size=7)
+        ax.annotate(f"{row['MVPRtg']:.2f}" if pd.notna(row['MVPRtg']) else '', (col_x['Rtg'], i_loc), va='center', ha='left', size=7)
         # Row divider
         ax.axhline(i_loc - space/2, color='black', linewidth=0.3)
         i_loc -= space
