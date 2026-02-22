@@ -583,12 +583,73 @@ def scrollable_plot(fig, height=400):
         </div>
     """, unsafe_allow_html=True)
 
+def create_player_mvps(player_stats,matches_df,selected_season,selected_end_date):
+    player_stats = player_stats[(player_stats.season == selected_season) & (player_stats.game_date <= selected_end_date)].reset_index(drop=True)
+    player_stats.loc[(player_stats.minutesPlayed > 0) & (player_stats.rating.isna()),'rating'] = 6.6
+    player_stats['Rtg_Weight'] = player_stats.minutesPlayed * player_stats.rating
+    player_stats = player_stats.groupby(['id','name','position']).agg({'team':'unique','minutesPlayed':'sum','Rtg_Weight':'sum'})
+
+    avg = player_stats.Rtg_Weight.sum() / player_stats.minutesPlayed.sum()
+    player_stats['Rtg'] = player_stats.Rtg_Weight / player_stats.minutesPlayed
+    player_stats['MVPRtg'] = (player_stats.Rtg * player_stats.minutesPlayed + avg * (player_stats.minutesPlayed.max() - player_stats.minutesPlayed)) / player_stats.minutesPlayed.max()
+    return player_stats.reset_index()[['name','position','team','MVPRtg']]
+
+def create_mvp_figure(plot_df,position):
+    mvps = plot_df[plot_df.position == position].head(10)
+
+    fig, ax = plt.subplots(figsize=(1.5,4))
+    ax.set_xlim(0, 1)
+    ax.set_ylim(0, 1)
+    ax.axis('off')
+
+    # Column x positions
+    col_x = {
+        '':   0.01,
+        'Team':0.4,
+        'Rtg':   0.75}
+
+    # Headers
+    header_y = (len(mvps)+0.5)/(len(mvps)+1)
+    for col, x in col_x.items():
+        ha = 'left'
+        ax.annotate(col, (x , header_y), va='center', ha=ha, size=7, weight='bold')
+
+    # Row layout
+    top = len(mvps)/(len(mvps)+1)
+    ax.axhline(top, color='black', linewidth=0.8)
+    bottom_margin = 1/(len(mvps)+1)/10
+    total_height = top - bottom_margin
+    space = total_height / len(mvps)
+    i_loc = top - space / 2
+
+    # Vertical dividers (between groups)
+    for x in col_x.values():
+        ax.vlines(x-0.005, bottom_margin, top, color='black', linewidth=0.5)
+
+    for _, row in mvps.iterrows():
+        if len(mvps) > 1:
+            primary = 'white'
+            secondary = 'black'
+        else:
+            primary = team_colors[row['team'][0]]['home_primary']
+            secondary = team_colors[row['team'][0]]['home_secondary']
+
+        ax.add_patch(Rectangle((0.01, i_loc - space/2), 0.30, space, facecolor=primary))
+        # Text annotations
+        ax.annotate(row['name'], (col_x[''], i_loc), va='center', ha='left', size=7)
+        ax.annotate(row['team'], (col_x['Team'], i_loc), va='center', ha='left', size=7)
+        ax.annotate(row['Rtg'], (col_x['MVPRtg'], i_loc), va='center', ha='left', size=7)
+        # Row divider
+        ax.axhline(i_loc - space/2, color='black', linewidth=0.3)
+        i_loc -= space
+    return fig
+
 standings = pd.read_feather('data/standings.ftr')
 color_map = pd.read_feather('data/color_map.ftr')
 color_map['home_secondary'] = color_map.apply(lambda row: '#FFFFFF' if row['home_primary'] == row['home_secondary'] else row['home_secondary'],axis=1)
 team_colors = color_map.to_dict('index')
 matches = pd.read_feather('data/matches.ftr')
-#player_stats = pd.read_feather('data/player_stats.ftr')
+player_stats = pd.read_feather('data/player_stats.ftr')
 team_ratings = pd.read_feather('data/team_ratings.ftr')
 team_ratings = team_ratings[['Season','Date']].drop_duplicates().merge(team_ratings[['Season','Team']].drop_duplicates()).merge(
     team_ratings,how='outer').sort_values(['Team','Date'])
@@ -618,9 +679,26 @@ with tab_standings:
         scrollable_plot(fig, height=200)
         fig = create_schedule_figure(matches_df)
         st.markdown("")
-        st.markdown("")
         st.markdown("<p style='font-size:14px; font-weight:bold; margin-bottom:2px;'>Schedule</p>", unsafe_allow_html=True)
         scrollable_plot(fig, height=200)
+        st.markdown("")
+        mvp_df = create_player_mvps(player_stats,matches_df,selected_season,selected_end_date)
+        subcol1, subcol2, subcol3, subcol4 = st.columns([1,1,1,1])
+        with subcol1:
+            st.markdown("<p style='font-size:14px; font-weight:bold; margin-bottom:2px;'>Goalkeeper</p>", unsafe_allow_html=True)
+            fig = create_mvp_figure(mvp_df,'G')
+            buf = BytesIO()
+            fig.savefig(buf, format='png', bbox_inches='tight', dpi=150)
+            buf.seek(0)
+            img_base64 = base64.b64encode(buf.read()).decode()
+            st.markdown(f'<img src="data:image/png;base64,{img_base64}" style="width:100%;">', unsafe_allow_html=True)
+            plt.close(fig)
+        with subcol2:
+            st.markdown("<p style='font-size:14px; font-weight:bold; margin-bottom:2px;'>Defenders</p>", unsafe_allow_html=True)
+        with subcol3:
+            st.markdown("<p style='font-size:14px; font-weight:bold; margin-bottom:2px;'>Midfielders</p>", unsafe_allow_html=True)
+        with subcol4:
+            st.markdown("<p style='font-size:14px; font-weight:bold; margin-bottom:2px;'>Forwards</p>", unsafe_allow_html=True)
 
     with col2:
         standings_df = create_standings_file(standings,standings_sims,team_ratings,selected_season,selected_end_date,selected_start_date).sort_values(['P','GD'],ascending=False)
