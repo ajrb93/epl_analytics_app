@@ -379,7 +379,7 @@ def create_results_figure(plot_df):
     results = plot_df[~plot_df.home_score.isna()].reset_index(drop=True).sort_values('game_date',ascending=False)
     results[' '] = ''
     results['score'] = results.home_score.astype('int').astype('str') + ' - ' + results.away_score.astype('int').astype('str')
-    results = results[['game_date','home','Pre_Pts_H','score','Pre_Pts_A','away',' ','home_xPts','away_xPts',' ','home_xg','away_xg']].rename(
+    results = results[['game_date','home','Pre_Pts_H','score','Pre_Pts_A','away',' ','home_xPts','away_xPts',' ','home_xg','away_xg','home_score','away_score']].rename(
         columns={'game_date':'Date','home':'Home','Pre_Pts_H':'H_F','Pre_Pts_A':'A_F','away':'Away','home_xPts':'Per_H','away_xPts':'Per_A',
                  'home_xg':'xG_H','away_xg':'xG_A'})
 
@@ -409,12 +409,11 @@ def create_results_figure(plot_df):
     # Headers
     header_y = (len(results)+0.5)/(len(results)+1)
     for col, x in col_x.items():
-        if (col == '1') | (col == '2'):
+        if (col == '1') | (col == '2') | (col == '2'):
             pass
         else:
             ha = 'left'
-            shift = 0.015 if col in ['H','A'] else 0
-            ax.annotate(col, (x + shift , header_y), va='center', ha=ha, size=7, weight='bold')
+            ax.annotate(col, (x, header_y), va='center', ha=ha, size=7, weight='bold')
 
     # Row layout
     top = len(results)/(len(results)+1)
@@ -452,16 +451,26 @@ def create_results_figure(plot_df):
             facecolor=cmap(norm_o(row['xG_H'])) if pd.notna(row['xG_H']) else 'lightgray'))
         ax.add_patch(Rectangle((0.95-0.005, i_loc - space/2), 0.05, space,
             facecolor=cmap(norm_o(row['xG_A'])) if pd.notna(row['xG_A']) else 'lightgray'))
+        
+        if row['home_score'] > row['away_score']:
+            primary = home_primary
+            text = home_text
+        elif row['home_score'] < row['away_score']:
+            primary = away_primary
+            text = away_text
+        else:
+            primary = 'white'
+            text = 'black'
+
+        ax.add_patch(Rectangle((0.37-0.005,i_loc - space/2),0.05,space,facecolor=primary))
 
         # Text annotations
         ax.annotate(str(row['Date'])[:10], (col_x['Date'], i_loc), va='center', ha='left', size=7)
         ax.annotate(row['Home'], (col_x['Home'], i_loc), va='center', ha='left', size=7, 
                     color=home_text, fontweight='bold')
-        ax.annotate(f"{row['H_F']:.2f}", (col_x['HExp'], i_loc), va='center', ha='left', size=7,
-                    color=home_text)
-        ax.annotate(row['score'], (col_x[''], i_loc), va='center', ha='left', size=7, fontweight='bold')
-        ax.annotate(f"{row['A_F']:.2f}", (col_x['AExp'], i_loc), va='center', ha='left', size=7,
-                    color=away_text)
+        ax.annotate(f"{row['H_F']:.2f}", (col_x['HExp'], i_loc), va='center', ha='left', size=7)
+        ax.annotate(row['score'], (col_x[''], i_loc), va='center', ha='left', size=7, fontweight='bold',color=text)
+        ax.annotate(f"{row['A_F']:.2f}", (col_x['AExp'], i_loc), va='center', ha='left', size=7)
         ax.annotate(row['Away'], (col_x['Away'], i_loc), va='center', ha='left', size=7,
                     color=away_text, fontweight='bold')
         ax.annotate(f"{row['Per_H']:.2f}" if pd.notna(row['Per_H']) else '', 
