@@ -354,10 +354,10 @@ def plot_position_heatmap(standings_sims, standings_df, selected_end_date, team_
         ),
         yaxis=dict(
             autorange='reversed',  # keep standings order top to bottom
-            tickfont=dict(size=12)
+            tickfont=dict(size=14)
         ),
         margin=dict(l=50, r=20, t=20, b=20),
-        width=620,  # 400px plot + room for team names on left
+        width=820,  # 400px plot + room for team names on left
         height=420
     )
 
