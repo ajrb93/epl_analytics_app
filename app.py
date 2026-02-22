@@ -506,7 +506,7 @@ def create_schedule_figure(plot_df):
         'Date':   0.01,
         'Home':   0.12,
         'H':0.37,
-        'D':0.43,
+        'D':0.42,
         'A':0.48,
         'Away':0.53,
         '1':0.78,
@@ -551,8 +551,12 @@ def create_schedule_figure(plot_df):
         ax.add_patch(Rectangle((0.53-0.005, i_loc - space/2), 0.25, space, facecolor=away_primary))
 
         # Performance color rectangles
-
-
+        ax.add_patch(Rectangle((0.37-0.005, i_loc - space/2), 0.05, space,
+                    facecolor=cmap(norm_w(row['h_win'])) if pd.notna(row['h_win']) else 'lightgray'))
+        ax.add_patch(Rectangle((0.42-0.005, i_loc - space/2), 0.06, space,
+                    facecolor=cmap(norm_w(row['d_win'])) if pd.notna(row['d_win']) else 'lightgray'))
+        ax.add_patch(Rectangle((0.48-0.005, i_loc - space/2), 0.05, space,
+                    facecolor=cmap(norm_w(row['a_win'])) if pd.notna(row['a_win']) else 'lightgray'))
 
         ax.add_patch(Rectangle((0.79-0.005, i_loc - space/2), 0.05, space,
             facecolor=cmap(row['HRtg']) if pd.notna(row['HRtg']) else 'lightgray'))
@@ -567,13 +571,11 @@ def create_schedule_figure(plot_df):
         ax.annotate(str(row['Date'])[:10], (col_x['Date'], i_loc), va='center', ha='left', size=7)
         ax.annotate(row['Home'], (col_x['Home'], i_loc), va='center', ha='left', size=7, 
                     color=home_text, fontweight='bold')
-        ax.annotate(f"{row['h_win']:.2f}", (col_x['H'], i_loc), va='center', ha='left', size=7)
-        ax.annotate(f"{row['d_win']:.2f}", (col_x['D'], i_loc), va='center', ha='left', size=7)
-        ax.annotate(f"{row['a_win']:.2f}", (col_x['A'], i_loc), va='center', ha='left', size=7)
-        ax.annotate(f"{row['H_F']:.2f}", (col_x['HExp'], i_loc), va='center', ha='left', size=7,
-                    color=home_text)
-        ax.annotate(f"{row['A_F']:.2f}", (col_x['AExp'], i_loc), va='center', ha='left', size=7,
-                    color=away_text)
+        ax.annotate(f"{row['h_win']:.2%}", (col_x['H'], i_loc), va='center', ha='left', size=7)
+        ax.annotate(f"{row['d_win']:.2%}", (col_x['D'], i_loc), va='center', ha='left', size=7)
+        ax.annotate(f"{row['a_win']:.2%}", (col_x['A'], i_loc), va='center', ha='left', size=7)
+        ax.annotate(f"{row['H_F']:.2f}", (col_x['HExp'], i_loc), va='center', ha='left', size=7)
+        ax.annotate(f"{row['A_F']:.2f}", (col_x['AExp'], i_loc), va='center', ha='left', size=7)
         ax.annotate(row['Away'], (col_x['Away'], i_loc), va='center', ha='left', size=7,
                     color=away_text, fontweight='bold')
         ax.annotate(f"{row['HRtg']:.0%}" if pd.notna(row['HRtg']) else '', 
