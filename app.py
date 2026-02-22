@@ -340,7 +340,7 @@ def plot_position_heatmap(standings_sims, standings_df, selected_end_date, team_
         hovertemplate='<b>%{y}</b><br>Position %{x}: %{z:.0%}<extra></extra>',
         zmin=0,
         zmax=1,
-        text=[[f"{val:.0%}" if val >= 0.005 else "" for val in row] for row in heatmap_data.values],
+        text=[[f"{val*100:.0f}" if val >= 0.005 else "" for val in row] for row in heatmap_data.values],
         texttemplate="%{text}",
         textfont=dict(size=9)
     ))
@@ -522,7 +522,12 @@ with tab_standings:
     with col2:
         standings_df = create_standings_file(standings,standings_sims,team_ratings,selected_season,selected_end_date,selected_start_date).sort_values(['P','GD'],ascending=False)
         fig = plot_standings_table(standings_df.drop(columns='season'))
-        st.pyplot(fig, use_container_width=True)
+        buf = BytesIO()
+        fig.savefig(buf, format='png', bbox_inches='tight', dpi=150)
+        buf.seek(0)
+        img_base64 = base64.b64encode(buf.read()).decode()
+        st.markdown(f'<img src="data:image/png;base64,{img_base64}" style="width:100%;">', unsafe_allow_html=True)
+        plt.close(fig)
 
         subcol1, subcol2 = st.columns([0.45,0.55])
         with subcol1:
