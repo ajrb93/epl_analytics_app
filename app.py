@@ -730,7 +730,7 @@ with tab_team:
         subcol1, subcol2 = st.columns([1,2])
         with subcol1:
             season = sorted(standings_sims['season'].unique(), reverse=True)
-            selected_season = st.selectbox("Select Year", options=season, index=0, key="season_picker",label_visibility="collapsed")
+            selected_season = st.selectbox("Select Year", options=season, index=0, key="season_picker2",label_visibility="collapsed")
         with subcol2:
             teams = sorted(standings[standings.season == selected_season].F.unique())
             selected_team = st.selectbox('Select Team',options=teams,key='team_picker',label_visibility='collapsed')
