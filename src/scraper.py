@@ -39,7 +39,9 @@ def get_website(url):
             user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
         )
         page = context.new_page()
-        page.goto(url, wait_until="networkidle", timeout=60000)
+        response = page.goto(url, wait_until="networkidle", timeout=60000)
+        print(f"URL: {url}")
+        print(f"Status: {response.status if response else 'No response'}")
         content = page.content()
         browser.close()
         soup = BeautifulSoup(content,'html.parser')
@@ -56,6 +58,7 @@ def get_matches(league,season):
             matches += returned
             i += 1
         except:
+            print(f"Error on round {i}: {e}")
             break
             
     return matches
