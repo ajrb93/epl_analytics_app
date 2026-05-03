@@ -57,7 +57,7 @@ def get_matches(league,season):
             returned = get_website(url)['events']
             matches += returned
             i += 1
-        except:
+        except Exception as e:
             print(f"Error on round {i}: {e}")
             break
             
