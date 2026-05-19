@@ -1,0 +1,2281 @@
+,match_id,date,round,home_team,home_id,away_team,away_id,status,finished,season
+0,4813374,2025-08-15,1,Liverpool,8650,AFC Bournemouth,8678,True,True,2025/2026
+1,4813375,2025-08-16,1,Aston Villa,10252,Newcastle United,10261,True,True,2025/2026
+2,4813376,2025-08-16,1,Brighton & Hove Albion,10204,Fulham,9879,True,True,2025/2026
+3,4813378,2025-08-16,1,Sunderland,8472,West Ham United,8654,True,True,2025/2026
+4,4813379,2025-08-16,1,Tottenham Hotspur,8586,Burnley,8191,True,True,2025/2026
+5,4813380,2025-08-16,1,Wolverhampton Wanderers,8602,Manchester City,8456,True,True,2025/2026
+6,4813381,2025-08-17,1,Chelsea,8455,Crystal Palace,9826,True,True,2025/2026
+7,4813377,2025-08-17,1,Nottingham Forest,10203,Brentford,9937,True,True,2025/2026
+8,4813382,2025-08-17,1,Manchester United,10260,Arsenal,9825,True,True,2025/2026
+9,4813383,2025-08-18,1,Leeds United,8463,Everton,8668,True,True,2025/2026
+10,4813394,2025-08-22,2,West Ham United,8654,Chelsea,8455,True,True,2025/2026
+11,4813392,2025-08-23,2,Manchester City,8456,Tottenham Hotspur,8586,True,True,2025/2026
+12,4813385,2025-08-23,2,AFC Bournemouth,8678,Wolverhampton Wanderers,8602,True,True,2025/2026
+13,4813387,2025-08-23,2,Brentford,9937,Aston Villa,10252,True,True,2025/2026
+14,4813388,2025-08-23,2,Burnley,8191,Sunderland,8472,True,True,2025/2026
+15,4813386,2025-08-23,2,Arsenal,9825,Leeds United,8463,True,True,2025/2026
+16,4813389,2025-08-24,2,Crystal Palace,9826,Nottingham Forest,10203,True,True,2025/2026
+17,4813390,2025-08-24,2,Everton,8668,Brighton & Hove Albion,10204,True,True,2025/2026
+18,4813391,2025-08-24,2,Fulham,9879,Manchester United,10260,True,True,2025/2026
+19,4813393,2025-08-25,2,Newcastle United,10261,Liverpool,8650,True,True,2025/2026
+20,4813397,2025-08-30,3,Chelsea,8455,Fulham,9879,True,True,2025/2026
+21,4813400,2025-08-30,3,Manchester United,10260,Burnley,8191,True,True,2025/2026
+22,4813402,2025-08-30,3,Sunderland,8472,Brentford,9937,True,True,2025/2026
+23,4813403,2025-08-30,3,Tottenham Hotspur,8586,AFC Bournemouth,8678,True,True,2025/2026
+24,4813404,2025-08-30,3,Wolverhampton Wanderers,8602,Everton,8668,True,True,2025/2026
+25,4813398,2025-08-30,3,Leeds United,8463,Newcastle United,10261,True,True,2025/2026
+26,4813396,2025-08-31,3,Brighton & Hove Albion,10204,Manchester City,8456,True,True,2025/2026
+27,4813401,2025-08-31,3,Nottingham Forest,10203,West Ham United,8654,True,True,2025/2026
+28,4813399,2025-08-31,3,Liverpool,8650,Arsenal,9825,True,True,2025/2026
+29,4813395,2025-08-31,3,Aston Villa,10252,Crystal Palace,9826,True,True,2025/2026
+30,4813406,2025-09-13,4,Arsenal,9825,Nottingham Forest,10203,True,True,2025/2026
+31,4813405,2025-09-13,4,AFC Bournemouth,8678,Brighton & Hove Albion,10204,True,True,2025/2026
+32,4813409,2025-09-13,4,Crystal Palace,9826,Sunderland,8472,True,True,2025/2026
+33,4813410,2025-09-13,4,Everton,8668,Aston Villa,10252,True,True,2025/2026
+34,4813411,2025-09-13,4,Fulham,9879,Leeds United,8463,True,True,2025/2026
+35,4813413,2025-09-13,4,Newcastle United,10261,Wolverhampton Wanderers,8602,True,True,2025/2026
+36,4813414,2025-09-13,4,West Ham United,8654,Tottenham Hotspur,8586,True,True,2025/2026
+37,4813407,2025-09-13,4,Brentford,9937,Chelsea,8455,True,True,2025/2026
+38,4813408,2025-09-14,4,Burnley,8191,Liverpool,8650,True,True,2025/2026
+39,4813412,2025-09-14,4,Manchester City,8456,Manchester United,10260,True,True,2025/2026
+40,4813420,2025-09-20,5,Liverpool,8650,Everton,8668,True,True,2025/2026
+41,4813417,2025-09-20,5,Brighton & Hove Albion,10204,Tottenham Hotspur,8586,True,True,2025/2026
+42,4813418,2025-09-20,5,Burnley,8191,Nottingham Forest,10203,True,True,2025/2026
+43,4813423,2025-09-20,5,West Ham United,8654,Crystal Palace,9826,True,True,2025/2026
+44,4813424,2025-09-20,5,Wolverhampton Wanderers,8602,Leeds United,8463,True,True,2025/2026
+45,4813421,2025-09-20,5,Manchester United,10260,Chelsea,8455,True,True,2025/2026
+46,4813419,2025-09-20,5,Fulham,9879,Brentford,9937,True,True,2025/2026
+47,4813415,2025-09-21,5,AFC Bournemouth,8678,Newcastle United,10261,True,True,2025/2026
+48,4813422,2025-09-21,5,Sunderland,8472,Aston Villa,10252,True,True,2025/2026
+49,4813416,2025-09-21,5,Arsenal,9825,Manchester City,8456,True,True,2025/2026
+50,4813426,2025-09-27,6,Brentford,9937,Manchester United,10260,True,True,2025/2026
+51,4813427,2025-09-27,6,Chelsea,8455,Brighton & Hove Albion,10204,True,True,2025/2026
+52,4813428,2025-09-27,6,Crystal Palace,9826,Liverpool,8650,True,True,2025/2026
+53,4813430,2025-09-27,6,Leeds United,8463,AFC Bournemouth,8678,True,True,2025/2026
+54,4813431,2025-09-27,6,Manchester City,8456,Burnley,8191,True,True,2025/2026
+55,4813433,2025-09-27,6,Nottingham Forest,10203,Sunderland,8472,True,True,2025/2026
+56,4813434,2025-09-27,6,Tottenham Hotspur,8586,Wolverhampton Wanderers,8602,True,True,2025/2026
+57,4813425,2025-09-28,6,Aston Villa,10252,Fulham,9879,True,True,2025/2026
+58,4813432,2025-09-28,6,Newcastle United,10261,Arsenal,9825,True,True,2025/2026
+59,4813429,2025-09-29,6,Everton,8668,West Ham United,8654,True,True,2025/2026
+60,4813435,2025-10-03,7,AFC Bournemouth,8678,Fulham,9879,True,True,2025/2026
+61,4813441,2025-10-04,7,Leeds United,8463,Tottenham Hotspur,8586,True,True,2025/2026
+62,4813436,2025-10-04,7,Arsenal,9825,West Ham United,8654,True,True,2025/2026
+63,4813442,2025-10-04,7,Manchester United,10260,Sunderland,8472,True,True,2025/2026
+64,4813439,2025-10-04,7,Chelsea,8455,Liverpool,8650,True,True,2025/2026
+65,4813437,2025-10-05,7,Aston Villa,10252,Burnley,8191,True,True,2025/2026
+66,4813440,2025-10-05,7,Everton,8668,Crystal Palace,9826,True,True,2025/2026
+67,4813443,2025-10-05,7,Newcastle United,10261,Nottingham Forest,10203,True,True,2025/2026
+68,4813444,2025-10-05,7,Wolverhampton Wanderers,8602,Brighton & Hove Albion,10204,True,True,2025/2026
+69,4813438,2025-10-05,7,Brentford,9937,Manchester City,8456,True,True,2025/2026
+70,4813451,2025-10-18,8,Nottingham Forest,10203,Chelsea,8455,True,True,2025/2026
+71,4813445,2025-10-18,8,Brighton & Hove Albion,10204,Newcastle United,10261,True,True,2025/2026
+72,4813446,2025-10-18,8,Burnley,8191,Leeds United,8463,True,True,2025/2026
+73,4813447,2025-10-18,8,Crystal Palace,9826,AFC Bournemouth,8678,True,True,2025/2026
+74,4813450,2025-10-18,8,Manchester City,8456,Everton,8668,True,True,2025/2026
+75,4813452,2025-10-18,8,Sunderland,8472,Wolverhampton Wanderers,8602,True,True,2025/2026
+76,4813448,2025-10-18,8,Fulham,9879,Arsenal,9825,True,True,2025/2026
+77,4813453,2025-10-19,8,Tottenham Hotspur,8586,Aston Villa,10252,True,True,2025/2026
+78,4813449,2025-10-19,8,Liverpool,8650,Manchester United,10260,True,True,2025/2026
+79,4813454,2025-10-20,8,West Ham United,8654,Brentford,9937,True,True,2025/2026
+80,4813461,2025-10-24,9,Leeds United,8463,West Ham United,8654,True,True,2025/2026
+81,4813459,2025-10-25,9,Chelsea,8455,Sunderland,8472,True,True,2025/2026
+82,4813463,2025-10-25,9,Newcastle United,10261,Fulham,9879,True,True,2025/2026
+83,4813462,2025-10-25,9,Manchester United,10260,Brighton & Hove Albion,10204,True,True,2025/2026
+84,4813458,2025-10-25,9,Brentford,9937,Liverpool,8650,True,True,2025/2026
+85,4813455,2025-10-26,9,AFC Bournemouth,8678,Nottingham Forest,10203,True,True,2025/2026
+86,4813456,2025-10-26,9,Arsenal,9825,Crystal Palace,9826,True,True,2025/2026
+87,4813457,2025-10-26,9,Aston Villa,10252,Manchester City,8456,True,True,2025/2026
+88,4813464,2025-10-26,9,Wolverhampton Wanderers,8602,Burnley,8191,True,True,2025/2026
+89,4813460,2025-10-26,9,Everton,8668,Tottenham Hotspur,8586,True,True,2025/2026
+90,4813465,2025-11-01,10,Brighton & Hove Albion,10204,Leeds United,8463,True,True,2025/2026
+91,4813466,2025-11-01,10,Burnley,8191,Arsenal,9825,True,True,2025/2026
+92,4813467,2025-11-01,10,Crystal Palace,9826,Brentford,9937,True,True,2025/2026
+93,4813468,2025-11-01,10,Fulham,9879,Wolverhampton Wanderers,8602,True,True,2025/2026
+94,4813471,2025-11-01,10,Nottingham Forest,10203,Manchester United,10260,True,True,2025/2026
+95,4813473,2025-11-01,10,Tottenham Hotspur,8586,Chelsea,8455,True,True,2025/2026
+96,4813469,2025-11-01,10,Liverpool,8650,Aston Villa,10252,True,True,2025/2026
+97,4813474,2025-11-02,10,West Ham United,8654,Newcastle United,10261,True,True,2025/2026
+98,4813470,2025-11-02,10,Manchester City,8456,AFC Bournemouth,8678,True,True,2025/2026
+99,4813472,2025-11-03,10,Sunderland,8472,Everton,8668,True,True,2025/2026
+100,4813483,2025-11-08,11,Tottenham Hotspur,8586,Manchester United,10260,True,True,2025/2026
+101,4813479,2025-11-08,11,Everton,8668,Fulham,9879,True,True,2025/2026
+102,4813484,2025-11-08,11,West Ham United,8654,Burnley,8191,True,True,2025/2026
+103,4813482,2025-11-08,11,Sunderland,8472,Arsenal,9825,True,True,2025/2026
+104,4813477,2025-11-08,11,Chelsea,8455,Wolverhampton Wanderers,8602,True,True,2025/2026
+105,4813475,2025-11-09,11,Aston Villa,10252,AFC Bournemouth,8678,True,True,2025/2026
+106,4813476,2025-11-09,11,Brentford,9937,Newcastle United,10261,True,True,2025/2026
+107,4813478,2025-11-09,11,Crystal Palace,9826,Brighton & Hove Albion,10204,True,True,2025/2026
+108,4813481,2025-11-09,11,Nottingham Forest,10203,Leeds United,8463,True,True,2025/2026
+109,4813480,2025-11-09,11,Manchester City,8456,Liverpool,8650,True,True,2025/2026
+110,4813488,2025-11-22,12,Burnley,8191,Chelsea,8455,True,True,2025/2026
+111,4813485,2025-11-22,12,AFC Bournemouth,8678,West Ham United,8654,True,True,2025/2026
+112,4813487,2025-11-22,12,Brighton & Hove Albion,10204,Brentford,9937,True,True,2025/2026
+113,4813489,2025-11-22,12,Fulham,9879,Sunderland,8472,True,True,2025/2026
+114,4813491,2025-11-22,12,Liverpool,8650,Nottingham Forest,10203,True,True,2025/2026
+115,4813494,2025-11-22,12,Wolverhampton Wanderers,8602,Crystal Palace,9826,True,True,2025/2026
+116,4813493,2025-11-22,12,Newcastle United,10261,Manchester City,8456,True,True,2025/2026
+117,4813490,2025-11-23,12,Leeds United,8463,Aston Villa,10252,True,True,2025/2026
+118,4813486,2025-11-23,12,Arsenal,9825,Tottenham Hotspur,8586,True,True,2025/2026
+119,4813492,2025-11-24,12,Manchester United,10260,Everton,8668,True,True,2025/2026
+120,4813496,2025-11-29,13,Brentford,9937,Burnley,8191,True,True,2025/2026
+121,4813500,2025-11-29,13,Manchester City,8456,Leeds United,8463,True,True,2025/2026
+122,4813502,2025-11-29,13,Sunderland,8472,AFC Bournemouth,8678,True,True,2025/2026
+123,4813499,2025-11-29,13,Everton,8668,Newcastle United,10261,True,True,2025/2026
+124,4813503,2025-11-29,13,Tottenham Hotspur,8586,Fulham,9879,True,True,2025/2026
+125,4813498,2025-11-30,13,Crystal Palace,9826,Manchester United,10260,True,True,2025/2026
+126,4813495,2025-11-30,13,Aston Villa,10252,Wolverhampton Wanderers,8602,True,True,2025/2026
+127,4813501,2025-11-30,13,Nottingham Forest,10203,Brighton & Hove Albion,10204,True,True,2025/2026
+128,4813504,2025-11-30,13,West Ham United,8654,Liverpool,8650,True,True,2025/2026
+129,4813497,2025-11-30,13,Chelsea,8455,Arsenal,9825,True,True,2025/2026
+130,4813505,2025-12-02,14,AFC Bournemouth,8678,Everton,8668,True,True,2025/2026
+131,4813509,2025-12-02,14,Fulham,9879,Manchester City,8456,True,True,2025/2026
+132,4813513,2025-12-02,14,Newcastle United,10261,Tottenham Hotspur,8586,True,True,2025/2026
+133,4813506,2025-12-03,14,Arsenal,9825,Brentford,9937,True,True,2025/2026
+134,4813507,2025-12-03,14,Brighton & Hove Albion,10204,Aston Villa,10252,True,True,2025/2026
+135,4813508,2025-12-03,14,Burnley,8191,Crystal Palace,9826,True,True,2025/2026
+136,4813514,2025-12-03,14,Wolverhampton Wanderers,8602,Nottingham Forest,10203,True,True,2025/2026
+137,4813510,2025-12-03,14,Leeds United,8463,Chelsea,8455,True,True,2025/2026
+138,4813511,2025-12-03,14,Liverpool,8650,Sunderland,8472,True,True,2025/2026
+139,4813512,2025-12-04,14,Manchester United,10260,West Ham United,8654,True,True,2025/2026
+140,4813516,2025-12-06,15,Aston Villa,10252,Arsenal,9825,True,True,2025/2026
+141,4813515,2025-12-06,15,AFC Bournemouth,8678,Chelsea,8455,True,True,2025/2026
+142,4813518,2025-12-06,15,Everton,8668,Nottingham Forest,10203,True,True,2025/2026
+143,4813521,2025-12-06,15,Manchester City,8456,Sunderland,8472,True,True,2025/2026
+144,4813522,2025-12-06,15,Newcastle United,10261,Burnley,8191,True,True,2025/2026
+145,4813523,2025-12-06,15,Tottenham Hotspur,8586,Brentford,9937,True,True,2025/2026
+146,4813520,2025-12-06,15,Leeds United,8463,Liverpool,8650,True,True,2025/2026
+147,4813517,2025-12-07,15,Brighton & Hove Albion,10204,West Ham United,8654,True,True,2025/2026
+148,4813519,2025-12-07,15,Fulham,9879,Crystal Palace,9826,True,True,2025/2026
+149,4813524,2025-12-08,15,Wolverhampton Wanderers,8602,Manchester United,10260,True,True,2025/2026
+150,4813528,2025-12-13,16,Chelsea,8455,Everton,8668,True,True,2025/2026
+151,4813530,2025-12-13,16,Liverpool,8650,Brighton & Hove Albion,10204,True,True,2025/2026
+152,4813527,2025-12-13,16,Burnley,8191,Fulham,9879,True,True,2025/2026
+153,4813525,2025-12-13,16,Arsenal,9825,Wolverhampton Wanderers,8602,True,True,2025/2026
+154,4813529,2025-12-14,16,Crystal Palace,9826,Manchester City,8456,True,True,2025/2026
+155,4813532,2025-12-14,16,Nottingham Forest,10203,Tottenham Hotspur,8586,True,True,2025/2026
+156,4813533,2025-12-14,16,Sunderland,8472,Newcastle United,10261,True,True,2025/2026
+157,4813534,2025-12-14,16,West Ham United,8654,Aston Villa,10252,True,True,2025/2026
+158,4813526,2025-12-14,16,Brentford,9937,Leeds United,8463,True,True,2025/2026
+159,4813531,2025-12-15,16,Manchester United,10260,AFC Bournemouth,8678,True,True,2025/2026
+160,4813542,2025-12-20,17,Newcastle United,10261,Chelsea,8455,True,True,2025/2026
+161,4813535,2025-12-20,17,AFC Bournemouth,8678,Burnley,8191,True,True,2025/2026
+162,4813537,2025-12-20,17,Brighton & Hove Albion,10204,Sunderland,8472,True,True,2025/2026
+163,4813541,2025-12-20,17,Manchester City,8456,West Ham United,8654,True,True,2025/2026
+164,4813544,2025-12-20,17,Wolverhampton Wanderers,8602,Brentford,9937,True,True,2025/2026
+165,4813543,2025-12-20,17,Tottenham Hotspur,8586,Liverpool,8650,True,True,2025/2026
+166,4813538,2025-12-20,17,Everton,8668,Arsenal,9825,True,True,2025/2026
+167,4813540,2025-12-20,17,Leeds United,8463,Crystal Palace,9826,True,True,2025/2026
+168,4813536,2025-12-21,17,Aston Villa,10252,Manchester United,10260,True,True,2025/2026
+169,4813539,2025-12-22,17,Fulham,9879,Nottingham Forest,10203,True,True,2025/2026
+170,4813551,2025-12-26,18,Manchester United,10260,Newcastle United,10261,True,True,2025/2026
+171,4813552,2025-12-27,18,Nottingham Forest,10203,Manchester City,8456,True,True,2025/2026
+172,4813545,2025-12-27,18,Arsenal,9825,Brighton & Hove Albion,10204,True,True,2025/2026
+173,4813546,2025-12-27,18,Brentford,9937,AFC Bournemouth,8678,True,True,2025/2026
+174,4813547,2025-12-27,18,Burnley,8191,Everton,8668,True,True,2025/2026
+175,4813550,2025-12-27,18,Liverpool,8650,Wolverhampton Wanderers,8602,True,True,2025/2026
+176,4813554,2025-12-27,18,West Ham United,8654,Fulham,9879,True,True,2025/2026
+177,4813548,2025-12-27,18,Chelsea,8455,Aston Villa,10252,True,True,2025/2026
+178,4813553,2025-12-28,18,Sunderland,8472,Leeds United,8463,True,True,2025/2026
+179,4813549,2025-12-28,18,Crystal Palace,9826,Tottenham Hotspur,8586,True,True,2025/2026
+180,4813557,2025-12-30,19,Burnley,8191,Newcastle United,10261,True,True,2025/2026
+181,4813558,2025-12-30,19,Chelsea,8455,AFC Bournemouth,8678,True,True,2025/2026
+182,4813562,2025-12-30,19,Nottingham Forest,10203,Everton,8668,True,True,2025/2026
+183,4813564,2025-12-30,19,West Ham United,8654,Brighton & Hove Albion,10204,True,True,2025/2026
+184,4813555,2025-12-30,19,Arsenal,9825,Aston Villa,10252,True,True,2025/2026
+185,4813561,2025-12-30,19,Manchester United,10260,Wolverhampton Wanderers,8602,True,True,2025/2026
+186,4813559,2026-01-01,19,Crystal Palace,9826,Fulham,9879,True,True,2025/2026
+187,4813560,2026-01-01,19,Liverpool,8650,Leeds United,8463,True,True,2025/2026
+188,4813556,2026-01-01,19,Brentford,9937,Tottenham Hotspur,8586,True,True,2025/2026
+189,4813563,2026-01-01,19,Sunderland,8472,Manchester City,8456,True,True,2025/2026
+190,4813566,2026-01-03,20,Aston Villa,10252,Nottingham Forest,10203,True,True,2025/2026
+191,4813567,2026-01-03,20,Brighton & Hove Albion,10204,Burnley,8191,True,True,2025/2026
+192,4813574,2026-01-03,20,Wolverhampton Wanderers,8602,West Ham United,8654,True,True,2025/2026
+193,4813565,2026-01-03,20,AFC Bournemouth,8678,Arsenal,9825,True,True,2025/2026
+194,4813570,2026-01-04,20,Leeds United,8463,Manchester United,10260,True,True,2025/2026
+195,4813568,2026-01-04,20,Everton,8668,Brentford,9937,True,True,2025/2026
+196,4813572,2026-01-04,20,Newcastle United,10261,Crystal Palace,9826,True,True,2025/2026
+197,4813573,2026-01-04,20,Tottenham Hotspur,8586,Sunderland,8472,True,True,2025/2026
+198,4813569,2026-01-04,20,Fulham,9879,Liverpool,8650,True,True,2025/2026
+199,4813571,2026-01-04,20,Manchester City,8456,Chelsea,8455,True,True,2025/2026
+200,4813584,2026-01-06,21,West Ham United,8654,Nottingham Forest,10203,True,True,2025/2026
+201,4813575,2026-01-07,21,AFC Bournemouth,8678,Tottenham Hotspur,8586,True,True,2025/2026
+202,4813577,2026-01-07,21,Brentford,9937,Sunderland,8472,True,True,2025/2026
+203,4813579,2026-01-07,21,Crystal Palace,9826,Aston Villa,10252,True,True,2025/2026
+204,4813580,2026-01-07,21,Everton,8668,Wolverhampton Wanderers,8602,True,True,2025/2026
+205,4813581,2026-01-07,21,Fulham,9879,Chelsea,8455,True,True,2025/2026
+206,4813582,2026-01-07,21,Manchester City,8456,Brighton & Hove Albion,10204,True,True,2025/2026
+207,4813578,2026-01-07,21,Burnley,8191,Manchester United,10260,True,True,2025/2026
+208,4813583,2026-01-07,21,Newcastle United,10261,Leeds United,8463,True,True,2025/2026
+209,4813576,2026-01-08,21,Arsenal,9825,Liverpool,8650,True,True,2025/2026
+210,4813590,2026-01-17,22,Manchester United,10260,Manchester City,8456,True,True,2025/2026
+211,4813587,2026-01-17,22,Chelsea,8455,Brentford,9937,True,True,2025/2026
+212,4813588,2026-01-17,22,Leeds United,8463,Fulham,9879,True,True,2025/2026
+213,4813589,2026-01-17,22,Liverpool,8650,Burnley,8191,True,True,2025/2026
+214,4813592,2026-01-17,22,Sunderland,8472,Crystal Palace,9826,True,True,2025/2026
+215,4813593,2026-01-17,22,Tottenham Hotspur,8586,West Ham United,8654,True,True,2025/2026
+216,4813591,2026-01-17,22,Nottingham Forest,10203,Arsenal,9825,True,True,2025/2026
+217,4813594,2026-01-18,22,Wolverhampton Wanderers,8602,Newcastle United,10261,True,True,2025/2026
+218,4813585,2026-01-18,22,Aston Villa,10252,Everton,8668,True,True,2025/2026
+219,4813586,2026-01-19,22,Brighton & Hove Albion,10204,AFC Bournemouth,8678,True,True,2025/2026
+220,4813604,2026-01-24,23,West Ham United,8654,Sunderland,8472,True,True,2025/2026
+221,4813598,2026-01-24,23,Burnley,8191,Tottenham Hotspur,8586,True,True,2025/2026
+222,4813601,2026-01-24,23,Fulham,9879,Brighton & Hove Albion,10204,True,True,2025/2026
+223,4813602,2026-01-24,23,Manchester City,8456,Wolverhampton Wanderers,8602,True,True,2025/2026
+224,4813595,2026-01-24,23,AFC Bournemouth,8678,Liverpool,8650,True,True,2025/2026
+225,4813597,2026-01-25,23,Brentford,9937,Nottingham Forest,10203,True,True,2025/2026
+226,4813599,2026-01-25,23,Crystal Palace,9826,Chelsea,8455,True,True,2025/2026
+227,4813603,2026-01-25,23,Newcastle United,10261,Aston Villa,10252,True,True,2025/2026
+228,4813596,2026-01-25,23,Arsenal,9825,Manchester United,10260,True,True,2025/2026
+229,4813600,2026-01-26,23,Everton,8668,Leeds United,8463,True,True,2025/2026
+230,4813606,2026-01-31,24,Brighton & Hove Albion,10204,Everton,8668,True,True,2025/2026
+231,4813608,2026-01-31,24,Leeds United,8463,Arsenal,9825,True,True,2025/2026
+232,4813614,2026-01-31,24,Wolverhampton Wanderers,8602,AFC Bournemouth,8678,True,True,2025/2026
+233,4813607,2026-01-31,24,Chelsea,8455,West Ham United,8654,True,True,2025/2026
+234,4813609,2026-01-31,24,Liverpool,8650,Newcastle United,10261,True,True,2025/2026
+235,4813605,2026-02-01,24,Aston Villa,10252,Brentford,9937,True,True,2025/2026
+236,4813610,2026-02-01,24,Manchester United,10260,Fulham,9879,True,True,2025/2026
+237,4813611,2026-02-01,24,Nottingham Forest,10203,Crystal Palace,9826,True,True,2025/2026
+238,4813613,2026-02-01,24,Tottenham Hotspur,8586,Manchester City,8456,True,True,2025/2026
+239,4813612,2026-02-02,24,Sunderland,8472,Burnley,8191,True,True,2025/2026
+240,4813620,2026-02-06,25,Leeds United,8463,Nottingham Forest,10203,True,True,2025/2026
+241,4813622,2026-02-07,25,Manchester United,10260,Tottenham Hotspur,8586,True,True,2025/2026
+242,4813615,2026-02-07,25,AFC Bournemouth,8678,Aston Villa,10252,True,True,2025/2026
+243,4813616,2026-02-07,25,Arsenal,9825,Sunderland,8472,True,True,2025/2026
+244,4813618,2026-02-07,25,Burnley,8191,West Ham United,8654,True,True,2025/2026
+245,4813619,2026-02-07,25,Fulham,9879,Everton,8668,True,True,2025/2026
+246,4813624,2026-02-07,25,Wolverhampton Wanderers,8602,Chelsea,8455,True,True,2025/2026
+247,4813623,2026-02-07,25,Newcastle United,10261,Brentford,9937,True,True,2025/2026
+248,4813617,2026-02-08,25,Brighton & Hove Albion,10204,Crystal Palace,9826,True,True,2025/2026
+249,4813621,2026-02-08,25,Liverpool,8650,Manchester City,8456,True,True,2025/2026
+250,4813627,2026-02-10,26,Chelsea,8455,Leeds United,8463,True,True,2025/2026
+251,4813629,2026-02-10,26,Everton,8668,AFC Bournemouth,8678,True,True,2025/2026
+252,4813633,2026-02-10,26,Tottenham Hotspur,8586,Newcastle United,10261,True,True,2025/2026
+253,4813634,2026-02-10,26,West Ham United,8654,Manchester United,10260,True,True,2025/2026
+254,4813625,2026-02-11,26,Aston Villa,10252,Brighton & Hove Albion,10204,True,True,2025/2026
+255,4813630,2026-02-11,26,Manchester City,8456,Fulham,9879,True,True,2025/2026
+256,4813631,2026-02-11,26,Nottingham Forest,10203,Wolverhampton Wanderers,8602,True,True,2025/2026
+257,4813628,2026-02-11,26,Crystal Palace,9826,Burnley,8191,True,True,2025/2026
+258,4813632,2026-02-11,26,Sunderland,8472,Liverpool,8650,True,True,2025/2026
+259,4813626,2026-02-12,26,Brentford,9937,Arsenal,9825,True,True,2025/2026
+260,4813684,2026-02-18,31,Wolverhampton Wanderers,8602,Arsenal,9825,True,True,2025/2026
+261,4813635,2026-02-21,27,Aston Villa,10252,Leeds United,8463,True,True,2025/2026
+262,4813636,2026-02-21,27,Brentford,9937,Brighton & Hove Albion,10204,True,True,2025/2026
+263,4813637,2026-02-21,27,Chelsea,8455,Burnley,8191,True,True,2025/2026
+264,4813644,2026-02-21,27,West Ham United,8654,AFC Bournemouth,8678,True,True,2025/2026
+265,4813640,2026-02-21,27,Manchester City,8456,Newcastle United,10261,True,True,2025/2026
+266,4813638,2026-02-22,27,Crystal Palace,9826,Wolverhampton Wanderers,8602,True,True,2025/2026
+267,4813641,2026-02-22,27,Nottingham Forest,10203,Liverpool,8650,True,True,2025/2026
+268,4813642,2026-02-22,27,Sunderland,8472,Fulham,9879,True,True,2025/2026
+269,4813643,2026-02-22,27,Tottenham Hotspur,8586,Arsenal,9825,True,True,2025/2026
+270,4813639,2026-02-23,27,Everton,8668,Manchester United,10260,True,True,2025/2026
+271,4813654,2026-02-27,28,Wolverhampton Wanderers,8602,Aston Villa,10252,True,True,2025/2026
+272,4813645,2026-02-28,28,AFC Bournemouth,8678,Sunderland,8472,True,True,2025/2026
+273,4813648,2026-02-28,28,Burnley,8191,Brentford,9937,True,True,2025/2026
+274,4813651,2026-02-28,28,Liverpool,8650,West Ham United,8654,True,True,2025/2026
+275,4813653,2026-02-28,28,Newcastle United,10261,Everton,8668,True,True,2025/2026
+276,4813650,2026-02-28,28,Leeds United,8463,Manchester City,8456,True,True,2025/2026
+277,4813647,2026-03-01,28,Brighton & Hove Albion,10204,Nottingham Forest,10203,True,True,2025/2026
+278,4813649,2026-03-01,28,Fulham,9879,Tottenham Hotspur,8586,True,True,2025/2026
+279,4813652,2026-03-01,28,Manchester United,10260,Crystal Palace,9826,True,True,2025/2026
+280,4813646,2026-03-01,28,Arsenal,9825,Chelsea,8455,True,True,2025/2026
+281,4813655,2026-03-03,29,AFC Bournemouth,8678,Brentford,9937,True,True,2025/2026
+282,4813658,2026-03-03,29,Everton,8668,Burnley,8191,True,True,2025/2026
+283,4813660,2026-03-03,29,Leeds United,8463,Sunderland,8472,True,True,2025/2026
+284,4813664,2026-03-03,29,Wolverhampton Wanderers,8602,Liverpool,8650,True,True,2025/2026
+285,4813656,2026-03-04,29,Aston Villa,10252,Chelsea,8455,True,True,2025/2026
+286,4813657,2026-03-04,29,Brighton & Hove Albion,10204,Arsenal,9825,True,True,2025/2026
+287,4813659,2026-03-04,29,Fulham,9879,West Ham United,8654,True,True,2025/2026
+288,4813661,2026-03-04,29,Manchester City,8456,Nottingham Forest,10203,True,True,2025/2026
+289,4813662,2026-03-04,29,Newcastle United,10261,Manchester United,10260,True,True,2025/2026
+290,4813663,2026-03-05,29,Tottenham Hotspur,8586,Crystal Palace,9826,True,True,2025/2026
+291,4813667,2026-03-14,30,Burnley,8191,AFC Bournemouth,8678,True,True,2025/2026
+292,4813673,2026-03-14,30,Sunderland,8472,Brighton & Hove Albion,10204,True,True,2025/2026
+293,4813665,2026-03-14,30,Arsenal,9825,Everton,8668,True,True,2025/2026
+294,4813668,2026-03-14,30,Chelsea,8455,Newcastle United,10261,True,True,2025/2026
+295,4813674,2026-03-14,30,West Ham United,8654,Manchester City,8456,True,True,2025/2026
+296,4813669,2026-03-15,30,Crystal Palace,9826,Leeds United,8463,True,True,2025/2026
+297,4813671,2026-03-15,30,Manchester United,10260,Aston Villa,10252,True,True,2025/2026
+298,4813672,2026-03-15,30,Nottingham Forest,10203,Fulham,9879,True,True,2025/2026
+299,4813670,2026-03-15,30,Liverpool,8650,Tottenham Hotspur,8586,True,True,2025/2026
+300,4813666,2026-03-16,30,Brentford,9937,Wolverhampton Wanderers,8602,True,True,2025/2026
+301,4813675,2026-03-20,31,AFC Bournemouth,8678,Manchester United,10260,True,True,2025/2026
+302,4813677,2026-03-21,31,Brighton & Hove Albion,10204,Liverpool,8650,True,True,2025/2026
+303,4813679,2026-03-21,31,Fulham,9879,Burnley,8191,True,True,2025/2026
+304,4813678,2026-03-21,31,Everton,8668,Chelsea,8455,True,True,2025/2026
+305,4813680,2026-03-21,31,Leeds United,8463,Brentford,9937,True,True,2025/2026
+306,4813682,2026-03-22,31,Newcastle United,10261,Sunderland,8472,True,True,2025/2026
+307,4813676,2026-03-22,31,Aston Villa,10252,West Ham United,8654,True,True,2025/2026
+308,4813683,2026-03-22,31,Tottenham Hotspur,8586,Nottingham Forest,10203,True,True,2025/2026
+309,4813694,2026-04-10,32,West Ham United,8654,Wolverhampton Wanderers,8602,True,True,2025/2026
+310,4813685,2026-04-11,32,Arsenal,9825,AFC Bournemouth,8678,True,True,2025/2026
+311,4813686,2026-04-11,32,Brentford,9937,Everton,8668,True,True,2025/2026
+312,4813687,2026-04-11,32,Burnley,8191,Brighton & Hove Albion,10204,True,True,2025/2026
+313,4813690,2026-04-11,32,Liverpool,8650,Fulham,9879,True,True,2025/2026
+314,4813689,2026-04-12,32,Crystal Palace,9826,Newcastle United,10261,True,True,2025/2026
+315,4813692,2026-04-12,32,Nottingham Forest,10203,Aston Villa,10252,True,True,2025/2026
+316,4813693,2026-04-12,32,Sunderland,8472,Tottenham Hotspur,8586,True,True,2025/2026
+317,4813688,2026-04-12,32,Chelsea,8455,Manchester City,8456,True,True,2025/2026
+318,4813691,2026-04-13,32,Manchester United,10260,Leeds United,8463,True,True,2025/2026
+319,4813696,2026-04-18,33,Brentford,9937,Fulham,9879,True,True,2025/2026
+320,4813700,2026-04-18,33,Leeds United,8463,Wolverhampton Wanderers,8602,True,True,2025/2026
+321,4813702,2026-04-18,33,Newcastle United,10261,AFC Bournemouth,8678,True,True,2025/2026
+322,4813704,2026-04-18,33,Tottenham Hotspur,8586,Brighton & Hove Albion,10204,True,True,2025/2026
+323,4813697,2026-04-18,33,Chelsea,8455,Manchester United,10260,True,True,2025/2026
+324,4813695,2026-04-19,33,Aston Villa,10252,Sunderland,8472,True,True,2025/2026
+325,4813699,2026-04-19,33,Everton,8668,Liverpool,8650,True,True,2025/2026
+326,4813703,2026-04-19,33,Nottingham Forest,10203,Burnley,8191,True,True,2025/2026
+327,4813701,2026-04-19,33,Manchester City,8456,Arsenal,9825,True,True,2025/2026
+328,4813698,2026-04-20,33,Crystal Palace,9826,West Ham United,8654,True,True,2025/2026
+329,4813707,2026-04-21,34,Brighton & Hove Albion,10204,Chelsea,8455,True,True,2025/2026
+330,4813705,2026-04-22,34,AFC Bournemouth,8678,Leeds United,8463,True,True,2025/2026
+331,4813708,2026-04-22,34,Burnley,8191,Manchester City,8456,True,True,2025/2026
+332,4813712,2026-04-24,34,Sunderland,8472,Nottingham Forest,10203,True,True,2025/2026
+333,4813709,2026-04-25,34,Fulham,9879,Aston Villa,10252,True,True,2025/2026
+334,4813710,2026-04-25,34,Liverpool,8650,Crystal Palace,9826,True,True,2025/2026
+335,4813713,2026-04-25,34,West Ham United,8654,Everton,8668,True,True,2025/2026
+336,4813714,2026-04-25,34,Wolverhampton Wanderers,8602,Tottenham Hotspur,8586,True,True,2025/2026
+337,4813706,2026-04-25,34,Arsenal,9825,Newcastle United,10261,True,True,2025/2026
+338,4813711,2026-04-27,34,Manchester United,10260,Brentford,9937,True,True,2025/2026
+339,4813721,2026-05-01,35,Leeds United,8463,Burnley,8191,True,True,2025/2026
+340,4813718,2026-05-02,35,Brentford,9937,West Ham United,8654,True,True,2025/2026
+341,4813723,2026-05-02,35,Newcastle United,10261,Brighton & Hove Albion,10204,True,True,2025/2026
+342,4813724,2026-05-02,35,Wolverhampton Wanderers,8602,Sunderland,8472,True,True,2025/2026
+343,4813716,2026-05-02,35,Arsenal,9825,Fulham,9879,True,True,2025/2026
+344,4813715,2026-05-03,35,AFC Bournemouth,8678,Crystal Palace,9826,True,True,2025/2026
+345,4813722,2026-05-03,35,Manchester United,10260,Liverpool,8650,True,True,2025/2026
+346,4813717,2026-05-03,35,Aston Villa,10252,Tottenham Hotspur,8586,True,True,2025/2026
+347,4813719,2026-05-04,35,Chelsea,8455,Nottingham Forest,10203,True,True,2025/2026
+348,4813720,2026-05-04,35,Everton,8668,Manchester City,8456,True,True,2025/2026
+349,4813729,2026-05-09,36,Liverpool,8650,Chelsea,8455,True,True,2025/2026
+350,4813725,2026-05-09,36,Brighton & Hove Albion,10204,Wolverhampton Wanderers,8602,True,True,2025/2026
+351,4813728,2026-05-09,36,Fulham,9879,AFC Bournemouth,8678,True,True,2025/2026
+352,4813732,2026-05-09,36,Sunderland,8472,Manchester United,10260,True,True,2025/2026
+353,4813730,2026-05-09,36,Manchester City,8456,Brentford,9937,True,True,2025/2026
+354,4813726,2026-05-10,36,Burnley,8191,Aston Villa,10252,True,True,2025/2026
+355,4813727,2026-05-10,36,Crystal Palace,9826,Everton,8668,True,True,2025/2026
+356,4813731,2026-05-10,36,Nottingham Forest,10203,Newcastle United,10261,True,True,2025/2026
+357,4813734,2026-05-10,36,West Ham United,8654,Arsenal,9825,True,True,2025/2026
+358,4813733,2026-05-11,36,Tottenham Hotspur,8586,Leeds United,8463,True,True,2025/2026
+359,4813681,2026-05-13,31,Manchester City,8456,Crystal Palace,9826,True,True,2025/2026
+360,4813737,2026-05-15,37,Aston Villa,10252,Liverpool,8650,True,True,2025/2026
+361,4813742,2026-05-17,37,Manchester United,10260,Nottingham Forest,10203,True,True,2025/2026
+362,4813738,2026-05-17,37,Brentford,9937,Crystal Palace,9826,True,True,2025/2026
+363,4813740,2026-05-17,37,Everton,8668,Sunderland,8472,True,True,2025/2026
+364,4813741,2026-05-17,37,Leeds United,8463,Brighton & Hove Albion,10204,True,True,2025/2026
+365,4813744,2026-05-17,37,Wolverhampton Wanderers,8602,Fulham,9879,True,True,2025/2026
+366,4813743,2026-05-17,37,Newcastle United,10261,West Ham United,8654,True,True,2025/2026
+367,4813736,2026-05-18,37,Arsenal,9825,Burnley,8191,True,True,2025/2026
+368,4813735,2026-05-19,37,AFC Bournemouth,8678,Manchester City,8456,False,False,2025/2026
+369,4813739,2026-05-19,37,Chelsea,8455,Tottenham Hotspur,8586,False,False,2025/2026
+370,4813745,2026-05-24,38,Brighton & Hove Albion,10204,Manchester United,10260,False,False,2025/2026
+371,4813746,2026-05-24,38,Burnley,8191,Wolverhampton Wanderers,8602,False,False,2025/2026
+372,4813747,2026-05-24,38,Crystal Palace,9826,Arsenal,9825,False,False,2025/2026
+373,4813748,2026-05-24,38,Fulham,9879,Newcastle United,10261,False,False,2025/2026
+374,4813749,2026-05-24,38,Liverpool,8650,Brentford,9937,False,False,2025/2026
+375,4813750,2026-05-24,38,Manchester City,8456,Aston Villa,10252,False,False,2025/2026
+376,4813751,2026-05-24,38,Nottingham Forest,10203,AFC Bournemouth,8678,False,False,2025/2026
+377,4813752,2026-05-24,38,Sunderland,8472,Chelsea,8455,False,False,2025/2026
+378,4813753,2026-05-24,38,Tottenham Hotspur,8586,Everton,8668,False,False,2025/2026
+379,4813754,2026-05-24,38,West Ham United,8654,Leeds United,8463,False,False,2025/2026
+380,4506263,2024-08-16,1,Manchester United,10260,Fulham,9879,True,True,2024/2025
+381,4506264,2024-08-17,1,Ipswich Town,9902,Liverpool,8650,True,True,2024/2025
+382,4506265,2024-08-17,1,Arsenal,9825,Wolverhampton Wanderers,8602,True,True,2024/2025
+383,4506266,2024-08-17,1,Everton,8668,Brighton & Hove Albion,10204,True,True,2024/2025
+384,4506267,2024-08-17,1,Newcastle United,10261,Southampton,8466,True,True,2024/2025
+385,4506268,2024-08-17,1,Nottingham Forest,10203,AFC Bournemouth,8678,True,True,2024/2025
+386,4506269,2024-08-17,1,West Ham United,8654,Aston Villa,10252,True,True,2024/2025
+387,4506270,2024-08-18,1,Brentford,9937,Crystal Palace,9826,True,True,2024/2025
+388,4506271,2024-08-18,1,Chelsea,8455,Manchester City,8456,True,True,2024/2025
+389,4506272,2024-08-19,1,Leicester City,8197,Tottenham Hotspur,8586,True,True,2024/2025
+390,4506275,2024-08-24,2,Brighton & Hove Albion,10204,Manchester United,10260,True,True,2024/2025
+391,4506276,2024-08-24,2,Crystal Palace,9826,West Ham United,8654,True,True,2024/2025
+392,4506277,2024-08-24,2,Fulham,9879,Leicester City,8197,True,True,2024/2025
+393,4506279,2024-08-24,2,Manchester City,8456,Ipswich Town,9902,True,True,2024/2025
+394,4506280,2024-08-24,2,Southampton,8466,Nottingham Forest,10203,True,True,2024/2025
+395,4506281,2024-08-24,2,Tottenham Hotspur,8586,Everton,8668,True,True,2024/2025
+396,4506274,2024-08-24,2,Aston Villa,10252,Arsenal,9825,True,True,2024/2025
+397,4506273,2024-08-25,2,AFC Bournemouth,8678,Newcastle United,10261,True,True,2024/2025
+398,4506282,2024-08-25,2,Wolverhampton Wanderers,8602,Chelsea,8455,True,True,2024/2025
+399,4506278,2024-08-25,2,Liverpool,8650,Brentford,9937,True,True,2024/2025
+400,4506283,2024-08-31,3,Arsenal,9825,Brighton & Hove Albion,10204,True,True,2024/2025
+401,4506284,2024-08-31,3,Brentford,9937,Southampton,8466,True,True,2024/2025
+402,4506286,2024-08-31,3,Everton,8668,AFC Bournemouth,8678,True,True,2024/2025
+403,4506287,2024-08-31,3,Ipswich Town,9902,Fulham,9879,True,True,2024/2025
+404,4506288,2024-08-31,3,Leicester City,8197,Aston Villa,10252,True,True,2024/2025
+405,4506291,2024-08-31,3,Nottingham Forest,10203,Wolverhampton Wanderers,8602,True,True,2024/2025
+406,4506292,2024-08-31,3,West Ham United,8654,Manchester City,8456,True,True,2024/2025
+407,4506285,2024-09-01,3,Chelsea,8455,Crystal Palace,9826,True,True,2024/2025
+408,4506290,2024-09-01,3,Newcastle United,10261,Tottenham Hotspur,8586,True,True,2024/2025
+409,4506289,2024-09-01,3,Manchester United,10260,Liverpool,8650,True,True,2024/2025
+410,4506300,2024-09-14,4,Southampton,8466,Manchester United,10260,True,True,2024/2025
+411,4506295,2024-09-14,4,Brighton & Hove Albion,10204,Ipswich Town,9902,True,True,2024/2025
+412,4506296,2024-09-14,4,Crystal Palace,9826,Leicester City,8197,True,True,2024/2025
+413,4506297,2024-09-14,4,Fulham,9879,West Ham United,8654,True,True,2024/2025
+414,4506298,2024-09-14,4,Liverpool,8650,Nottingham Forest,10203,True,True,2024/2025
+415,4506299,2024-09-14,4,Manchester City,8456,Brentford,9937,True,True,2024/2025
+416,4506294,2024-09-14,4,Aston Villa,10252,Everton,8668,True,True,2024/2025
+417,4506293,2024-09-14,4,AFC Bournemouth,8678,Chelsea,8455,True,True,2024/2025
+418,4506301,2024-09-15,4,Tottenham Hotspur,8586,Arsenal,9825,True,True,2024/2025
+419,4506302,2024-09-15,4,Wolverhampton Wanderers,8602,Newcastle United,10261,True,True,2024/2025
+420,4506312,2024-09-21,5,West Ham United,8654,Chelsea,8455,True,True,2024/2025
+421,4506303,2024-09-21,5,Aston Villa,10252,Wolverhampton Wanderers,8602,True,True,2024/2025
+422,4506306,2024-09-21,5,Fulham,9879,Newcastle United,10261,True,True,2024/2025
+423,4506307,2024-09-21,5,Leicester City,8197,Everton,8668,True,True,2024/2025
+424,4506308,2024-09-21,5,Liverpool,8650,AFC Bournemouth,8678,True,True,2024/2025
+425,4506310,2024-09-21,5,Southampton,8466,Ipswich Town,9902,True,True,2024/2025
+426,4506311,2024-09-21,5,Tottenham Hotspur,8586,Brentford,9937,True,True,2024/2025
+427,4506305,2024-09-21,5,Crystal Palace,9826,Manchester United,10260,True,True,2024/2025
+428,4506304,2024-09-22,5,Brighton & Hove Albion,10204,Nottingham Forest,10203,True,True,2024/2025
+429,4506309,2024-09-22,5,Manchester City,8456,Arsenal,9825,True,True,2024/2025
+430,4506320,2024-09-28,6,Newcastle United,10261,Manchester City,8456,True,True,2024/2025
+431,4506314,2024-09-28,6,Arsenal,9825,Leicester City,8197,True,True,2024/2025
+432,4506315,2024-09-28,6,Brentford,9937,West Ham United,8654,True,True,2024/2025
+433,4506316,2024-09-28,6,Chelsea,8455,Brighton & Hove Albion,10204,True,True,2024/2025
+434,4506317,2024-09-28,6,Everton,8668,Crystal Palace,9826,True,True,2024/2025
+435,4506321,2024-09-28,6,Nottingham Forest,10203,Fulham,9879,True,True,2024/2025
+436,4506322,2024-09-28,6,Wolverhampton Wanderers,8602,Liverpool,8650,True,True,2024/2025
+437,4506318,2024-09-29,6,Ipswich Town,9902,Aston Villa,10252,True,True,2024/2025
+438,4506319,2024-09-29,6,Manchester United,10260,Tottenham Hotspur,8586,True,True,2024/2025
+439,4506313,2024-09-30,6,AFC Bournemouth,8678,Southampton,8466,True,True,2024/2025
+440,4506328,2024-10-05,7,Crystal Palace,9826,Liverpool,8650,True,True,2024/2025
+441,4506323,2024-10-05,7,Arsenal,9825,Southampton,8466,True,True,2024/2025
+442,4506325,2024-10-05,7,Brentford,9937,Wolverhampton Wanderers,8602,True,True,2024/2025
+443,4506330,2024-10-05,7,Leicester City,8197,AFC Bournemouth,8678,True,True,2024/2025
+444,4506331,2024-10-05,7,Manchester City,8456,Fulham,9879,True,True,2024/2025
+445,4506332,2024-10-05,7,West Ham United,8654,Ipswich Town,9902,True,True,2024/2025
+446,4506329,2024-10-05,7,Everton,8668,Newcastle United,10261,True,True,2024/2025
+447,4506324,2024-10-06,7,Aston Villa,10252,Manchester United,10260,True,True,2024/2025
+448,4506327,2024-10-06,7,Chelsea,8455,Nottingham Forest,10203,True,True,2024/2025
+449,4506326,2024-10-06,7,Brighton & Hove Albion,10204,Tottenham Hotspur,8586,True,True,2024/2025
+450,4506401,2024-10-19,8,Tottenham Hotspur,8586,West Ham United,8654,True,True,2024/2025
+451,4506394,2024-10-19,8,Fulham,9879,Aston Villa,10252,True,True,2024/2025
+452,4506397,2024-10-19,8,Manchester United,10260,Brentford,9937,True,True,2024/2025
+453,4506398,2024-10-19,8,Newcastle United,10261,Brighton & Hove Albion,10204,True,True,2024/2025
+454,4506400,2024-10-19,8,Southampton,8466,Leicester City,8197,True,True,2024/2025
+455,4506395,2024-10-19,8,Ipswich Town,9902,Everton,8668,True,True,2024/2025
+456,4506393,2024-10-19,8,AFC Bournemouth,8678,Arsenal,9825,True,True,2024/2025
+457,4506402,2024-10-20,8,Wolverhampton Wanderers,8602,Manchester City,8456,True,True,2024/2025
+458,4506396,2024-10-20,8,Liverpool,8650,Chelsea,8455,True,True,2024/2025
+459,4506399,2024-10-21,8,Nottingham Forest,10203,Crystal Palace,9826,True,True,2024/2025
+460,4506413,2024-10-25,9,Leicester City,8197,Nottingham Forest,10203,True,True,2024/2025
+461,4506404,2024-10-26,9,Aston Villa,10252,AFC Bournemouth,8678,True,True,2024/2025
+462,4506405,2024-10-26,9,Brentford,9937,Ipswich Town,9902,True,True,2024/2025
+463,4506406,2024-10-26,9,Brighton & Hove Albion,10204,Wolverhampton Wanderers,8602,True,True,2024/2025
+464,4506415,2024-10-26,9,Manchester City,8456,Southampton,8466,True,True,2024/2025
+465,4506410,2024-10-26,9,Everton,8668,Fulham,9879,True,True,2024/2025
+466,4506407,2024-10-27,9,Chelsea,8455,Newcastle United,10261,True,True,2024/2025
+467,4506409,2024-10-27,9,Crystal Palace,9826,Tottenham Hotspur,8586,True,True,2024/2025
+468,4506417,2024-10-27,9,West Ham United,8654,Manchester United,10260,True,True,2024/2025
+469,4506403,2024-10-27,9,Arsenal,9825,Liverpool,8650,True,True,2024/2025
+470,4506468,2024-11-02,10,Newcastle United,10261,Arsenal,9825,True,True,2024/2025
+471,4506463,2024-11-02,10,AFC Bournemouth,8678,Manchester City,8456,True,True,2024/2025
+472,4506465,2024-11-02,10,Ipswich Town,9902,Leicester City,8197,True,True,2024/2025
+473,4506466,2024-11-02,10,Liverpool,8650,Brighton & Hove Albion,10204,True,True,2024/2025
+474,4506469,2024-11-02,10,Nottingham Forest,10203,West Ham United,8654,True,True,2024/2025
+475,4506470,2024-11-02,10,Southampton,8466,Everton,8668,True,True,2024/2025
+476,4506472,2024-11-02,10,Wolverhampton Wanderers,8602,Crystal Palace,9826,True,True,2024/2025
+477,4506471,2024-11-03,10,Tottenham Hotspur,8586,Aston Villa,10252,True,True,2024/2025
+478,4506467,2024-11-03,10,Manchester United,10260,Chelsea,8455,True,True,2024/2025
+479,4506464,2024-11-04,10,Fulham,9879,Brentford,9937,True,True,2024/2025
+480,4506473,2024-11-09,11,Brentford,9937,AFC Bournemouth,8678,True,True,2024/2025
+481,4506476,2024-11-09,11,Crystal Palace,9826,Fulham,9879,True,True,2024/2025
+482,4506481,2024-11-09,11,West Ham United,8654,Everton,8668,True,True,2024/2025
+483,4506482,2024-11-09,11,Wolverhampton Wanderers,8602,Southampton,8466,True,True,2024/2025
+484,4506474,2024-11-09,11,Brighton & Hove Albion,10204,Manchester City,8456,True,True,2024/2025
+485,4506477,2024-11-09,11,Liverpool,8650,Aston Villa,10252,True,True,2024/2025
+486,4506478,2024-11-10,11,Manchester United,10260,Leicester City,8197,True,True,2024/2025
+487,4506479,2024-11-10,11,Nottingham Forest,10203,Newcastle United,10261,True,True,2024/2025
+488,4506480,2024-11-10,11,Tottenham Hotspur,8586,Ipswich Town,9902,True,True,2024/2025
+489,4506475,2024-11-10,11,Chelsea,8455,Arsenal,9825,True,True,2024/2025
+490,4506539,2024-11-23,12,Leicester City,8197,Chelsea,8455,True,True,2024/2025
+491,4506533,2024-11-23,12,AFC Bournemouth,8678,Brighton & Hove Albion,10204,True,True,2024/2025
+492,4506534,2024-11-23,12,Arsenal,9825,Nottingham Forest,10203,True,True,2024/2025
+493,4506535,2024-11-23,12,Aston Villa,10252,Crystal Palace,9826,True,True,2024/2025
+494,4506536,2024-11-23,12,Everton,8668,Brentford,9937,True,True,2024/2025
+495,4506537,2024-11-23,12,Fulham,9879,Wolverhampton Wanderers,8602,True,True,2024/2025
+496,4506540,2024-11-23,12,Manchester City,8456,Tottenham Hotspur,8586,True,True,2024/2025
+497,4506542,2024-11-24,12,Southampton,8466,Liverpool,8650,True,True,2024/2025
+498,4506538,2024-11-24,12,Ipswich Town,9902,Manchester United,10260,True,True,2024/2025
+499,4506541,2024-11-25,12,Newcastle United,10261,West Ham United,8654,True,True,2024/2025
+500,4506411,2024-11-29,13,Brighton & Hove Albion,10204,Southampton,8466,True,True,2024/2025
+501,4506408,2024-11-30,13,Brentford,9937,Leicester City,8197,True,True,2024/2025
+502,4506414,2024-11-30,13,Crystal Palace,9826,Newcastle United,10261,True,True,2024/2025
+503,4506419,2024-11-30,13,Nottingham Forest,10203,Ipswich Town,9902,True,True,2024/2025
+504,4506422,2024-11-30,13,Wolverhampton Wanderers,8602,AFC Bournemouth,8678,True,True,2024/2025
+505,4506421,2024-11-30,13,West Ham United,8654,Arsenal,9825,True,True,2024/2025
+506,4506412,2024-12-01,13,Chelsea,8455,Aston Villa,10252,True,True,2024/2025
+507,4506418,2024-12-01,13,Manchester United,10260,Everton,8668,True,True,2024/2025
+508,4506420,2024-12-01,13,Tottenham Hotspur,8586,Fulham,9879,True,True,2024/2025
+509,4506416,2024-12-01,13,Liverpool,8650,Manchester City,8456,True,True,2024/2025
+510,4506428,2024-12-03,14,Ipswich Town,9902,Crystal Palace,9826,True,True,2024/2025
+511,4506429,2024-12-03,14,Leicester City,8197,West Ham United,8654,True,True,2024/2025
+512,4506426,2024-12-04,14,Everton,8668,Wolverhampton Wanderers,8602,True,True,2024/2025
+513,4506430,2024-12-04,14,Manchester City,8456,Nottingham Forest,10203,True,True,2024/2025
+514,4506431,2024-12-04,14,Newcastle United,10261,Liverpool,8650,True,True,2024/2025
+515,4506432,2024-12-04,14,Southampton,8466,Chelsea,8455,True,True,2024/2025
+516,4506424,2024-12-04,14,Arsenal,9825,Manchester United,10260,True,True,2024/2025
+517,4506425,2024-12-04,14,Aston Villa,10252,Brentford,9937,True,True,2024/2025
+518,4506427,2024-12-05,14,Fulham,9879,Brighton & Hove Albion,10204,True,True,2024/2025
+519,4506423,2024-12-05,14,AFC Bournemouth,8678,Tottenham Hotspur,8586,True,True,2024/2025
+520,4506433,2024-12-07,15,Aston Villa,10252,Southampton,8466,True,True,2024/2025
+521,4506434,2024-12-07,15,Brentford,9937,Newcastle United,10261,True,True,2024/2025
+522,4506435,2024-12-07,15,Crystal Palace,9826,Manchester City,8456,True,True,2024/2025
+523,4506440,2024-12-07,15,Manchester United,10260,Nottingham Forest,10203,True,True,2024/2025
+524,4506437,2024-12-08,15,Fulham,9879,Arsenal,9825,True,True,2024/2025
+525,4506438,2024-12-08,15,Ipswich Town,9902,AFC Bournemouth,8678,True,True,2024/2025
+526,4506439,2024-12-08,15,Leicester City,8197,Brighton & Hove Albion,10204,True,True,2024/2025
+527,4506441,2024-12-08,15,Tottenham Hotspur,8586,Chelsea,8455,True,True,2024/2025
+528,4506442,2024-12-09,15,West Ham United,8654,Wolverhampton Wanderers,8602,True,True,2024/2025
+529,4506444,2024-12-14,16,Arsenal,9825,Everton,8668,True,True,2024/2025
+530,4506447,2024-12-14,16,Liverpool,8650,Fulham,9879,True,True,2024/2025
+531,4506449,2024-12-14,16,Newcastle United,10261,Leicester City,8197,True,True,2024/2025
+532,4506452,2024-12-14,16,Wolverhampton Wanderers,8602,Ipswich Town,9902,True,True,2024/2025
+533,4506450,2024-12-14,16,Nottingham Forest,10203,Aston Villa,10252,True,True,2024/2025
+534,4506445,2024-12-15,16,Brighton & Hove Albion,10204,Crystal Palace,9826,True,True,2024/2025
+535,4506448,2024-12-15,16,Manchester City,8456,Manchester United,10260,True,True,2024/2025
+536,4506446,2024-12-15,16,Chelsea,8455,Brentford,9937,True,True,2024/2025
+537,4506451,2024-12-15,16,Southampton,8466,Tottenham Hotspur,8586,True,True,2024/2025
+538,4506443,2024-12-16,16,AFC Bournemouth,8678,West Ham United,8654,True,True,2024/2025
+539,4506453,2024-12-21,17,Aston Villa,10252,Manchester City,8456,True,True,2024/2025
+540,4506454,2024-12-21,17,Brentford,9937,Nottingham Forest,10203,True,True,2024/2025
+541,4506458,2024-12-21,17,Ipswich Town,9902,Newcastle United,10261,True,True,2024/2025
+542,4506462,2024-12-21,17,West Ham United,8654,Brighton & Hove Albion,10204,True,True,2024/2025
+543,4506455,2024-12-21,17,Crystal Palace,9826,Arsenal,9825,True,True,2024/2025
+544,4506456,2024-12-22,17,Everton,8668,Chelsea,8455,True,True,2024/2025
+545,4506457,2024-12-22,17,Fulham,9879,Southampton,8466,True,True,2024/2025
+546,4506459,2024-12-22,17,Leicester City,8197,Wolverhampton Wanderers,8602,True,True,2024/2025
+547,4506460,2024-12-22,17,Manchester United,10260,AFC Bournemouth,8678,True,True,2024/2025
+548,4506461,2024-12-22,17,Tottenham Hotspur,8586,Liverpool,8650,True,True,2024/2025
+549,4506488,2024-12-26,18,Manchester City,8456,Everton,8668,True,True,2024/2025
+550,4506483,2024-12-26,18,AFC Bournemouth,8678,Crystal Palace,9826,True,True,2024/2025
+551,4506486,2024-12-26,18,Chelsea,8455,Fulham,9879,True,True,2024/2025
+552,4506489,2024-12-26,18,Newcastle United,10261,Aston Villa,10252,True,True,2024/2025
+553,4506490,2024-12-26,18,Nottingham Forest,10203,Tottenham Hotspur,8586,True,True,2024/2025
+554,4506491,2024-12-26,18,Southampton,8466,West Ham United,8654,True,True,2024/2025
+555,4506492,2024-12-26,18,Wolverhampton Wanderers,8602,Manchester United,10260,True,True,2024/2025
+556,4506487,2024-12-26,18,Liverpool,8650,Leicester City,8197,True,True,2024/2025
+557,4506485,2024-12-27,18,Brighton & Hove Albion,10204,Brentford,9937,True,True,2024/2025
+558,4506484,2024-12-27,18,Arsenal,9825,Ipswich Town,9902,True,True,2024/2025
+559,4506499,2024-12-29,19,Leicester City,8197,Manchester City,8456,True,True,2024/2025
+560,4506495,2024-12-29,19,Crystal Palace,9826,Southampton,8466,True,True,2024/2025
+561,4506496,2024-12-29,19,Everton,8668,Nottingham Forest,10203,True,True,2024/2025
+562,4506497,2024-12-29,19,Fulham,9879,AFC Bournemouth,8678,True,True,2024/2025
+563,4506501,2024-12-29,19,Tottenham Hotspur,8586,Wolverhampton Wanderers,8602,True,True,2024/2025
+564,4506502,2024-12-29,19,West Ham United,8654,Liverpool,8650,True,True,2024/2025
+565,4506493,2024-12-30,19,Aston Villa,10252,Brighton & Hove Albion,10204,True,True,2024/2025
+566,4506498,2024-12-30,19,Ipswich Town,9902,Chelsea,8455,True,True,2024/2025
+567,4506500,2024-12-30,19,Manchester United,10260,Newcastle United,10261,True,True,2024/2025
+568,4506494,2025-01-01,19,Brentford,9937,Arsenal,9825,True,True,2024/2025
+569,4506511,2025-01-04,20,Tottenham Hotspur,8586,Newcastle United,10261,True,True,2024/2025
+570,4506503,2025-01-04,20,AFC Bournemouth,8678,Everton,8668,True,True,2024/2025
+571,4506504,2025-01-04,20,Aston Villa,10252,Leicester City,8197,True,True,2024/2025
+572,4506506,2025-01-04,20,Crystal Palace,9826,Chelsea,8455,True,True,2024/2025
+573,4506509,2025-01-04,20,Manchester City,8456,West Ham United,8654,True,True,2024/2025
+574,4506510,2025-01-04,20,Southampton,8466,Brentford,9937,True,True,2024/2025
+575,4506505,2025-01-04,20,Brighton & Hove Albion,10204,Arsenal,9825,True,True,2024/2025
+576,4506507,2025-01-05,20,Fulham,9879,Ipswich Town,9902,True,True,2024/2025
+577,4506508,2025-01-05,20,Liverpool,8650,Manchester United,10260,True,True,2024/2025
+578,4506512,2025-01-06,20,Wolverhampton Wanderers,8602,Nottingham Forest,10203,True,True,2024/2025
+579,4506514,2025-01-14,21,Brentford,9937,Manchester City,8456,True,True,2024/2025
+580,4506520,2025-01-14,21,Chelsea,8455,AFC Bournemouth,8678,True,True,2024/2025
+581,4506519,2025-01-14,21,West Ham United,8654,Fulham,9879,True,True,2024/2025
+582,4506518,2025-01-14,21,Nottingham Forest,10203,Liverpool,8650,True,True,2024/2025
+583,4506515,2025-01-15,21,Everton,8668,Aston Villa,10252,True,True,2024/2025
+584,4506517,2025-01-15,21,Leicester City,8197,Crystal Palace,9826,True,True,2024/2025
+585,4506521,2025-01-15,21,Newcastle United,10261,Wolverhampton Wanderers,8602,True,True,2024/2025
+586,4506513,2025-01-15,21,Arsenal,9825,Tottenham Hotspur,8586,True,True,2024/2025
+587,4506516,2025-01-16,21,Ipswich Town,9902,Brighton & Hove Albion,10204,True,True,2024/2025
+588,4506522,2025-01-16,21,Manchester United,10260,Southampton,8466,True,True,2024/2025
+589,4506530,2025-01-18,22,Newcastle United,10261,AFC Bournemouth,8678,True,True,2024/2025
+590,4506524,2025-01-18,22,Brentford,9937,Liverpool,8650,True,True,2024/2025
+591,4506528,2025-01-18,22,Leicester City,8197,Fulham,9879,True,True,2024/2025
+592,4506532,2025-01-18,22,West Ham United,8654,Crystal Palace,9826,True,True,2024/2025
+593,4506523,2025-01-18,22,Arsenal,9825,Aston Villa,10252,True,True,2024/2025
+594,4506526,2025-01-19,22,Everton,8668,Tottenham Hotspur,8586,True,True,2024/2025
+595,4506529,2025-01-19,22,Manchester United,10260,Brighton & Hove Albion,10204,True,True,2024/2025
+596,4506531,2025-01-19,22,Nottingham Forest,10203,Southampton,8466,True,True,2024/2025
+597,4506527,2025-01-19,22,Ipswich Town,9902,Manchester City,8456,True,True,2024/2025
+598,4506525,2025-01-20,22,Chelsea,8455,Wolverhampton Wanderers,8602,True,True,2024/2025
+599,4506603,2025-01-25,23,AFC Bournemouth,8678,Nottingham Forest,10203,True,True,2024/2025
+600,4506605,2025-01-25,23,Brighton & Hove Albion,10204,Everton,8668,True,True,2024/2025
+601,4506608,2025-01-25,23,Liverpool,8650,Ipswich Town,9902,True,True,2024/2025
+602,4506610,2025-01-25,23,Southampton,8466,Newcastle United,10261,True,True,2024/2025
+603,4506612,2025-01-25,23,Wolverhampton Wanderers,8602,Arsenal,9825,True,True,2024/2025
+604,4506609,2025-01-25,23,Manchester City,8456,Chelsea,8455,True,True,2024/2025
+605,4506606,2025-01-26,23,Crystal Palace,9826,Brentford,9937,True,True,2024/2025
+606,4506611,2025-01-26,23,Tottenham Hotspur,8586,Leicester City,8197,True,True,2024/2025
+607,4506604,2025-01-26,23,Aston Villa,10252,West Ham United,8654,True,True,2024/2025
+608,4506607,2025-01-26,23,Fulham,9879,Manchester United,10260,True,True,2024/2025
+609,4506621,2025-02-01,24,Nottingham Forest,10203,Brighton & Hove Albion,10204,True,True,2024/2025
+610,4506613,2025-02-01,24,AFC Bournemouth,8678,Liverpool,8650,True,True,2024/2025
+611,4506617,2025-02-01,24,Everton,8668,Leicester City,8197,True,True,2024/2025
+612,4506618,2025-02-01,24,Ipswich Town,9902,Southampton,8466,True,True,2024/2025
+613,4506620,2025-02-01,24,Newcastle United,10261,Fulham,9879,True,True,2024/2025
+614,4506622,2025-02-01,24,Wolverhampton Wanderers,8602,Aston Villa,10252,True,True,2024/2025
+615,4506615,2025-02-02,24,Brentford,9937,Tottenham Hotspur,8586,True,True,2024/2025
+616,4506619,2025-02-02,24,Manchester United,10260,Crystal Palace,9826,True,True,2024/2025
+617,4506614,2025-02-02,24,Arsenal,9825,Manchester City,8456,True,True,2024/2025
+618,4506616,2025-02-03,24,Chelsea,8455,West Ham United,8654,True,True,2024/2025
+619,4506436,2025-02-12,15,Everton,8668,Liverpool,8650,True,True,2024/2025
+620,4506624,2025-02-14,25,Brighton & Hove Albion,10204,Chelsea,8455,True,True,2024/2025
+621,4506627,2025-02-15,25,Leicester City,8197,Arsenal,9825,True,True,2024/2025
+622,4506623,2025-02-15,25,Aston Villa,10252,Ipswich Town,9902,True,True,2024/2025
+623,4506626,2025-02-15,25,Fulham,9879,Nottingham Forest,10203,True,True,2024/2025
+624,4506629,2025-02-15,25,Manchester City,8456,Newcastle United,10261,True,True,2024/2025
+625,4506630,2025-02-15,25,Southampton,8466,AFC Bournemouth,8678,True,True,2024/2025
+626,4506632,2025-02-15,25,West Ham United,8654,Brentford,9937,True,True,2024/2025
+627,4506625,2025-02-15,25,Crystal Palace,9826,Everton,8668,True,True,2024/2025
+628,4506628,2025-02-16,25,Liverpool,8650,Wolverhampton Wanderers,8602,True,True,2024/2025
+629,4506631,2025-02-16,25,Tottenham Hotspur,8586,Manchester United,10260,True,True,2024/2025
+630,4506355,2025-02-19,29,Aston Villa,10252,Liverpool,8650,True,True,2024/2025
+631,4506639,2025-02-21,26,Leicester City,8197,Brentford,9937,True,True,2024/2025
+632,4506636,2025-02-22,26,Everton,8668,Manchester United,10260,True,True,2024/2025
+633,4506633,2025-02-22,26,AFC Bournemouth,8678,Wolverhampton Wanderers,8602,True,True,2024/2025
+634,4506634,2025-02-22,26,Arsenal,9825,West Ham United,8654,True,True,2024/2025
+635,4506637,2025-02-22,26,Fulham,9879,Crystal Palace,9826,True,True,2024/2025
+636,4506638,2025-02-22,26,Ipswich Town,9902,Tottenham Hotspur,8586,True,True,2024/2025
+637,4506642,2025-02-22,26,Southampton,8466,Brighton & Hove Albion,10204,True,True,2024/2025
+638,4506635,2025-02-22,26,Aston Villa,10252,Chelsea,8455,True,True,2024/2025
+639,4506641,2025-02-23,26,Newcastle United,10261,Nottingham Forest,10203,True,True,2024/2025
+640,4506640,2025-02-23,26,Manchester City,8456,Liverpool,8650,True,True,2024/2025
+641,4506334,2025-02-25,27,Brighton & Hove Albion,10204,AFC Bournemouth,8678,True,True,2024/2025
+642,4506339,2025-02-25,27,Crystal Palace,9826,Aston Villa,10252,True,True,2024/2025
+643,4506338,2025-02-25,27,Wolverhampton Wanderers,8602,Fulham,9879,True,True,2024/2025
+644,4506340,2025-02-25,27,Chelsea,8455,Southampton,8466,True,True,2024/2025
+645,4506333,2025-02-26,27,Brentford,9937,Everton,8668,True,True,2024/2025
+646,4506342,2025-02-26,27,Manchester United,10260,Ipswich Town,9902,True,True,2024/2025
+647,4506335,2025-02-26,27,Nottingham Forest,10203,Arsenal,9825,True,True,2024/2025
+648,4506336,2025-02-26,27,Tottenham Hotspur,8586,Manchester City,8456,True,True,2024/2025
+649,4506341,2025-02-26,27,Liverpool,8650,Newcastle United,10261,True,True,2024/2025
+650,4506337,2025-02-27,27,West Ham United,8654,Leicester City,8197,True,True,2024/2025
+651,4506349,2025-03-08,28,Nottingham Forest,10203,Manchester City,8456,True,True,2024/2025
+652,4506344,2025-03-08,28,Brighton & Hove Albion,10204,Fulham,9879,True,True,2024/2025
+653,4506346,2025-03-08,28,Crystal Palace,9826,Ipswich Town,9902,True,True,2024/2025
+654,4506347,2025-03-08,28,Liverpool,8650,Southampton,8466,True,True,2024/2025
+655,4506343,2025-03-08,28,Brentford,9937,Aston Villa,10252,True,True,2024/2025
+656,4506352,2025-03-08,28,Wolverhampton Wanderers,8602,Everton,8668,True,True,2024/2025
+657,4506345,2025-03-09,28,Chelsea,8455,Leicester City,8197,True,True,2024/2025
+658,4506350,2025-03-09,28,Tottenham Hotspur,8586,AFC Bournemouth,8678,True,True,2024/2025
+659,4506348,2025-03-09,28,Manchester United,10260,Arsenal,9825,True,True,2024/2025
+660,4506351,2025-03-10,28,West Ham United,8654,Newcastle United,10261,True,True,2024/2025
+661,4506356,2025-03-15,29,Everton,8668,West Ham United,8654,True,True,2024/2025
+662,4506358,2025-03-15,29,Ipswich Town,9902,Nottingham Forest,10203,True,True,2024/2025
+663,4506362,2025-03-15,29,Southampton,8466,Wolverhampton Wanderers,8602,True,True,2024/2025
+664,4506360,2025-03-15,29,Manchester City,8456,Brighton & Hove Albion,10204,True,True,2024/2025
+665,4506353,2025-03-15,29,AFC Bournemouth,8678,Brentford,9937,True,True,2024/2025
+666,4506354,2025-03-16,29,Arsenal,9825,Chelsea,8455,True,True,2024/2025
+667,4506357,2025-03-16,29,Fulham,9879,Tottenham Hotspur,8586,True,True,2024/2025
+668,4506359,2025-03-16,29,Leicester City,8197,Manchester United,10260,True,True,2024/2025
+669,4506364,2025-04-01,30,Arsenal,9825,Fulham,9879,True,True,2024/2025
+670,4506367,2025-04-01,30,Wolverhampton Wanderers,8602,West Ham United,8654,True,True,2024/2025
+671,4506366,2025-04-01,30,Nottingham Forest,10203,Manchester United,10260,True,True,2024/2025
+672,4506363,2025-04-02,30,AFC Bournemouth,8678,Ipswich Town,9902,True,True,2024/2025
+673,4506365,2025-04-02,30,Brighton & Hove Albion,10204,Aston Villa,10252,True,True,2024/2025
+674,4506369,2025-04-02,30,Manchester City,8456,Leicester City,8197,True,True,2024/2025
+675,4506370,2025-04-02,30,Newcastle United,10261,Brentford,9937,True,True,2024/2025
+676,4506371,2025-04-02,30,Southampton,8466,Crystal Palace,9826,True,True,2024/2025
+677,4506372,2025-04-02,30,Liverpool,8650,Everton,8668,True,True,2024/2025
+678,4506368,2025-04-03,30,Chelsea,8455,Tottenham Hotspur,8586,True,True,2024/2025
+679,4506376,2025-04-05,31,Everton,8668,Arsenal,9825,True,True,2024/2025
+680,4506375,2025-04-05,31,Crystal Palace,9826,Brighton & Hove Albion,10204,True,True,2024/2025
+681,4506378,2025-04-05,31,Ipswich Town,9902,Wolverhampton Wanderers,8602,True,True,2024/2025
+682,4506382,2025-04-05,31,West Ham United,8654,AFC Bournemouth,8678,True,True,2024/2025
+683,4506373,2025-04-05,31,Aston Villa,10252,Nottingham Forest,10203,True,True,2024/2025
+684,4506374,2025-04-06,31,Brentford,9937,Chelsea,8455,True,True,2024/2025
+685,4506377,2025-04-06,31,Fulham,9879,Liverpool,8650,True,True,2024/2025
+686,4506381,2025-04-06,31,Tottenham Hotspur,8586,Southampton,8466,True,True,2024/2025
+687,4506380,2025-04-06,31,Manchester United,10260,Manchester City,8456,True,True,2024/2025
+688,4506379,2025-04-07,31,Leicester City,8197,Newcastle United,10261,True,True,2024/2025
+689,4506388,2025-04-12,32,Manchester City,8456,Crystal Palace,9826,True,True,2024/2025
+690,4506385,2025-04-12,32,Brighton & Hove Albion,10204,Leicester City,8197,True,True,2024/2025
+691,4506390,2025-04-12,32,Nottingham Forest,10203,Everton,8668,True,True,2024/2025
+692,4506391,2025-04-12,32,Southampton,8466,Aston Villa,10252,True,True,2024/2025
+693,4506384,2025-04-12,32,Arsenal,9825,Brentford,9937,True,True,2024/2025
+694,4506386,2025-04-13,32,Chelsea,8455,Ipswich Town,9902,True,True,2024/2025
+695,4506387,2025-04-13,32,Liverpool,8650,West Ham United,8654,True,True,2024/2025
+696,4506392,2025-04-13,32,Wolverhampton Wanderers,8602,Tottenham Hotspur,8586,True,True,2024/2025
+697,4506389,2025-04-13,32,Newcastle United,10261,Manchester United,10260,True,True,2024/2025
+698,4506383,2025-04-14,32,AFC Bournemouth,8678,Fulham,9879,True,True,2024/2025
+699,4506361,2025-04-16,29,Newcastle United,10261,Crystal Palace,9826,True,True,2024/2025
+700,4506544,2025-04-19,33,Brentford,9937,Brighton & Hove Albion,10204,True,True,2024/2025
+701,4506545,2025-04-19,33,Crystal Palace,9826,AFC Bournemouth,8678,True,True,2024/2025
+702,4506546,2025-04-19,33,Everton,8668,Manchester City,8456,True,True,2024/2025
+703,4506552,2025-04-19,33,West Ham United,8654,Southampton,8466,True,True,2024/2025
+704,4506543,2025-04-19,33,Aston Villa,10252,Newcastle United,10261,True,True,2024/2025
+705,4506547,2025-04-20,33,Fulham,9879,Chelsea,8455,True,True,2024/2025
+706,4506548,2025-04-20,33,Ipswich Town,9902,Arsenal,9825,True,True,2024/2025
+707,4506550,2025-04-20,33,Manchester United,10260,Wolverhampton Wanderers,8602,True,True,2024/2025
+708,4506549,2025-04-20,33,Leicester City,8197,Liverpool,8650,True,True,2024/2025
+709,4506551,2025-04-21,33,Tottenham Hotspur,8586,Nottingham Forest,10203,True,True,2024/2025
+710,4506558,2025-04-22,34,Manchester City,8456,Aston Villa,10252,True,True,2024/2025
+711,4506554,2025-04-23,34,Arsenal,9825,Crystal Palace,9826,True,True,2024/2025
+712,4506556,2025-04-26,34,Chelsea,8455,Everton,8668,True,True,2024/2025
+713,4506555,2025-04-26,34,Brighton & Hove Albion,10204,West Ham United,8654,True,True,2024/2025
+714,4506559,2025-04-26,34,Newcastle United,10261,Ipswich Town,9902,True,True,2024/2025
+715,4506561,2025-04-26,34,Southampton,8466,Fulham,9879,True,True,2024/2025
+716,4506562,2025-04-26,34,Wolverhampton Wanderers,8602,Leicester City,8197,True,True,2024/2025
+717,4506553,2025-04-27,34,AFC Bournemouth,8678,Manchester United,10260,True,True,2024/2025
+718,4506557,2025-04-27,34,Liverpool,8650,Tottenham Hotspur,8586,True,True,2024/2025
+719,4506560,2025-05-01,34,Nottingham Forest,10203,Brentford,9937,True,True,2024/2025
+720,4506570,2025-05-02,35,Manchester City,8456,Wolverhampton Wanderers,8602,True,True,2024/2025
+721,4506564,2025-05-03,35,Aston Villa,10252,Fulham,9879,True,True,2024/2025
+722,4506568,2025-05-03,35,Everton,8668,Ipswich Town,9902,True,True,2024/2025
+723,4506569,2025-05-03,35,Leicester City,8197,Southampton,8466,True,True,2024/2025
+724,4506563,2025-05-03,35,Arsenal,9825,AFC Bournemouth,8678,True,True,2024/2025
+725,4506565,2025-05-04,35,Brentford,9937,Manchester United,10260,True,True,2024/2025
+726,4506572,2025-05-04,35,Brighton & Hove Albion,10204,Newcastle United,10261,True,True,2024/2025
+727,4506571,2025-05-04,35,West Ham United,8654,Tottenham Hotspur,8586,True,True,2024/2025
+728,4506566,2025-05-04,35,Chelsea,8455,Liverpool,8650,True,True,2024/2025
+729,4506567,2025-05-05,35,Crystal Palace,9826,Nottingham Forest,10203,True,True,2024/2025
+730,4506574,2025-05-10,36,Fulham,9879,Everton,8668,True,True,2024/2025
+731,4506575,2025-05-10,36,Ipswich Town,9902,Brentford,9937,True,True,2024/2025
+732,4506580,2025-05-10,36,Southampton,8466,Manchester City,8456,True,True,2024/2025
+733,4506582,2025-05-10,36,Wolverhampton Wanderers,8602,Brighton & Hove Albion,10204,True,True,2024/2025
+734,4506573,2025-05-10,36,AFC Bournemouth,8678,Aston Villa,10252,True,True,2024/2025
+735,4506578,2025-05-11,36,Newcastle United,10261,Chelsea,8455,True,True,2024/2025
+736,4506577,2025-05-11,36,Manchester United,10260,West Ham United,8654,True,True,2024/2025
+737,4506579,2025-05-11,36,Nottingham Forest,10203,Leicester City,8197,True,True,2024/2025
+738,4506581,2025-05-11,36,Tottenham Hotspur,8586,Crystal Palace,9826,True,True,2024/2025
+739,4506576,2025-05-11,36,Liverpool,8650,Arsenal,9825,True,True,2024/2025
+740,4506584,2025-05-16,37,Aston Villa,10252,Tottenham Hotspur,8586,True,True,2024/2025
+741,4506587,2025-05-16,37,Chelsea,8455,Manchester United,10260,True,True,2024/2025
+742,4506589,2025-05-18,37,Everton,8668,Southampton,8466,True,True,2024/2025
+743,4506592,2025-05-18,37,West Ham United,8654,Nottingham Forest,10203,True,True,2024/2025
+744,4506585,2025-05-18,37,Brentford,9937,Fulham,9879,True,True,2024/2025
+745,4506590,2025-05-18,37,Leicester City,8197,Ipswich Town,9902,True,True,2024/2025
+746,4506583,2025-05-18,37,Arsenal,9825,Newcastle United,10261,True,True,2024/2025
+747,4506586,2025-05-19,37,Brighton & Hove Albion,10204,Liverpool,8650,True,True,2024/2025
+748,4506588,2025-05-20,37,Crystal Palace,9826,Wolverhampton Wanderers,8602,True,True,2024/2025
+749,4506591,2025-05-20,37,Manchester City,8456,AFC Bournemouth,8678,True,True,2024/2025
+750,4506593,2025-05-25,38,AFC Bournemouth,8678,Leicester City,8197,True,True,2024/2025
+751,4506594,2025-05-25,38,Fulham,9879,Manchester City,8456,True,True,2024/2025
+752,4506595,2025-05-25,38,Ipswich Town,9902,West Ham United,8654,True,True,2024/2025
+753,4506596,2025-05-25,38,Liverpool,8650,Crystal Palace,9826,True,True,2024/2025
+754,4506597,2025-05-25,38,Manchester United,10260,Aston Villa,10252,True,True,2024/2025
+755,4506598,2025-05-25,38,Newcastle United,10261,Everton,8668,True,True,2024/2025
+756,4506599,2025-05-25,38,Nottingham Forest,10203,Chelsea,8455,True,True,2024/2025
+757,4506600,2025-05-25,38,Southampton,8466,Arsenal,9825,True,True,2024/2025
+758,4506601,2025-05-25,38,Tottenham Hotspur,8586,Brighton & Hove Albion,10204,True,True,2024/2025
+759,4506602,2025-05-25,38,Wolverhampton Wanderers,8602,Brentford,9937,True,True,2024/2025
+760,4193450,2023-08-11,1,Burnley,8191,Manchester City,8456,True,True,2023/2024
+761,4193451,2023-08-12,1,Arsenal,9825,Nottingham Forest,10203,True,True,2023/2024
+762,4193452,2023-08-12,1,AFC Bournemouth,8678,West Ham United,8654,True,True,2023/2024
+763,4193453,2023-08-12,1,Brighton & Hove Albion,10204,Luton Town,8346,True,True,2023/2024
+764,4193454,2023-08-12,1,Everton,8668,Fulham,9879,True,True,2023/2024
+765,4193455,2023-08-12,1,Sheffield United,8657,Crystal Palace,9826,True,True,2023/2024
+766,4193456,2023-08-12,1,Newcastle United,10261,Aston Villa,10252,True,True,2023/2024
+767,4193457,2023-08-13,1,Brentford,9937,Tottenham Hotspur,8586,True,True,2023/2024
+768,4193458,2023-08-13,1,Chelsea,8455,Liverpool,8650,True,True,2023/2024
+769,4193459,2023-08-14,1,Manchester United,10260,Wolverhampton Wanderers,8602,True,True,2023/2024
+770,4193476,2023-08-18,2,Nottingham Forest,10203,Sheffield United,8657,True,True,2023/2024
+771,4193472,2023-08-19,2,Fulham,9879,Brentford,9937,True,True,2023/2024
+772,4193473,2023-08-19,2,Liverpool,8650,AFC Bournemouth,8678,True,True,2023/2024
+773,4193479,2023-08-19,2,Wolverhampton Wanderers,8602,Brighton & Hove Albion,10204,True,True,2023/2024
+774,4193477,2023-08-19,2,Tottenham Hotspur,8586,Manchester United,10260,True,True,2023/2024
+775,4193475,2023-08-19,2,Manchester City,8456,Newcastle United,10261,True,True,2023/2024
+776,4193470,2023-08-20,2,Aston Villa,10252,Everton,8668,True,True,2023/2024
+777,4193478,2023-08-20,2,West Ham United,8654,Chelsea,8455,True,True,2023/2024
+778,4193471,2023-08-21,2,Crystal Palace,9826,Arsenal,9825,True,True,2023/2024
+779,4193485,2023-08-25,3,Chelsea,8455,Luton Town,8346,True,True,2023/2024
+780,4193480,2023-08-26,3,AFC Bournemouth,8678,Tottenham Hotspur,8586,True,True,2023/2024
+781,4193481,2023-08-26,3,Arsenal,9825,Fulham,9879,True,True,2023/2024
+782,4193482,2023-08-26,3,Brentford,9937,Crystal Palace,9826,True,True,2023/2024
+783,4193486,2023-08-26,3,Everton,8668,Wolverhampton Wanderers,8602,True,True,2023/2024
+784,4193487,2023-08-26,3,Manchester United,10260,Nottingham Forest,10203,True,True,2023/2024
+785,4193483,2023-08-26,3,Brighton & Hove Albion,10204,West Ham United,8654,True,True,2023/2024
+786,4193484,2023-08-27,3,Burnley,8191,Aston Villa,10252,True,True,2023/2024
+787,4193489,2023-08-27,3,Sheffield United,8657,Manchester City,8456,True,True,2023/2024
+788,4193488,2023-08-27,3,Newcastle United,10261,Liverpool,8650,True,True,2023/2024
+789,4193497,2023-09-01,4,Luton Town,8346,West Ham United,8654,True,True,2023/2024
+790,4193499,2023-09-02,4,Sheffield United,8657,Everton,8668,True,True,2023/2024
+791,4193491,2023-09-02,4,Brentford,9937,AFC Bournemouth,8678,True,True,2023/2024
+792,4193493,2023-09-02,4,Burnley,8191,Tottenham Hotspur,8586,True,True,2023/2024
+793,4193494,2023-09-02,4,Chelsea,8455,Nottingham Forest,10203,True,True,2023/2024
+794,4193498,2023-09-02,4,Manchester City,8456,Fulham,9879,True,True,2023/2024
+795,4193492,2023-09-02,4,Brighton & Hove Albion,10204,Newcastle United,10261,True,True,2023/2024
+796,4193495,2023-09-03,4,Crystal Palace,9826,Wolverhampton Wanderers,8602,True,True,2023/2024
+797,4193496,2023-09-03,4,Liverpool,8650,Aston Villa,10252,True,True,2023/2024
+798,4193490,2023-09-03,4,Arsenal,9825,Manchester United,10260,True,True,2023/2024
+799,4193509,2023-09-16,5,Wolverhampton Wanderers,8602,Liverpool,8650,True,True,2023/2024
+800,4193501,2023-09-16,5,Aston Villa,10252,Crystal Palace,9826,True,True,2023/2024
+801,4193503,2023-09-16,5,Fulham,9879,Luton Town,8346,True,True,2023/2024
+802,4193504,2023-09-16,5,Manchester United,10260,Brighton & Hove Albion,10204,True,True,2023/2024
+803,4193507,2023-09-16,5,Tottenham Hotspur,8586,Sheffield United,8657,True,True,2023/2024
+804,4193508,2023-09-16,5,West Ham United,8654,Manchester City,8456,True,True,2023/2024
+805,4193505,2023-09-16,5,Newcastle United,10261,Brentford,9937,True,True,2023/2024
+806,4193500,2023-09-17,5,AFC Bournemouth,8678,Chelsea,8455,True,True,2023/2024
+807,4193502,2023-09-17,5,Everton,8668,Arsenal,9825,True,True,2023/2024
+808,4193506,2023-09-18,5,Nottingham Forest,10203,Burnley,8191,True,True,2023/2024
+809,4193515,2023-09-23,6,Crystal Palace,9826,Fulham,9879,True,True,2023/2024
+810,4193517,2023-09-23,6,Luton Town,8346,Wolverhampton Wanderers,8602,True,True,2023/2024
+811,4193518,2023-09-23,6,Manchester City,8456,Nottingham Forest,10203,True,True,2023/2024
+812,4193511,2023-09-23,6,Brentford,9937,Everton,8668,True,True,2023/2024
+813,4193513,2023-09-23,6,Burnley,8191,Manchester United,10260,True,True,2023/2024
+814,4193510,2023-09-24,6,Arsenal,9825,Tottenham Hotspur,8586,True,True,2023/2024
+815,4193512,2023-09-24,6,Brighton & Hove Albion,10204,AFC Bournemouth,8678,True,True,2023/2024
+816,4193514,2023-09-24,6,Chelsea,8455,Aston Villa,10252,True,True,2023/2024
+817,4193516,2023-09-24,6,Liverpool,8650,West Ham United,8654,True,True,2023/2024
+818,4193519,2023-09-24,6,Sheffield United,8657,Newcastle United,10261,True,True,2023/2024
+819,4193521,2023-09-30,7,Aston Villa,10252,Brighton & Hove Albion,10204,True,True,2023/2024
+820,4193520,2023-09-30,7,AFC Bournemouth,8678,Arsenal,9825,True,True,2023/2024
+821,4193522,2023-09-30,7,Everton,8668,Luton Town,8346,True,True,2023/2024
+822,4193524,2023-09-30,7,Manchester United,10260,Crystal Palace,9826,True,True,2023/2024
+823,4193525,2023-09-30,7,Newcastle United,10261,Burnley,8191,True,True,2023/2024
+824,4193528,2023-09-30,7,West Ham United,8654,Sheffield United,8657,True,True,2023/2024
+825,4193529,2023-09-30,7,Wolverhampton Wanderers,8602,Manchester City,8456,True,True,2023/2024
+826,4193527,2023-09-30,7,Tottenham Hotspur,8586,Liverpool,8650,True,True,2023/2024
+827,4193526,2023-10-01,7,Nottingham Forest,10203,Brentford,9937,True,True,2023/2024
+828,4193523,2023-10-02,7,Fulham,9879,Chelsea,8455,True,True,2023/2024
+829,4193474,2023-10-03,2,Luton Town,8346,Burnley,8191,True,True,2023/2024
+830,4193536,2023-10-07,8,Luton Town,8346,Tottenham Hotspur,8586,True,True,2023/2024
+831,4193532,2023-10-07,8,Burnley,8191,Chelsea,8455,True,True,2023/2024
+832,4193534,2023-10-07,8,Everton,8668,AFC Bournemouth,8678,True,True,2023/2024
+833,4193535,2023-10-07,8,Fulham,9879,Sheffield United,8657,True,True,2023/2024
+834,4193537,2023-10-07,8,Manchester United,10260,Brentford,9937,True,True,2023/2024
+835,4193533,2023-10-07,8,Crystal Palace,9826,Nottingham Forest,10203,True,True,2023/2024
+836,4193531,2023-10-08,8,Brighton & Hove Albion,10204,Liverpool,8650,True,True,2023/2024
+837,4193538,2023-10-08,8,West Ham United,8654,Newcastle United,10261,True,True,2023/2024
+838,4193539,2023-10-08,8,Wolverhampton Wanderers,8602,Aston Villa,10252,True,True,2023/2024
+839,4193530,2023-10-08,8,Arsenal,9825,Manchester City,8456,True,True,2023/2024
+840,4193544,2023-10-21,9,Liverpool,8650,Everton,8668,True,True,2023/2024
+841,4193540,2023-10-21,9,AFC Bournemouth,8678,Wolverhampton Wanderers,8602,True,True,2023/2024
+842,4193542,2023-10-21,9,Brentford,9937,Burnley,8191,True,True,2023/2024
+843,4193545,2023-10-21,9,Manchester City,8456,Brighton & Hove Albion,10204,True,True,2023/2024
+844,4193546,2023-10-21,9,Newcastle United,10261,Crystal Palace,9826,True,True,2023/2024
+845,4193547,2023-10-21,9,Nottingham Forest,10203,Luton Town,8346,True,True,2023/2024
+846,4193543,2023-10-21,9,Chelsea,8455,Arsenal,9825,True,True,2023/2024
+847,4193548,2023-10-21,9,Sheffield United,8657,Manchester United,10260,True,True,2023/2024
+848,4193541,2023-10-22,9,Aston Villa,10252,West Ham United,8654,True,True,2023/2024
+849,4193549,2023-10-23,9,Tottenham Hotspur,8586,Fulham,9879,True,True,2023/2024
+850,4193555,2023-10-27,10,Crystal Palace,9826,Tottenham Hotspur,8586,True,True,2023/2024
+851,4193554,2023-10-28,10,Chelsea,8455,Brentford,9937,True,True,2023/2024
+852,4193550,2023-10-28,10,AFC Bournemouth,8678,Burnley,8191,True,True,2023/2024
+853,4193551,2023-10-28,10,Arsenal,9825,Sheffield United,8657,True,True,2023/2024
+854,4193559,2023-10-28,10,Wolverhampton Wanderers,8602,Newcastle United,10261,True,True,2023/2024
+855,4193558,2023-10-29,10,West Ham United,8654,Everton,8668,True,True,2023/2024
+856,4193552,2023-10-29,10,Aston Villa,10252,Luton Town,8346,True,True,2023/2024
+857,4193553,2023-10-29,10,Brighton & Hove Albion,10204,Fulham,9879,True,True,2023/2024
+858,4193556,2023-10-29,10,Liverpool,8650,Nottingham Forest,10203,True,True,2023/2024
+859,4193557,2023-10-29,10,Manchester United,10260,Manchester City,8456,True,True,2023/2024
+860,4193563,2023-11-04,11,Fulham,9879,Manchester United,10260,True,True,2023/2024
+861,4193560,2023-11-04,11,Brentford,9937,West Ham United,8654,True,True,2023/2024
+862,4193561,2023-11-04,11,Burnley,8191,Crystal Palace,9826,True,True,2023/2024
+863,4193562,2023-11-04,11,Everton,8668,Brighton & Hove Albion,10204,True,True,2023/2024
+864,4193565,2023-11-04,11,Manchester City,8456,AFC Bournemouth,8678,True,True,2023/2024
+865,4193568,2023-11-04,11,Sheffield United,8657,Wolverhampton Wanderers,8602,True,True,2023/2024
+866,4193566,2023-11-04,11,Newcastle United,10261,Arsenal,9825,True,True,2023/2024
+867,4193567,2023-11-05,11,Nottingham Forest,10203,Aston Villa,10252,True,True,2023/2024
+868,4193564,2023-11-05,11,Luton Town,8346,Liverpool,8650,True,True,2023/2024
+869,4193569,2023-11-06,11,Tottenham Hotspur,8586,Chelsea,8455,True,True,2023/2024
+870,4193579,2023-11-11,12,Wolverhampton Wanderers,8602,Tottenham Hotspur,8586,True,True,2023/2024
+871,4193571,2023-11-11,12,Arsenal,9825,Burnley,8191,True,True,2023/2024
+872,4193575,2023-11-11,12,Crystal Palace,9826,Everton,8668,True,True,2023/2024
+873,4193577,2023-11-11,12,Manchester United,10260,Luton Town,8346,True,True,2023/2024
+874,4193570,2023-11-11,12,AFC Bournemouth,8678,Newcastle United,10261,True,True,2023/2024
+875,4193572,2023-11-12,12,Aston Villa,10252,Fulham,9879,True,True,2023/2024
+876,4193573,2023-11-12,12,Brighton & Hove Albion,10204,Sheffield United,8657,True,True,2023/2024
+877,4193576,2023-11-12,12,Liverpool,8650,Brentford,9937,True,True,2023/2024
+878,4193578,2023-11-12,12,West Ham United,8654,Nottingham Forest,10203,True,True,2023/2024
+879,4193574,2023-11-12,12,Chelsea,8455,Manchester City,8456,True,True,2023/2024
+880,4193656,2023-11-25,13,Manchester City,8456,Liverpool,8650,True,True,2023/2024
+881,4193652,2023-11-25,13,Burnley,8191,West Ham United,8654,True,True,2023/2024
+882,4193655,2023-11-25,13,Luton Town,8346,Crystal Palace,9826,True,True,2023/2024
+883,4193657,2023-11-25,13,Newcastle United,10261,Chelsea,8455,True,True,2023/2024
+884,4193658,2023-11-25,13,Nottingham Forest,10203,Brighton & Hove Albion,10204,True,True,2023/2024
+885,4193659,2023-11-25,13,Sheffield United,8657,AFC Bournemouth,8678,True,True,2023/2024
+886,4193651,2023-11-25,13,Brentford,9937,Arsenal,9825,True,True,2023/2024
+887,4193660,2023-11-26,13,Tottenham Hotspur,8586,Aston Villa,10252,True,True,2023/2024
+888,4193653,2023-11-26,13,Everton,8668,Manchester United,10260,True,True,2023/2024
+889,4193654,2023-11-27,13,Fulham,9879,Wolverhampton Wanderers,8602,True,True,2023/2024
+890,4193662,2023-12-02,14,Arsenal,9825,Wolverhampton Wanderers,8602,True,True,2023/2024
+891,4193663,2023-12-02,14,Brentford,9937,Luton Town,8346,True,True,2023/2024
+892,4193664,2023-12-02,14,Burnley,8191,Sheffield United,8657,True,True,2023/2024
+893,4193669,2023-12-02,14,Nottingham Forest,10203,Everton,8668,True,True,2023/2024
+894,4193668,2023-12-02,14,Newcastle United,10261,Manchester United,10260,True,True,2023/2024
+895,4193661,2023-12-03,14,AFC Bournemouth,8678,Aston Villa,10252,True,True,2023/2024
+896,4193665,2023-12-03,14,Chelsea,8455,Brighton & Hove Albion,10204,True,True,2023/2024
+897,4193666,2023-12-03,14,Liverpool,8650,Fulham,9879,True,True,2023/2024
+898,4193670,2023-12-03,14,West Ham United,8654,Crystal Palace,9826,True,True,2023/2024
+899,4193667,2023-12-03,14,Manchester City,8456,Tottenham Hotspur,8586,True,True,2023/2024
+900,4193678,2023-12-05,15,Wolverhampton Wanderers,8602,Burnley,8191,True,True,2023/2024
+901,4193675,2023-12-05,15,Luton Town,8346,Arsenal,9825,True,True,2023/2024
+902,4193672,2023-12-06,15,Brighton & Hove Albion,10204,Brentford,9937,True,True,2023/2024
+903,4193679,2023-12-06,15,Crystal Palace,9826,AFC Bournemouth,8678,True,True,2023/2024
+904,4193674,2023-12-06,15,Fulham,9879,Nottingham Forest,10203,True,True,2023/2024
+905,4193676,2023-12-06,15,Sheffield United,8657,Liverpool,8650,True,True,2023/2024
+906,4193671,2023-12-06,15,Aston Villa,10252,Manchester City,8456,True,True,2023/2024
+907,4193680,2023-12-06,15,Manchester United,10260,Chelsea,8455,True,True,2023/2024
+908,4193673,2023-12-07,15,Everton,8668,Newcastle United,10261,True,True,2023/2024
+909,4193677,2023-12-07,15,Tottenham Hotspur,8586,West Ham United,8654,True,True,2023/2024
+910,4193683,2023-12-09,16,Crystal Palace,9826,Liverpool,8650,True,True,2023/2024
+911,4193682,2023-12-09,16,Brighton & Hove Albion,10204,Burnley,8191,True,True,2023/2024
+912,4193687,2023-12-09,16,Manchester United,10260,AFC Bournemouth,8678,True,True,2023/2024
+913,4193688,2023-12-09,16,Sheffield United,8657,Brentford,9937,True,True,2023/2024
+914,4193690,2023-12-09,16,Wolverhampton Wanderers,8602,Nottingham Forest,10203,True,True,2023/2024
+915,4193681,2023-12-09,16,Aston Villa,10252,Arsenal,9825,True,True,2023/2024
+916,4193684,2023-12-10,16,Everton,8668,Chelsea,8455,True,True,2023/2024
+917,4193685,2023-12-10,16,Fulham,9879,West Ham United,8654,True,True,2023/2024
+918,4193686,2023-12-10,16,Luton Town,8346,Manchester City,8456,True,True,2023/2024
+919,4193689,2023-12-10,16,Tottenham Hotspur,8586,Newcastle United,10261,True,True,2023/2024
+920,4193699,2023-12-15,17,Nottingham Forest,10203,Tottenham Hotspur,8586,True,True,2023/2024
+921,4193695,2023-12-16,17,Chelsea,8455,Sheffield United,8657,True,True,2023/2024
+922,4193697,2023-12-16,17,Manchester City,8456,Crystal Palace,9826,True,True,2023/2024
+923,4193698,2023-12-16,17,Newcastle United,10261,Fulham,9879,True,True,2023/2024
+924,4193694,2023-12-16,17,Burnley,8191,Everton,8668,True,True,2023/2024
+925,4193692,2023-12-17,17,Arsenal,9825,Brighton & Hove Albion,10204,True,True,2023/2024
+926,4193693,2023-12-17,17,Brentford,9937,Aston Villa,10252,True,True,2023/2024
+927,4193700,2023-12-17,17,West Ham United,8654,Wolverhampton Wanderers,8602,True,True,2023/2024
+928,4193696,2023-12-17,17,Liverpool,8650,Manchester United,10260,True,True,2023/2024
+929,4193702,2023-12-21,18,Crystal Palace,9826,Brighton & Hove Albion,10204,True,True,2023/2024
+930,4193701,2023-12-22,18,Aston Villa,10252,Sheffield United,8657,True,True,2023/2024
+931,4193709,2023-12-23,18,West Ham United,8654,Manchester United,10260,True,True,2023/2024
+932,4193703,2023-12-23,18,Fulham,9879,Burnley,8191,True,True,2023/2024
+933,4193705,2023-12-23,18,Luton Town,8346,Newcastle United,10261,True,True,2023/2024
+934,4193707,2023-12-23,18,Nottingham Forest,10203,AFC Bournemouth,8678,True,True,2023/2024
+935,4193708,2023-12-23,18,Tottenham Hotspur,8586,Everton,8668,True,True,2023/2024
+936,4193704,2023-12-23,18,Liverpool,8650,Arsenal,9825,True,True,2023/2024
+937,4193710,2023-12-24,18,Wolverhampton Wanderers,8602,Chelsea,8455,True,True,2023/2024
+938,4193719,2023-12-26,19,Newcastle United,10261,Nottingham Forest,10203,True,True,2023/2024
+939,4193711,2023-12-26,19,AFC Bournemouth,8678,Fulham,9879,True,True,2023/2024
+940,4193720,2023-12-26,19,Sheffield United,8657,Luton Town,8346,True,True,2023/2024
+941,4193715,2023-12-26,19,Burnley,8191,Liverpool,8650,True,True,2023/2024
+942,4193718,2023-12-26,19,Manchester United,10260,Aston Villa,10252,True,True,2023/2024
+943,4193713,2023-12-27,19,Brentford,9937,Wolverhampton Wanderers,8602,True,True,2023/2024
+944,4193716,2023-12-27,19,Chelsea,8455,Crystal Palace,9826,True,True,2023/2024
+945,4193717,2023-12-27,19,Everton,8668,Manchester City,8456,True,True,2023/2024
+946,4193714,2023-12-28,19,Brighton & Hove Albion,10204,Tottenham Hotspur,8586,True,True,2023/2024
+947,4193712,2023-12-28,19,Arsenal,9825,West Ham United,8654,True,True,2023/2024
+948,4193725,2023-12-30,20,Luton Town,8346,Chelsea,8455,True,True,2023/2024
+949,4193721,2023-12-30,20,Aston Villa,10252,Burnley,8191,True,True,2023/2024
+950,4193722,2023-12-30,20,Crystal Palace,9826,Brentford,9937,True,True,2023/2024
+951,4193726,2023-12-30,20,Manchester City,8456,Sheffield United,8657,True,True,2023/2024
+952,4193730,2023-12-30,20,Wolverhampton Wanderers,8602,Everton,8668,True,True,2023/2024
+953,4193727,2023-12-30,20,Nottingham Forest,10203,Manchester United,10260,True,True,2023/2024
+954,4193723,2023-12-31,20,Fulham,9879,Arsenal,9825,True,True,2023/2024
+955,4193728,2023-12-31,20,Tottenham Hotspur,8586,AFC Bournemouth,8678,True,True,2023/2024
+956,4193724,2024-01-01,20,Liverpool,8650,Newcastle United,10261,True,True,2023/2024
+957,4193729,2024-01-02,20,West Ham United,8654,Brighton & Hove Albion,10204,True,True,2023/2024
+958,4193735,2024-01-12,21,Burnley,8191,Luton Town,8346,True,True,2023/2024
+959,4193736,2024-01-13,21,Chelsea,8455,Fulham,9879,True,True,2023/2024
+960,4193739,2024-01-13,21,Newcastle United,10261,Manchester City,8456,True,True,2023/2024
+961,4193737,2024-01-14,21,Everton,8668,Aston Villa,10252,True,True,2023/2024
+962,4193738,2024-01-14,21,Manchester United,10260,Tottenham Hotspur,8586,True,True,2023/2024
+963,4193732,2024-01-20,21,Arsenal,9825,Crystal Palace,9826,True,True,2023/2024
+964,4193733,2024-01-20,21,Brentford,9937,Nottingham Forest,10203,True,True,2023/2024
+965,4193740,2024-01-21,21,Sheffield United,8657,West Ham United,8654,True,True,2023/2024
+966,4193731,2024-01-21,21,AFC Bournemouth,8678,Liverpool,8650,True,True,2023/2024
+967,4193734,2024-01-22,21,Brighton & Hove Albion,10204,Wolverhampton Wanderers,8602,True,True,2023/2024
+968,4193744,2024-01-30,22,Nottingham Forest,10203,Arsenal,9825,True,True,2023/2024
+969,4193742,2024-01-30,22,Fulham,9879,Everton,8668,True,True,2023/2024
+970,4193743,2024-01-30,22,Luton Town,8346,Brighton & Hove Albion,10204,True,True,2023/2024
+971,4193748,2024-01-30,22,Crystal Palace,9826,Sheffield United,8657,True,True,2023/2024
+972,4193741,2024-01-30,22,Aston Villa,10252,Newcastle United,10261,True,True,2023/2024
+973,4193750,2024-01-31,22,Manchester City,8456,Burnley,8191,True,True,2023/2024
+974,4193745,2024-01-31,22,Tottenham Hotspur,8586,Brentford,9937,True,True,2023/2024
+975,4193749,2024-01-31,22,Liverpool,8650,Chelsea,8455,True,True,2023/2024
+976,4193746,2024-02-01,22,West Ham United,8654,AFC Bournemouth,8678,True,True,2023/2024
+977,4193747,2024-02-01,22,Wolverhampton Wanderers,8602,Manchester United,10260,True,True,2023/2024
+978,4193757,2024-02-03,23,Everton,8668,Tottenham Hotspur,8586,True,True,2023/2024
+979,4193754,2024-02-03,23,Brighton & Hove Albion,10204,Crystal Palace,9826,True,True,2023/2024
+980,4193755,2024-02-03,23,Burnley,8191,Fulham,9879,True,True,2023/2024
+981,4193759,2024-02-03,23,Newcastle United,10261,Luton Town,8346,True,True,2023/2024
+982,4193760,2024-02-03,23,Sheffield United,8657,Aston Villa,10252,True,True,2023/2024
+983,4193751,2024-02-04,23,AFC Bournemouth,8678,Nottingham Forest,10203,True,True,2023/2024
+984,4193756,2024-02-04,23,Chelsea,8455,Wolverhampton Wanderers,8602,True,True,2023/2024
+985,4193758,2024-02-04,23,Manchester United,10260,West Ham United,8654,True,True,2023/2024
+986,4193752,2024-02-04,23,Arsenal,9825,Liverpool,8650,True,True,2023/2024
+987,4193753,2024-02-05,23,Brentford,9937,Manchester City,8456,True,True,2023/2024
+988,4193766,2024-02-10,24,Manchester City,8456,Everton,8668,True,True,2023/2024
+989,4193763,2024-02-10,24,Fulham,9879,AFC Bournemouth,8678,True,True,2023/2024
+990,4193764,2024-02-10,24,Liverpool,8650,Burnley,8191,True,True,2023/2024
+991,4193765,2024-02-10,24,Luton Town,8346,Sheffield United,8657,True,True,2023/2024
+992,4193768,2024-02-10,24,Tottenham Hotspur,8586,Brighton & Hove Albion,10204,True,True,2023/2024
+993,4193770,2024-02-10,24,Wolverhampton Wanderers,8602,Brentford,9937,True,True,2023/2024
+994,4193767,2024-02-10,24,Nottingham Forest,10203,Newcastle United,10261,True,True,2023/2024
+995,4193769,2024-02-11,24,West Ham United,8654,Arsenal,9825,True,True,2023/2024
+996,4193761,2024-02-11,24,Aston Villa,10252,Manchester United,10260,True,True,2023/2024
+997,4193762,2024-02-12,24,Crystal Palace,9826,Chelsea,8455,True,True,2023/2024
+998,4193771,2024-02-17,25,Brentford,9937,Liverpool,8650,True,True,2023/2024
+999,4193772,2024-02-17,25,Burnley,8191,Arsenal,9825,True,True,2023/2024
+1000,4193774,2024-02-17,25,Fulham,9879,Aston Villa,10252,True,True,2023/2024
+1001,4193777,2024-02-17,25,Newcastle United,10261,AFC Bournemouth,8678,True,True,2023/2024
+1002,4193778,2024-02-17,25,Nottingham Forest,10203,West Ham United,8654,True,True,2023/2024
+1003,4193780,2024-02-17,25,Tottenham Hotspur,8586,Wolverhampton Wanderers,8602,True,True,2023/2024
+1004,4193776,2024-02-17,25,Manchester City,8456,Chelsea,8455,True,True,2023/2024
+1005,4193779,2024-02-18,25,Sheffield United,8657,Brighton & Hove Albion,10204,True,True,2023/2024
+1006,4193775,2024-02-18,25,Luton Town,8346,Manchester United,10260,True,True,2023/2024
+1007,4193773,2024-02-19,25,Everton,8668,Crystal Palace,9826,True,True,2023/2024
+1008,4193706,2024-02-20,18,Manchester City,8456,Brentford,9937,True,True,2023/2024
+1009,4193787,2024-02-21,26,Liverpool,8650,Luton Town,8346,True,True,2023/2024
+1010,4193783,2024-02-24,26,Aston Villa,10252,Nottingham Forest,10203,True,True,2023/2024
+1011,4193784,2024-02-24,26,Brighton & Hove Albion,10204,Everton,8668,True,True,2023/2024
+1012,4193786,2024-02-24,26,Crystal Palace,9826,Burnley,8191,True,True,2023/2024
+1013,4193788,2024-02-24,26,Manchester United,10260,Fulham,9879,True,True,2023/2024
+1014,4193781,2024-02-24,26,AFC Bournemouth,8678,Manchester City,8456,True,True,2023/2024
+1015,4193782,2024-02-24,26,Arsenal,9825,Newcastle United,10261,True,True,2023/2024
+1016,4193790,2024-02-25,26,Wolverhampton Wanderers,8602,Sheffield United,8657,True,True,2023/2024
+1017,4193789,2024-02-26,26,West Ham United,8654,Brentford,9937,True,True,2023/2024
+1018,4193791,2024-03-02,27,Brentford,9937,Chelsea,8455,True,True,2023/2024
+1019,4193793,2024-03-02,27,Everton,8668,West Ham United,8654,True,True,2023/2024
+1020,4193794,2024-03-02,27,Fulham,9879,Brighton & Hove Albion,10204,True,True,2023/2024
+1021,4193797,2024-03-02,27,Newcastle United,10261,Wolverhampton Wanderers,8602,True,True,2023/2024
+1022,4193798,2024-03-02,27,Nottingham Forest,10203,Liverpool,8650,True,True,2023/2024
+1023,4193800,2024-03-02,27,Tottenham Hotspur,8586,Crystal Palace,9826,True,True,2023/2024
+1024,4193795,2024-03-02,27,Luton Town,8346,Aston Villa,10252,True,True,2023/2024
+1025,4193792,2024-03-03,27,Burnley,8191,AFC Bournemouth,8678,True,True,2023/2024
+1026,4193796,2024-03-03,27,Manchester City,8456,Manchester United,10260,True,True,2023/2024
+1027,4193799,2024-03-04,27,Sheffield United,8657,Arsenal,9825,True,True,2023/2024
+1028,4193808,2024-03-09,28,Manchester United,10260,Everton,8668,True,True,2023/2024
+1029,4193801,2024-03-09,28,AFC Bournemouth,8678,Sheffield United,8657,True,True,2023/2024
+1030,4193806,2024-03-09,28,Crystal Palace,9826,Luton Town,8346,True,True,2023/2024
+1031,4193810,2024-03-09,28,Wolverhampton Wanderers,8602,Fulham,9879,True,True,2023/2024
+1032,4193802,2024-03-09,28,Arsenal,9825,Brentford,9937,True,True,2023/2024
+1033,4193803,2024-03-10,28,Aston Villa,10252,Tottenham Hotspur,8586,True,True,2023/2024
+1034,4193804,2024-03-10,28,Brighton & Hove Albion,10204,Nottingham Forest,10203,True,True,2023/2024
+1035,4193809,2024-03-10,28,West Ham United,8654,Burnley,8191,True,True,2023/2024
+1036,4193807,2024-03-10,28,Liverpool,8650,Manchester City,8456,True,True,2023/2024
+1037,4193805,2024-03-11,28,Chelsea,8455,Newcastle United,10261,True,True,2023/2024
+1038,4421797,2024-03-13,17,AFC Bournemouth,8678,Luton Town,8346,True,True,2023/2024
+1039,4193813,2024-03-16,29,Burnley,8191,Brentford,9937,True,True,2023/2024
+1040,4193817,2024-03-16,29,Luton Town,8346,Nottingham Forest,10203,True,True,2023/2024
+1041,4193816,2024-03-16,29,Fulham,9879,Tottenham Hotspur,8586,True,True,2023/2024
+1042,4193819,2024-03-17,29,West Ham United,8654,Aston Villa,10252,True,True,2023/2024
+1043,4193827,2024-03-30,30,Newcastle United,10261,West Ham United,8654,True,True,2023/2024
+1044,4193821,2024-03-30,30,AFC Bournemouth,8678,Everton,8668,True,True,2023/2024
+1045,4193824,2024-03-30,30,Chelsea,8455,Burnley,8191,True,True,2023/2024
+1046,4193828,2024-03-30,30,Nottingham Forest,10203,Crystal Palace,9826,True,True,2023/2024
+1047,4193829,2024-03-30,30,Sheffield United,8657,Fulham,9879,True,True,2023/2024
+1048,4193830,2024-03-30,30,Tottenham Hotspur,8586,Luton Town,8346,True,True,2023/2024
+1049,4193822,2024-03-30,30,Aston Villa,10252,Wolverhampton Wanderers,8602,True,True,2023/2024
+1050,4193823,2024-03-30,30,Brentford,9937,Manchester United,10260,True,True,2023/2024
+1051,4193825,2024-03-31,30,Liverpool,8650,Brighton & Hove Albion,10204,True,True,2023/2024
+1052,4193826,2024-03-31,30,Manchester City,8456,Arsenal,9825,True,True,2023/2024
+1053,4193838,2024-04-02,31,Newcastle United,10261,Everton,8668,True,True,2023/2024
+1054,4193835,2024-04-02,31,Nottingham Forest,10203,Fulham,9879,True,True,2023/2024
+1055,4193831,2024-04-02,31,AFC Bournemouth,8678,Crystal Palace,9826,True,True,2023/2024
+1056,4193834,2024-04-02,31,Burnley,8191,Wolverhampton Wanderers,8602,True,True,2023/2024
+1057,4193836,2024-04-02,31,West Ham United,8654,Tottenham Hotspur,8586,True,True,2023/2024
+1058,4193832,2024-04-03,31,Arsenal,9825,Luton Town,8346,True,True,2023/2024
+1059,4193833,2024-04-03,31,Brentford,9937,Brighton & Hove Albion,10204,True,True,2023/2024
+1060,4193840,2024-04-03,31,Manchester City,8456,Aston Villa,10252,True,True,2023/2024
+1061,4193839,2024-04-04,31,Liverpool,8650,Sheffield United,8657,True,True,2023/2024
+1062,4193837,2024-04-04,31,Chelsea,8455,Manchester United,10260,True,True,2023/2024
+1063,4193843,2024-04-06,32,Crystal Palace,9826,Manchester City,8456,True,True,2023/2024
+1064,4193841,2024-04-06,32,Aston Villa,10252,Brentford,9937,True,True,2023/2024
+1065,4193844,2024-04-06,32,Everton,8668,Burnley,8191,True,True,2023/2024
+1066,4193845,2024-04-06,32,Fulham,9879,Newcastle United,10261,True,True,2023/2024
+1067,4193846,2024-04-06,32,Luton Town,8346,AFC Bournemouth,8678,True,True,2023/2024
+1068,4193850,2024-04-06,32,Wolverhampton Wanderers,8602,West Ham United,8654,True,True,2023/2024
+1069,4193842,2024-04-06,32,Brighton & Hove Albion,10204,Arsenal,9825,True,True,2023/2024
+1070,4193847,2024-04-07,32,Manchester United,10260,Liverpool,8650,True,True,2023/2024
+1071,4193848,2024-04-07,32,Sheffield United,8657,Chelsea,8455,True,True,2023/2024
+1072,4193849,2024-04-07,32,Tottenham Hotspur,8586,Nottingham Forest,10203,True,True,2023/2024
+1073,4193858,2024-04-13,33,Newcastle United,10261,Tottenham Hotspur,8586,True,True,2023/2024
+1074,4193853,2024-04-13,33,Brentford,9937,Sheffield United,8657,True,True,2023/2024
+1075,4193854,2024-04-13,33,Burnley,8191,Brighton & Hove Albion,10204,True,True,2023/2024
+1076,4193857,2024-04-13,33,Manchester City,8456,Luton Town,8346,True,True,2023/2024
+1077,4193859,2024-04-13,33,Nottingham Forest,10203,Wolverhampton Wanderers,8602,True,True,2023/2024
+1078,4193851,2024-04-13,33,AFC Bournemouth,8678,Manchester United,10260,True,True,2023/2024
+1079,4193856,2024-04-14,33,Liverpool,8650,Crystal Palace,9826,True,True,2023/2024
+1080,4193860,2024-04-14,33,West Ham United,8654,Fulham,9879,True,True,2023/2024
+1081,4193852,2024-04-14,33,Arsenal,9825,Aston Villa,10252,True,True,2023/2024
+1082,4193855,2024-04-15,33,Chelsea,8455,Everton,8668,True,True,2023/2024
+1083,4193866,2024-04-20,34,Luton Town,8346,Brentford,9937,True,True,2023/2024
+1084,4193868,2024-04-20,34,Sheffield United,8657,Burnley,8191,True,True,2023/2024
+1085,4193870,2024-04-20,34,Wolverhampton Wanderers,8602,Arsenal,9825,True,True,2023/2024
+1086,4193864,2024-04-21,34,Everton,8668,Nottingham Forest,10203,True,True,2023/2024
+1087,4193861,2024-04-21,34,Aston Villa,10252,AFC Bournemouth,8678,True,True,2023/2024
+1088,4193863,2024-04-21,34,Crystal Palace,9826,West Ham United,8654,True,True,2023/2024
+1089,4193865,2024-04-21,34,Fulham,9879,Liverpool,8650,True,True,2023/2024
+1090,4193811,2024-04-23,29,Arsenal,9825,Chelsea,8455,True,True,2023/2024
+1091,4193820,2024-04-24,29,Wolverhampton Wanderers,8602,AFC Bournemouth,8678,True,True,2023/2024
+1092,4193814,2024-04-24,29,Crystal Palace,9826,Newcastle United,10261,True,True,2023/2024
+1093,4193815,2024-04-24,29,Everton,8668,Liverpool,8650,True,True,2023/2024
+1094,4193818,2024-04-24,29,Manchester United,10260,Sheffield United,8657,True,True,2023/2024
+1095,4193812,2024-04-25,29,Brighton & Hove Albion,10204,Manchester City,8456,True,True,2023/2024
+1096,4193879,2024-04-27,35,West Ham United,8654,Liverpool,8650,True,True,2023/2024
+1097,4193874,2024-04-27,35,Fulham,9879,Crystal Palace,9826,True,True,2023/2024
+1098,4193875,2024-04-27,35,Manchester United,10260,Burnley,8191,True,True,2023/2024
+1099,4193876,2024-04-27,35,Newcastle United,10261,Sheffield United,8657,True,True,2023/2024
+1100,4193880,2024-04-27,35,Wolverhampton Wanderers,8602,Luton Town,8346,True,True,2023/2024
+1101,4193873,2024-04-27,35,Everton,8668,Brentford,9937,True,True,2023/2024
+1102,4193872,2024-04-27,35,Aston Villa,10252,Chelsea,8455,True,True,2023/2024
+1103,4193871,2024-04-28,35,AFC Bournemouth,8678,Brighton & Hove Albion,10204,True,True,2023/2024
+1104,4193878,2024-04-28,35,Tottenham Hotspur,8586,Arsenal,9825,True,True,2023/2024
+1105,4193877,2024-04-28,35,Nottingham Forest,10203,Manchester City,8456,True,True,2023/2024
+1106,4193785,2024-05-02,26,Chelsea,8455,Tottenham Hotspur,8586,True,True,2023/2024
+1107,4193888,2024-05-03,36,Luton Town,8346,Everton,8668,True,True,2023/2024
+1108,4193881,2024-05-04,36,Arsenal,9825,AFC Bournemouth,8678,True,True,2023/2024
+1109,4193882,2024-05-04,36,Brentford,9937,Fulham,9879,True,True,2023/2024
+1110,4193884,2024-05-04,36,Burnley,8191,Newcastle United,10261,True,True,2023/2024
+1111,4193890,2024-05-04,36,Sheffield United,8657,Nottingham Forest,10203,True,True,2023/2024
+1112,4193889,2024-05-04,36,Manchester City,8456,Wolverhampton Wanderers,8602,True,True,2023/2024
+1113,4193883,2024-05-05,36,Brighton & Hove Albion,10204,Aston Villa,10252,True,True,2023/2024
+1114,4193885,2024-05-05,36,Chelsea,8455,West Ham United,8654,True,True,2023/2024
+1115,4193887,2024-05-05,36,Liverpool,8650,Tottenham Hotspur,8586,True,True,2023/2024
+1116,4193886,2024-05-06,36,Crystal Palace,9826,Manchester United,10260,True,True,2023/2024
+1117,4193894,2024-05-11,37,Fulham,9879,Manchester City,8456,True,True,2023/2024
+1118,4193891,2024-05-11,37,AFC Bournemouth,8678,Brentford,9937,True,True,2023/2024
+1119,4193893,2024-05-11,37,Everton,8668,Sheffield United,8657,True,True,2023/2024
+1120,4193896,2024-05-11,37,Newcastle United,10261,Brighton & Hove Albion,10204,True,True,2023/2024
+1121,4193898,2024-05-11,37,Tottenham Hotspur,8586,Burnley,8191,True,True,2023/2024
+1122,4193899,2024-05-11,37,West Ham United,8654,Luton Town,8346,True,True,2023/2024
+1123,4193900,2024-05-11,37,Wolverhampton Wanderers,8602,Crystal Palace,9826,True,True,2023/2024
+1124,4193897,2024-05-11,37,Nottingham Forest,10203,Chelsea,8455,True,True,2023/2024
+1125,4193895,2024-05-12,37,Manchester United,10260,Arsenal,9825,True,True,2023/2024
+1126,4193892,2024-05-13,37,Aston Villa,10252,Liverpool,8650,True,True,2023/2024
+1127,4193869,2024-05-14,34,Tottenham Hotspur,8586,Manchester City,8456,True,True,2023/2024
+1128,4193862,2024-05-15,34,Brighton & Hove Albion,10204,Chelsea,8455,True,True,2023/2024
+1129,4193867,2024-05-15,34,Manchester United,10260,Newcastle United,10261,True,True,2023/2024
+1130,4193901,2024-05-19,38,Arsenal,9825,Everton,8668,True,True,2023/2024
+1131,4193902,2024-05-19,38,Brentford,9937,Newcastle United,10261,True,True,2023/2024
+1132,4193903,2024-05-19,38,Brighton & Hove Albion,10204,Manchester United,10260,True,True,2023/2024
+1133,4193904,2024-05-19,38,Burnley,8191,Nottingham Forest,10203,True,True,2023/2024
+1134,4193905,2024-05-19,38,Chelsea,8455,AFC Bournemouth,8678,True,True,2023/2024
+1135,4193906,2024-05-19,38,Crystal Palace,9826,Aston Villa,10252,True,True,2023/2024
+1136,4193907,2024-05-19,38,Liverpool,8650,Wolverhampton Wanderers,8602,True,True,2023/2024
+1137,4193908,2024-05-19,38,Luton Town,8346,Fulham,9879,True,True,2023/2024
+1138,4193909,2024-05-19,38,Manchester City,8456,West Ham United,8654,True,True,2023/2024
+1139,4193910,2024-05-19,38,Sheffield United,8657,Tottenham Hotspur,8586,True,True,2023/2024
+1140,3900932,2022-08-05,1,Crystal Palace,9826,Arsenal,9825,True,True,2022/2023
+1141,3900933,2022-08-06,1,Fulham,9879,Liverpool,8650,True,True,2022/2023
+1142,3900934,2022-08-06,1,AFC Bournemouth,8678,Aston Villa,10252,True,True,2022/2023
+1143,3900935,2022-08-06,1,Leeds United,8463,Wolverhampton Wanderers,8602,True,True,2022/2023
+1144,3900937,2022-08-06,1,Newcastle United,10261,Nottingham Forest,10203,True,True,2022/2023
+1145,3900938,2022-08-06,1,Tottenham Hotspur,8586,Southampton,8466,True,True,2022/2023
+1146,3900939,2022-08-06,1,Everton,8668,Chelsea,8455,True,True,2022/2023
+1147,3900936,2022-08-07,1,Leicester City,8197,Brentford,9937,True,True,2022/2023
+1148,3900940,2022-08-07,1,Manchester United,10260,Brighton & Hove Albion,10204,True,True,2022/2023
+1149,3900941,2022-08-07,1,West Ham United,8654,Manchester City,8456,True,True,2022/2023
+1150,3900943,2022-08-13,2,Aston Villa,10252,Everton,8668,True,True,2022/2023
+1151,3900942,2022-08-13,2,Arsenal,9825,Leicester City,8197,True,True,2022/2023
+1152,3900945,2022-08-13,2,Brighton & Hove Albion,10204,Newcastle United,10261,True,True,2022/2023
+1153,3900948,2022-08-13,2,Manchester City,8456,AFC Bournemouth,8678,True,True,2022/2023
+1154,3900950,2022-08-13,2,Southampton,8466,Leeds United,8463,True,True,2022/2023
+1155,3900951,2022-08-13,2,Wolverhampton Wanderers,8602,Fulham,9879,True,True,2022/2023
+1156,3900944,2022-08-13,2,Brentford,9937,Manchester United,10260,True,True,2022/2023
+1157,3900949,2022-08-14,2,Nottingham Forest,10203,West Ham United,8654,True,True,2022/2023
+1158,3900946,2022-08-14,2,Chelsea,8455,Tottenham Hotspur,8586,True,True,2022/2023
+1159,3900947,2022-08-15,2,Liverpool,8650,Crystal Palace,9826,True,True,2022/2023
+1160,3900960,2022-08-20,3,Tottenham Hotspur,8586,Wolverhampton Wanderers,8602,True,True,2022/2023
+1161,3900953,2022-08-20,3,Crystal Palace,9826,Aston Villa,10252,True,True,2022/2023
+1162,3900954,2022-08-20,3,Everton,8668,Nottingham Forest,10203,True,True,2022/2023
+1163,3900955,2022-08-20,3,Fulham,9879,Brentford,9937,True,True,2022/2023
+1164,3900957,2022-08-20,3,Leicester City,8197,Southampton,8466,True,True,2022/2023
+1165,3900952,2022-08-20,3,AFC Bournemouth,8678,Arsenal,9825,True,True,2022/2023
+1166,3900956,2022-08-21,3,Leeds United,8463,Chelsea,8455,True,True,2022/2023
+1167,3900961,2022-08-21,3,West Ham United,8654,Brighton & Hove Albion,10204,True,True,2022/2023
+1168,3900959,2022-08-21,3,Newcastle United,10261,Manchester City,8456,True,True,2022/2023
+1169,3900958,2022-08-22,3,Manchester United,10260,Liverpool,8650,True,True,2022/2023
+1170,3900970,2022-08-27,4,Southampton,8466,Manchester United,10260,True,True,2022/2023
+1171,3900964,2022-08-27,4,Brentford,9937,Everton,8668,True,True,2022/2023
+1172,3900965,2022-08-27,4,Brighton & Hove Albion,10204,Leeds United,8463,True,True,2022/2023
+1173,3900966,2022-08-27,4,Chelsea,8455,Leicester City,8197,True,True,2022/2023
+1174,3900967,2022-08-27,4,Liverpool,8650,AFC Bournemouth,8678,True,True,2022/2023
+1175,3900968,2022-08-27,4,Manchester City,8456,Crystal Palace,9826,True,True,2022/2023
+1176,3900962,2022-08-27,4,Arsenal,9825,Fulham,9879,True,True,2022/2023
+1177,3900963,2022-08-28,4,Aston Villa,10252,West Ham United,8654,True,True,2022/2023
+1178,3900971,2022-08-28,4,Wolverhampton Wanderers,8602,Newcastle United,10261,True,True,2022/2023
+1179,3900969,2022-08-28,4,Nottingham Forest,10203,Tottenham Hotspur,8586,True,True,2022/2023
+1180,3900978,2022-08-30,5,Crystal Palace,9826,Brentford,9937,True,True,2022/2023
+1181,3900974,2022-08-30,5,Fulham,9879,Brighton & Hove Albion,10204,True,True,2022/2023
+1182,3900979,2022-08-30,5,Southampton,8466,Chelsea,8455,True,True,2022/2023
+1183,3900975,2022-08-30,5,Leeds United,8463,Everton,8668,True,True,2022/2023
+1184,3900973,2022-08-31,5,AFC Bournemouth,8678,Wolverhampton Wanderers,8602,True,True,2022/2023
+1185,3900972,2022-08-31,5,Arsenal,9825,Aston Villa,10252,True,True,2022/2023
+1186,3900981,2022-08-31,5,Manchester City,8456,Nottingham Forest,10203,True,True,2022/2023
+1187,3900977,2022-08-31,5,West Ham United,8654,Tottenham Hotspur,8586,True,True,2022/2023
+1188,3900980,2022-08-31,5,Liverpool,8650,Newcastle United,10261,True,True,2022/2023
+1189,3900976,2022-09-01,5,Leicester City,8197,Manchester United,10260,True,True,2022/2023
+1190,3900986,2022-09-03,6,Everton,8668,Liverpool,8650,True,True,2022/2023
+1191,3900983,2022-09-03,6,Brentford,9937,Leeds United,8463,True,True,2022/2023
+1192,3900985,2022-09-03,6,Chelsea,8455,West Ham United,8654,True,True,2022/2023
+1193,3900988,2022-09-03,6,Newcastle United,10261,Crystal Palace,9826,True,True,2022/2023
+1194,3900989,2022-09-03,6,Nottingham Forest,10203,AFC Bournemouth,8678,True,True,2022/2023
+1195,3900990,2022-09-03,6,Tottenham Hotspur,8586,Fulham,9879,True,True,2022/2023
+1196,3900991,2022-09-03,6,Wolverhampton Wanderers,8602,Southampton,8466,True,True,2022/2023
+1197,3900982,2022-09-03,6,Aston Villa,10252,Manchester City,8456,True,True,2022/2023
+1198,3900984,2022-09-04,6,Brighton & Hove Albion,10204,Leicester City,8197,True,True,2022/2023
+1199,3900987,2022-09-04,6,Manchester United,10260,Arsenal,9825,True,True,2022/2023
+1200,3901002,2022-09-16,8,Aston Villa,10252,Southampton,8466,True,True,2022/2023
+1201,3901009,2022-09-16,8,Nottingham Forest,10203,Fulham,9879,True,True,2022/2023
+1202,3901011,2022-09-17,8,Wolverhampton Wanderers,8602,Manchester City,8456,True,True,2022/2023
+1203,3901008,2022-09-17,8,Newcastle United,10261,AFC Bournemouth,8678,True,True,2022/2023
+1204,3901010,2022-09-17,8,Tottenham Hotspur,8586,Leicester City,8197,True,True,2022/2023
+1205,3901003,2022-09-18,8,Brentford,9937,Arsenal,9825,True,True,2022/2023
+1206,3901006,2022-09-18,8,Everton,8668,West Ham United,8654,True,True,2022/2023
+1207,3901012,2022-10-01,9,Arsenal,9825,Tottenham Hotspur,8586,True,True,2022/2023
+1208,3901013,2022-10-01,9,AFC Bournemouth,8678,Brentford,9937,True,True,2022/2023
+1209,3901014,2022-10-01,9,Crystal Palace,9826,Chelsea,8455,True,True,2022/2023
+1210,3901015,2022-10-01,9,Fulham,9879,Newcastle United,10261,True,True,2022/2023
+1211,3901018,2022-10-01,9,Liverpool,8650,Brighton & Hove Albion,10204,True,True,2022/2023
+1212,3901020,2022-10-01,9,Southampton,8466,Everton,8668,True,True,2022/2023
+1213,3901021,2022-10-01,9,West Ham United,8654,Wolverhampton Wanderers,8602,True,True,2022/2023
+1214,3901019,2022-10-02,9,Manchester City,8456,Manchester United,10260,True,True,2022/2023
+1215,3901016,2022-10-02,9,Leeds United,8463,Aston Villa,10252,True,True,2022/2023
+1216,3901017,2022-10-03,9,Leicester City,8197,Nottingham Forest,10203,True,True,2022/2023
+1217,3901023,2022-10-08,10,AFC Bournemouth,8678,Leicester City,8197,True,True,2022/2023
+1218,3901025,2022-10-08,10,Chelsea,8455,Wolverhampton Wanderers,8602,True,True,2022/2023
+1219,3901028,2022-10-08,10,Manchester City,8456,Southampton,8466,True,True,2022/2023
+1220,3901029,2022-10-08,10,Newcastle United,10261,Brentford,9937,True,True,2022/2023
+1221,3901024,2022-10-08,10,Brighton & Hove Albion,10204,Tottenham Hotspur,8586,True,True,2022/2023
+1222,3901026,2022-10-09,10,Crystal Palace,9826,Leeds United,8463,True,True,2022/2023
+1223,3901031,2022-10-09,10,West Ham United,8654,Fulham,9879,True,True,2022/2023
+1224,3901022,2022-10-09,10,Arsenal,9825,Liverpool,8650,True,True,2022/2023
+1225,3901027,2022-10-09,10,Everton,8668,Manchester United,10260,True,True,2022/2023
+1226,3901030,2022-10-10,10,Nottingham Forest,10203,Aston Villa,10252,True,True,2022/2023
+1227,3901033,2022-10-14,11,Brentford,9937,Brighton & Hove Albion,10204,True,True,2022/2023
+1228,3901036,2022-10-15,11,Leicester City,8197,Crystal Palace,9826,True,True,2022/2023
+1229,3901034,2022-10-15,11,Fulham,9879,AFC Bournemouth,8678,True,True,2022/2023
+1230,3901041,2022-10-15,11,Wolverhampton Wanderers,8602,Nottingham Forest,10203,True,True,2022/2023
+1231,3901040,2022-10-15,11,Tottenham Hotspur,8586,Everton,8668,True,True,2022/2023
+1232,3901032,2022-10-16,11,Aston Villa,10252,Chelsea,8455,True,True,2022/2023
+1233,3901035,2022-10-16,11,Leeds United,8463,Arsenal,9825,True,True,2022/2023
+1234,3901038,2022-10-16,11,Manchester United,10260,Newcastle United,10261,True,True,2022/2023
+1235,3901039,2022-10-16,11,Southampton,8466,West Ham United,8654,True,True,2022/2023
+1236,3901037,2022-10-16,11,Liverpool,8650,Manchester City,8456,True,True,2022/2023
+1237,3901045,2022-10-18,12,Brighton & Hove Albion,10204,Nottingham Forest,10203,True,True,2022/2023
+1238,3901048,2022-10-18,12,Crystal Palace,9826,Wolverhampton Wanderers,8602,True,True,2022/2023
+1239,3901043,2022-10-19,12,AFC Bournemouth,8678,Southampton,8466,True,True,2022/2023
+1240,3901044,2022-10-19,12,Brentford,9937,Chelsea,8455,True,True,2022/2023
+1241,3901050,2022-10-19,12,Liverpool,8650,West Ham United,8654,True,True,2022/2023
+1242,3901049,2022-10-19,12,Newcastle United,10261,Everton,8668,True,True,2022/2023
+1243,3901051,2022-10-19,12,Manchester United,10260,Tottenham Hotspur,8586,True,True,2022/2023
+1244,3901046,2022-10-20,12,Fulham,9879,Aston Villa,10252,True,True,2022/2023
+1245,3901047,2022-10-20,12,Leicester City,8197,Leeds United,8463,True,True,2022/2023
+1246,3901057,2022-10-22,13,Nottingham Forest,10203,Liverpool,8650,True,True,2022/2023
+1247,3901054,2022-10-22,13,Everton,8668,Crystal Palace,9826,True,True,2022/2023
+1248,3901056,2022-10-22,13,Manchester City,8456,Brighton & Hove Albion,10204,True,True,2022/2023
+1249,3901053,2022-10-22,13,Chelsea,8455,Manchester United,10260,True,True,2022/2023
+1250,3901052,2022-10-23,13,Aston Villa,10252,Brentford,9937,True,True,2022/2023
+1251,3901055,2022-10-23,13,Leeds United,8463,Fulham,9879,True,True,2022/2023
+1252,3901058,2022-10-23,13,Southampton,8466,Arsenal,9825,True,True,2022/2023
+1253,3901061,2022-10-23,13,Wolverhampton Wanderers,8602,Leicester City,8197,True,True,2022/2023
+1254,3901059,2022-10-23,13,Tottenham Hotspur,8586,Newcastle United,10261,True,True,2022/2023
+1255,3901060,2022-10-24,13,West Ham United,8654,AFC Bournemouth,8678,True,True,2022/2023
+1256,3901068,2022-10-29,14,Leicester City,8197,Manchester City,8456,True,True,2022/2023
+1257,3901063,2022-10-29,14,AFC Bournemouth,8678,Tottenham Hotspur,8586,True,True,2022/2023
+1258,3901064,2022-10-29,14,Brentford,9937,Wolverhampton Wanderers,8602,True,True,2022/2023
+1259,3901065,2022-10-29,14,Brighton & Hove Albion,10204,Chelsea,8455,True,True,2022/2023
+1260,3901066,2022-10-29,14,Crystal Palace,9826,Southampton,8466,True,True,2022/2023
+1261,3901071,2022-10-29,14,Newcastle United,10261,Aston Villa,10252,True,True,2022/2023
+1262,3901067,2022-10-29,14,Fulham,9879,Everton,8668,True,True,2022/2023
+1263,3901069,2022-10-29,14,Liverpool,8650,Leeds United,8463,True,True,2022/2023
+1264,3901062,2022-10-30,14,Arsenal,9825,Nottingham Forest,10203,True,True,2022/2023
+1265,3901070,2022-10-30,14,Manchester United,10260,West Ham United,8654,True,True,2022/2023
+1266,3901075,2022-11-05,15,Leeds United,8463,AFC Bournemouth,8678,True,True,2022/2023
+1267,3901076,2022-11-05,15,Manchester City,8456,Fulham,9879,True,True,2022/2023
+1268,3901077,2022-11-05,15,Nottingham Forest,10203,Brentford,9937,True,True,2022/2023
+1269,3901081,2022-11-05,15,Wolverhampton Wanderers,8602,Brighton & Hove Albion,10204,True,True,2022/2023
+1270,3901074,2022-11-05,15,Everton,8668,Leicester City,8197,True,True,2022/2023
+1271,3901073,2022-11-06,15,Chelsea,8455,Arsenal,9825,True,True,2022/2023
+1272,3901072,2022-11-06,15,Aston Villa,10252,Manchester United,10260,True,True,2022/2023
+1273,3901078,2022-11-06,15,Southampton,8466,Newcastle United,10261,True,True,2022/2023
+1274,3901080,2022-11-06,15,West Ham United,8654,Crystal Palace,9826,True,True,2022/2023
+1275,3901079,2022-11-06,15,Tottenham Hotspur,8586,Liverpool,8650,True,True,2022/2023
+1276,3901086,2022-11-12,16,Manchester City,8456,Brentford,9937,True,True,2022/2023
+1277,3901082,2022-11-12,16,AFC Bournemouth,8678,Everton,8668,True,True,2022/2023
+1278,3901085,2022-11-12,16,Liverpool,8650,Southampton,8466,True,True,2022/2023
+1279,3901088,2022-11-12,16,Nottingham Forest,10203,Crystal Palace,9826,True,True,2022/2023
+1280,3901089,2022-11-12,16,Tottenham Hotspur,8586,Leeds United,8463,True,True,2022/2023
+1281,3901090,2022-11-12,16,West Ham United,8654,Leicester City,8197,True,True,2022/2023
+1282,3901087,2022-11-12,16,Newcastle United,10261,Chelsea,8455,True,True,2022/2023
+1283,3901091,2022-11-12,16,Wolverhampton Wanderers,8602,Arsenal,9825,True,True,2022/2023
+1284,3901083,2022-11-13,16,Brighton & Hove Albion,10204,Aston Villa,10252,True,True,2022/2023
+1285,3901084,2022-11-13,16,Fulham,9879,Manchester United,10260,True,True,2022/2023
+1286,3901094,2022-12-26,17,Brentford,9937,Tottenham Hotspur,8586,True,True,2022/2023
+1287,3901096,2022-12-26,17,Crystal Palace,9826,Fulham,9879,True,True,2022/2023
+1288,3901097,2022-12-26,17,Everton,8668,Wolverhampton Wanderers,8602,True,True,2022/2023
+1289,3901099,2022-12-26,17,Leicester City,8197,Newcastle United,10261,True,True,2022/2023
+1290,3901101,2022-12-26,17,Southampton,8466,Brighton & Hove Albion,10204,True,True,2022/2023
+1291,3901093,2022-12-26,17,Aston Villa,10252,Liverpool,8650,True,True,2022/2023
+1292,3901092,2022-12-26,17,Arsenal,9825,West Ham United,8654,True,True,2022/2023
+1293,3901095,2022-12-27,17,Chelsea,8455,AFC Bournemouth,8678,True,True,2022/2023
+1294,3901100,2022-12-27,17,Manchester United,10260,Nottingham Forest,10203,True,True,2022/2023
+1295,3901098,2022-12-28,17,Leeds United,8463,Manchester City,8456,True,True,2022/2023
+1296,3901110,2022-12-30,18,West Ham United,8654,Brentford,9937,True,True,2022/2023
+1297,3901105,2022-12-30,18,Liverpool,8650,Leicester City,8197,True,True,2022/2023
+1298,3901111,2022-12-31,18,Wolverhampton Wanderers,8602,Manchester United,10260,True,True,2022/2023
+1299,3901102,2022-12-31,18,AFC Bournemouth,8678,Crystal Palace,9826,True,True,2022/2023
+1300,3901104,2022-12-31,18,Fulham,9879,Southampton,8466,True,True,2022/2023
+1301,3901106,2022-12-31,18,Manchester City,8456,Everton,8668,True,True,2022/2023
+1302,3901107,2022-12-31,18,Newcastle United,10261,Leeds United,8463,True,True,2022/2023
+1303,3901103,2022-12-31,18,Brighton & Hove Albion,10204,Arsenal,9825,True,True,2022/2023
+1304,3901109,2023-01-01,18,Tottenham Hotspur,8586,Aston Villa,10252,True,True,2022/2023
+1305,3901108,2023-01-01,18,Nottingham Forest,10203,Chelsea,8455,True,True,2022/2023
+1306,3901114,2023-01-02,19,Brentford,9937,Liverpool,8650,True,True,2022/2023
+1307,3901112,2023-01-03,19,Arsenal,9825,Newcastle United,10261,True,True,2022/2023
+1308,3901117,2023-01-03,19,Everton,8668,Brighton & Hove Albion,10204,True,True,2022/2023
+1309,3901119,2023-01-03,19,Leicester City,8197,Fulham,9879,True,True,2022/2023
+1310,3901120,2023-01-03,19,Manchester United,10260,AFC Bournemouth,8678,True,True,2022/2023
+1311,3901121,2023-01-04,19,Southampton,8466,Nottingham Forest,10203,True,True,2022/2023
+1312,3901118,2023-01-04,19,Leeds United,8463,West Ham United,8654,True,True,2022/2023
+1313,3901113,2023-01-04,19,Aston Villa,10252,Wolverhampton Wanderers,8602,True,True,2022/2023
+1314,3901116,2023-01-04,19,Crystal Palace,9826,Tottenham Hotspur,8586,True,True,2022/2023
+1315,3901115,2023-01-05,19,Chelsea,8455,Manchester City,8456,True,True,2022/2023
+1316,3900995,2023-01-12,7,Fulham,9879,Chelsea,8455,True,True,2022/2023
+1317,3901122,2023-01-13,20,Aston Villa,10252,Leeds United,8463,True,True,2022/2023
+1318,3901127,2023-01-14,20,Manchester United,10260,Manchester City,8456,True,True,2022/2023
+1319,3901124,2023-01-14,20,Brighton & Hove Albion,10204,Liverpool,8650,True,True,2022/2023
+1320,3901126,2023-01-14,20,Everton,8668,Southampton,8466,True,True,2022/2023
+1321,3901129,2023-01-14,20,Nottingham Forest,10203,Leicester City,8197,True,True,2022/2023
+1322,3901131,2023-01-14,20,Wolverhampton Wanderers,8602,West Ham United,8654,True,True,2022/2023
+1323,3901123,2023-01-14,20,Brentford,9937,AFC Bournemouth,8678,True,True,2022/2023
+1324,3901125,2023-01-15,20,Chelsea,8455,Crystal Palace,9826,True,True,2022/2023
+1325,3901128,2023-01-15,20,Newcastle United,10261,Fulham,9879,True,True,2022/2023
+1326,3901130,2023-01-15,20,Tottenham Hotspur,8586,Arsenal,9825,True,True,2022/2023
+1327,3900994,2023-01-18,7,Crystal Palace,9826,Manchester United,10260,True,True,2022/2023
+1328,3900999,2023-01-19,7,Manchester City,8456,Tottenham Hotspur,8586,True,True,2022/2023
+1329,3901138,2023-01-21,21,Liverpool,8650,Chelsea,8455,True,True,2022/2023
+1330,3901133,2023-01-21,21,AFC Bournemouth,8678,Nottingham Forest,10203,True,True,2022/2023
+1331,3901137,2023-01-21,21,Leicester City,8197,Brighton & Hove Albion,10204,True,True,2022/2023
+1332,3901140,2023-01-21,21,Southampton,8466,Aston Villa,10252,True,True,2022/2023
+1333,3901141,2023-01-21,21,West Ham United,8654,Everton,8668,True,True,2022/2023
+1334,3901134,2023-01-21,21,Crystal Palace,9826,Newcastle United,10261,True,True,2022/2023
+1335,3901136,2023-01-22,21,Leeds United,8463,Brentford,9937,True,True,2022/2023
+1336,3901139,2023-01-22,21,Manchester City,8456,Wolverhampton Wanderers,8602,True,True,2022/2023
+1337,3901132,2023-01-22,21,Arsenal,9825,Manchester United,10260,True,True,2022/2023
+1338,3901135,2023-01-23,21,Fulham,9879,Tottenham Hotspur,8586,True,True,2022/2023
+1339,3901145,2023-02-03,22,Chelsea,8455,Fulham,9879,True,True,2022/2023
+1340,3901146,2023-02-04,22,Everton,8668,Arsenal,9825,True,True,2022/2023
+1341,3901142,2023-02-04,22,Aston Villa,10252,Leicester City,8197,True,True,2022/2023
+1342,3901143,2023-02-04,22,Brentford,9937,Southampton,8466,True,True,2022/2023
+1343,3901144,2023-02-04,22,Brighton & Hove Albion,10204,AFC Bournemouth,8678,True,True,2022/2023
+1344,3901147,2023-02-04,22,Manchester United,10260,Crystal Palace,9826,True,True,2022/2023
+1345,3901151,2023-02-04,22,Wolverhampton Wanderers,8602,Liverpool,8650,True,True,2022/2023
+1346,3901148,2023-02-04,22,Newcastle United,10261,West Ham United,8654,True,True,2022/2023
+1347,3901149,2023-02-05,22,Nottingham Forest,10203,Leeds United,8463,True,True,2022/2023
+1348,3901150,2023-02-05,22,Tottenham Hotspur,8586,Manchester City,8456,True,True,2022/2023
+1349,3901007,2023-02-08,8,Manchester United,10260,Leeds United,8463,True,True,2022/2023
+1350,3901161,2023-02-11,23,West Ham United,8654,Chelsea,8455,True,True,2022/2023
+1351,3901152,2023-02-11,23,Arsenal,9825,Brentford,9937,True,True,2022/2023
+1352,3901154,2023-02-11,23,Crystal Palace,9826,Brighton & Hove Albion,10204,True,True,2022/2023
+1353,3901155,2023-02-11,23,Fulham,9879,Nottingham Forest,10203,True,True,2022/2023
+1354,3901157,2023-02-11,23,Leicester City,8197,Tottenham Hotspur,8586,True,True,2022/2023
+1355,3901160,2023-02-11,23,Southampton,8466,Wolverhampton Wanderers,8602,True,True,2022/2023
+1356,3901153,2023-02-11,23,AFC Bournemouth,8678,Newcastle United,10261,True,True,2022/2023
+1357,3901156,2023-02-12,23,Leeds United,8463,Manchester United,10260,True,True,2022/2023
+1358,3901159,2023-02-12,23,Manchester City,8456,Aston Villa,10252,True,True,2022/2023
+1359,3901158,2023-02-13,23,Liverpool,8650,Everton,8668,True,True,2022/2023
+1360,3901042,2023-02-15,12,Arsenal,9825,Manchester City,8456,True,True,2022/2023
+1361,3901162,2023-02-18,24,Aston Villa,10252,Arsenal,9825,True,True,2022/2023
+1362,3901163,2023-02-18,24,Brentford,9937,Crystal Palace,9826,True,True,2022/2023
+1363,3901164,2023-02-18,24,Brighton & Hove Albion,10204,Fulham,9879,True,True,2022/2023
+1364,3901165,2023-02-18,24,Chelsea,8455,Southampton,8466,True,True,2022/2023
+1365,3901166,2023-02-18,24,Everton,8668,Leeds United,8463,True,True,2022/2023
+1366,3901169,2023-02-18,24,Nottingham Forest,10203,Manchester City,8456,True,True,2022/2023
+1367,3901171,2023-02-18,24,Wolverhampton Wanderers,8602,AFC Bournemouth,8678,True,True,2022/2023
+1368,3901168,2023-02-18,24,Newcastle United,10261,Liverpool,8650,True,True,2022/2023
+1369,3901167,2023-02-19,24,Manchester United,10260,Leicester City,8197,True,True,2022/2023
+1370,3901170,2023-02-19,24,Tottenham Hotspur,8586,West Ham United,8654,True,True,2022/2023
+1371,3901175,2023-02-24,25,Fulham,9879,Wolverhampton Wanderers,8602,True,True,2022/2023
+1372,3901174,2023-02-25,25,Everton,8668,Aston Villa,10252,True,True,2022/2023
+1373,3901176,2023-02-25,25,Leeds United,8463,Southampton,8466,True,True,2022/2023
+1374,3901177,2023-02-25,25,Leicester City,8197,Arsenal,9825,True,True,2022/2023
+1375,3901181,2023-02-25,25,West Ham United,8654,Nottingham Forest,10203,True,True,2022/2023
+1376,3901172,2023-02-25,25,AFC Bournemouth,8678,Manchester City,8456,True,True,2022/2023
+1377,3901173,2023-02-25,25,Crystal Palace,9826,Liverpool,8650,True,True,2022/2023
+1378,3901180,2023-02-26,25,Tottenham Hotspur,8586,Chelsea,8455,True,True,2022/2023
+1379,3900992,2023-03-01,7,Arsenal,9825,Everton,8668,True,True,2022/2023
+1380,3900998,2023-03-01,7,Liverpool,8650,Wolverhampton Wanderers,8602,True,True,2022/2023
+1381,3901188,2023-03-04,26,Manchester City,8456,Newcastle United,10261,True,True,2022/2023
+1382,3901182,2023-03-04,26,Arsenal,9825,AFC Bournemouth,8678,True,True,2022/2023
+1383,3901183,2023-03-04,26,Aston Villa,10252,Crystal Palace,9826,True,True,2022/2023
+1384,3901185,2023-03-04,26,Brighton & Hove Albion,10204,West Ham United,8654,True,True,2022/2023
+1385,3901186,2023-03-04,26,Chelsea,8455,Leeds United,8463,True,True,2022/2023
+1386,3901191,2023-03-04,26,Wolverhampton Wanderers,8602,Tottenham Hotspur,8586,True,True,2022/2023
+1387,3901190,2023-03-04,26,Southampton,8466,Leicester City,8197,True,True,2022/2023
+1388,3901189,2023-03-05,26,Nottingham Forest,10203,Everton,8668,True,True,2022/2023
+1389,3901187,2023-03-05,26,Liverpool,8650,Manchester United,10260,True,True,2022/2023
+1390,3901184,2023-03-06,26,Brentford,9937,Fulham,9879,True,True,2022/2023
+1391,3901192,2023-03-11,27,AFC Bournemouth,8678,Liverpool,8650,True,True,2022/2023
+1392,3901194,2023-03-11,27,Everton,8668,Brentford,9937,True,True,2022/2023
+1393,3901196,2023-03-11,27,Leeds United,8463,Brighton & Hove Albion,10204,True,True,2022/2023
+1394,3901197,2023-03-11,27,Leicester City,8197,Chelsea,8455,True,True,2022/2023
+1395,3901200,2023-03-11,27,Tottenham Hotspur,8586,Nottingham Forest,10203,True,True,2022/2023
+1396,3901193,2023-03-11,27,Crystal Palace,9826,Manchester City,8456,True,True,2022/2023
+1397,3901195,2023-03-12,27,Fulham,9879,Arsenal,9825,True,True,2022/2023
+1398,3901198,2023-03-12,27,Manchester United,10260,Southampton,8466,True,True,2022/2023
+1399,3901201,2023-03-12,27,West Ham United,8654,Aston Villa,10252,True,True,2022/2023
+1400,3901199,2023-03-12,27,Newcastle United,10261,Wolverhampton Wanderers,8602,True,True,2022/2023
+1401,3901004,2023-03-15,8,Brighton & Hove Albion,10204,Crystal Palace,9826,True,True,2022/2023
+1402,3901000,2023-03-15,7,Southampton,8466,Brentford,9937,True,True,2022/2023
+1403,3901209,2023-03-17,28,Nottingham Forest,10203,Newcastle United,10261,True,True,2022/2023
+1404,3901203,2023-03-18,28,Aston Villa,10252,AFC Bournemouth,8678,True,True,2022/2023
+1405,3901204,2023-03-18,28,Brentford,9937,Leicester City,8197,True,True,2022/2023
+1406,3901210,2023-03-18,28,Southampton,8466,Tottenham Hotspur,8586,True,True,2022/2023
+1407,3901211,2023-03-18,28,Wolverhampton Wanderers,8602,Leeds United,8463,True,True,2022/2023
+1408,3901206,2023-03-18,28,Chelsea,8455,Everton,8668,True,True,2022/2023
+1409,3901202,2023-03-19,28,Arsenal,9825,Crystal Palace,9826,True,True,2022/2023
+1410,3901218,2023-04-01,29,Manchester City,8456,Liverpool,8650,True,True,2022/2023
+1411,3901213,2023-04-01,29,AFC Bournemouth,8678,Fulham,9879,True,True,2022/2023
+1412,3901212,2023-04-01,29,Arsenal,9825,Leeds United,8463,True,True,2022/2023
+1413,3901214,2023-04-01,29,Brighton & Hove Albion,10204,Brentford,9937,True,True,2022/2023
+1414,3901216,2023-04-01,29,Crystal Palace,9826,Leicester City,8197,True,True,2022/2023
+1415,3901220,2023-04-01,29,Nottingham Forest,10203,Wolverhampton Wanderers,8602,True,True,2022/2023
+1416,3901215,2023-04-01,29,Chelsea,8455,Aston Villa,10252,True,True,2022/2023
+1417,3901221,2023-04-02,29,West Ham United,8654,Southampton,8466,True,True,2022/2023
+1418,3901219,2023-04-02,29,Newcastle United,10261,Manchester United,10260,True,True,2022/2023
+1419,3901217,2023-04-03,29,Everton,8668,Tottenham Hotspur,8586,True,True,2022/2023
+1420,3900993,2023-04-04,7,AFC Bournemouth,8678,Brighton & Hove Albion,10204,True,True,2022/2023
+1421,3900996,2023-04-04,7,Leeds United,8463,Nottingham Forest,10203,True,True,2022/2023
+1422,3900997,2023-04-04,7,Leicester City,8197,Aston Villa,10252,True,True,2022/2023
+1423,3901005,2023-04-04,8,Chelsea,8455,Liverpool,8650,True,True,2022/2023
+1424,3901178,2023-04-05,25,Manchester United,10260,Brentford,9937,True,True,2022/2023
+1425,3901001,2023-04-05,7,West Ham United,8654,Newcastle United,10261,True,True,2022/2023
+1426,3901228,2023-04-08,30,Manchester United,10260,Everton,8668,True,True,2022/2023
+1427,3901222,2023-04-08,30,Aston Villa,10252,Nottingham Forest,10203,True,True,2022/2023
+1428,3901223,2023-04-08,30,Brentford,9937,Newcastle United,10261,True,True,2022/2023
+1429,3901224,2023-04-08,30,Fulham,9879,West Ham United,8654,True,True,2022/2023
+1430,3901226,2023-04-08,30,Leicester City,8197,AFC Bournemouth,8678,True,True,2022/2023
+1431,3901230,2023-04-08,30,Tottenham Hotspur,8586,Brighton & Hove Albion,10204,True,True,2022/2023
+1432,3901231,2023-04-08,30,Wolverhampton Wanderers,8602,Chelsea,8455,True,True,2022/2023
+1433,3901229,2023-04-08,30,Southampton,8466,Manchester City,8456,True,True,2022/2023
+1434,3901225,2023-04-09,30,Leeds United,8463,Crystal Palace,9826,True,True,2022/2023
+1435,3901227,2023-04-09,30,Liverpool,8650,Arsenal,9825,True,True,2022/2023
+1436,3901232,2023-04-15,31,Aston Villa,10252,Newcastle United,10261,True,True,2022/2023
+1437,3901233,2023-04-15,31,Chelsea,8455,Brighton & Hove Albion,10204,True,True,2022/2023
+1438,3901234,2023-04-15,31,Everton,8668,Fulham,9879,True,True,2022/2023
+1439,3901238,2023-04-15,31,Southampton,8466,Crystal Palace,9826,True,True,2022/2023
+1440,3901241,2023-04-15,31,Wolverhampton Wanderers,8602,Brentford,9937,True,True,2022/2023
+1441,3901239,2023-04-15,31,Tottenham Hotspur,8586,AFC Bournemouth,8678,True,True,2022/2023
+1442,3901236,2023-04-15,31,Manchester City,8456,Leicester City,8197,True,True,2022/2023
+1443,3901240,2023-04-16,31,West Ham United,8654,Arsenal,9825,True,True,2022/2023
+1444,3901237,2023-04-16,31,Nottingham Forest,10203,Manchester United,10260,True,True,2022/2023
+1445,3901235,2023-04-17,31,Leeds United,8463,Liverpool,8650,True,True,2022/2023
+1446,3901242,2023-04-21,32,Arsenal,9825,Southampton,8466,True,True,2022/2023
+1447,3901247,2023-04-22,32,Fulham,9879,Leeds United,8463,True,True,2022/2023
+1448,3901244,2023-04-22,32,Brentford,9937,Aston Villa,10252,True,True,2022/2023
+1449,3901246,2023-04-22,32,Crystal Palace,9826,Everton,8668,True,True,2022/2023
+1450,3901248,2023-04-22,32,Leicester City,8197,Wolverhampton Wanderers,8602,True,True,2022/2023
+1451,3901249,2023-04-22,32,Liverpool,8650,Nottingham Forest,10203,True,True,2022/2023
+1452,3901243,2023-04-23,32,AFC Bournemouth,8678,West Ham United,8654,True,True,2022/2023
+1453,3901251,2023-04-23,32,Newcastle United,10261,Tottenham Hotspur,8586,True,True,2022/2023
+1454,3901257,2023-04-25,33,Wolverhampton Wanderers,8602,Crystal Palace,9826,True,True,2022/2023
+1455,3901258,2023-04-25,33,Aston Villa,10252,Fulham,9879,True,True,2022/2023
+1456,3901253,2023-04-25,33,Leeds United,8463,Leicester City,8197,True,True,2022/2023
+1457,3901254,2023-04-26,33,Nottingham Forest,10203,Brighton & Hove Albion,10204,True,True,2022/2023
+1458,3901259,2023-04-26,33,Chelsea,8455,Brentford,9937,True,True,2022/2023
+1459,3901256,2023-04-26,33,West Ham United,8654,Liverpool,8650,True,True,2022/2023
+1460,3901261,2023-04-26,33,Manchester City,8456,Arsenal,9825,True,True,2022/2023
+1461,3901252,2023-04-27,33,Everton,8668,Newcastle United,10261,True,True,2022/2023
+1462,3901260,2023-04-27,33,Southampton,8466,AFC Bournemouth,8678,True,True,2022/2023
+1463,3901255,2023-04-27,33,Tottenham Hotspur,8586,Manchester United,10260,True,True,2022/2023
+1464,3901266,2023-04-29,34,Crystal Palace,9826,West Ham United,8654,True,True,2022/2023
+1465,3901264,2023-04-29,34,Brentford,9937,Nottingham Forest,10203,True,True,2022/2023
+1466,3901265,2023-04-29,34,Brighton & Hove Albion,10204,Wolverhampton Wanderers,8602,True,True,2022/2023
+1467,3901263,2023-04-30,34,AFC Bournemouth,8678,Leeds United,8463,True,True,2022/2023
+1468,3901267,2023-04-30,34,Fulham,9879,Manchester City,8456,True,True,2022/2023
+1469,3901270,2023-04-30,34,Manchester United,10260,Aston Villa,10252,True,True,2022/2023
+1470,3901271,2023-04-30,34,Newcastle United,10261,Southampton,8466,True,True,2022/2023
+1471,3901269,2023-04-30,34,Liverpool,8650,Tottenham Hotspur,8586,True,True,2022/2023
+1472,3901268,2023-05-01,34,Leicester City,8197,Everton,8668,True,True,2022/2023
+1473,3901262,2023-05-02,34,Arsenal,9825,Chelsea,8455,True,True,2022/2023
+1474,3901207,2023-05-03,28,Liverpool,8650,Fulham,9879,True,True,2022/2023
+1475,3901208,2023-05-03,28,Manchester City,8456,West Ham United,8654,True,True,2022/2023
+1476,3901205,2023-05-04,28,Brighton & Hove Albion,10204,Manchester United,10260,True,True,2022/2023
+1477,3901272,2023-05-06,35,AFC Bournemouth,8678,Chelsea,8455,True,True,2022/2023
+1478,3901276,2023-05-06,35,Manchester City,8456,Leeds United,8463,True,True,2022/2023
+1479,3901279,2023-05-06,35,Tottenham Hotspur,8586,Crystal Palace,9826,True,True,2022/2023
+1480,3901281,2023-05-06,35,Wolverhampton Wanderers,8602,Aston Villa,10252,True,True,2022/2023
+1481,3901275,2023-05-06,35,Liverpool,8650,Brentford,9937,True,True,2022/2023
+1482,3901277,2023-05-07,35,Newcastle United,10261,Arsenal,9825,True,True,2022/2023
+1483,3901280,2023-05-07,35,West Ham United,8654,Manchester United,10260,True,True,2022/2023
+1484,3901274,2023-05-08,35,Fulham,9879,Leicester City,8197,True,True,2022/2023
+1485,3901273,2023-05-08,35,Brighton & Hove Albion,10204,Everton,8668,True,True,2022/2023
+1486,3901278,2023-05-08,35,Nottingham Forest,10203,Southampton,8466,True,True,2022/2023
+1487,3901288,2023-05-13,36,Leeds United,8463,Newcastle United,10261,True,True,2022/2023
+1488,3901283,2023-05-13,36,Aston Villa,10252,Tottenham Hotspur,8586,True,True,2022/2023
+1489,3901285,2023-05-13,36,Chelsea,8455,Nottingham Forest,10203,True,True,2022/2023
+1490,3901286,2023-05-13,36,Crystal Palace,9826,AFC Bournemouth,8678,True,True,2022/2023
+1491,3901290,2023-05-13,36,Manchester United,10260,Wolverhampton Wanderers,8602,True,True,2022/2023
+1492,3901291,2023-05-13,36,Southampton,8466,Fulham,9879,True,True,2022/2023
+1493,3901284,2023-05-14,36,Brentford,9937,West Ham United,8654,True,True,2022/2023
+1494,3901287,2023-05-14,36,Everton,8668,Manchester City,8456,True,True,2022/2023
+1495,3901282,2023-05-14,36,Arsenal,9825,Brighton & Hove Albion,10204,True,True,2022/2023
+1496,3901289,2023-05-15,36,Leicester City,8197,Liverpool,8650,True,True,2022/2023
+1497,3901179,2023-05-18,25,Newcastle United,10261,Brighton & Hove Albion,10204,True,True,2022/2023
+1498,3901299,2023-05-20,37,Tottenham Hotspur,8586,Brentford,9937,True,True,2022/2023
+1499,3901292,2023-05-20,37,AFC Bournemouth,8678,Manchester United,10260,True,True,2022/2023
+1500,3901294,2023-05-20,37,Fulham,9879,Crystal Palace,9826,True,True,2022/2023
+1501,3901295,2023-05-20,37,Liverpool,8650,Aston Villa,10252,True,True,2022/2023
+1502,3901301,2023-05-20,37,Wolverhampton Wanderers,8602,Everton,8668,True,True,2022/2023
+1503,3901298,2023-05-20,37,Nottingham Forest,10203,Arsenal,9825,True,True,2022/2023
+1504,3901300,2023-05-21,37,West Ham United,8654,Leeds United,8463,True,True,2022/2023
+1505,3901293,2023-05-21,37,Brighton & Hove Albion,10204,Southampton,8466,True,True,2022/2023
+1506,3901296,2023-05-21,37,Manchester City,8456,Chelsea,8455,True,True,2022/2023
+1507,3901297,2023-05-22,37,Newcastle United,10261,Leicester City,8197,True,True,2022/2023
+1508,3901245,2023-05-24,32,Brighton & Hove Albion,10204,Manchester City,8456,True,True,2022/2023
+1509,3901250,2023-05-25,32,Manchester United,10260,Chelsea,8455,True,True,2022/2023
+1510,3901302,2023-05-28,38,Arsenal,9825,Wolverhampton Wanderers,8602,True,True,2022/2023
+1511,3901303,2023-05-28,38,Aston Villa,10252,Brighton & Hove Albion,10204,True,True,2022/2023
+1512,3901304,2023-05-28,38,Brentford,9937,Manchester City,8456,True,True,2022/2023
+1513,3901305,2023-05-28,38,Chelsea,8455,Newcastle United,10261,True,True,2022/2023
+1514,3901306,2023-05-28,38,Crystal Palace,9826,Nottingham Forest,10203,True,True,2022/2023
+1515,3901307,2023-05-28,38,Everton,8668,AFC Bournemouth,8678,True,True,2022/2023
+1516,3901308,2023-05-28,38,Leeds United,8463,Tottenham Hotspur,8586,True,True,2022/2023
+1517,3901309,2023-05-28,38,Leicester City,8197,West Ham United,8654,True,True,2022/2023
+1518,3901310,2023-05-28,38,Manchester United,10260,Fulham,9879,True,True,2022/2023
+1519,3901311,2023-05-28,38,Southampton,8466,Liverpool,8650,True,True,2022/2023
+1520,3609929,2021-08-13,1,Brentford,9937,Arsenal,9825,True,True,2021/2022
+1521,3609934,2021-08-14,1,Manchester United,10260,Leeds United,8463,True,True,2021/2022
+1522,3609930,2021-08-14,1,Burnley,8191,Brighton & Hove Albion,10204,True,True,2021/2022
+1523,3609931,2021-08-14,1,Chelsea,8455,Crystal Palace,9826,True,True,2021/2022
+1524,3609932,2021-08-14,1,Everton,8668,Southampton,8466,True,True,2021/2022
+1525,3609933,2021-08-14,1,Leicester City,8197,Wolverhampton Wanderers,8602,True,True,2021/2022
+1526,3609938,2021-08-14,1,Watford,9817,Aston Villa,10252,True,True,2021/2022
+1527,3609936,2021-08-14,1,Norwich City,9850,Liverpool,8650,True,True,2021/2022
+1528,3609935,2021-08-15,1,Newcastle United,10261,West Ham United,8654,True,True,2021/2022
+1529,3609937,2021-08-15,1,Tottenham Hotspur,8586,Manchester City,8456,True,True,2021/2022
+1530,3609944,2021-08-21,2,Liverpool,8650,Burnley,8191,True,True,2021/2022
+1531,3609940,2021-08-21,2,Aston Villa,10252,Newcastle United,10261,True,True,2021/2022
+1532,3609942,2021-08-21,2,Crystal Palace,9826,Brentford,9937,True,True,2021/2022
+1533,3609943,2021-08-21,2,Leeds United,8463,Everton,8668,True,True,2021/2022
+1534,3609945,2021-08-21,2,Manchester City,8456,Norwich City,9850,True,True,2021/2022
+1535,3609941,2021-08-21,2,Brighton & Hove Albion,10204,Watford,9817,True,True,2021/2022
+1536,3609946,2021-08-22,2,Southampton,8466,Manchester United,10260,True,True,2021/2022
+1537,3609948,2021-08-22,2,Wolverhampton Wanderers,8602,Tottenham Hotspur,8586,True,True,2021/2022
+1538,3609939,2021-08-22,2,Arsenal,9825,Chelsea,8455,True,True,2021/2022
+1539,3609947,2021-08-23,2,West Ham United,8654,Leicester City,8197,True,True,2021/2022
+1540,3609953,2021-08-28,3,Manchester City,8456,Arsenal,9825,True,True,2021/2022
+1541,3609949,2021-08-28,3,Aston Villa,10252,Brentford,9937,True,True,2021/2022
+1542,3609950,2021-08-28,3,Brighton & Hove Albion,10204,Everton,8668,True,True,2021/2022
+1543,3609954,2021-08-28,3,Newcastle United,10261,Southampton,8466,True,True,2021/2022
+1544,3609955,2021-08-28,3,Norwich City,9850,Leicester City,8197,True,True,2021/2022
+1545,3609957,2021-08-28,3,West Ham United,8654,Crystal Palace,9826,True,True,2021/2022
+1546,3609952,2021-08-28,3,Liverpool,8650,Chelsea,8455,True,True,2021/2022
+1547,3609951,2021-08-29,3,Burnley,8191,Leeds United,8463,True,True,2021/2022
+1548,3609956,2021-08-29,3,Tottenham Hotspur,8586,Watford,9817,True,True,2021/2022
+1549,3609958,2021-08-29,3,Wolverhampton Wanderers,8602,Manchester United,10260,True,True,2021/2022
+1550,3609962,2021-09-11,4,Crystal Palace,9826,Tottenham Hotspur,8586,True,True,2021/2022
+1551,3609959,2021-09-11,4,Arsenal,9825,Norwich City,9850,True,True,2021/2022
+1552,3609960,2021-09-11,4,Brentford,9937,Brighton & Hove Albion,10204,True,True,2021/2022
+1553,3609965,2021-09-11,4,Leicester City,8197,Manchester City,8456,True,True,2021/2022
+1554,3609966,2021-09-11,4,Manchester United,10260,Newcastle United,10261,True,True,2021/2022
+1555,3609967,2021-09-11,4,Southampton,8466,West Ham United,8654,True,True,2021/2022
+1556,3609968,2021-09-11,4,Watford,9817,Wolverhampton Wanderers,8602,True,True,2021/2022
+1557,3609961,2021-09-11,4,Chelsea,8455,Aston Villa,10252,True,True,2021/2022
+1558,3609964,2021-09-12,4,Leeds United,8463,Liverpool,8650,True,True,2021/2022
+1559,3609963,2021-09-13,4,Everton,8668,Burnley,8191,True,True,2021/2022
+1560,3609974,2021-09-17,5,Newcastle United,10261,Leeds United,8463,True,True,2021/2022
+1561,3609978,2021-09-18,5,Wolverhampton Wanderers,8602,Brentford,9937,True,True,2021/2022
+1562,3609971,2021-09-18,5,Burnley,8191,Arsenal,9825,True,True,2021/2022
+1563,3609972,2021-09-18,5,Liverpool,8650,Crystal Palace,9826,True,True,2021/2022
+1564,3609973,2021-09-18,5,Manchester City,8456,Southampton,8466,True,True,2021/2022
+1565,3609975,2021-09-18,5,Norwich City,9850,Watford,9817,True,True,2021/2022
+1566,3609969,2021-09-18,5,Aston Villa,10252,Everton,8668,True,True,2021/2022
+1567,3609970,2021-09-19,5,Brighton & Hove Albion,10204,Leicester City,8197,True,True,2021/2022
+1568,3609977,2021-09-19,5,West Ham United,8654,Manchester United,10260,True,True,2021/2022
+1569,3609976,2021-09-19,5,Tottenham Hotspur,8586,Chelsea,8455,True,True,2021/2022
+1570,3609981,2021-09-25,6,Chelsea,8455,Manchester City,8456,True,True,2021/2022
+1571,3609986,2021-09-25,6,Manchester United,10260,Aston Villa,10252,True,True,2021/2022
+1572,3609983,2021-09-25,6,Everton,8668,Norwich City,9850,True,True,2021/2022
+1573,3609984,2021-09-25,6,Leeds United,8463,West Ham United,8654,True,True,2021/2022
+1574,3609985,2021-09-25,6,Leicester City,8197,Burnley,8191,True,True,2021/2022
+1575,3609988,2021-09-25,6,Watford,9817,Newcastle United,10261,True,True,2021/2022
+1576,3609980,2021-09-25,6,Brentford,9937,Liverpool,8650,True,True,2021/2022
+1577,3609987,2021-09-26,6,Southampton,8466,Wolverhampton Wanderers,8602,True,True,2021/2022
+1578,3609979,2021-09-26,6,Arsenal,9825,Tottenham Hotspur,8586,True,True,2021/2022
+1579,3609982,2021-09-27,6,Crystal Palace,9826,Brighton & Hove Albion,10204,True,True,2021/2022
+1580,3609995,2021-10-02,7,Manchester United,10260,Everton,8668,True,True,2021/2022
+1581,3609990,2021-10-02,7,Burnley,8191,Norwich City,9850,True,True,2021/2022
+1582,3609991,2021-10-02,7,Chelsea,8455,Southampton,8466,True,True,2021/2022
+1583,3609993,2021-10-02,7,Leeds United,8463,Watford,9817,True,True,2021/2022
+1584,3609998,2021-10-02,7,Wolverhampton Wanderers,8602,Newcastle United,10261,True,True,2021/2022
+1585,3609989,2021-10-02,7,Brighton & Hove Albion,10204,Arsenal,9825,True,True,2021/2022
+1586,3609992,2021-10-03,7,Crystal Palace,9826,Leicester City,8197,True,True,2021/2022
+1587,3609996,2021-10-03,7,Tottenham Hotspur,8586,Aston Villa,10252,True,True,2021/2022
+1588,3609997,2021-10-03,7,West Ham United,8654,Brentford,9937,True,True,2021/2022
+1589,3609994,2021-10-03,7,Liverpool,8650,Manchester City,8456,True,True,2021/2022
+1590,3610008,2021-10-16,8,Watford,9817,Liverpool,8650,True,True,2021/2022
+1591,3610000,2021-10-16,8,Aston Villa,10252,Wolverhampton Wanderers,8602,True,True,2021/2022
+1592,3610003,2021-10-16,8,Leicester City,8197,Manchester United,10260,True,True,2021/2022
+1593,3610004,2021-10-16,8,Manchester City,8456,Burnley,8191,True,True,2021/2022
+1594,3610006,2021-10-16,8,Norwich City,9850,Brighton & Hove Albion,10204,True,True,2021/2022
+1595,3610007,2021-10-16,8,Southampton,8466,Leeds United,8463,True,True,2021/2022
+1596,3610001,2021-10-16,8,Brentford,9937,Chelsea,8455,True,True,2021/2022
+1597,3610002,2021-10-17,8,Everton,8668,West Ham United,8654,True,True,2021/2022
+1598,3610005,2021-10-17,8,Newcastle United,10261,Tottenham Hotspur,8586,True,True,2021/2022
+1599,3609999,2021-10-18,8,Arsenal,9825,Crystal Palace,9826,True,True,2021/2022
+1600,3610009,2021-10-22,9,Arsenal,9825,Aston Villa,10252,True,True,2021/2022
+1601,3610012,2021-10-23,9,Chelsea,8455,Norwich City,9850,True,True,2021/2022
+1602,3610013,2021-10-23,9,Crystal Palace,9826,Newcastle United,10261,True,True,2021/2022
+1603,3610014,2021-10-23,9,Everton,8668,Watford,9817,True,True,2021/2022
+1604,3610015,2021-10-23,9,Leeds United,8463,Wolverhampton Wanderers,8602,True,True,2021/2022
+1605,3610017,2021-10-23,9,Southampton,8466,Burnley,8191,True,True,2021/2022
+1606,3610011,2021-10-23,9,Brighton & Hove Albion,10204,Manchester City,8456,True,True,2021/2022
+1607,3610010,2021-10-24,9,Brentford,9937,Leicester City,8197,True,True,2021/2022
+1608,3610018,2021-10-24,9,West Ham United,8654,Tottenham Hotspur,8586,True,True,2021/2022
+1609,3610016,2021-10-24,9,Manchester United,10260,Liverpool,8650,True,True,2021/2022
+1610,3610021,2021-10-30,10,Leicester City,8197,Arsenal,9825,True,True,2021/2022
+1611,3610020,2021-10-30,10,Burnley,8191,Brentford,9937,True,True,2021/2022
+1612,3610022,2021-10-30,10,Liverpool,8650,Brighton & Hove Albion,10204,True,True,2021/2022
+1613,3610023,2021-10-30,10,Manchester City,8456,Crystal Palace,9826,True,True,2021/2022
+1614,3610024,2021-10-30,10,Newcastle United,10261,Chelsea,8455,True,True,2021/2022
+1615,3610027,2021-10-30,10,Watford,9817,Southampton,8466,True,True,2021/2022
+1616,3610026,2021-10-30,10,Tottenham Hotspur,8586,Manchester United,10260,True,True,2021/2022
+1617,3610025,2021-10-31,10,Norwich City,9850,Leeds United,8463,True,True,2021/2022
+1618,3610019,2021-10-31,10,Aston Villa,10252,West Ham United,8654,True,True,2021/2022
+1619,3610028,2021-11-01,10,Wolverhampton Wanderers,8602,Everton,8668,True,True,2021/2022
+1620,3610037,2021-11-05,11,Southampton,8466,Aston Villa,10252,True,True,2021/2022
+1621,3610036,2021-11-06,11,Manchester United,10260,Manchester City,8456,True,True,2021/2022
+1622,3610030,2021-11-06,11,Brentford,9937,Norwich City,9850,True,True,2021/2022
+1623,3610032,2021-11-06,11,Chelsea,8455,Burnley,8191,True,True,2021/2022
+1624,3610033,2021-11-06,11,Crystal Palace,9826,Wolverhampton Wanderers,8602,True,True,2021/2022
+1625,3610031,2021-11-06,11,Brighton & Hove Albion,10204,Newcastle United,10261,True,True,2021/2022
+1626,3610029,2021-11-07,11,Arsenal,9825,Watford,9817,True,True,2021/2022
+1627,3610034,2021-11-07,11,Everton,8668,Tottenham Hotspur,8586,True,True,2021/2022
+1628,3610035,2021-11-07,11,Leeds United,8463,Leicester City,8197,True,True,2021/2022
+1629,3610038,2021-11-07,11,West Ham United,8654,Liverpool,8650,True,True,2021/2022
+1630,3610041,2021-11-20,12,Leicester City,8197,Chelsea,8455,True,True,2021/2022
+1631,3610039,2021-11-20,12,Aston Villa,10252,Brighton & Hove Albion,10204,True,True,2021/2022
+1632,3610040,2021-11-20,12,Burnley,8191,Crystal Palace,9826,True,True,2021/2022
+1633,3610044,2021-11-20,12,Newcastle United,10261,Brentford,9937,True,True,2021/2022
+1634,3610045,2021-11-20,12,Norwich City,9850,Southampton,8466,True,True,2021/2022
+1635,3610047,2021-11-20,12,Watford,9817,Manchester United,10260,True,True,2021/2022
+1636,3610048,2021-11-20,12,Wolverhampton Wanderers,8602,West Ham United,8654,True,True,2021/2022
+1637,3610042,2021-11-20,12,Liverpool,8650,Arsenal,9825,True,True,2021/2022
+1638,3610043,2021-11-21,12,Manchester City,8456,Everton,8668,True,True,2021/2022
+1639,3610046,2021-11-21,12,Tottenham Hotspur,8586,Leeds United,8463,True,True,2021/2022
+1640,3610049,2021-11-27,13,Arsenal,9825,Newcastle United,10261,True,True,2021/2022
+1641,3610054,2021-11-27,13,Crystal Palace,9826,Aston Villa,10252,True,True,2021/2022
+1642,3610056,2021-11-27,13,Liverpool,8650,Southampton,8466,True,True,2021/2022
+1643,3610058,2021-11-27,13,Norwich City,9850,Wolverhampton Wanderers,8602,True,True,2021/2022
+1644,3610051,2021-11-27,13,Brighton & Hove Albion,10204,Leeds United,8463,True,True,2021/2022
+1645,3610050,2021-11-28,13,Brentford,9937,Everton,8668,True,True,2021/2022
+1646,3610055,2021-11-28,13,Leicester City,8197,Watford,9817,True,True,2021/2022
+1647,3610057,2021-11-28,13,Manchester City,8456,West Ham United,8654,True,True,2021/2022
+1648,3610053,2021-11-28,13,Chelsea,8455,Manchester United,10260,True,True,2021/2022
+1649,3610066,2021-11-30,14,Newcastle United,10261,Norwich City,9850,True,True,2021/2022
+1650,3610061,2021-11-30,14,Leeds United,8463,Crystal Palace,9826,True,True,2021/2022
+1651,3610067,2021-12-01,14,Southampton,8466,Leicester City,8197,True,True,2021/2022
+1652,3610062,2021-12-01,14,Watford,9817,Chelsea,8455,True,True,2021/2022
+1653,3610063,2021-12-01,14,West Ham United,8654,Brighton & Hove Albion,10204,True,True,2021/2022
+1654,3610064,2021-12-01,14,Wolverhampton Wanderers,8602,Burnley,8191,True,True,2021/2022
+1655,3610059,2021-12-01,14,Aston Villa,10252,Manchester City,8456,True,True,2021/2022
+1656,3610060,2021-12-01,14,Everton,8668,Liverpool,8650,True,True,2021/2022
+1657,3610068,2021-12-02,14,Tottenham Hotspur,8586,Brentford,9937,True,True,2021/2022
+1658,3610065,2021-12-02,14,Manchester United,10260,Arsenal,9825,True,True,2021/2022
+1659,3610077,2021-12-04,15,West Ham United,8654,Chelsea,8455,True,True,2021/2022
+1660,3610073,2021-12-04,15,Newcastle United,10261,Burnley,8191,True,True,2021/2022
+1661,3610074,2021-12-04,15,Southampton,8466,Brighton & Hove Albion,10204,True,True,2021/2022
+1662,3610078,2021-12-04,15,Wolverhampton Wanderers,8602,Liverpool,8650,True,True,2021/2022
+1663,3610076,2021-12-04,15,Watford,9817,Manchester City,8456,True,True,2021/2022
+1664,3610071,2021-12-05,15,Leeds United,8463,Brentford,9937,True,True,2021/2022
+1665,3610072,2021-12-05,15,Manchester United,10260,Crystal Palace,9826,True,True,2021/2022
+1666,3610075,2021-12-05,15,Tottenham Hotspur,8586,Norwich City,9850,True,True,2021/2022
+1667,3610069,2021-12-05,15,Aston Villa,10252,Leicester City,8197,True,True,2021/2022
+1668,3610070,2021-12-06,15,Everton,8668,Arsenal,9825,True,True,2021/2022
+1669,3610081,2021-12-10,16,Brentford,9937,Watford,9817,True,True,2021/2022
+1670,3610088,2021-12-11,16,Manchester City,8456,Wolverhampton Wanderers,8602,True,True,2021/2022
+1671,3610080,2021-12-11,16,Arsenal,9825,Southampton,8466,True,True,2021/2022
+1672,3610084,2021-12-11,16,Chelsea,8455,Leeds United,8463,True,True,2021/2022
+1673,3610087,2021-12-11,16,Liverpool,8650,Aston Villa,10252,True,True,2021/2022
+1674,3610089,2021-12-11,16,Norwich City,9850,Manchester United,10260,True,True,2021/2022
+1675,3610083,2021-12-12,16,Burnley,8191,West Ham United,8654,True,True,2021/2022
+1676,3610086,2021-12-12,16,Leicester City,8197,Newcastle United,10261,True,True,2021/2022
+1677,3610085,2021-12-12,16,Crystal Palace,9826,Everton,8668,True,True,2021/2022
+1678,3610095,2021-12-14,17,Norwich City,9850,Aston Villa,10252,True,True,2021/2022
+1679,3610099,2021-12-14,17,Manchester City,8456,Leeds United,8463,True,True,2021/2022
+1680,3610092,2021-12-15,17,Brighton & Hove Albion,10204,Wolverhampton Wanderers,8602,True,True,2021/2022
+1681,3610096,2021-12-15,17,Crystal Palace,9826,Southampton,8466,True,True,2021/2022
+1682,3610090,2021-12-15,17,Arsenal,9825,West Ham United,8654,True,True,2021/2022
+1683,3610097,2021-12-16,17,Chelsea,8455,Everton,8668,True,True,2021/2022
+1684,3610098,2021-12-16,17,Liverpool,8650,Newcastle United,10261,True,True,2021/2022
+1685,3610102,2021-12-18,18,Leeds United,8463,Arsenal,9825,True,True,2021/2022
+1686,3610104,2021-12-19,18,Newcastle United,10261,Manchester City,8456,True,True,2021/2022
+1687,3610109,2021-12-19,18,Wolverhampton Wanderers,8602,Chelsea,8455,True,True,2021/2022
+1688,3610106,2021-12-19,18,Tottenham Hotspur,8586,Liverpool,8650,True,True,2021/2022
+1689,3610114,2021-12-26,19,Manchester City,8456,Leicester City,8197,True,True,2021/2022
+1690,3610116,2021-12-26,19,Norwich City,9850,Arsenal,9825,True,True,2021/2022
+1691,3610117,2021-12-26,19,Tottenham Hotspur,8586,Crystal Palace,9826,True,True,2021/2022
+1692,3610118,2021-12-26,19,West Ham United,8654,Southampton,8466,True,True,2021/2022
+1693,3610110,2021-12-26,19,Aston Villa,10252,Chelsea,8455,True,True,2021/2022
+1694,3610111,2021-12-26,19,Brighton & Hove Albion,10204,Brentford,9937,True,True,2021/2022
+1695,3610115,2021-12-27,19,Newcastle United,10261,Manchester United,10260,True,True,2021/2022
+1696,3610124,2021-12-28,20,Crystal Palace,9826,Norwich City,9850,True,True,2021/2022
+1697,3610129,2021-12-28,20,Southampton,8466,Tottenham Hotspur,8586,True,True,2021/2022
+1698,3610123,2021-12-28,20,Watford,9817,West Ham United,8654,True,True,2021/2022
+1699,3610127,2021-12-28,20,Leicester City,8197,Liverpool,8650,True,True,2021/2022
+1700,3610122,2021-12-29,20,Chelsea,8455,Brighton & Hove Albion,10204,True,True,2021/2022
+1701,3610121,2021-12-29,20,Brentford,9937,Manchester City,8456,True,True,2021/2022
+1702,3610128,2021-12-30,20,Manchester United,10260,Burnley,8191,True,True,2021/2022
+1703,3610130,2022-01-01,21,Arsenal,9825,Manchester City,8456,True,True,2021/2022
+1704,3610139,2022-01-01,21,Watford,9817,Tottenham Hotspur,8586,True,True,2021/2022
+1705,3610133,2022-01-01,21,Crystal Palace,9826,West Ham United,8654,True,True,2021/2022
+1706,3610131,2022-01-02,21,Brentford,9937,Aston Villa,10252,True,True,2021/2022
+1707,3610134,2022-01-02,21,Everton,8668,Brighton & Hove Albion,10204,True,True,2021/2022
+1708,3610135,2022-01-02,21,Leeds United,8463,Burnley,8191,True,True,2021/2022
+1709,3610132,2022-01-02,21,Chelsea,8455,Liverpool,8650,True,True,2021/2022
+1710,3610137,2022-01-03,21,Manchester United,10260,Wolverhampton Wanderers,8602,True,True,2021/2022
+1711,3610105,2022-01-11,18,Southampton,8466,Brentford,9937,True,True,2021/2022
+1712,3610108,2022-01-12,18,West Ham United,8654,Norwich City,9850,True,True,2021/2022
+1713,3610141,2022-01-14,22,Brighton & Hove Albion,10204,Crystal Palace,9826,True,True,2021/2022
+1714,3610144,2022-01-15,22,Manchester City,8456,Chelsea,8455,True,True,2021/2022
+1715,3610145,2022-01-15,22,Newcastle United,10261,Watford,9817,True,True,2021/2022
+1716,3610146,2022-01-15,22,Norwich City,9850,Everton,8668,True,True,2021/2022
+1717,3610149,2022-01-15,22,Wolverhampton Wanderers,8602,Southampton,8466,True,True,2021/2022
+1718,3610140,2022-01-15,22,Aston Villa,10252,Manchester United,10260,True,True,2021/2022
+1719,3610143,2022-01-16,22,Liverpool,8650,Brentford,9937,True,True,2021/2022
+1720,3610148,2022-01-16,22,West Ham United,8654,Leeds United,8463,True,True,2021/2022
+1721,3610161,2022-01-18,24,Brighton & Hove Albion,10204,Chelsea,8455,True,True,2021/2022
+1722,3610094,2022-01-19,17,Leicester City,8197,Tottenham Hotspur,8586,True,True,2021/2022
+1723,3610091,2022-01-19,17,Brentford,9937,Manchester United,10260,True,True,2021/2022
+1724,3610159,2022-01-21,23,Watford,9817,Norwich City,9850,True,True,2021/2022
+1725,3610154,2022-01-22,23,Everton,8668,Aston Villa,10252,True,True,2021/2022
+1726,3610151,2022-01-22,23,Brentford,9937,Wolverhampton Wanderers,8602,True,True,2021/2022
+1727,3610155,2022-01-22,23,Leeds United,8463,Newcastle United,10261,True,True,2021/2022
+1728,3610157,2022-01-22,23,Manchester United,10260,West Ham United,8654,True,True,2021/2022
+1729,3610158,2022-01-22,23,Southampton,8466,Manchester City,8456,True,True,2021/2022
+1730,3610150,2022-01-23,23,Arsenal,9825,Burnley,8191,True,True,2021/2022
+1731,3610153,2022-01-23,23,Crystal Palace,9826,Liverpool,8650,True,True,2021/2022
+1732,3610156,2022-01-23,23,Leicester City,8197,Brighton & Hove Albion,10204,True,True,2021/2022
+1733,3610152,2022-01-23,23,Chelsea,8455,Tottenham Hotspur,8586,True,True,2021/2022
+1734,3610093,2022-02-05,17,Burnley,8191,Watford,9817,True,True,2021/2022
+1735,3610166,2022-02-08,24,Newcastle United,10261,Everton,8668,True,True,2021/2022
+1736,3610164,2022-02-08,24,West Ham United,8654,Watford,9817,True,True,2021/2022
+1737,3610162,2022-02-08,24,Burnley,8191,Manchester United,10260,True,True,2021/2022
+1738,3610169,2022-02-09,24,Manchester City,8456,Brentford,9937,True,True,2021/2022
+1739,3610163,2022-02-09,24,Norwich City,9850,Crystal Palace,9826,True,True,2021/2022
+1740,3610167,2022-02-09,24,Tottenham Hotspur,8586,Southampton,8466,True,True,2021/2022
+1741,3610160,2022-02-09,24,Aston Villa,10252,Leeds United,8463,True,True,2021/2022
+1742,3610168,2022-02-10,24,Liverpool,8650,Leicester City,8197,True,True,2021/2022
+1743,3610165,2022-02-10,24,Wolverhampton Wanderers,8602,Arsenal,9825,True,True,2021/2022
+1744,3610175,2022-02-12,25,Manchester United,10260,Southampton,8466,True,True,2021/2022
+1745,3610170,2022-02-12,25,Brentford,9937,Crystal Palace,9826,True,True,2021/2022
+1746,3610173,2022-02-12,25,Everton,8668,Leeds United,8463,True,True,2021/2022
+1747,3610179,2022-02-12,25,Watford,9817,Brighton & Hove Albion,10204,True,True,2021/2022
+1748,3610177,2022-02-12,25,Norwich City,9850,Manchester City,8456,True,True,2021/2022
+1749,3610171,2022-02-13,25,Burnley,8191,Liverpool,8650,True,True,2021/2022
+1750,3610176,2022-02-13,25,Newcastle United,10261,Aston Villa,10252,True,True,2021/2022
+1751,3610178,2022-02-13,25,Tottenham Hotspur,8586,Wolverhampton Wanderers,8602,True,True,2021/2022
+1752,3610174,2022-02-13,25,Leicester City,8197,West Ham United,8654,True,True,2021/2022
+1753,3610103,2022-02-15,18,Manchester United,10260,Brighton & Hove Albion,10204,True,True,2021/2022
+1754,3610188,2022-02-19,26,West Ham United,8654,Newcastle United,10261,True,True,2021/2022
+1755,3610180,2022-02-19,26,Arsenal,9825,Brentford,9937,True,True,2021/2022
+1756,3610181,2022-02-19,26,Aston Villa,10252,Watford,9817,True,True,2021/2022
+1757,3610182,2022-02-19,26,Brighton & Hove Albion,10204,Burnley,8191,True,True,2021/2022
+1758,3610183,2022-02-19,26,Crystal Palace,9826,Chelsea,8455,True,True,2021/2022
+1759,3610185,2022-02-19,26,Liverpool,8650,Norwich City,9850,True,True,2021/2022
+1760,3610187,2022-02-19,26,Southampton,8466,Everton,8668,True,True,2021/2022
+1761,3610186,2022-02-19,26,Manchester City,8456,Tottenham Hotspur,8586,True,True,2021/2022
+1762,3610184,2022-02-20,26,Leeds United,8463,Manchester United,10260,True,True,2021/2022
+1763,3610189,2022-02-20,26,Wolverhampton Wanderers,8602,Leicester City,8197,True,True,2021/2022
+1764,3610052,2022-02-23,13,Burnley,8191,Tottenham Hotspur,8586,True,True,2021/2022
+1765,3610107,2022-02-23,18,Watford,9817,Crystal Palace,9826,True,True,2021/2022
+1766,3610113,2022-02-23,19,Liverpool,8650,Leeds United,8463,True,True,2021/2022
+1767,3610120,2022-02-24,20,Arsenal,9825,Wolverhampton Wanderers,8602,True,True,2021/2022
+1768,3610198,2022-02-25,27,Southampton,8466,Norwich City,9850,True,True,2021/2022
+1769,3610196,2022-02-26,27,Leeds United,8463,Tottenham Hotspur,8586,True,True,2021/2022
+1770,3610191,2022-02-26,27,Brentford,9937,Newcastle United,10261,True,True,2021/2022
+1771,3610194,2022-02-26,27,Crystal Palace,9826,Burnley,8191,True,True,2021/2022
+1772,3610197,2022-02-26,27,Manchester United,10260,Watford,9817,True,True,2021/2022
+1773,3610192,2022-02-26,27,Brighton & Hove Albion,10204,Aston Villa,10252,True,True,2021/2022
+1774,3610195,2022-02-26,27,Everton,8668,Manchester City,8456,True,True,2021/2022
+1775,3610199,2022-02-27,27,West Ham United,8654,Wolverhampton Wanderers,8602,True,True,2021/2022
+1776,3610142,2022-03-01,22,Burnley,8191,Leicester City,8197,True,True,2021/2022
+1777,3610202,2022-03-05,28,Leicester City,8197,Leeds United,8463,True,True,2021/2022
+1778,3610200,2022-03-05,28,Aston Villa,10252,Southampton,8466,True,True,2021/2022
+1779,3610201,2022-03-05,28,Burnley,8191,Chelsea,8455,True,True,2021/2022
+1780,3610205,2022-03-05,28,Newcastle United,10261,Brighton & Hove Albion,10204,True,True,2021/2022
+1781,3610206,2022-03-05,28,Norwich City,9850,Brentford,9937,True,True,2021/2022
+1782,3610209,2022-03-05,28,Wolverhampton Wanderers,8602,Crystal Palace,9826,True,True,2021/2022
+1783,3610203,2022-03-05,28,Liverpool,8650,West Ham United,8654,True,True,2021/2022
+1784,3610208,2022-03-06,28,Watford,9817,Arsenal,9825,True,True,2021/2022
+1785,3610204,2022-03-06,28,Manchester City,8456,Manchester United,10260,True,True,2021/2022
+1786,3610207,2022-03-07,28,Tottenham Hotspur,8586,Everton,8668,True,True,2021/2022
+1787,3610226,2022-03-10,30,Norwich City,9850,Chelsea,8455,True,True,2021/2022
+1788,3610138,2022-03-10,21,Southampton,8466,Newcastle United,10261,True,True,2021/2022
+1789,3610119,2022-03-10,19,Wolverhampton Wanderers,8602,Watford,9817,True,True,2021/2022
+1790,3610126,2022-03-10,20,Leeds United,8463,Aston Villa,10252,True,True,2021/2022
+1791,3610212,2022-03-12,29,Brighton & Hove Albion,10204,Liverpool,8650,True,True,2021/2022
+1792,3610211,2022-03-12,29,Brentford,9937,Burnley,8191,True,True,2021/2022
+1793,3610217,2022-03-12,29,Manchester United,10260,Tottenham Hotspur,8586,True,True,2021/2022
+1794,3610213,2022-03-13,29,Chelsea,8455,Newcastle United,10261,True,True,2021/2022
+1795,3610215,2022-03-13,29,Everton,8668,Wolverhampton Wanderers,8602,True,True,2021/2022
+1796,3610216,2022-03-13,29,Leeds United,8463,Norwich City,9850,True,True,2021/2022
+1797,3610218,2022-03-13,29,Southampton,8466,Watford,9817,True,True,2021/2022
+1798,3610219,2022-03-13,29,West Ham United,8654,Aston Villa,10252,True,True,2021/2022
+1799,3610210,2022-03-13,29,Arsenal,9825,Leicester City,8197,True,True,2021/2022
+1800,3610214,2022-03-14,29,Crystal Palace,9826,Manchester City,8456,True,True,2021/2022
+1801,3610082,2022-03-16,16,Brighton & Hove Albion,10204,Tottenham Hotspur,8586,True,True,2021/2022
+1802,3610190,2022-03-16,27,Arsenal,9825,Liverpool,8650,True,True,2021/2022
+1803,3610125,2022-03-17,20,Everton,8668,Newcastle United,10261,True,True,2021/2022
+1804,3610229,2022-03-18,30,Wolverhampton Wanderers,8602,Leeds United,8463,True,True,2021/2022
+1805,3610220,2022-03-19,30,Aston Villa,10252,Arsenal,9825,True,True,2021/2022
+1806,3610222,2022-03-20,30,Leicester City,8197,Brentford,9937,True,True,2021/2022
+1807,3610227,2022-03-20,30,Tottenham Hotspur,8586,West Ham United,8654,True,True,2021/2022
+1808,3610234,2022-04-02,31,Liverpool,8650,Watford,9817,True,True,2021/2022
+1809,3610239,2022-04-02,31,Brighton & Hove Albion,10204,Norwich City,9850,True,True,2021/2022
+1810,3610238,2022-04-02,31,Burnley,8191,Manchester City,8456,True,True,2021/2022
+1811,3610237,2022-04-02,31,Chelsea,8455,Brentford,9937,True,True,2021/2022
+1812,3610235,2022-04-02,31,Leeds United,8463,Southampton,8466,True,True,2021/2022
+1813,3610230,2022-04-02,31,Wolverhampton Wanderers,8602,Aston Villa,10252,True,True,2021/2022
+1814,3610233,2022-04-02,31,Manchester United,10260,Leicester City,8197,True,True,2021/2022
+1815,3610231,2022-04-03,31,West Ham United,8654,Everton,8668,True,True,2021/2022
+1816,3610232,2022-04-03,31,Tottenham Hotspur,8586,Newcastle United,10261,True,True,2021/2022
+1817,3610236,2022-04-04,31,Crystal Palace,9826,Arsenal,9825,True,True,2021/2022
+1818,3610112,2022-04-06,19,Burnley,8191,Everton,8668,True,True,2021/2022
+1819,3610243,2022-04-08,32,Newcastle United,10261,Wolverhampton Wanderers,8602,True,True,2021/2022
+1820,3610246,2022-04-09,32,Everton,8668,Manchester United,10260,True,True,2021/2022
+1821,3610249,2022-04-09,32,Arsenal,9825,Brighton & Hove Albion,10204,True,True,2021/2022
+1822,3610241,2022-04-09,32,Southampton,8466,Chelsea,8455,True,True,2021/2022
+1823,3610240,2022-04-09,32,Watford,9817,Leeds United,8463,True,True,2021/2022
+1824,3610248,2022-04-09,32,Aston Villa,10252,Tottenham Hotspur,8586,True,True,2021/2022
+1825,3610247,2022-04-10,32,Brentford,9937,West Ham United,8654,True,True,2021/2022
+1826,3610245,2022-04-10,32,Leicester City,8197,Crystal Palace,9826,True,True,2021/2022
+1827,3610242,2022-04-10,32,Norwich City,9850,Burnley,8191,True,True,2021/2022
+1828,3610244,2022-04-10,32,Manchester City,8456,Liverpool,8650,True,True,2021/2022
+1829,3610253,2022-04-16,33,Tottenham Hotspur,8586,Brighton & Hove Albion,10204,True,True,2021/2022
+1830,3610256,2022-04-16,33,Manchester United,10260,Norwich City,9850,True,True,2021/2022
+1831,3610254,2022-04-16,33,Southampton,8466,Arsenal,9825,True,True,2021/2022
+1832,3610252,2022-04-16,33,Watford,9817,Brentford,9937,True,True,2021/2022
+1833,3610255,2022-04-17,33,Newcastle United,10261,Leicester City,8197,True,True,2021/2022
+1834,3610251,2022-04-17,33,West Ham United,8654,Burnley,8191,True,True,2021/2022
+1835,3610223,2022-04-19,30,Liverpool,8650,Manchester United,10260,True,True,2021/2022
+1836,3610172,2022-04-20,25,Chelsea,8455,Arsenal,9825,True,True,2021/2022
+1837,3610101,2022-04-20,18,Everton,8668,Leicester City,8197,True,True,2021/2022
+1838,3610225,2022-04-20,30,Newcastle United,10261,Crystal Palace,9826,True,True,2021/2022
+1839,3610224,2022-04-20,30,Manchester City,8456,Brighton & Hove Albion,10204,True,True,2021/2022
+1840,3610221,2022-04-21,30,Burnley,8191,Southampton,8466,True,True,2021/2022
+1841,3610269,2022-04-23,34,Arsenal,9825,Manchester United,10260,True,True,2021/2022
+1842,3610263,2022-04-23,34,Leicester City,8197,Aston Villa,10252,True,True,2021/2022
+1843,3610261,2022-04-23,34,Manchester City,8456,Watford,9817,True,True,2021/2022
+1844,3610260,2022-04-23,34,Norwich City,9850,Newcastle United,10261,True,True,2021/2022
+1845,3610268,2022-04-23,34,Brentford,9937,Tottenham Hotspur,8586,True,True,2021/2022
+1846,3610267,2022-04-24,34,Brighton & Hove Albion,10204,Southampton,8466,True,True,2021/2022
+1847,3610266,2022-04-24,34,Burnley,8191,Wolverhampton Wanderers,8602,True,True,2021/2022
+1848,3610265,2022-04-24,34,Chelsea,8455,West Ham United,8654,True,True,2021/2022
+1849,3610262,2022-04-24,34,Liverpool,8650,Everton,8668,True,True,2021/2022
+1850,3610264,2022-04-25,34,Crystal Palace,9826,Leeds United,8463,True,True,2021/2022
+1851,3610296,2022-04-28,37,Manchester United,10260,Chelsea,8455,True,True,2021/2022
+1852,3610275,2022-04-30,35,Newcastle United,10261,Liverpool,8650,True,True,2021/2022
+1853,3610279,2022-04-30,35,Aston Villa,10252,Norwich City,9850,True,True,2021/2022
+1854,3610274,2022-04-30,35,Southampton,8466,Crystal Palace,9826,True,True,2021/2022
+1855,3610272,2022-04-30,35,Watford,9817,Burnley,8191,True,True,2021/2022
+1856,3610270,2022-04-30,35,Wolverhampton Wanderers,8602,Brighton & Hove Albion,10204,True,True,2021/2022
+1857,3610277,2022-04-30,35,Leeds United,8463,Manchester City,8456,True,True,2021/2022
+1858,3610278,2022-05-01,35,Everton,8668,Chelsea,8455,True,True,2021/2022
+1859,3610273,2022-05-01,35,Tottenham Hotspur,8586,Leicester City,8197,True,True,2021/2022
+1860,3610271,2022-05-01,35,West Ham United,8654,Arsenal,9825,True,True,2021/2022
+1861,3610276,2022-05-02,35,Manchester United,10260,Brentford,9937,True,True,2021/2022
+1862,3610288,2022-05-07,36,Brentford,9937,Southampton,8466,True,True,2021/2022
+1863,3610286,2022-05-07,36,Burnley,8191,Aston Villa,10252,True,True,2021/2022
+1864,3610285,2022-05-07,36,Chelsea,8455,Wolverhampton Wanderers,8602,True,True,2021/2022
+1865,3610284,2022-05-07,36,Crystal Palace,9826,Watford,9817,True,True,2021/2022
+1866,3610287,2022-05-07,36,Brighton & Hove Albion,10204,Manchester United,10260,True,True,2021/2022
+1867,3610282,2022-05-07,36,Liverpool,8650,Tottenham Hotspur,8586,True,True,2021/2022
+1868,3610289,2022-05-08,36,Arsenal,9825,Leeds United,8463,True,True,2021/2022
+1869,3610283,2022-05-08,36,Leicester City,8197,Everton,8668,True,True,2021/2022
+1870,3610280,2022-05-08,36,Norwich City,9850,West Ham United,8654,True,True,2021/2022
+1871,3610281,2022-05-08,36,Manchester City,8456,Newcastle United,10261,True,True,2021/2022
+1872,3610259,2022-05-10,33,Aston Villa,10252,Liverpool,8650,True,True,2021/2022
+1873,3610257,2022-05-11,33,Leeds United,8463,Chelsea,8455,True,True,2021/2022
+1874,3610136,2022-05-11,21,Leicester City,8197,Norwich City,9850,True,True,2021/2022
+1875,3610228,2022-05-11,30,Watford,9817,Everton,8668,True,True,2021/2022
+1876,3610250,2022-05-11,33,Wolverhampton Wanderers,8602,Manchester City,8456,True,True,2021/2022
+1877,3610147,2022-05-12,22,Tottenham Hotspur,8586,Arsenal,9825,True,True,2021/2022
+1878,3610293,2022-05-15,37,Tottenham Hotspur,8586,Burnley,8191,True,True,2021/2022
+1879,3610299,2022-05-15,37,Aston Villa,10252,Crystal Palace,9826,True,True,2021/2022
+1880,3610297,2022-05-15,37,Leeds United,8463,Brighton & Hove Albion,10204,True,True,2021/2022
+1881,3610292,2022-05-15,37,Watford,9817,Leicester City,8197,True,True,2021/2022
+1882,3610291,2022-05-15,37,West Ham United,8654,Manchester City,8456,True,True,2021/2022
+1883,3610290,2022-05-15,37,Wolverhampton Wanderers,8602,Norwich City,9850,True,True,2021/2022
+1884,3610298,2022-05-15,37,Everton,8668,Brentford,9937,True,True,2021/2022
+1885,3610295,2022-05-16,37,Newcastle United,10261,Arsenal,9825,True,True,2021/2022
+1886,3610294,2022-05-17,37,Southampton,8466,Liverpool,8650,True,True,2021/2022
+1887,3610258,2022-05-19,33,Everton,8668,Crystal Palace,9826,True,True,2021/2022
+1888,3610100,2022-05-19,18,Aston Villa,10252,Burnley,8191,True,True,2021/2022
+1889,3610193,2022-05-19,27,Chelsea,8455,Leicester City,8197,True,True,2021/2022
+1890,3610300,2022-05-22,38,Arsenal,9825,Everton,8668,True,True,2021/2022
+1891,3610301,2022-05-22,38,Brentford,9937,Leeds United,8463,True,True,2021/2022
+1892,3610302,2022-05-22,38,Brighton & Hove Albion,10204,West Ham United,8654,True,True,2021/2022
+1893,3610303,2022-05-22,38,Burnley,8191,Newcastle United,10261,True,True,2021/2022
+1894,3610304,2022-05-22,38,Chelsea,8455,Watford,9817,True,True,2021/2022
+1895,3610305,2022-05-22,38,Crystal Palace,9826,Manchester United,10260,True,True,2021/2022
+1896,3610306,2022-05-22,38,Leicester City,8197,Southampton,8466,True,True,2021/2022
+1897,3610307,2022-05-22,38,Liverpool,8650,Wolverhampton Wanderers,8602,True,True,2021/2022
+1898,3610308,2022-05-22,38,Manchester City,8456,Aston Villa,10252,True,True,2021/2022
+1899,3610309,2022-05-22,38,Norwich City,9850,Tottenham Hotspur,8586,True,True,2021/2022
+1900,3411352,2020-09-12,1,Fulham,9879,Arsenal,9825,True,True,2020/2021
+1901,3411351,2020-09-12,1,Crystal Palace,9826,Southampton,8466,True,True,2020/2021
+1902,3411353,2020-09-12,1,Liverpool,8650,Leeds United,8463,True,True,2020/2021
+1903,3411356,2020-09-12,1,West Ham United,8654,Newcastle United,10261,True,True,2020/2021
+1904,3411355,2020-09-13,1,West Bromwich Albion,8659,Leicester City,8197,True,True,2020/2021
+1905,3411354,2020-09-13,1,Tottenham Hotspur,8586,Everton,8668,True,True,2020/2021
+1906,3411358,2020-09-14,1,Sheffield United,8657,Wolverhampton Wanderers,8602,True,True,2020/2021
+1907,3411357,2020-09-14,1,Brighton & Hove Albion,10204,Chelsea,8455,True,True,2020/2021
+1908,3411362,2020-09-19,2,Everton,8668,West Bromwich Albion,8659,True,True,2020/2021
+1909,3411363,2020-09-19,2,Leeds United,8463,Fulham,9879,True,True,2020/2021
+1910,3411365,2020-09-19,2,Manchester United,10260,Crystal Palace,9826,True,True,2020/2021
+1911,3411359,2020-09-19,2,Arsenal,9825,West Ham United,8654,True,True,2020/2021
+1912,3411367,2020-09-20,2,Southampton,8466,Tottenham Hotspur,8586,True,True,2020/2021
+1913,3411366,2020-09-20,2,Newcastle United,10261,Brighton & Hove Albion,10204,True,True,2020/2021
+1914,3411361,2020-09-20,2,Chelsea,8455,Liverpool,8650,True,True,2020/2021
+1915,3411364,2020-09-20,2,Leicester City,8197,Burnley,8191,True,True,2020/2021
+1916,3411360,2020-09-21,2,Aston Villa,10252,Sheffield United,8657,True,True,2020/2021
+1917,3411368,2020-09-21,2,Wolverhampton Wanderers,8602,Manchester City,8456,True,True,2020/2021
+1918,3411369,2020-09-26,3,Brighton & Hove Albion,10204,Manchester United,10260,True,True,2020/2021
+1919,3411371,2020-09-26,3,Crystal Palace,9826,Everton,8668,True,True,2020/2021
+1920,3411377,2020-09-26,3,West Bromwich Albion,8659,Chelsea,8455,True,True,2020/2021
+1921,3411370,2020-09-26,3,Burnley,8191,Southampton,8466,True,True,2020/2021
+1922,3411375,2020-09-27,3,Sheffield United,8657,Leeds United,8463,True,True,2020/2021
+1923,3411376,2020-09-27,3,Tottenham Hotspur,8586,Newcastle United,10261,True,True,2020/2021
+1924,3411374,2020-09-27,3,Manchester City,8456,Leicester City,8197,True,True,2020/2021
+1925,3411378,2020-09-27,3,West Ham United,8654,Wolverhampton Wanderers,8602,True,True,2020/2021
+1926,3411372,2020-09-28,3,Fulham,9879,Aston Villa,10252,True,True,2020/2021
+1927,3411373,2020-09-28,3,Liverpool,8650,Arsenal,9825,True,True,2020/2021
+1928,3411381,2020-10-03,4,Chelsea,8455,Crystal Palace,9826,True,True,2020/2021
+1929,3411382,2020-10-03,4,Everton,8668,Brighton & Hove Albion,10204,True,True,2020/2021
+1930,3411383,2020-10-03,4,Leeds United,8463,Manchester City,8456,True,True,2020/2021
+1931,3411386,2020-10-03,4,Newcastle United,10261,Burnley,8191,True,True,2020/2021
+1932,3411384,2020-10-04,4,Leicester City,8197,West Ham United,8654,True,True,2020/2021
+1933,3411387,2020-10-04,4,Southampton,8466,West Bromwich Albion,8659,True,True,2020/2021
+1934,3411379,2020-10-04,4,Arsenal,9825,Sheffield United,8657,True,True,2020/2021
+1935,3411388,2020-10-04,4,Wolverhampton Wanderers,8602,Fulham,9879,True,True,2020/2021
+1936,3411385,2020-10-04,4,Manchester United,10260,Tottenham Hotspur,8586,True,True,2020/2021
+1937,3411380,2020-10-04,4,Aston Villa,10252,Liverpool,8650,True,True,2020/2021
+1938,3411391,2020-10-17,5,Everton,8668,Liverpool,8650,True,True,2020/2021
+1939,3411389,2020-10-17,5,Chelsea,8455,Southampton,8466,True,True,2020/2021
+1940,3411394,2020-10-17,5,Manchester City,8456,Arsenal,9825,True,True,2020/2021
+1941,3411395,2020-10-17,5,Newcastle United,10261,Manchester United,10260,True,True,2020/2021
+1942,3411396,2020-10-18,5,Sheffield United,8657,Fulham,9879,True,True,2020/2021
+1943,3411390,2020-10-18,5,Crystal Palace,9826,Brighton & Hove Albion,10204,True,True,2020/2021
+1944,3411397,2020-10-18,5,Tottenham Hotspur,8586,West Ham United,8654,True,True,2020/2021
+1945,3411393,2020-10-18,5,Leicester City,8197,Aston Villa,10252,True,True,2020/2021
+1946,3411398,2020-10-19,5,West Bromwich Albion,8659,Burnley,8191,True,True,2020/2021
+1947,3411392,2020-10-19,5,Leeds United,8463,Wolverhampton Wanderers,8602,True,True,2020/2021
+1948,3411400,2020-10-23,6,Aston Villa,10252,Leeds United,8463,True,True,2020/2021
+1949,3411407,2020-10-24,6,West Ham United,8654,Manchester City,8456,True,True,2020/2021
+1950,3411403,2020-10-24,6,Fulham,9879,Crystal Palace,9826,True,True,2020/2021
+1951,3411405,2020-10-24,6,Manchester United,10260,Chelsea,8455,True,True,2020/2021
+1952,3411404,2020-10-24,6,Liverpool,8650,Sheffield United,8657,True,True,2020/2021
+1953,3411406,2020-10-25,6,Southampton,8466,Everton,8668,True,True,2020/2021
+1954,3411408,2020-10-25,6,Wolverhampton Wanderers,8602,Newcastle United,10261,True,True,2020/2021
+1955,3411399,2020-10-25,6,Arsenal,9825,Leicester City,8197,True,True,2020/2021
+1956,3411401,2020-10-26,6,Brighton & Hove Albion,10204,West Bromwich Albion,8659,True,True,2020/2021
+1957,3411402,2020-10-26,6,Burnley,8191,Tottenham Hotspur,8586,True,True,2020/2021
+1958,3411418,2020-10-30,7,Wolverhampton Wanderers,8602,Crystal Palace,9826,True,True,2020/2021
+1959,3411416,2020-10-31,7,Sheffield United,8657,Manchester City,8456,True,True,2020/2021
+1960,3411410,2020-10-31,7,Burnley,8191,Chelsea,8455,True,True,2020/2021
+1961,3411413,2020-10-31,7,Liverpool,8650,West Ham United,8654,True,True,2020/2021
+1962,3411409,2020-11-01,7,Aston Villa,10252,Southampton,8466,True,True,2020/2021
+1963,3411415,2020-11-01,7,Newcastle United,10261,Everton,8668,True,True,2020/2021
+1964,3411414,2020-11-01,7,Manchester United,10260,Arsenal,9825,True,True,2020/2021
+1965,3411417,2020-11-01,7,Tottenham Hotspur,8586,Brighton & Hove Albion,10204,True,True,2020/2021
+1966,3411411,2020-11-02,7,Fulham,9879,West Bromwich Albion,8659,True,True,2020/2021
+1967,3411412,2020-11-02,7,Leeds United,8463,Leicester City,8197,True,True,2020/2021
+1968,3411420,2020-11-06,8,Brighton & Hove Albion,10204,Burnley,8191,True,True,2020/2021
+1969,3411426,2020-11-06,8,Southampton,8466,Newcastle United,10261,True,True,2020/2021
+1970,3411423,2020-11-07,8,Everton,8668,Manchester United,10260,True,True,2020/2021
+1971,3411422,2020-11-07,8,Crystal Palace,9826,Leeds United,8463,True,True,2020/2021
+1972,3411421,2020-11-07,8,Chelsea,8455,Sheffield United,8657,True,True,2020/2021
+1973,3411428,2020-11-07,8,West Ham United,8654,Fulham,9879,True,True,2020/2021
+1974,3411427,2020-11-08,8,West Bromwich Albion,8659,Tottenham Hotspur,8586,True,True,2020/2021
+1975,3411424,2020-11-08,8,Leicester City,8197,Wolverhampton Wanderers,8602,True,True,2020/2021
+1976,3411425,2020-11-08,8,Manchester City,8456,Liverpool,8650,True,True,2020/2021
+1977,3411419,2020-11-08,8,Arsenal,9825,Aston Villa,10252,True,True,2020/2021
+1978,3411435,2020-11-21,9,Newcastle United,10261,Chelsea,8455,True,True,2020/2021
+1979,3411429,2020-11-21,9,Aston Villa,10252,Brighton & Hove Albion,10204,True,True,2020/2021
+1980,3411437,2020-11-21,9,Tottenham Hotspur,8586,Manchester City,8456,True,True,2020/2021
+1981,3411434,2020-11-21,9,Manchester United,10260,West Bromwich Albion,8659,True,True,2020/2021
+1982,3411431,2020-11-22,9,Fulham,9879,Everton,8668,True,True,2020/2021
+1983,3411436,2020-11-22,9,Sheffield United,8657,West Ham United,8654,True,True,2020/2021
+1984,3411432,2020-11-22,9,Leeds United,8463,Arsenal,9825,True,True,2020/2021
+1985,3411433,2020-11-22,9,Liverpool,8650,Leicester City,8197,True,True,2020/2021
+1986,3411430,2020-11-23,9,Burnley,8191,Crystal Palace,9826,True,True,2020/2021
+1987,3411438,2020-11-23,9,Wolverhampton Wanderers,8602,Southampton,8466,True,True,2020/2021
+1988,3411442,2020-11-27,10,Crystal Palace,9826,Newcastle United,10261,True,True,2020/2021
+1989,3411440,2020-11-28,10,Brighton & Hove Albion,10204,Liverpool,8650,True,True,2020/2021
+1990,3411445,2020-11-28,10,Manchester City,8456,Burnley,8191,True,True,2020/2021
+1991,3411443,2020-11-28,10,Everton,8668,Leeds United,8463,True,True,2020/2021
+1992,3411447,2020-11-28,10,West Bromwich Albion,8659,Sheffield United,8657,True,True,2020/2021
+1993,3411446,2020-11-29,10,Southampton,8466,Manchester United,10260,True,True,2020/2021
+1994,3411441,2020-11-29,10,Chelsea,8455,Tottenham Hotspur,8586,True,True,2020/2021
+1995,3411439,2020-11-29,10,Arsenal,9825,Wolverhampton Wanderers,8602,True,True,2020/2021
+1996,3411444,2020-11-30,10,Leicester City,8197,Fulham,9879,True,True,2020/2021
+1997,3411448,2020-11-30,10,West Ham United,8654,Aston Villa,10252,True,True,2020/2021
+1998,3411451,2020-12-05,11,Burnley,8191,Everton,8668,True,True,2020/2021
+1999,3411454,2020-12-05,11,Manchester City,8456,Fulham,9879,True,True,2020/2021
+2000,3411458,2020-12-05,11,West Ham United,8654,Manchester United,10260,True,True,2020/2021
+2001,3411452,2020-12-05,11,Chelsea,8455,Leeds United,8463,True,True,2020/2021
+2002,3411457,2020-12-06,11,West Bromwich Albion,8659,Crystal Palace,9826,True,True,2020/2021
+2003,3411455,2020-12-06,11,Sheffield United,8657,Leicester City,8197,True,True,2020/2021
+2004,3411456,2020-12-06,11,Tottenham Hotspur,8586,Arsenal,9825,True,True,2020/2021
+2005,3411453,2020-12-06,11,Liverpool,8650,Wolverhampton Wanderers,8602,True,True,2020/2021
+2006,3411450,2020-12-07,11,Brighton & Hove Albion,10204,Southampton,8466,True,True,2020/2021
+2007,3411463,2020-12-11,12,Leeds United,8463,West Ham United,8654,True,True,2020/2021
+2008,3411468,2020-12-12,12,Wolverhampton Wanderers,8602,Aston Villa,10252,True,True,2020/2021
+2009,3411466,2020-12-12,12,Newcastle United,10261,West Bromwich Albion,8659,True,True,2020/2021
+2010,3411465,2020-12-12,12,Manchester United,10260,Manchester City,8456,True,True,2020/2021
+2011,3411461,2020-12-12,12,Everton,8668,Chelsea,8455,True,True,2020/2021
+2012,3411467,2020-12-13,12,Southampton,8466,Sheffield United,8657,True,True,2020/2021
+2013,3411460,2020-12-13,12,Crystal Palace,9826,Tottenham Hotspur,8586,True,True,2020/2021
+2014,3411462,2020-12-13,12,Fulham,9879,Liverpool,8650,True,True,2020/2021
+2015,3411459,2020-12-13,12,Arsenal,9825,Burnley,8191,True,True,2020/2021
+2016,3411464,2020-12-13,12,Leicester City,8197,Brighton & Hove Albion,10204,True,True,2020/2021
+2017,3411476,2020-12-15,13,Wolverhampton Wanderers,8602,Chelsea,8455,True,True,2020/2021
+2018,3411478,2020-12-15,13,Manchester City,8456,West Bromwich Albion,8659,True,True,2020/2021
+2019,3411469,2020-12-16,13,Arsenal,9825,Southampton,8466,True,True,2020/2021
+2020,3411472,2020-12-16,13,Leeds United,8463,Newcastle United,10261,True,True,2020/2021
+2021,3411473,2020-12-16,13,Leicester City,8197,Everton,8668,True,True,2020/2021
+2022,3411471,2020-12-16,13,Fulham,9879,Brighton & Hove Albion,10204,True,True,2020/2021
+2023,3411477,2020-12-16,13,Liverpool,8650,Tottenham Hotspur,8586,True,True,2020/2021
+2024,3411475,2020-12-16,13,West Ham United,8654,Crystal Palace,9826,True,True,2020/2021
+2025,3411470,2020-12-17,13,Aston Villa,10252,Burnley,8191,True,True,2020/2021
+2026,3411474,2020-12-17,13,Sheffield United,8657,Manchester United,10260,True,True,2020/2021
+2027,3411482,2020-12-19,14,Crystal Palace,9826,Liverpool,8650,True,True,2020/2021
+2028,3411486,2020-12-19,14,Southampton,8466,Manchester City,8456,True,True,2020/2021
+2029,3411483,2020-12-19,14,Everton,8668,Arsenal,9825,True,True,2020/2021
+2030,3411485,2020-12-19,14,Newcastle United,10261,Fulham,9879,True,True,2020/2021
+2031,3411479,2020-12-20,14,Brighton & Hove Albion,10204,Sheffield United,8657,True,True,2020/2021
+2032,3411487,2020-12-20,14,Tottenham Hotspur,8586,Leicester City,8197,True,True,2020/2021
+2033,3411484,2020-12-20,14,Manchester United,10260,Leeds United,8463,True,True,2020/2021
+2034,3411488,2020-12-20,14,West Bromwich Albion,8659,Aston Villa,10252,True,True,2020/2021
+2035,3411480,2020-12-21,14,Burnley,8191,Wolverhampton Wanderers,8602,True,True,2020/2021
+2036,3411481,2020-12-21,14,Chelsea,8455,West Ham United,8654,True,True,2020/2021
+2037,3411493,2020-12-26,15,Leicester City,8197,Manchester United,10260,True,True,2020/2021
+2038,3411490,2020-12-26,15,Aston Villa,10252,Crystal Palace,9826,True,True,2020/2021
+2039,3411491,2020-12-26,15,Fulham,9879,Southampton,8466,True,True,2020/2021
+2040,3411489,2020-12-26,15,Arsenal,9825,Chelsea,8455,True,True,2020/2021
+2041,3411495,2020-12-26,15,Manchester City,8456,Newcastle United,10261,True,True,2020/2021
+2042,3411496,2020-12-26,15,Sheffield United,8657,Everton,8668,True,True,2020/2021
+2043,3411492,2020-12-27,15,Leeds United,8463,Burnley,8191,True,True,2020/2021
+2044,3411497,2020-12-27,15,West Ham United,8654,Brighton & Hove Albion,10204,True,True,2020/2021
+2045,3411494,2020-12-27,15,Liverpool,8650,West Bromwich Albion,8659,True,True,2020/2021
+2046,3411498,2020-12-27,15,Wolverhampton Wanderers,8602,Tottenham Hotspur,8586,True,True,2020/2021
+2047,3411502,2020-12-28,16,Crystal Palace,9826,Leicester City,8197,True,True,2020/2021
+2048,3411501,2020-12-28,16,Chelsea,8455,Aston Villa,10252,True,True,2020/2021
+2049,3411499,2020-12-29,16,Brighton & Hove Albion,10204,Arsenal,9825,True,True,2020/2021
+2050,3411500,2020-12-29,16,Burnley,8191,Sheffield United,8657,True,True,2020/2021
+2051,3411506,2020-12-29,16,Southampton,8466,West Ham United,8654,True,True,2020/2021
+2052,3411508,2020-12-29,16,West Bromwich Albion,8659,Leeds United,8463,True,True,2020/2021
+2053,3411504,2020-12-29,16,Manchester United,10260,Wolverhampton Wanderers,8602,True,True,2020/2021
+2054,3411505,2020-12-30,16,Newcastle United,10261,Liverpool,8650,True,True,2020/2021
+2055,3411513,2021-01-01,17,Everton,8668,West Ham United,8654,True,True,2020/2021
+2056,3411514,2021-01-01,17,Manchester United,10260,Aston Villa,10252,True,True,2020/2021
+2057,3411517,2021-01-02,17,Tottenham Hotspur,8586,Leeds United,8463,True,True,2020/2021
+2058,3411512,2021-01-02,17,Crystal Palace,9826,Sheffield United,8657,True,True,2020/2021
+2059,3411509,2021-01-02,17,Brighton & Hove Albion,10204,Wolverhampton Wanderers,8602,True,True,2020/2021
+2060,3411518,2021-01-02,17,West Bromwich Albion,8659,Arsenal,9825,True,True,2020/2021
+2061,3411515,2021-01-03,17,Newcastle United,10261,Leicester City,8197,True,True,2020/2021
+2062,3411511,2021-01-03,17,Chelsea,8455,Manchester City,8456,True,True,2020/2021
+2063,3411516,2021-01-04,17,Southampton,8466,Liverpool,8650,True,True,2020/2021
+2064,3411524,2021-01-12,18,Sheffield United,8657,Newcastle United,10261,True,True,2020/2021
+2065,3411340,2021-01-12,1,Burnley,8191,Manchester United,10260,True,True,2020/2021
+2066,3411526,2021-01-12,18,Wolverhampton Wanderers,8602,Everton,8668,True,True,2020/2021
+2067,3411528,2021-01-13,18,Manchester City,8456,Brighton & Hove Albion,10204,True,True,2020/2021
+2068,3411507,2021-01-13,16,Tottenham Hotspur,8586,Fulham,9879,True,True,2020/2021
+2069,3411519,2021-01-14,18,Arsenal,9825,Crystal Palace,9826,True,True,2020/2021
+2070,3411538,2021-01-16,19,Wolverhampton Wanderers,8602,West Bromwich Albion,8659,True,True,2020/2021
+2071,3411532,2021-01-16,19,Leeds United,8463,Brighton & Hove Albion,10204,True,True,2020/2021
+2072,3411537,2021-01-16,19,West Ham United,8654,Burnley,8191,True,True,2020/2021
+2073,3411531,2021-01-16,19,Fulham,9879,Chelsea,8455,True,True,2020/2021
+2074,3411533,2021-01-16,19,Leicester City,8197,Southampton,8466,True,True,2020/2021
+2075,3411536,2021-01-17,19,Sheffield United,8657,Tottenham Hotspur,8586,True,True,2020/2021
+2076,3411534,2021-01-17,19,Liverpool,8650,Manchester United,10260,True,True,2020/2021
+2077,3411535,2021-01-17,19,Manchester City,8456,Crystal Palace,9826,True,True,2020/2021
+2078,3411529,2021-01-18,19,Arsenal,9825,Newcastle United,10261,True,True,2020/2021
+2079,3411525,2021-01-19,18,West Ham United,8654,West Bromwich Albion,8659,True,True,2020/2021
+2080,3411523,2021-01-19,18,Leicester City,8197,Chelsea,8455,True,True,2020/2021
+2081,3411341,2021-01-20,1,Manchester City,8456,Aston Villa,10252,True,True,2020/2021
+2082,3411521,2021-01-20,18,Fulham,9879,Manchester United,10260,True,True,2020/2021
+2083,3411527,2021-01-21,18,Liverpool,8650,Burnley,8191,True,True,2020/2021
+2084,3411449,2021-01-23,11,Aston Villa,10252,Newcastle United,10261,True,True,2020/2021
+2085,3411548,2021-01-26,20,Crystal Palace,9826,West Ham United,8654,True,True,2020/2021
+2086,3411545,2021-01-26,20,Newcastle United,10261,Leeds United,8463,True,True,2020/2021
+2087,3411546,2021-01-26,20,Southampton,8466,Arsenal,9825,True,True,2020/2021
+2088,3411543,2021-01-26,20,West Bromwich Albion,8659,Manchester City,8456,True,True,2020/2021
+2089,3411540,2021-01-27,20,Burnley,8191,Aston Villa,10252,True,True,2020/2021
+2090,3411544,2021-01-27,20,Chelsea,8455,Wolverhampton Wanderers,8602,True,True,2020/2021
+2091,3411539,2021-01-27,20,Brighton & Hove Albion,10204,Fulham,9879,True,True,2020/2021
+2092,3411541,2021-01-27,20,Everton,8668,Leicester City,8197,True,True,2020/2021
+2093,3411542,2021-01-27,20,Manchester United,10260,Sheffield United,8657,True,True,2020/2021
+2094,3411547,2021-01-28,20,Tottenham Hotspur,8586,Liverpool,8650,True,True,2020/2021
+2095,3411553,2021-01-30,21,Everton,8668,Newcastle United,10261,True,True,2020/2021
+2096,3411552,2021-01-30,21,Crystal Palace,9826,Wolverhampton Wanderers,8602,True,True,2020/2021
+2097,3411555,2021-01-30,21,Manchester City,8456,Sheffield United,8657,True,True,2020/2021
+2098,3411557,2021-01-30,21,West Bromwich Albion,8659,Fulham,9879,True,True,2020/2021
+2099,3411549,2021-01-30,21,Arsenal,9825,Manchester United,10260,True,True,2020/2021
+2100,3411556,2021-01-30,21,Southampton,8466,Aston Villa,10252,True,True,2020/2021
+2101,3411551,2021-01-31,21,Chelsea,8455,Burnley,8191,True,True,2020/2021
+2102,3411554,2021-01-31,21,Leicester City,8197,Leeds United,8463,True,True,2020/2021
+2103,3411558,2021-01-31,21,West Ham United,8654,Liverpool,8650,True,True,2020/2021
+2104,3411550,2021-01-31,21,Brighton & Hove Albion,10204,Tottenham Hotspur,8586,True,True,2020/2021
+2105,3411563,2021-02-02,22,Sheffield United,8657,West Bromwich Albion,8659,True,True,2020/2021
+2106,3411564,2021-02-02,22,Wolverhampton Wanderers,8602,Arsenal,9825,True,True,2020/2021
+2107,3411565,2021-02-02,22,Manchester United,10260,Southampton,8466,True,True,2020/2021
+2108,3411566,2021-02-02,22,Newcastle United,10261,Crystal Palace,9826,True,True,2020/2021
+2109,3411560,2021-02-03,22,Burnley,8191,Manchester City,8456,True,True,2020/2021
+2110,3411561,2021-02-03,22,Fulham,9879,Leicester City,8197,True,True,2020/2021
+2111,3411562,2021-02-03,22,Leeds United,8463,Everton,8668,True,True,2020/2021
+2112,3411559,2021-02-03,22,Aston Villa,10252,West Ham United,8654,True,True,2020/2021
+2113,3411568,2021-02-03,22,Liverpool,8650,Brighton & Hove Albion,10204,True,True,2020/2021
+2114,3411567,2021-02-04,22,Tottenham Hotspur,8586,Chelsea,8455,True,True,2020/2021
+2115,3411569,2021-02-06,23,Aston Villa,10252,Arsenal,9825,True,True,2020/2021
+2116,3411570,2021-02-06,23,Burnley,8191,Brighton & Hove Albion,10204,True,True,2020/2021
+2117,3411575,2021-02-06,23,Newcastle United,10261,Southampton,8466,True,True,2020/2021
+2118,3411571,2021-02-06,23,Fulham,9879,West Ham United,8654,True,True,2020/2021
+2119,3411574,2021-02-06,23,Manchester United,10260,Everton,8668,True,True,2020/2021
+2120,3411577,2021-02-07,23,Tottenham Hotspur,8586,West Bromwich Albion,8659,True,True,2020/2021
+2121,3411578,2021-02-07,23,Wolverhampton Wanderers,8602,Leicester City,8197,True,True,2020/2021
+2122,3411573,2021-02-07,23,Liverpool,8650,Manchester City,8456,True,True,2020/2021
+2123,3411576,2021-02-07,23,Sheffield United,8657,Chelsea,8455,True,True,2020/2021
+2124,3411572,2021-02-08,23,Leeds United,8463,Crystal Palace,9826,True,True,2020/2021
+2125,3411584,2021-02-13,24,Leicester City,8197,Liverpool,8650,True,True,2020/2021
+2126,3411582,2021-02-13,24,Crystal Palace,9826,Burnley,8191,True,True,2020/2021
+2127,3411585,2021-02-13,24,Manchester City,8456,Tottenham Hotspur,8586,True,True,2020/2021
+2128,3411580,2021-02-13,24,Brighton & Hove Albion,10204,Aston Villa,10252,True,True,2020/2021
+2129,3411586,2021-02-14,24,Southampton,8466,Wolverhampton Wanderers,8602,True,True,2020/2021
+2130,3411587,2021-02-14,24,West Bromwich Albion,8659,Manchester United,10260,True,True,2020/2021
+2131,3411579,2021-02-14,24,Arsenal,9825,Leeds United,8463,True,True,2020/2021
+2132,3411583,2021-02-14,24,Everton,8668,Fulham,9879,True,True,2020/2021
+2133,3411588,2021-02-15,24,West Ham United,8654,Sheffield United,8657,True,True,2020/2021
+2134,3411581,2021-02-15,24,Chelsea,8455,Newcastle United,10261,True,True,2020/2021
+2135,3411510,2021-02-17,17,Burnley,8191,Fulham,9879,True,True,2020/2021
+2136,3411503,2021-02-17,16,Everton,8668,Manchester City,8456,True,True,2020/2021
+2137,3411598,2021-02-19,25,Wolverhampton Wanderers,8602,Leeds United,8463,True,True,2020/2021
+2138,3411596,2021-02-20,25,Southampton,8466,Chelsea,8455,True,True,2020/2021
+2139,3411592,2021-02-20,25,Burnley,8191,West Bromwich Albion,8659,True,True,2020/2021
+2140,3411594,2021-02-20,25,Liverpool,8650,Everton,8668,True,True,2020/2021
+2141,3411593,2021-02-20,25,Fulham,9879,Sheffield United,8657,True,True,2020/2021
+2142,3411597,2021-02-21,25,West Ham United,8654,Tottenham Hotspur,8586,True,True,2020/2021
+2143,3411590,2021-02-21,25,Aston Villa,10252,Leicester City,8197,True,True,2020/2021
+2144,3411589,2021-02-21,25,Arsenal,9825,Manchester City,8456,True,True,2020/2021
+2145,3411595,2021-02-21,25,Manchester United,10260,Newcastle United,10261,True,True,2020/2021
+2146,3411591,2021-02-22,25,Brighton & Hove Albion,10204,Crystal Palace,9826,True,True,2020/2021
+2147,3411522,2021-02-23,18,Leeds United,8463,Southampton,8466,True,True,2020/2021
+2148,3411604,2021-02-27,26,Manchester City,8456,West Ham United,8654,True,True,2020/2021
+2149,3411608,2021-02-27,26,West Bromwich Albion,8659,Brighton & Hove Albion,10204,True,True,2020/2021
+2150,3411602,2021-02-27,26,Leeds United,8463,Aston Villa,10252,True,True,2020/2021
+2151,3411605,2021-02-27,26,Newcastle United,10261,Wolverhampton Wanderers,8602,True,True,2020/2021
+2152,3411600,2021-02-28,26,Crystal Palace,9826,Fulham,9879,True,True,2020/2021
+2153,3411603,2021-02-28,26,Leicester City,8197,Arsenal,9825,True,True,2020/2021
+2154,3411607,2021-02-28,26,Tottenham Hotspur,8586,Burnley,8191,True,True,2020/2021
+2155,3411599,2021-02-28,26,Chelsea,8455,Manchester United,10260,True,True,2020/2021
+2156,3411606,2021-02-28,26,Sheffield United,8657,Liverpool,8650,True,True,2020/2021
+2157,3411601,2021-03-01,26,Everton,8668,Southampton,8466,True,True,2020/2021
+2158,3411634,2021-03-02,29,Manchester City,8456,Wolverhampton Wanderers,8602,True,True,2020/2021
+2159,3411630,2021-03-03,29,Burnley,8191,Leicester City,8197,True,True,2020/2021
+2160,3411635,2021-03-03,29,Sheffield United,8657,Aston Villa,10252,True,True,2020/2021
+2161,3411631,2021-03-03,29,Crystal Palace,9826,Manchester United,10260,True,True,2020/2021
+2162,3411671,2021-03-04,33,Fulham,9879,Tottenham Hotspur,8586,True,True,2020/2021
+2163,3411637,2021-03-04,29,West Bromwich Albion,8659,Everton,8668,True,True,2020/2021
+2164,3411633,2021-03-04,29,Liverpool,8650,Chelsea,8455,True,True,2020/2021
+2165,3411611,2021-03-06,27,Burnley,8191,Arsenal,9825,True,True,2020/2021
+2166,3411615,2021-03-06,27,Sheffield United,8657,Southampton,8466,True,True,2020/2021
+2167,3411609,2021-03-06,27,Aston Villa,10252,Wolverhampton Wanderers,8602,True,True,2020/2021
+2168,3411610,2021-03-06,27,Brighton & Hove Albion,10204,Leicester City,8197,True,True,2020/2021
+2169,3411617,2021-03-07,27,West Bromwich Albion,8659,Newcastle United,10261,True,True,2020/2021
+2170,3411613,2021-03-07,27,Liverpool,8650,Fulham,9879,True,True,2020/2021
+2171,3411614,2021-03-07,27,Manchester City,8456,Manchester United,10260,True,True,2020/2021
+2172,3411616,2021-03-07,27,Tottenham Hotspur,8586,Crystal Palace,9826,True,True,2020/2021
+2173,3411612,2021-03-08,27,Chelsea,8455,Everton,8668,True,True,2020/2021
+2174,3411618,2021-03-08,27,West Ham United,8654,Leeds United,8463,True,True,2020/2021
+2175,3411675,2021-03-10,33,Manchester City,8456,Southampton,8466,True,True,2020/2021
+2176,3411626,2021-03-12,28,Newcastle United,10261,Aston Villa,10252,True,True,2020/2021
+2177,3411623,2021-03-13,28,Leeds United,8463,Chelsea,8455,True,True,2020/2021
+2178,3411620,2021-03-13,28,Crystal Palace,9826,West Bromwich Albion,8659,True,True,2020/2021
+2179,3411621,2021-03-13,28,Everton,8668,Burnley,8191,True,True,2020/2021
+2180,3411622,2021-03-13,28,Fulham,9879,Manchester City,8456,True,True,2020/2021
+2181,3411627,2021-03-14,28,Southampton,8466,Brighton & Hove Albion,10204,True,True,2020/2021
+2182,3411624,2021-03-14,28,Leicester City,8197,Sheffield United,8657,True,True,2020/2021
+2183,3411619,2021-03-14,28,Arsenal,9825,Tottenham Hotspur,8586,True,True,2020/2021
+2184,3411625,2021-03-14,28,Manchester United,10260,West Ham United,8654,True,True,2020/2021
+2185,3411628,2021-03-15,28,Wolverhampton Wanderers,8602,Liverpool,8650,True,True,2020/2021
+2186,3411632,2021-03-19,29,Fulham,9879,Leeds United,8463,True,True,2020/2021
+2187,3411629,2021-03-20,29,Brighton & Hove Albion,10204,Newcastle United,10261,True,True,2020/2021
+2188,3411638,2021-03-21,29,West Ham United,8654,Arsenal,9825,True,True,2020/2021
+2189,3411520,2021-03-21,18,Aston Villa,10252,Tottenham Hotspur,8586,True,True,2020/2021
+2190,3411641,2021-04-03,30,Chelsea,8455,West Bromwich Albion,8659,True,True,2020/2021
+2191,3411643,2021-04-03,30,Leeds United,8463,Sheffield United,8657,True,True,2020/2021
+2192,3411644,2021-04-03,30,Leicester City,8197,Manchester City,8456,True,True,2020/2021
+2193,3411639,2021-04-03,30,Arsenal,9825,Liverpool,8650,True,True,2020/2021
+2194,3411647,2021-04-04,30,Southampton,8466,Burnley,8191,True,True,2020/2021
+2195,3411646,2021-04-04,30,Newcastle United,10261,Tottenham Hotspur,8586,True,True,2020/2021
+2196,3411640,2021-04-04,30,Aston Villa,10252,Fulham,9879,True,True,2020/2021
+2197,3411645,2021-04-04,30,Manchester United,10260,Brighton & Hove Albion,10204,True,True,2020/2021
+2198,3411642,2021-04-05,30,Everton,8668,Crystal Palace,9826,True,True,2020/2021
+2199,3411648,2021-04-05,30,Wolverhampton Wanderers,8602,West Ham United,8654,True,True,2020/2021
+2200,3411652,2021-04-09,31,Fulham,9879,Wolverhampton Wanderers,8602,True,True,2020/2021
+2201,3411654,2021-04-10,31,Manchester City,8456,Leeds United,8463,True,True,2020/2021
+2202,3411653,2021-04-10,31,Liverpool,8650,Aston Villa,10252,True,True,2020/2021
+2203,3411651,2021-04-10,31,Crystal Palace,9826,Chelsea,8455,True,True,2020/2021
+2204,3411650,2021-04-11,31,Burnley,8191,Newcastle United,10261,True,True,2020/2021
+2205,3411658,2021-04-11,31,West Ham United,8654,Leicester City,8197,True,True,2020/2021
+2206,3411656,2021-04-11,31,Tottenham Hotspur,8586,Manchester United,10260,True,True,2020/2021
+2207,3411655,2021-04-11,31,Sheffield United,8657,Arsenal,9825,True,True,2020/2021
+2208,3411657,2021-04-12,31,West Bromwich Albion,8659,Southampton,8466,True,True,2020/2021
+2209,3411649,2021-04-12,31,Brighton & Hove Albion,10204,Everton,8668,True,True,2020/2021
+2210,3411662,2021-04-16,32,Everton,8668,Tottenham Hotspur,8586,True,True,2020/2021
+2211,3411666,2021-04-17,32,Newcastle United,10261,West Ham United,8654,True,True,2020/2021
+2212,3411668,2021-04-17,32,Wolverhampton Wanderers,8602,Sheffield United,8657,True,True,2020/2021
+2213,3411659,2021-04-18,32,Arsenal,9825,Fulham,9879,True,True,2020/2021
+2214,3411665,2021-04-18,32,Manchester United,10260,Burnley,8191,True,True,2020/2021
+2215,3411663,2021-04-19,32,Leeds United,8463,Liverpool,8650,True,True,2020/2021
+2216,3411661,2021-04-20,32,Chelsea,8455,Brighton & Hove Albion,10204,True,True,2020/2021
+2217,3411636,2021-04-21,29,Tottenham Hotspur,8586,Southampton,8466,True,True,2020/2021
+2218,3411660,2021-04-21,32,Aston Villa,10252,Manchester City,8456,True,True,2020/2021
+2219,3411664,2021-04-22,32,Leicester City,8197,West Bromwich Albion,8659,True,True,2020/2021
+2220,3411669,2021-04-23,33,Arsenal,9825,Everton,8668,True,True,2020/2021
+2221,3411674,2021-04-24,33,Liverpool,8650,Newcastle United,10261,True,True,2020/2021
+2222,3411677,2021-04-24,33,West Ham United,8654,Chelsea,8455,True,True,2020/2021
+2223,3411676,2021-04-24,33,Sheffield United,8657,Brighton & Hove Albion,10204,True,True,2020/2021
+2224,3411678,2021-04-25,33,Wolverhampton Wanderers,8602,Burnley,8191,True,True,2020/2021
+2225,3411672,2021-04-25,33,Leeds United,8463,Manchester United,10260,True,True,2020/2021
+2226,3411670,2021-04-25,33,Aston Villa,10252,West Bromwich Albion,8659,True,True,2020/2021
+2227,3411673,2021-04-26,33,Leicester City,8197,Crystal Palace,9826,True,True,2020/2021
+2228,3411686,2021-04-30,34,Southampton,8466,Leicester City,8197,True,True,2020/2021
+2229,3411682,2021-05-01,34,Crystal Palace,9826,Manchester City,8456,True,True,2020/2021
+2230,3411679,2021-05-01,34,Brighton & Hove Albion,10204,Leeds United,8463,True,True,2020/2021
+2231,3411681,2021-05-01,34,Chelsea,8455,Fulham,9879,True,True,2020/2021
+2232,3411683,2021-05-01,34,Everton,8668,Aston Villa,10252,True,True,2020/2021
+2233,3411685,2021-05-02,34,Newcastle United,10261,Arsenal,9825,True,True,2020/2021
+2234,3411687,2021-05-02,34,Tottenham Hotspur,8586,Sheffield United,8657,True,True,2020/2021
+2235,3411688,2021-05-03,34,West Bromwich Albion,8659,Wolverhampton Wanderers,8602,True,True,2020/2021
+2236,3411680,2021-05-03,34,Burnley,8191,West Ham United,8654,True,True,2020/2021
+2237,3411693,2021-05-07,35,Leicester City,8197,Newcastle United,10261,True,True,2020/2021
+2238,3411692,2021-05-08,35,Leeds United,8463,Tottenham Hotspur,8586,True,True,2020/2021
+2239,3411696,2021-05-08,35,Sheffield United,8657,Crystal Palace,9826,True,True,2020/2021
+2240,3411695,2021-05-08,35,Manchester City,8456,Chelsea,8455,True,True,2020/2021
+2241,3411694,2021-05-08,35,Liverpool,8650,Southampton,8466,True,True,2020/2021
+2242,3411698,2021-05-09,35,Wolverhampton Wanderers,8602,Brighton & Hove Albion,10204,True,True,2020/2021
+2243,3411690,2021-05-09,35,Aston Villa,10252,Manchester United,10260,True,True,2020/2021
+2244,3411697,2021-05-09,35,West Ham United,8654,Everton,8668,True,True,2020/2021
+2245,3411689,2021-05-09,35,Arsenal,9825,West Bromwich Albion,8659,True,True,2020/2021
+2246,3411691,2021-05-10,35,Fulham,9879,Burnley,8191,True,True,2020/2021
+2247,3411702,2021-05-11,36,Manchester United,10260,Leicester City,8197,True,True,2020/2021
+2248,3411667,2021-05-11,32,Southampton,8466,Crystal Palace,9826,True,True,2020/2021
+2249,3411704,2021-05-12,36,Chelsea,8455,Arsenal,9825,True,True,2020/2021
+2250,3411530,2021-05-13,19,Aston Villa,10252,Everton,8668,True,True,2020/2021
+2251,3411684,2021-05-13,34,Manchester United,10260,Liverpool,8650,True,True,2020/2021
+2252,3411705,2021-05-14,36,Newcastle United,10261,Manchester City,8456,True,True,2020/2021
+2253,3411700,2021-05-15,36,Burnley,8191,Leeds United,8463,True,True,2020/2021
+2254,3411706,2021-05-15,36,Southampton,8466,Fulham,9879,True,True,2020/2021
+2255,3411699,2021-05-15,36,Brighton & Hove Albion,10204,West Ham United,8654,True,True,2020/2021
+2256,3411708,2021-05-16,36,Crystal Palace,9826,Aston Villa,10252,True,True,2020/2021
+2257,3411707,2021-05-16,36,Tottenham Hotspur,8586,Wolverhampton Wanderers,8602,True,True,2020/2021
+2258,3411703,2021-05-16,36,West Bromwich Albion,8659,Liverpool,8650,True,True,2020/2021
+2259,3411701,2021-05-16,36,Everton,8668,Sheffield United,8657,True,True,2020/2021
+2260,3411714,2021-05-18,37,Manchester United,10260,Fulham,9879,True,True,2020/2021
+2261,3411716,2021-05-18,37,Southampton,8466,Leeds United,8463,True,True,2020/2021
+2262,3411709,2021-05-18,37,Brighton & Hove Albion,10204,Manchester City,8456,True,True,2020/2021
+2263,3411711,2021-05-18,37,Chelsea,8455,Leicester City,8197,True,True,2020/2021
+2264,3411713,2021-05-19,37,Everton,8668,Wolverhampton Wanderers,8602,True,True,2020/2021
+2265,3411715,2021-05-19,37,Newcastle United,10261,Sheffield United,8657,True,True,2020/2021
+2266,3411717,2021-05-19,37,Tottenham Hotspur,8586,Aston Villa,10252,True,True,2020/2021
+2267,3411712,2021-05-19,37,Crystal Palace,9826,Arsenal,9825,True,True,2020/2021
+2268,3411710,2021-05-19,37,Burnley,8191,Liverpool,8650,True,True,2020/2021
+2269,3411718,2021-05-19,37,West Bromwich Albion,8659,West Ham United,8654,True,True,2020/2021
+2270,3411719,2021-05-23,38,Arsenal,9825,Brighton & Hove Albion,10204,True,True,2020/2021
+2271,3411720,2021-05-23,38,Aston Villa,10252,Chelsea,8455,True,True,2020/2021
+2272,3411721,2021-05-23,38,Fulham,9879,Newcastle United,10261,True,True,2020/2021
+2273,3411722,2021-05-23,38,Leeds United,8463,West Bromwich Albion,8659,True,True,2020/2021
+2274,3411723,2021-05-23,38,Leicester City,8197,Tottenham Hotspur,8586,True,True,2020/2021
+2275,3411724,2021-05-23,38,Liverpool,8650,Crystal Palace,9826,True,True,2020/2021
+2276,3411725,2021-05-23,38,Manchester City,8456,Everton,8668,True,True,2020/2021
+2277,3411726,2021-05-23,38,Sheffield United,8657,Burnley,8191,True,True,2020/2021
+2278,3411727,2021-05-23,38,West Ham United,8654,Southampton,8466,True,True,2020/2021
+2279,3411728,2021-05-23,38,Wolverhampton Wanderers,8602,Manchester United,10260,True,True,2020/2021

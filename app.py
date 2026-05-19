@@ -12,7 +12,7 @@ from io import BytesIO
 import numpy as np
 
 # --- 1. CONFIG & COMPACT STYLING ---
-st.set_page_config(layout="wide", page_title="English Premier League")
+st.set_page_config(layout="wide", page_title="Northern Super League")
 
 # CUSTOM CSS: Shrinks headers, table padding, and overall container gaps
 st.markdown("""
@@ -69,12 +69,11 @@ def load_standings_sims():
     standings_sims.Sim_Date = pd.to_datetime(standings_sims.Sim_Date).dt.date
     standings_sims = standings_sims.fillna(0)
     standings_sims['Champ'] = standings_sims['1']
-    standings_sims['CL'] = standings_sims[['1','2','3','4','5']].sum(axis=1)
-    standings_sims['Rel'] = standings_sims[['18','19','20']].sum(axis=1)
+    standings_sims['Playoffs'] = standings_sims[['1','2','3','4','5']].sum(axis=1)
+    standings_sims['Last'] = standings_sims[['18','19','20']].sum(axis=1)
 
     standings_sims['range'] = standings_sims[['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20']].apply(credible_range_str, axis=1)
-    standings_sims['season'] = (pd.to_datetime(standings_sims.Sim_Date).dt.year + (pd.to_datetime(standings_sims.Sim_Date).dt.month >= 8).astype('int')).astype('str').str[2:]
-    
+    standings_sims['season'] = pd.to_datetime(standings_sims.Sim_Date).dt.year
     match_sims = []
     for file in match_files:
         temp = pd.read_feather('data/Sim_States/'+file)
@@ -84,21 +83,21 @@ def load_standings_sims():
     return standings_sims, match_sims
 
 def create_standings_file(standings,standings_sims,team_ratings,season,max_date,min_date):
-    temp = standings[standings.season == season][['season','F','F_score','A_score','F_P','F_xg','A_xg','F_xPts','oRTG','dRTG','nRTG']].reset_index(drop=True)
+    temp = standings[standings.season == season][['season','F_team','F_score','A_score','F_p','F_xg','A_xg','F_xpts','oRTG','dRTG','nRTG']].reset_index(drop=True)
     temp['GD'] = temp.F_score - temp.A_score
     temp['xGD'] = temp.F_xg - temp.A_xg
-    temp_sim = standings_sims[standings_sims.Sim_Date == max_date].set_index('index')[['Points','Champ','CL','Rel','range']]
-    temp_sim2 = standings_sims[standings_sims.Sim_Date == min_date].set_index('index')[['Points','Champ','CL','Rel']]
+    temp_sim = standings_sims[standings_sims.Sim_Date == max_date].set_index('index')[['Points','Champ','Playoffs','Last','range']]
+    temp_sim2 = standings_sims[standings_sims.Sim_Date == min_date].set_index('index')[['Points','Champ','Playoffs','Last']]
     temp_sim2 = temp_sim - temp_sim2
     temp_sim3 = team_ratings[team_ratings.Date == max_date].set_index('Team')[['Date','A','B','C']]
     temp_sim4 = team_ratings[team_ratings.Date == min_date].set_index('Team')[['A','B','C']]
     temp_sim4 = temp_sim3 - temp_sim4
-    temp = temp.merge(temp_sim.reset_index(),left_on='F',right_on='index').merge(temp_sim2.reset_index(),left_on='F',right_on='index',suffixes=['','_c']).merge(
-        temp_sim3.reset_index(),left_on='F',right_on='Team').merge(temp_sim4.reset_index(),left_on='F',right_on='Team',suffixes=['','_c'])
-    temp = temp[['season','Team','C','C_c','A','A_c','B','B_c','nRTG','oRTG','dRTG','Points','Points_c','F_P','F_xPts','GD','xGD','Champ','Champ_c','CL','CL_c','Rel',
-                 'Rel_c','range']].rename(
-                     columns={'A':'oPRE','A_c':'oPREΔ','B':'dPRE','B_c':'dPREΔ','F_P':'P','F_xPts':'xPts','Points':'Proj','Points_c':'ProjΔ','C':'nPRE','C_c':'nPREΔ',
-                               'Champ':'Win','Champ_c':'WinΔ','CL_c':'CLΔ','Rel_c':'RelΔ'})
+    temp = temp.merge(temp_sim.reset_index(),left_on='F_team',right_on='index').merge(temp_sim2.reset_index(),left_on='F_team',right_on='index',suffixes=['','_c']).merge(
+        temp_sim3.reset_index(),left_on='F_team',right_on='Team').merge(temp_sim4.reset_index(),left_on='F_team',right_on='Team',suffixes=['','_c'])
+    temp = temp[['season','Team','C','C_c','A','A_c','B','B_c','nRTG','oRTG','dRTG','Points','Points_c','F_p','F_xpts','GD','xGD','Champ','Champ_c','Playoffs','Playoffs_c','Last',
+                 'Last_c','range']].rename(
+                     columns={'A':'oPRE','A_c':'oPREΔ','B':'dPRE','B_c':'dPREΔ','F_p':'P','F_xpts':'xpts','Points':'Proj','Points_c':'ProjΔ','C':'nPRE','C_c':'nPREΔ',
+                               'Champ':'Win','Champ_c':'WinΔ','Playoffs_c':'PlayoffsΔ','Last_c':'LastΔ'})
     return temp
 
 def hex_to_rgb(value):
@@ -126,14 +125,14 @@ colors_r = [(0,0.75,0),(1,1,1),(0.75,0,0),]
 n_bins = 100
 cmap = mcolors.LinearSegmentedColormap.from_list('redwhitegreen',colors,N=n_bins)
 cmap_r = mcolors.LinearSegmentedColormap.from_list('redwhitegreen_r',colors_r,N=n_bins)
-norm_o = mcolors.TwoSlopeNorm(vmin=0,vcenter=1.3,vmax=2.6)
-norm_r = mcolors.TwoSlopeNorm(vmin=0,vcenter=1,vmax=3)
+norm_o = mcolors.TwoSlopeNorm(vmin=0,vcenter=1.35,vmax=2.6)
+norm_r = mcolors.TwoSlopeNorm(vmin=0,vcenter=1,vmax=2)
 norm_p = mcolors.TwoSlopeNorm(vmin=0,vcenter=1.5,vmax=3)
-norm_w = mcolors.TwoSlopeNorm(vmin=0,vcenter=1/3,vmax=1)
+norm_w = mcolors.TwoSlopeNorm(vmin=0,vcenter=1/4,vmax=1)
 norm_perf = mcolors.TwoSlopeNorm(vmin=-1.5, vcenter=0, vmax=1.5)
 
 def plot_standings_table(standings_df):
-    fig, ax = plt.subplots(figsize=(12,12/2.33333333))
+    fig, ax = plt.subplots(figsize=(12,6/2.33333333))
     ax.set_xlim(0, 1)
     ax.set_ylim(0, 1)
     ax.axis('off')
@@ -148,8 +147,8 @@ def plot_standings_table(standings_df):
     ax.annotate('Points',     (6.15/10, 0.97), va='center', ha='center', size=10, weight='bold')
     ax.annotate('GD',         (6.7/10,  0.97), va='center', ha='center', size=10, weight='bold')
     ax.annotate('Champ',      (7.45/10, 0.97), va='center', ha='center', size=10, weight='bold')
-    ax.annotate('CL',         (8.3/10,  0.97), va='center', ha='center', size=10, weight='bold')
-    ax.annotate('Rele.',      (9.1/10,  0.97), va='center', ha='center', size=10, weight='bold')
+    ax.annotate('CL',    (8.3/10,  0.97), va='center', ha='center', size=10, weight='bold')
+    ax.annotate('Rel',       (9.1/10,  0.97), va='center', ha='center', size=10, weight='bold')
     ax.annotate('Range',      (9.75/10, 0.97), va='center', ha='center', size=10, weight='bold')
 
     # --- VERTICAL DIVIDERS ---
@@ -185,13 +184,13 @@ def plot_standings_table(standings_df):
         ax.annotate(f"{row['oPRE']:.2f}", (2.4/10, i_loc), va='center', ha='center', size=9)
         delta_color = 'darkgreen' if row['oPREΔ'] > 0 else 'darkred'
         ax.annotate(f"({'+' if row['oPREΔ'] > 0 else ''}{row['oPREΔ']:.0%})", (2.9/10, i_loc), va='center', ha='center', size=9, color=delta_color)
-        ax.add_patch(Rectangle((2.15/10, i_loc - space/2), 0.5/10, space,facecolor=cmap(norm_o(row['oPRE']))))
+        ax.add_patch(Rectangle((2.15/10, i_loc - space/2), 0.5/10, space,facecolor=cmap(norm_r(row['oPRE']))))
 
         # Defensive (dPRE)
         ax.annotate(f"{row['dPRE']:.2f}", (3.4/10, i_loc), va='center', ha='center', size=9)
         delta_color = 'darkgreen' if row['dPREΔ'] < 0 else 'darkred'
         ax.annotate(f"({'+' if row['dPREΔ'] < 0 else ''}{row['dPREΔ']*-1:.0%})", (3.9/10, i_loc), va='center', ha='center', size=9, color=delta_color)
-        ax.add_patch(Rectangle((3.15/10, i_loc - space/2), 0.5/10, space,facecolor=cmap(1 - norm_o(row['dPRE']))))
+        ax.add_patch(Rectangle((3.15/10, i_loc - space/2), 0.5/10, space,facecolor=cmap(1 - norm_r(row['dPRE']))))
 
         # Performance (nRTG, oRTG, dRTG)
         ax.add_patch(Rectangle((4.15/10, i_loc - space/2), (1/3)/10, space,facecolor=cmap(norm_perf(row['nRTG']))))
@@ -201,7 +200,6 @@ def plot_standings_table(standings_df):
         ax.annotate(f"{row['oRTG']:.2f}", (4.65/10, i_loc), va='center', ha='center', size=9)
         ax.annotate(f"{row['dRTG']:.2f}", (4.97/10, i_loc), va='center', ha='center', size=9)
 
-
         # Proj + ProjΔ
         ax.annotate(f"{row['Proj']:.0f}", (5.3/10, i_loc), va='center', ha='center', size=9)
         delta_color = 'darkgreen' if row['ProjΔ'] > 0 else 'darkred'
@@ -209,7 +207,7 @@ def plot_standings_table(standings_df):
 
         # Points + xPts
         ax.annotate(f"{int(row['P'])}", (6.0/10, i_loc), va='center', ha='center', size=9)
-        ax.annotate(f"{row['xPts']:.1f}", (6.25/10, i_loc), va='center', ha='center', size=9)
+        ax.annotate(f"{row['xpts']:.1f}", (6.25/10, i_loc), va='center', ha='center', size=9)
 
         # GD + xGD
         ax.annotate(f"{int(row['GD'])}", (6.6/10, i_loc), va='center', ha='center', size=9)
@@ -221,14 +219,14 @@ def plot_standings_table(standings_df):
         ax.annotate(f"({'+' if row['WinΔ'] > 0 else ''}{row['WinΔ']:.0%})", (7.65/10, i_loc), va='center', ha='center', size=9, color=delta_color)
 
         # CL + CLΔ
-        ax.annotate(f"{row['CL']:.0%}", (8.05/10, i_loc), va='center', ha='center', size=9)
-        delta_color = 'darkgreen' if row['CLΔ'] > 0 else 'darkred'
-        ax.annotate(f"({'+' if row['CLΔ'] > 0 else ''}{row['CLΔ']:.0%})", (8.45/10, i_loc), va='center', ha='center', size=9, color=delta_color)
+        ax.annotate(f"{row['Playoffs']:.0%}", (8.05/10, i_loc), va='center', ha='center', size=9)
+        delta_color = 'darkgreen' if row['PlayoffsΔ'] > 0 else 'darkred'
+        ax.annotate(f"({'+' if row['PlayoffsΔ'] > 0 else ''}{row['PlayoffsΔ']:.0%})", (8.45/10, i_loc), va='center', ha='center', size=9, color=delta_color)
 
         # Rel + RelΔ
-        ax.annotate(f"{row['Rel']:.0%}", (8.85/10, i_loc), va='center', ha='center', size=9)
-        delta_color = 'darkgreen' if row['RelΔ'] < 0 else 'darkred'
-        ax.annotate(f"({'+' if row['RelΔ'] < 0 else ''}{row['RelΔ']*-1:.0%})", (9.25/10, i_loc), va='center', ha='center', size=9, color=delta_color)
+        ax.annotate(f"{row['Last']:.0%}", (8.85/10, i_loc), va='center', ha='center', size=9)
+        delta_color = 'darkgreen' if row['LastΔ'] < 0 else 'darkred'
+        ax.annotate(f"({'+' if row['LastΔ'] < 0 else ''}{row['LastΔ']*-1:.0%})", (9.25/10, i_loc), va='center', ha='center', size=9, color=delta_color)
 
         # Range
         ax.annotate(row['range'], (9.75/10, i_loc), va='center', ha='center', size=9)
@@ -324,7 +322,7 @@ def plot_ratings_scatter(standings_df, team_colors):
 def plot_position_heatmap(standings_sims, standings_df, selected_end_date, team_colors):
     # Get position probabilities for selected date, ordered by current standings
     sim_data = standings_sims[standings_sims.Sim_Date == selected_end_date].set_index('index')
-    position_cols = [str(i) for i in range(1, 21)]
+    position_cols = [str(i) for i in range(1, 7)]
     
     # Order teams by current points (same order as standings table)
     teams_ordered = standings_df['Team'].tolist()
@@ -333,7 +331,7 @@ def plot_position_heatmap(standings_sims, standings_df, selected_end_date, team_
 
     fig = go.Figure(data=go.Heatmap(
         z=heatmap_data.values,
-        x=list(range(1, 21)),
+        x=list(range(1, 7)),
         y=teams_ordered,
         colorscale='RdYlGn',
         showscale=False,
@@ -352,38 +350,38 @@ def plot_position_heatmap(standings_sims, standings_df, selected_end_date, team_
             tickfont=dict(size=10)
         ),
         margin=dict(l=10, r=10, t=10, b=10),
-        width=820,  # 400px plot + room for team names on left
-        height=400
+        width=420,  # 400px plot + room for team names on left
+        height=150
     )
 
     return fig
 
 def create_matches_df(match_sims,matches,team_ratings,selected_season,selected_end_date):
-    match_sims = match_sims[match_sims.Sim_Date <= selected_end_date].sort_values('Sim_Date').groupby(['game_date','Home','Away']).tail(1)
-    match_sims = match_sims[['Sim_Date','game_date','Home','Away','h_exp','a_exp','h_win','d_win','a_win']]
+    match_sims = match_sims[match_sims.Sim_Date <= selected_end_date].sort_values('Sim_Date').groupby(['date','Home','Away']).tail(1)
+    match_sims = match_sims[['Sim_Date','date','Home','Away','h_exp','a_exp','h_win','d_win','a_win']]
     matches = matches[matches.season == selected_season]
-    matches = matches[['game_date','home','away','home_score','away_score','home_xg','away_xg','home_P','away_P','home_perf','away_perf','home_xPts','away_xPts']]
-    matches.loc[matches.game_date.dt.date > selected_end_date,('home_score','away_score','home_xg','away_xg','home_P','away_P','home_perf','away_perf',
-                                                       'home_xPts','away_xPts')] = np.nan
-    matches = matches.merge(match_sims,left_on=['game_date','home','away'],right_on=['game_date','Home','Away']).drop(columns=['Home','Away'])
+    matches = matches[['date','home_team','away_team','home_score','away_score','home_xg','away_xg','home_p','away_p','home_perf','away_perf','home_xpts','away_xpts']]
+    matches.loc[pd.to_datetime(matches.date).dt.date > selected_end_date,('home_score','away_score','home_xg','away_xg','home_p','away_p','home_perf','away_perf',
+                                                       'home_xpts','away_xpts')] = np.nan
+    matches = matches.merge(match_sims,left_on=['date','home_team','away_team'],right_on=['date','Home','Away']).drop(columns=['Home','Away'])
 
     plot_df = matches.merge(
-        team_ratings.drop(columns=['Season','A','B']), left_on=['Sim_Date','home'], right_on=['Date','Team']).merge(
-        team_ratings.drop(columns=['Season','A','B']), left_on=['Sim_Date','away'], right_on=['Date','Team'], suffixes=['_H','_A']).drop(
+        team_ratings.drop(columns=['Season','A','B']), left_on=['Sim_Date','home_team'], right_on=['Date','Team']).merge(
+        team_ratings.drop(columns=['Season','A','B']), left_on=['Sim_Date','away_team'], right_on=['Date','Team'], suffixes=['_H','_A']).drop(
         columns=['Sim_Date','Date_H','Date_A'])
     plot_df['Pre_Pts_H'] = plot_df.h_win * 3 + plot_df.d_win
     plot_df['Pre_Pts_A'] = plot_df.a_win * 3 + plot_df.d_win
-    return plot_df.sort_values('game_date').reset_index(drop=True)
+    return plot_df.sort_values('date').reset_index(drop=True)
 
 def create_results_figure(plot_df):
-    results = plot_df[~plot_df.home_score.isna()].reset_index(drop=True).sort_values('game_date',ascending=False)
+    results = plot_df[~plot_df.home_score.isna()].reset_index(drop=True).sort_values('date',ascending=False)
     results[' '] = ''
     results['score'] = results.home_score.astype('int').astype('str') + ' - ' + results.away_score.astype('int').astype('str')
-    results = results[['game_date','home','Pre_Pts_H','score','Pre_Pts_A','away',' ','home_xPts','away_xPts',' ','home_xg','away_xg','home_score','away_score']].rename(
-        columns={'game_date':'Date','home':'Home','Pre_Pts_H':'H_F','Pre_Pts_A':'A_F','away':'Away','home_xPts':'Per_H','away_xPts':'Per_A',
+    results = results[['date','home_team','Pre_Pts_H','score','Pre_Pts_A','away_team',' ','home_xpts','away_xpts',' ','home_xg','away_xg','home_score','away_score']].rename(
+        columns={'date':'Date','home_team':'Home','Pre_Pts_H':'H_F','Pre_Pts_A':'A_F','away_team':'Away','home_xpts':'Per_H','away_xpts':'Per_A',
                  'home_xg':'xG_H','away_xg':'xG_A'})
 
-    fig_height = max(4, len(results) * 0.2)
+    fig_height = max(2, len(results) * 0.2)
     fig, ax = plt.subplots(figsize=(7,fig_height))
     ax.set_xlim(0, 1)
     ax.set_ylim(0, 1)
@@ -488,14 +486,14 @@ def create_results_figure(plot_df):
     return fig
 
 def create_schedule_figure(plot_df):
-    results = plot_df[plot_df.home_score.isna()].reset_index(drop=True).sort_values('game_date',ascending=True)
+    results = plot_df[plot_df.home_score.isna()].reset_index(drop=True).sort_values('date',ascending=True)
     results[' '] = ''
     results['score'] = ''
-    results = results[['game_date','home','Pre_Pts_H','score','Pre_Pts_A','away',' ','C_H','C_A',' ','h_win','d_win','a_win']].rename(
-        columns={'game_date':'Date','home':'Home','Pre_Pts_H':'H_F','Pre_Pts_A':'A_F','away':'Away','C_H':'HRtg','C_A':'ARtg',
+    results = results[['date','home_team','Pre_Pts_H','score','Pre_Pts_A','away_team',' ','C_H','C_A',' ','h_win','d_win','a_win']].rename(
+        columns={'date':'Date','home_team':'Home','Pre_Pts_H':'H_F','Pre_Pts_A':'A_F','away_team':'Away','C_H':'HRtg','C_A':'ARtg',
                  'h_exp':'HpG','a_exp':'ApG'})
 
-    fig_height = max(4, len(results) * 0.2)
+    fig_height = max(2, len(results) * 0.2)
     fig, ax = plt.subplots(figsize=(7,fig_height))
     ax.set_xlim(0, 1)
     ax.set_ylim(0, 1)
@@ -601,30 +599,32 @@ def scrollable_plot(fig, height=400):
     """, unsafe_allow_html=True)
 
 def create_player_mvps(player_stats,matches_df,selected_season,selected_end_date):
-    player_stats = player_stats[(player_stats.season == selected_season) & (player_stats.game_date <= selected_end_date)].reset_index(drop=True)
-    player_stats.loc[(player_stats.minutesPlayed > 0) & (player_stats.rating.isna()),'rating'] = 6.6
-    player_stats['Rtg_Weight'] = player_stats.minutesPlayed * player_stats.rating
-    player_stats = player_stats.groupby(['id','name','position']).agg({'team':'unique','minutesPlayed':'sum','Rtg_Weight':'sum'})
-
-    avg = player_stats.Rtg_Weight.sum() / player_stats.minutesPlayed.sum()
-    player_stats['Rtg'] = player_stats.Rtg_Weight / player_stats.minutesPlayed
-    player_stats['MVPRtg'] = (player_stats.Rtg * player_stats.minutesPlayed + avg * (player_stats.minutesPlayed.max() - player_stats.minutesPlayed)) / player_stats.minutesPlayed.max()
-    return player_stats.reset_index()[['name','position','team','MVPRtg']]
-
+    player_stats = player_stats[(player_stats.season == selected_season) & (player_stats.Date.dt.date <= selected_end_date)].reset_index(drop=True)
+    player_stats = player_stats[player_stats.Type == 'Regular']
+    player_stats = player_stats.merge(pd.pivot_table(
+        player_stats,index='Name',columns='P',values='MIN',aggfunc='sum').fillna(0).idxmax(axis=1).reset_index().rename(columns={0:'Pos'}))
+    player_mvp = player_stats.groupby(['Name','Pos']).agg(
+        {'MIN':'sum','Rtg':'sum','Team': lambda x: ', '.join(sorted(set(x)))})
+    player_mvp['per90'] = player_mvp.Rtg / player_mvp.MIN * 90
+    player_mvp = player_mvp.drop(columns=['MIN']).rename(columns={'Rtg':'Goals Added','per90':'GA per 90'}).reset_index()
+    
+    return player_mvp.reset_index()
+    
 def create_mvp_figure(plot_df):
-    mvps = plot_df.sort_values('MVPRtg',ascending=False).head(100)
+    mvps = plot_df.sort_values('Goals Added',ascending=False)
 
-    fig, ax = plt.subplots(figsize=(8,40))
+    fig, ax = plt.subplots(figsize=(6,40))
     ax.set_xlim(0, 1)
     ax.set_ylim(0, 1)
     ax.axis('off')
 
     # Column x positions
     col_x = {
-        '':   0.01,
-        'Pos':0.35,
-        'Team':0.4,
-        'Rtg':   0.9}
+        'Player':   0.01,
+        'Team':0.40,
+        'Pos':0.75,
+        'Goals+':0.80,
+        'G+/90':   0.90}
 
     # Headers
     header_y = (len(mvps)+0.5)/(len(mvps)+1)
@@ -645,44 +645,590 @@ def create_mvp_figure(plot_df):
         ax.vlines(x-0.005, bottom_margin, top, color='black', linewidth=0.5)
 
     for _, row in mvps.iterrows():
-        if len(row['team']) > 1:
+        try:
+            primary = team_colors[row['Team']]['home_primary']
+            secondary = team_colors[row['Team']]['home_secondary']
+        except:
             primary = 'white'
             secondary = 'black'
-        else:
-            primary = team_colors[row['team'][0]]['home_primary']
-            secondary = team_colors[row['team'][0]]['home_secondary']
 
         ax.add_patch(Rectangle((0, i_loc - space/2),1, space, facecolor=primary))
         # Text annotations
-        ax.annotate(row['name'], (col_x[''], i_loc), va='center', ha='left', size=7,color = secondary,fontweight='bold')
-        ax.annotate(row['position'], (col_x['Pos'], i_loc), va='center', ha='left', size=7,color = secondary)
-        ax.annotate(row['team'][0], (col_x['Team'], i_loc), va='center', ha='left', size=7,color = secondary)
-        ax.annotate(f"{row['MVPRtg']:.2f}" if pd.notna(row['MVPRtg']) else '', (col_x['Rtg'], i_loc), va='center', ha='left', size=7,color = secondary)
+        ax.annotate(row['Name'], (col_x['Player'], i_loc), va='center', ha='left', size=7,color = secondary,fontweight='bold')
+        ax.annotate(row['Team'], (col_x['Team'], i_loc), va='center', ha='left', size=7,color = secondary)
+        ax.annotate(row['Pos'], (col_x['Pos'], i_loc), va='center', ha='left', size=7,color = secondary)
+        ax.annotate(f"{row['Goals Added']:.2f}" if pd.notna(row['Goals Added']) else '', (col_x['Goals+'], i_loc), va='center', ha='left', size=7,color = secondary)
+        ax.annotate(f"{row['GA per 90']:.2f}" if pd.notna(row['GA per 90']) else '', (col_x['G+/90'], i_loc), va='center', ha='left', size=7,color = secondary)
         # Row divider
         ax.axhline(i_loc - space/2, color='black', linewidth=0.3)
         i_loc -= space
     return fig
 
-standings = pd.read_feather('data/standings.ftr')
-color_map = pd.read_feather('data/color_map.ftr')
-color_map['home_secondary'] = color_map.apply(lambda row: '#FFFFFF' if row['home_primary'] == row['home_secondary'] else row['home_secondary'],axis=1)
+def create_multi_year_standings(team_ratings,standings):
+    temp1 = team_ratings.groupby('Team').head(1).reset_index()
+    temp1.Season = (temp1.Season.astype('int') - 1)
+    temp2 = team_ratings.groupby(['Team','Season']).tail(1).reset_index()
+    temp_season_ratings = pd.concat((temp1,temp2))[['Season','Team','A','B','C']].sort_values(['Team','Season'])
+    temp_season_ratings[['A_C','B_C','C_C']] = temp_season_ratings[['A','B','C']] - temp_season_ratings.groupby('Team')[['A','B','C']].shift(periods=1)
+
+    temp_standings = standings.copy()
+    temp_standings['GD'] = temp_standings.F_score - temp_standings.A_score
+    temp_standings['xGD'] = temp_standings.F_xg - temp_standings.A_xg
+    temp_standings = temp_standings.sort_values(['F_p','GD','F_score'],ascending=False)
+    temp_standings['Rank'] = 1
+    temp_standings.Rank = temp_standings.groupby('season').Rank.cumsum()
+    temp_standings = temp_standings[['season','F_team','F_p','F_xpts','GD','xGD','Rank']].rename(
+        columns={'season':'Season','F_team':'Team'})
+    return temp_season_ratings.merge(temp_standings,on=['Team','Season']).sort_values('Season',ascending=False)
+
+def plot_history_table(results):
+    fig, ax = plt.subplots(figsize=(5,1))
+    ax.set_xlim(0, 1)
+    ax.set_ylim(0, 1)
+    ax.axis('off')
+
+    # Column x positions
+    col_x = {
+        '1':   0.01,
+        'Rk':0.09,
+        'Points':   0.14,
+        'GD':0.29,
+        'Off':0.44,
+        'Def':0.62,
+        'Skill':0.80
+    }
+
+    # Headers
+    header_y = (len(results)+0.5)/(len(results)+1)
+    for col, x in col_x.items():
+        if (col == '1') | (col == '2'):
+            pass
+        else:
+            ha = 'left'
+            
+            ax.annotate(col, (x , header_y), va='center', ha=ha, size=7, weight='bold')
+
+    # Row layout
+    top = len(results)/(len(results)+0.8)
+    ax.axhline(top, color='black', linewidth=0.8)
+    bottom_margin = 1/(len(results)+1)/10
+    total_height = top - bottom_margin
+    space = total_height / len(results)
+    i_loc = top - space / 2
+
+    norm_rk = mcolors.TwoSlopeNorm(vmin=1,vcenter=3.5,vmax=6)
+    
+
+    # Vertical dividers (between groups)
+    for x in col_x.values():
+        ax.vlines(x-0.005, bottom_margin, top, color='black', linewidth=0.5)
+
+
+    for _, row in results.iterrows():
+        ax.annotate(str(row['Season']), (col_x['1']+0.035, i_loc), va='center', ha='center', size=7)
+        ax.annotate(f"{int(row['F_p'])}", (col_x['Points']+0.035, i_loc), va='center', ha='center', size=7)
+        ax.annotate(f"{row['F_xpts']:.1f}", (col_x['Points']+0.095, i_loc), va='center', ha='center', size=7)
+        ax.annotate(f"{int(row['GD'])}", (col_x['GD']+0.035, i_loc), va='center', ha='center', size=7)
+        ax.annotate(f"{row['xGD']:.1f}", (col_x['GD']+0.095, i_loc), va='center', ha='center', size=7)
+        ax.annotate(f"{int(row['Rank'])}", (col_x['Rk']+0.02, i_loc), va='center', ha='center', size=7)
+        ax.add_patch(Rectangle((0.09-0.005, i_loc - space/2), 0.05, space,
+            facecolor=cmap_r(norm_rk(row['Rank'])) if pd.notna(row['Rank']) else 'lightgray'))
+
+        ax.annotate(f"{row['A']:.2f}", (col_x['Off']+0.035, i_loc), va='center', ha='center', size=7)
+        delta_color = 'darkgreen' if row['A_C'] > 0 else 'darkred'
+        ax.annotate(f"({'+' if row['A_C'] > 0 else ''}{row['A_C']:.0%})", (col_x['Off']+0.12, i_loc), va='center', ha='center', size=7, color=delta_color)
+        ax.add_patch(Rectangle((col_x['Off']-0.005, i_loc - space/2), 0.075, space,facecolor=cmap(norm_r(row['A']))))
+
+        ax.annotate(f"{row['B']:.2f}", (col_x['Def']+0.035, i_loc), va='center', ha='center', size=7)
+        delta_color = 'darkgreen' if row['B_C'] < 0 else 'darkred'
+        ax.annotate(f"({'+' if row['B_C'] < 0 else ''}{row['B_C']*-1:.0%})", (col_x['Def']+0.12, i_loc), va='center', ha='center', size=7, color=delta_color)
+        ax.add_patch(Rectangle((col_x['Def']-0.005, i_loc - space/2), 0.075, space,facecolor=cmap_r(norm_r(row['B']))))
+
+        ax.annotate(f"{row['C']:.0%}", (col_x['Skill']+0.035, i_loc), va='center', ha='center', size=7)
+        delta_color = 'darkgreen' if row['C_C'] > 0 else 'darkred'
+        ax.annotate(f"({'+' if row['C_C'] > 0 else ''}{row['C_C']:.0%})", (col_x['Skill']+0.12, i_loc), va='center', ha='center', size=7, color=delta_color)
+        ax.add_patch(Rectangle((col_x['Skill']-0.005, i_loc - space/2), 0.075, space,facecolor=cmap(row['C'])))
+        
+        # Row divider
+        ax.axhline(i_loc - space/2, color='black', linewidth=0.3)
+        i_loc -= space
+    return fig
+
+def create_schedule_results(match_sims,matches,team_ratings,selected_season,selected_team):
+    match_sims = match_sims.sort_values('Sim_Date').groupby(['date','Home','Away']).tail(1)
+    match_sims = match_sims[['Sim_Date','date','Home','Away','h_exp','a_exp','h_win','d_win','a_win']]
+    matches = matches[matches.season == selected_season]
+    matches = matches[['date','home_team','away_team','home_score','away_score','home_xg','away_xg','home_p','away_p','home_perf','away_perf','home_xpts','away_xpts']]
+    matches = matches.merge(match_sims,left_on=['date','home_team','away_team'],right_on=['date','Home','Away']).drop(columns=['Home','Away'])
+
+    plot_df = matches.merge(
+        team_ratings.drop(columns=['Season','A','B']), left_on=['Sim_Date','home_team'], right_on=['Date','Team']).merge(
+        team_ratings.drop(columns=['Season','A','B']), left_on=['Sim_Date','away_team'], right_on=['Date','Team'], suffixes=['_H','_A']).drop(
+        columns=['Sim_Date','Date_H','Date_A'])
+    plot_df['Pre_Pts_H'] = plot_df.h_win * 3 + plot_df.d_win
+    plot_df['Pre_Pts_A'] = plot_df.a_win * 3 + plot_df.d_win
+
+    plot_home = plot_df[(plot_df.home_team == selected_team)].reset_index(drop=True)
+    plot_home['Loc'] = 'H'
+    plot_home = plot_home[['date','Loc','C_H','home_score','away_score','C_A','away_team','h_win','d_win','a_win','Pre_Pts_H','home_xpts','home_xg',
+                           'away_xg']].rename(columns={'date':'Date','C_H':'Rtg','C_A':'ORtg','away_team':'Opponent','h_win':'win','d_win':'draw',
+                                                       'a_win':'loss','Pre_Pts_H':'Exp','home_xpts':'Perf','home_xg':'xGF','away_xg':'xGA',
+                                                       'home_score':'for_score','away_score':'against_score'})
+    
+    plot_away = plot_df[(plot_df.away_team == selected_team)].reset_index(drop=True)
+    plot_away['Loc'] = 'A'
+    plot_away = plot_away[['date','Loc','C_A','home_score','away_score','C_H','home_team','a_win','d_win','h_win','Pre_Pts_A','away_xpts','away_xg',
+                           'home_xg']].rename(columns={'date':'Date','C_A':'Rtg','C_H':'ORtg','home_team':'Opponent','a_win':'win','d_win':'draw',
+                                                       'h_win':'loss','Pre_Pts_A':'Exp','away_xpts':'Perf','away_xg':'xGF','home_xg':'xGA',
+                                                       'away_score':'for_score','home_score':'against_score'})
+    plot_df = pd.concat((plot_home,plot_away)).sort_values('Date').reset_index(drop=True)
+    return plot_df
+
+def create_schedule_results_figure(results,selected_team):
+    results.loc[results.for_score.isna(),'score'] = ''
+    results.loc[~results.for_score.isna(),'score'] = (results[~results.for_score.isna()].for_score.astype('int').astype('str') + ' - ' + 
+                                                      results[~results.against_score.isna()].against_score.astype('int').astype('str'))
+
+    fig_height = max(7, len(results) * 0.2)
+    fig, ax = plt.subplots(figsize=(7,fig_height))
+    ax.set_xlim(0, 1)
+    ax.set_ylim(0, 1)
+    ax.axis('off')
+
+    # Column x positions
+    col_x = {
+        'Date':   0.01,
+        'H/A':   0.13,
+        'Rtg':    0.16,
+        'Score':   0.21,
+        'ORtg':0.26,
+        'Opponent':0.31,
+        '1':  0.56,
+        'W':0.59,
+        'D':0.64,
+        'L':  0.69,
+        '2':0.74,
+        'Exp':0.77,
+        'Per':0.82,
+        '3':0.87,
+        'xGF':0.90,
+        'xGA':0.95}
+
+    # Headers
+    header_y = (len(results)+0.5)/(len(results)+1)
+    for col, x in col_x.items():
+        if (col == 'H/A') | (col == 'Score') | (col == '1') | (col == '2') | (col == '3'):
+            pass
+        else:
+            ha = 'left'
+            ax.annotate(col, (x, header_y), va='center', ha=ha, size=7, weight='bold')
+
+    # Row layout
+    top = len(results)/(len(results)+1)
+    ax.axhline(top, color='black', linewidth=0.8)
+    bottom_margin = 1/(len(results)+1)/10
+    total_height = top - bottom_margin
+    space = total_height / max(4, len(results))
+    i_loc = top - space / 2
+
+    # Vertical dividers (between groups)
+    for x in col_x.values():
+        ax.vlines(x-0.005, bottom_margin, top, color='black', linewidth=0.5)
+
+    for _, row in results.iterrows():
+        team_primary = team_colors[selected_team]['home_primary']
+        team_text = team_colors[selected_team]['home_secondary']
+        opp_primary = team_colors[row['Opponent']]['home_primary']
+        opp_text = team_colors[row['Opponent']]['home_secondary']
+
+        if row['Loc'] == 'H':
+            loc_background = team_primary
+            loc_text = team_text
+        else:
+            loc_background = opp_primary
+            loc_text = opp_text
+            
+        ax.add_patch(Rectangle((col_x['Date']-0.005,i_loc - space/2),0.12,space,facecolor=team_primary))
+        ax.add_patch(Rectangle((col_x['H/A']-0.005,i_loc - space/2),0.03,space,facecolor=loc_background))
+        ax.add_patch(Rectangle((col_x['Rtg']-0.005, i_loc - space/2), 0.05, space,facecolor=cmap(row['Rtg']) if pd.notna(row['Rtg']) else 'lightgray'))
+        ax.add_patch(Rectangle((col_x['ORtg']-0.005, i_loc - space/2), 0.05, space,facecolor=cmap(row['ORtg']) if pd.notna(row['Rtg']) else 'lightgray'))
+        ax.add_patch(Rectangle((col_x['Opponent']-0.005, i_loc - space/2), 0.25, space, facecolor=opp_primary))
+        ax.add_patch(Rectangle((col_x['W']-0.005, i_loc - space/2), 0.05, space,facecolor=cmap(norm_w(row['win'])) if pd.notna(row['win']) else 'lightgray'))
+        ax.add_patch(Rectangle((col_x['D']-0.005, i_loc - space/2), 0.06, space,facecolor=cmap(norm_w(row['draw'])) if pd.notna(row['draw']) else 'lightgray'))
+        ax.add_patch(Rectangle((col_x['L']-0.005, i_loc - space/2), 0.05, space,facecolor=cmap(norm_w(row['loss'])) if pd.notna(row['loss']) else 'lightgray'))
+        ax.add_patch(Rectangle((col_x['Exp']-0.005, i_loc - space/2), 0.05, space,facecolor=cmap(norm_p(row['Exp'])) if pd.notna(row['Exp']) else 'lightgray'))
+        ax.add_patch(Rectangle((col_x['Per']-0.005, i_loc - space/2), 0.05, space,facecolor=cmap(norm_p(row['Perf'])) if pd.notna(row['Perf']) else 'lightgray'))
+        ax.add_patch(Rectangle((col_x['xGF']-0.005, i_loc - space/2), 0.05, space,facecolor=cmap(norm_o(row['xGF'])) if pd.notna(row['xGF']) else 'lightgray'))
+        ax.add_patch(Rectangle((col_x['xGA']-0.005, i_loc - space/2), 0.05, space,facecolor=cmap_r(norm_o(row['xGA'])) if pd.notna(row['xGA']) else 'lightgray'))
+
+        
+        if row['for_score'] > row['against_score']:
+            primary = team_primary
+            text = team_text
+        elif row['for_score'] < row['against_score']:
+            primary = opp_primary
+            text = opp_text
+        else:
+            primary = 'white'
+            text = 'black'
+        ax.add_patch(Rectangle((col_x['Score']-0.005,i_loc - space/2),0.05,space,facecolor=primary))
+
+        # Text annotations
+        ax.annotate(str(row['Date'])[:10], (col_x['Date'], i_loc), va='center', ha='left', size=7,color=team_text,weight='bold')
+        ax.annotate(str(row['Loc']), (col_x['H/A']+0.01, i_loc), va='center', ha='center', size=7,color=loc_text,weight='bold')
+        ax.annotate(f"{row['Rtg']:.0%}" if pd.notna(row['Rtg']) else '', (col_x['Rtg'], i_loc), va='center', ha='left', size=7)
+        ax.annotate(row['score'], (col_x['Score'], i_loc), va='center', ha='left', size=7, fontweight='bold',color=text)
+        ax.annotate(f"{row['ORtg']:.0%}" if pd.notna(row['ORtg']) else '', (col_x['ORtg'], i_loc), va='center', ha='left', size=7)
+        ax.annotate(row['Opponent'], (col_x['Opponent'], i_loc), va='center', ha='left', size=7,color=opp_text, fontweight='bold')
+        ax.annotate(f"{row['win']:.0%}", (col_x['W'], i_loc), va='center', ha='left', size=7)
+        ax.annotate(f"{row['draw']:.0%}", (col_x['D'], i_loc), va='center', ha='left', size=7)
+        ax.annotate(f"{row['loss']:.0%}", (col_x['L'], i_loc), va='center', ha='left', size=7)
+        ax.annotate(f"{row['Exp']:.2f}", (col_x['Exp'], i_loc), va='center', ha='left', size=7)
+        ax.annotate(f"{row['Perf']:.2f}", (col_x['Per'], i_loc), va='center', ha='left', size=7)
+        ax.annotate(f"{row['xGF']:.2f}" if pd.notna(row['xGF']) else '',(col_x['xGF'], i_loc), va='center', ha='left', size=7)
+        ax.annotate(f"{row['xGA']:.2f}" if pd.notna(row['xGA']) else '',(col_x['xGA'], i_loc), va='center', ha='left', size=7)
+
+        # Row divider
+        ax.axhline(i_loc - space/2, color='black', linewidth=0.3)
+        i_loc -= space
+    return fig
+
+def plot_spi_chart(data):
+    fig = go.Figure()
+    c = np.array(data.C, dtype=float)
+    baseline = 0.5
+    dates = list(pd.to_datetime(data.Date))
+    x_fill = dates + dates[::-1]
+    y_green = list(np.where(c >= baseline, c, baseline)) + [baseline] * len(dates)
+    fig.add_trace(go.Scatter(
+        x=x_fill, y=y_green, fill='toself', mode='none',
+        fillcolor='rgba(0,150,0,0.2)', showlegend=False, hoverinfo='skip'
+    ))
+
+    y_red = list(np.where(c < baseline, c, baseline)) + [baseline] * len(dates)
+    fig.add_trace(go.Scatter(
+        x=x_fill, y=y_red, fill='toself', mode='none',
+        fillcolor='rgba(200,0,0,0.2)', showlegend=False, hoverinfo='skip'
+    ))
+
+    fig.add_trace(go.Scatter(x=data.Date, y=np.where(c >= baseline, c, np.nan), mode='lines',
+        line=dict(color='darkgreen', width=2.5), showlegend=False, connectgaps=False))
+    fig.add_trace(go.Scatter(x=data.Date, y=np.where(c < baseline, c, np.nan), mode='lines',
+        line=dict(color='darkred', width=2.5), showlegend=False, connectgaps=False))
+
+ 
+    fig.add_hline(y=0.5, line_dash='dash', line_color='gray', line_width=2)
+    for year in pd.to_datetime(data.Date).dt.year.unique():
+        fig.add_vline(x=pd.Timestamp(f'{year}-08-01').timestamp()*1000,line_dash='dot', line_color='black', line_width=2)
+    fig.update_layout(height=105, margin=dict(l=0, r=0, t=0, b=0),yaxis=dict(range=[0.25, 0.75], tickvals=[i/10 for i in range(3, 8)],tickformat='.0%'),
+                      plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)')
+    season_start = '08-01'
+    season_end = '06-01'
+
+    rangebreaks = []
+    for year in pd.to_datetime(data.Date).dt.year.unique():
+    # Gap before season (Jan 3 → season start)
+        rangebreaks.append(dict(bounds=[f'{year}-08-03', f'{year}-{season_start}']))
+    # Gap after season (season end → Dec 31)
+        rangebreaks.append(dict(bounds=[f'{year}-{season_end}', f'{year}-05-31']))
+    fig.update_xaxes(rangebreaks=rangebreaks)
+    return fig
+
+def get_crossover_segments(x, a, b):
+    segments = []
+    diff = a - b
+    sign = np.sign(diff)
+    
+    crossovers = np.where(np.diff(sign) != 0)[0]    
+    split_points = [0] + list(crossovers + 1) + [len(x)]
+    
+    for i in range(len(split_points) - 1):
+        start = split_points[i]
+        end = split_points[i + 1]
+        
+        seg_x = list(x[start:end])
+        seg_a = list(a[start:end])
+        seg_b = list(b[start:end])
+        
+        if i > 0:
+            prev = split_points[i] - 1
+            curr = split_points[i]
+            t = diff[prev] / (diff[prev] - diff[curr])  # linear interpolation
+            x_cross = x[prev] + t * (x[curr] - x[prev])
+            y_cross = a[prev] + t * (a[curr] - a[prev])
+            seg_x = [x_cross] + seg_x
+            seg_a = [y_cross] + seg_a
+            seg_b = [y_cross] + seg_b
+        
+        if i < len(split_points) - 2:
+            curr = split_points[i + 1] - 1
+            nxt = split_points[i + 1]
+            t = diff[curr] / (diff[curr] - diff[nxt])
+            x_cross = x[curr] + t * (x[nxt] - x[curr])
+            y_cross = a[curr] + t * (a[nxt] - a[curr])
+            seg_x = seg_x + [x_cross]
+            seg_a = seg_a + [y_cross]
+            seg_b = seg_b + [y_cross]
+        
+        a_above = np.mean(seg_a) > np.mean(seg_b)
+        segments.append((seg_x, seg_a, seg_b, a_above))
+    
+    return segments
+
+def plot_offdef_chart(data):
+    fig = go.Figure()
+
+    x = np.array(data.Date)
+    a = np.array(data.A, dtype=float)
+    b = np.array(data.B, dtype=float)
+
+    segments = get_crossover_segments(x, a, b)
+
+    for seg_x, seg_a, seg_b, a_above in segments:
+        fill_color = 'rgba(0,180,0,0.4)' if a_above else 'rgba(220,0,0,0.4)'
+        # Bottom line first, then top line reversed — creates a closed polygon
+        x_fill = seg_x + seg_x[::-1]
+        y_fill = seg_b + seg_a[::-1]   # swap if a_above=False? No — always b on bottom, a on top of polygon
+        if not a_above:
+            y_fill = seg_a + seg_b[::-1]  # a is lower, b is upper
+        fig.add_trace(go.Scatter(x=x_fill, y=y_fill,fill='toself', mode='none',fillcolor=fill_color,showlegend=False,hoverinfo='skip'))
+
+    # Draw the two lines on top
+    fig.add_hline(y=1,line_dash='dash',line_color='grey')
+    fig.add_trace(go.Scatter(x=data.Date, y=data.A, mode='lines',line=dict(color='darkgreen', width=2.5), name='Off Rating'))
+    fig.add_trace(go.Scatter(x=data.Date, y=data.B, mode='lines',line=dict(color='darkred', width=2.5), name='Def Rating'))
+
+    for year in pd.to_datetime(data.Date).dt.year.unique():
+        fig.add_vline(x=pd.Timestamp(f'{year}-01-01').timestamp()*1000,line_dash='dot', line_color='black', line_width=2)
+    
+    fig.update_layout(height=105,margin=dict(l=0, r=0, t=0, b=0),yaxis=dict(range=[0, 2], tickvals=[i/10 for i in np.arange(0,21,5)], tickformat='.2f'),
+                      plot_bgcolor='rgba(0,0,0,0)',paper_bgcolor='rgba(0,0,0,0)')
+    season_start = '08-01'
+    season_end = '06-01'
+
+    rangebreaks = []
+    for year in pd.to_datetime(data.Date).dt.year.unique():
+    # Gap before season (Jan 3 → season start)
+        rangebreaks.append(dict(bounds=[f'{year}-08-03', f'{year}-{season_start}']))
+    # Gap after season (season end → Dec 31)
+        rangebreaks.append(dict(bounds=[f'{year}-{season_end}', f'{year}-05-31']))
+    fig.update_xaxes(rangebreaks=rangebreaks)
+    return fig
+
+def plot_xg_chart(data):
+    fig = go.Figure()
+    
+    n = 5  # rolling window
+    xg = np.array(data.xGF, dtype=float)
+    xga = np.array(data.xGA, dtype=float)
+    xgd = xg - xga
+
+    # Rolling averages
+    def rolling(arr, n):
+        result = np.full(len(arr), np.nan)
+        for i in range(n - 1, len(arr)):
+            result[i] = arr[i - n + 1:i + 1].mean()
+        return result
+
+    xg_roll = rolling(xg, n)
+    xga_roll = rolling(xga, n)
+    xgd_roll = rolling(xgd, n)
+
+    fig.add_trace(go.Bar(x=data.Date, y=xg,marker_color='rgba(0,150,0,0.5)',showlegend=False))
+    fig.add_trace(go.Bar(x=data.Date, y=-xga,marker_color='rgba(200,0,0,0.5)',showlegend=False))
+    fig.add_trace(go.Scatter(x=data.Date, y=xgd,mode='markers',marker=dict(symbol='diamond', size=6, color='black', opacity=0.6),showlegend=False))
+    fig.add_trace(go.Scatter(x=data.Date, y=xg_roll,mode='lines', line=dict(color='darkgreen', width=2),showlegend=False, hoverinfo='skip'))
+    fig.add_trace(go.Scatter(x=data.Date, y=-xga_roll,mode='lines', line=dict(color='darkred', width=2),showlegend=False, hoverinfo='skip'))
+    fig.add_trace(go.Scatter(x=data.Date, y=xgd_roll,mode='lines', line=dict(color='black', width=3),showlegend=False, hoverinfo='skip'))
+
+    fig.add_hline(y=0, line_dash='dash',line_color='grey')
+    fig.add_hline(y=1.35, line_color='darkgreen', line_dash='dash')
+    fig.add_hline(y=-1.35, line_color='darkred', line_dash='dash')
+
+    for year in pd.to_datetime(data.Date).dt.year.unique():
+        fig.add_vline(x=pd.Timestamp(f'{year}-01-01').timestamp()*1000,line_dash='dot', line_color='black', line_width=2)
+    fig.update_layout(height=105,margin=dict(l=0, r=0, t=0, b=0),yaxis=dict(range=[-4,4], tickvals=list(range(-4, 5)), tickformat='.0f'),
+                      plot_bgcolor='rgba(0,0,0,0)',paper_bgcolor='rgba(0,0,0,0)')
+    season_start = '08-01'
+    season_end = '06-01'
+
+    rangebreaks = []
+    for year in pd.to_datetime(data.Date).dt.year.unique():
+        rangebreaks.append(dict(bounds=[f'{year}-08-03', f'{year}-{season_start}']))
+        rangebreaks.append(dict(bounds=[f'{year}-{season_end}', f'{year}-05-31']))
+    fig.update_xaxes(rangebreaks=rangebreaks)
+    return fig
+
+def create_player_heatmap(df,matches):
+    df['Dressed'] = 1
+    df = df[df.Type == 'Regular'].reset_index(drop=True)
+    df.loc[df.Out > 90,'In'] = df.In - df.MIN
+    df.loc[df.Out > 90,'Out'] = df.In + df.MIN
+    df['Season'] = df.Date.dt.year
+    df.Date = df.Date.dt.date
+    df = pd.concat((df.merge(matches[['date','home_score','away_score','home_team','away_team']],left_on=['Date','Team'],right_on=['date','home_team']
+                                            ).drop(columns=['home_team']).rename(columns={'away_team':'Opp','home_score':'GF','away_score':'GA'}),
+                          df.merge(matches[['date','home_score','away_score','home_team','away_team']],left_on=['Date','Team'],right_on=['date','away_team']
+                                            ).drop(columns=['away_team']).rename(columns={'home_team':'Opp','away_score':'GF','home_score':'GA'})))
+    df = df.merge(pd.pivot_table(df,index=['Name','Season'],columns='P',values='MIN',aggfunc='sum').fillna(0).idxmax(axis=1).reset_index().rename(columns={0:'Pos'}))
+    df['P_Weight'] = df.P.replace({'G':1,'D':2,'M':3,'F':4,'':0}).astype('int') * df.MIN
+    return df
+
+def plot_player_heatmaps(df,selected_team,selected_season):
+    fig, ax = plt.subplots(1,1,figsize=(18*4/5,9*4/5))
+    df = df[(df.Team == selected_team) & (pd.to_datetime(df.date).dt.year == selected_season)].reset_index(drop=True).sort_values('Date')
+    df_total = df.groupby(['Name','Pos']).agg({'MIN':'sum','Dressed':'sum','Rtg':'sum','P_Weight':'sum'}).reset_index()
+    df_total['P'] = df_total.P_Weight / df_total.MIN
+
+    df['label1'] = (df.GF.astype('int').astype('str') + '-' + df.GA.astype('int').astype('str'))
+    df['label2'] =  df.Opp.str[0:3].str.upper()
+    df['Result'] = (df.GF > df.GA).astype('int') * 2 + (df.GF == df.GA)
+    df.loc[df.MIN == 0,'Rtg'] = np.nan
+        
+    df_total['90s'] = np.round(df_total.MIN / 90,0)
+    df_total.Pos = df_total.Pos.replace({'':4,'G':0,'D':1,'M':2,'F':3})
+    df_total = df_total.sort_values(['Pos','Rtg','90s'],ascending=[True,False,False])
+
+    names_index = df_total.reset_index(drop=True)
+    names_index['pos2'] = names_index.Pos.shift(periods=1)
+    position_breaks = names_index[names_index.Pos != names_index.pos2].iloc[1:].index.tolist()
+    position_breaks = np.insert(position_breaks,0,0)
+    names_index = names_index.Name.values
+    positions_present = sorted(df_total.Pos.unique())
+    pos_map = {0: 'Goalkeepers', 1: 'Defenders', 2: 'Midfielders', 3: 'Forwards', 4: 'Unknown'}
+    pos_labels = [pos_map[p] for p in positions_present]
+
+    for i, idx in enumerate(position_breaks):
+        position_breaks[i] += i
+    for i, idx in enumerate(position_breaks):
+        names_index = np.insert(names_index,idx,pos_labels[i])
+    names_index = np.insert(names_index,len(names_index),'')
+    columns_index1 = df[['Date','label1']].drop_duplicates().label1.values
+    columns_index2 = df[['Date','label2']].drop_duplicates().label2.values
+    results_index = df[['Date','Result']].drop_duplicates().Result.values
+    team_index = df[['Date','Opp']].drop_duplicates().Opp.values
+    dressed_index = df.pivot(index='Name',columns='Date',values='Dressed').reindex(names_index)
+    dressed_index = dressed_index.reindex(index=dressed_index.index[::-1])
+    minutes_start_index = df.pivot(index='Name',columns='Date',values='In').reindex(names_index)
+    minutes_start_index = minutes_start_index.reindex(index=minutes_start_index.index[::-1]).fillna(0)
+    minutes_end_index = df.pivot(index='Name',columns='Date',values='MIN').reindex(names_index)
+    minutes_end_index = minutes_end_index.reindex(index=minutes_end_index.index[::-1])
+    rtg_index = df.pivot(index='Name',columns='Date',values='Rtg').reindex(names_index)
+    rtg_index = rtg_index.reindex(index=rtg_index.index[::-1])
+
+    n_games = df.Date.nunique()
+    names = 0.15
+    header = 0.95
+    players = len(df_total) + 5
+
+    ax.set_xlim(0,1)
+    ax.set_ylim(0,1)
+    ax.axis(False)
+
+    cmap = plt.cm.RdYlGn
+    norm = mcolors.Normalize(vmin=-10, vmax=10)
+    norm2 = plt.Normalize(-2,2)
+
+    j = 0
+    for i in range(0,n_games+1):
+        ax.axvline(names+j,c='grey')
+        try:
+            box_color = ('red' if results_index[i] == 0 else 'yellow' if results_index[i] == 1 else 'green')
+            ax.annotate(columns_index1[i],(names+j+(1-names)/n_games/2,(1-header)/4*3+header),ha='center',va='bottom',
+                        bbox=dict(boxstyle="round,pad=0.1",facecolor=box_color,edgecolor='black',alpha=0.5))
+            box_color = team_colors[team_index[i]]
+            ax.annotate(columns_index2[i],(names+j+(1-names)/n_games/2,(1-header)/4*0.5+header),ha='center',va='bottom',color=box_color['home_secondary'],
+                        bbox=dict(boxstyle="round,pad=0.1",facecolor=box_color['home_primary'],edgecolor='black',alpha=1),fontweight='bold')
+        except:
+            pass
+        j += (1-names)/n_games
+        
+    k = 0
+    for i in range(0,players+1):
+        name = names_index[(players-1)-i]
+        if name not in pos_map.values():
+            try:
+                box_color = cmap(norm(df_total[df_total.Name == name]['Rtg'].values[0]))
+                ax.annotate(name.split(' ')[0][0] + '. ' + name.split(' ')[-1],(0.015,k+0.005),va='bottom')
+                ax.axhline(k,ls=':',color='grey')
+                ax.annotate(str(int(df_total[df_total.Name == name]['90s'].values[0]))+', '+str(np.round(df_total[df_total.Name == name]['Rtg'].values[0],1)),
+                            (names-0.008,k+0.005),va='bottom',fontstyle='italic',ha='right',
+                            bbox=dict(boxstyle="round,pad=0.1",facecolor=box_color,edgecolor='black',alpha=0.5))
+            except:
+                pass
+        else:
+            ax.annotate(name,(0.005,k+0.005),va='bottom',fontweight='bold',color=team_colors[selected_team]['home_secondary'])
+            ax.annotate('(90s,Rtg)',(0.1,k+0.005),va='bottom',fontstyle='italic',fontweight='bold',color=team_colors[selected_team]['home_secondary'])
+            ax.add_patch(plt.Rectangle((0,k),1,(header)/players,color=team_colors[selected_team]['home_primary']))
+            
+        j = 0
+        for l in range(0,n_games+1):
+            if l != (n_games):
+                dressed_val = dressed_index.iloc[i].values[l]
+                minutes_start_val = minutes_start_index.iloc[i].values[l]
+                minutes_val = minutes_end_index.iloc[i].values[l]
+                rtg_val = rtg_index.iloc[i].values[l]
+                box_color = cmap(norm2(rtg_val))
+                if dressed_val == 1:
+                    ax.add_patch(plt.Rectangle((j+names,k),(1-names)/n_games,-(header)/players,color='#d9d9d9'))
+                    ax.add_patch(plt.Rectangle((j+names+(1-names)/n_games*minutes_start_val/90,k),(1-names)/n_games*minutes_val/90,-(header)/players,color=box_color,
+                                ec='#444444',lw=0.5))
+                    if minutes_val > 0:
+                        ax.annotate(np.round(rtg_val,1),(j+names+(1-names)/n_games/2,k-(header)/players/2),ha='center',va='center')
+            j += (1-names)/n_games
+        k += (header)/players    
+    plt.tight_layout()
+    return fig
+
+standings = pd.read_feather('data/standings.ftr').reset_index()
+color_map = pd.DataFrame([['Arsenal','#cc0000','#FFFFFF'],
+                          ['Aston Villa','#670e36','#94bee5'],
+                          ['Brighton & Hove Albion','#0054a6','#ffffff'],
+                          ['Burnley','#81204c','#8fd2f4'],
+                          ['Chelsea','#0310a7','#ffffff'],
+                          ['Crystal Palace','#0033ff','#b90d2b'],
+                          ['Everton','#274488','#ffffff'],
+                          ['Fulham','#ffffff','#000000'],
+                          ['Leeds United','#ffffff','#1d4189'],
+                          ['Leicester City','#003090','#ffffff'],
+                          ['Liverpool','#cc0000','#ffffff'],
+                          ['Manchester City','#66ccff','#ffffff'],
+                          ['Manchester United','#ff0000','#373737'],
+                          ['Newcastle United','#000000','#ffffff'],
+                          ['Sheffield United','#ffffff','#ff0000'],
+                          ['Southampton','#ff0000','#FFFFFF'],
+                          ['Tottenham Hotspur','#ffffff','#000066'],
+                          ['West Bromwich Albion','#122F67','#FFFFFF'],
+                          ['West Ham United','#66192c','#59b3e4'],
+                          ['Wolverhampton Wanderers','#ff9900','#000000'],
+                          ['Brentford','#ffffff','#ff0000'],
+                          ['Norwich City','#FFF200','#00A650'],
+                          ['Watford','#FBEE23','#ED2127'],
+                          ['AFC Bournemouth','#000000','#cc0000'],
+                          ['Nottingham Forest','#cc0000','#cc0000'],
+                          ['Luton Town','#ff3300','#000033'],
+                          ['Ipswich Town','#0000ff','#ffffff'],
+                          ['Sunderland','#ffffff','#ca0000'],
+                          ],columns=['team','home_primary','home_secondary']).set_index('team')
 team_colors = color_map.to_dict('index')
 matches = pd.read_feather('data/matches.ftr')
-player_stats = pd.read_feather('data/player_stats.ftr')
+player_stats = pd.read_feather('data/PlayerStats.ftr')
+player_stats['season'] = player_stats.Date.dt.year
 team_ratings = pd.read_feather('data/team_ratings.ftr')
 team_ratings = team_ratings[['Season','Date']].drop_duplicates().merge(team_ratings[['Season','Team']].drop_duplicates()).merge(
     team_ratings,how='outer').sort_values(['Team','Date'])
 team_ratings[['A','B','C']] = team_ratings.groupby(['Season','Team'])[['A','B','C']].ffill()
 standings_sims, match_sims = load_standings_sims()
 
-# --- MAIN DASHBOARD ---
-tab_standings, tab_team = st.tabs([f"Standings", "Team Profile"])
+initial_ratings = pd.read_csv('data/Initializations.txt')
+
+tab_standings, tab_team = st.tabs(["Standings", "Team Profile"])
 
 with tab_standings:
     col1, col2 = st.columns([2,3])
     # --- COLUMN 1: LEFT ---
     with col1:
-        subcol1, subcol2, subcol3 = st.columns([1,1,1])
+        subcol1, subcol2, subcol3 = st.columns([0.5,1,1])
         with subcol1:
             season = sorted(standings_sims['season'].unique(), reverse=True)
             selected_season = st.selectbox("Select Year", options=season, index=0, key="season_picker",label_visibility="collapsed")
@@ -697,13 +1243,7 @@ with tab_standings:
         st.markdown("<p style='font-size:14px; font-weight:bold; margin-bottom:2px;'>Results</p>", unsafe_allow_html=True)
         scrollable_plot(fig, height=200)
         fig = create_schedule_figure(matches_df)
-        st.markdown("")
         st.markdown("<p style='font-size:14px; font-weight:bold; margin-bottom:2px;'>Schedule</p>", unsafe_allow_html=True)
-        scrollable_plot(fig, height=200)
-        st.markdown("")
-        mvp_df = create_player_mvps(player_stats,matches_df,int(selected_season),selected_end_date)
-        st.markdown("<p style='font-size:14px; font-weight:bold; margin-bottom:2px;'>Best Players</p>", unsafe_allow_html=True)
-        fig = create_mvp_figure(mvp_df)
         scrollable_plot(fig, height=200)
 
     with col2:
@@ -721,16 +1261,56 @@ with tab_standings:
             fig = plot_ratings_scatter(standings_df.drop(columns='season'), team_colors)
             st.plotly_chart(fig, use_container_width=False)
         with subcol2:
-            fig_heatmap = plot_position_heatmap(standings_sims, standings_df, selected_end_date, team_colors)
-            st.plotly_chart(fig_heatmap)
+#            fig_heatmap = plot_position_heatmap(standings_sims, standings_df, selected_end_date, team_colors)
+#            st.plotly_chart(fig_heatmap)
+            mvp_df = create_player_mvps(player_stats,matches_df,int(selected_season),selected_end_date)
+            st.markdown("<p style='font-size:14px; font-weight:bold; margin-bottom:2px;'>Best Players</p>", unsafe_allow_html=True)
+            fig = create_mvp_figure(mvp_df)
+            scrollable_plot(fig, height=400)
 
 with tab_team:
-    col1, col2 = st.columns([2,3])
+    col1, col2 = st.columns([2,3.5])
     with col1:
-        subcol1, subcol2 = st.columns([1,2])
+        subcol1, subcol2, subcol3 = st.columns([2.5,1,1])
         with subcol1:
-            season = sorted(standings_sims['season'].unique(), reverse=True)
-            selected_season = st.selectbox("Select Year", options=season, index=0, key="season_picker2",label_visibility="collapsed")
-        with subcol2:
-            teams = sorted(standings[standings.season == selected_season].F.unique())
+            teams = sorted(standings.F_team.unique())
             selected_team = st.selectbox('Select Team',options=teams,key='team_picker',label_visibility='collapsed')
+        with subcol2:
+            season = sorted(standings['season'].unique(), reverse=True)
+            selected_season = st.selectbox("Select Year", options=season, index=0, key="season_picker2",label_visibility="collapsed")
+            schedule_results = create_schedule_results(match_sims,matches,team_ratings,selected_season,selected_team)
+        with subcol3:
+            selected_visual_type = st.selectbox('Select Type',options=['Net Rtg','Off/Def','xG/xGA'],label_visibility='collapsed')
+            multi_standings = create_multi_year_standings(team_ratings,standings)
+            multi_standings = multi_standings[multi_standings.Team == selected_team]
+        fig = plot_history_table(multi_standings)
+        buf = BytesIO()
+        fig.savefig(buf, format='png', bbox_inches='tight', dpi=150)
+        buf.seek(0)
+        img_base64 = base64.b64encode(buf.read()).decode()
+        st.markdown(f'<img src="data:image/png;base64,{img_base64}" style="width:100%;">', unsafe_allow_html=True)
+        plt.close(fig)
+        fig = create_schedule_results_figure(schedule_results,selected_team)
+        scrollable_plot(fig, height=390)
+    with col2:
+        if selected_visual_type == 'Net Rtg':
+            fig = plot_spi_chart(team_ratings[team_ratings.Team == selected_team])
+            st.plotly_chart(fig, use_container_width=True)
+        elif selected_visual_type == 'Off/Def':
+            fig = plot_offdef_chart(team_ratings[team_ratings.Team == selected_team])
+            st.plotly_chart(fig, use_container_width=True)
+        else:
+            schedule_results = []
+            for i in season:
+                schedule_results.append(create_schedule_results(match_sims,matches,team_ratings,i,selected_team))
+            schedule_results = pd.concat(schedule_results)
+            fig = plot_xg_chart(schedule_results.sort_values('Date').reset_index(drop=True))
+            st.plotly_chart(fig, use_container_width=True)
+        player_heatmaps = create_player_heatmap(player_stats,matches)
+        fig = plot_player_heatmaps(player_heatmaps,selected_team,selected_season)
+        buf = BytesIO()
+        fig.savefig(buf, format='png', bbox_inches='tight', dpi=200)
+        buf.seek(0)
+        img_base64 = base64.b64encode(buf.read()).decode()
+        st.markdown(f'<img src="data:image/png;base64,{img_base64}" style="width:100%;">', unsafe_allow_html=True)
+        plt.close(fig)
