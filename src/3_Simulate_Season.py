@@ -270,7 +270,7 @@ def simulate_season(sim_dates,matches,total_goals,home_field,n_sims,update_rate,
                 
         sim_results.to_feather(f'data/Sim_States/{date}.ftr')
 
-    n_sims = 10000
+n_sims = 10000
 update_rate = 2/38
 
 simulate_season(sim_dates,matches,tg,hf,n_sims,update_rate,team_ratings)
