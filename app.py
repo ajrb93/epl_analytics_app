@@ -1278,7 +1278,7 @@ with tab_standings:
 with tab_team:
     col1, col2 = st.columns([2,3.5])
     with col1:
-        subcol1, subcol2, subcol3 = st.columns([2.5,1,1])
+        subcol1, subcol2, subcol3 = st.columns([2.25,1.25,1])
         with subcol1:
             teams = sorted(standings.F_team.unique())
             selected_team = st.selectbox('Select Team',options=teams,key='team_picker',label_visibility='collapsed')
@@ -1290,34 +1290,34 @@ with tab_team:
             selected_visual_type = st.selectbox('Select Type',options=['Net Rtg','Off/Def','xG/xGA'],label_visibility='collapsed')
             multi_standings = create_multi_year_standings(team_ratings,standings)
             multi_standings = multi_standings[multi_standings.Team == selected_team]
-#        fig = plot_history_table(multi_standings)
-#        buf = BytesIO()
-#        fig.savefig(buf, format='png', bbox_inches='tight', dpi=150)
-#        buf.seek(0)
-#        img_base64 = base64.b64encode(buf.read()).decode()
-#        st.markdown(f'<img src="data:image/png;base64,{img_base64}" style="width:100%;">', unsafe_allow_html=True)
-#        plt.close(fig)
-#        fig = create_schedule_results_figure(schedule_results,selected_team)
-#        scrollable_plot(fig, height=390)
-#    with col2:
-#        if selected_visual_type == 'Net Rtg':
-#            fig = plot_spi_chart(team_ratings[team_ratings.Team == selected_team])
-#            st.plotly_chart(fig, use_container_width=True)
-#        elif selected_visual_type == 'Off/Def':
-#            fig = plot_offdef_chart(team_ratings[team_ratings.Team == selected_team])
-#            st.plotly_chart(fig, use_container_width=True)
-#        else:
-#            schedule_results = []
-#            for i in season:
-#                schedule_results.append(create_schedule_results(match_sims,matches,team_ratings,i,selected_team))
-#            schedule_results = pd.concat(schedule_results)
-#            fig = plot_xg_chart(schedule_results.sort_values('Date').reset_index(drop=True))
-#            st.plotly_chart(fig, use_container_width=True)
-#        player_heatmaps = create_player_heatmap(player_stats,matches)
-#        fig = plot_player_heatmaps(player_heatmaps,selected_team,selected_season)
-#        buf = BytesIO()
-#        fig.savefig(buf, format='png', bbox_inches='tight', dpi=200)
-#        buf.seek(0)
-#        img_base64 = base64.b64encode(buf.read()).decode()
-#        st.markdown(f'<img src="data:image/png;base64,{img_base64}" style="width:100%;">', unsafe_allow_html=True)
- #       plt.close(fig)
+        fig = plot_history_table(multi_standings)
+        buf = BytesIO()
+        fig.savefig(buf, format='png', bbox_inches='tight', dpi=150)
+        buf.seek(0)
+        img_base64 = base64.b64encode(buf.read()).decode()
+        st.markdown(f'<img src="data:image/png;base64,{img_base64}" style="width:100%;">', unsafe_allow_html=True)
+        plt.close(fig)
+        fig = create_schedule_results_figure(schedule_results,selected_team)
+        scrollable_plot(fig, height=390)
+    with col2:
+        if selected_visual_type == 'Net Rtg':
+            fig = plot_spi_chart(team_ratings[team_ratings.Team == selected_team])
+            st.plotly_chart(fig, use_container_width=True)
+        elif selected_visual_type == 'Off/Def':
+            fig = plot_offdef_chart(team_ratings[team_ratings.Team == selected_team])
+            st.plotly_chart(fig, use_container_width=True)
+        else:
+            schedule_results = []
+            for i in season:
+                schedule_results.append(create_schedule_results(match_sims,matches,team_ratings,i,selected_team))
+            schedule_results = pd.concat(schedule_results)
+            fig = plot_xg_chart(schedule_results.sort_values('Date').reset_index(drop=True))
+            st.plotly_chart(fig, use_container_width=True)
+        player_heatmaps = create_player_heatmap(player_stats,matches)
+        fig = plot_player_heatmaps(player_heatmaps,selected_team,selected_season)
+        buf = BytesIO()
+        fig.savefig(buf, format='png', bbox_inches='tight', dpi=200)
+        buf.seek(0)
+        img_base64 = base64.b64encode(buf.read()).decode()
+        st.markdown(f'<img src="data:image/png;base64,{img_base64}" style="width:100%;">', unsafe_allow_html=True)
+        plt.close(fig)
