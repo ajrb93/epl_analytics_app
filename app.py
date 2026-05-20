@@ -133,7 +133,7 @@ norm_w = mcolors.TwoSlopeNorm(vmin=0,vcenter=1/4,vmax=1)
 norm_perf = mcolors.TwoSlopeNorm(vmin=-1.5, vcenter=0, vmax=1.5)
 
 def plot_standings_table(standings_df):
-    fig, ax = plt.subplots(figsize=(12,6/2.33333333))
+    fig, ax = plt.subplots(figsize=(12,6))
     ax.set_xlim(0, 1)
     ax.set_ylim(0, 1)
     ax.axis('off')
@@ -601,13 +601,14 @@ def scrollable_plot(fig, height=400):
 
 def create_player_mvps(player_stats,matches_df,selected_season,selected_end_date):
     player_stats = player_stats[(player_stats.season == selected_season) & (player_stats.Date.dt.date <= selected_end_date)].reset_index(drop=True)
-    player_stats = player_stats[player_stats.Type == 'Regular']
     player_stats = player_stats.merge(pd.pivot_table(
         player_stats,index='Name',columns='P',values='MIN',aggfunc='sum').fillna(0).idxmax(axis=1).reset_index().rename(columns={0:'Pos'}))
+    player_stats['Rtg'] *= player_stats.MIN
+    player_stats = player_stats[~player_stats.Rtg.isna()]
     player_mvp = player_stats.groupby(['Name','Pos']).agg(
         {'MIN':'sum','Rtg':'sum','Team': lambda x: ', '.join(sorted(set(x)))})
-    player_mvp['per90'] = player_mvp.Rtg / player_mvp.MIN * 90
-    player_mvp = player_mvp.drop(columns=['MIN']).rename(columns={'Rtg':'Goals Added','per90':'GA per 90'}).reset_index()
+    player_mvp['per90'] = player_mvp.Rtg / player_mvp.MIN
+    player_mvp = player_mvp.rename(columns={'Rtg':'Goals Added','per90':'GA per 90'}).reset_index()
     
     return player_mvp.reset_index()
     
@@ -624,8 +625,8 @@ def create_mvp_figure(plot_df):
         'Player':   0.01,
         'Team':0.40,
         'Pos':0.75,
-        'Goals+':0.80,
-        'G+/90':   0.90}
+        'MIN':0.80,
+        'Rtg':   0.90}
 
     # Headers
     header_y = (len(mvps)+0.5)/(len(mvps)+1)
@@ -658,8 +659,8 @@ def create_mvp_figure(plot_df):
         ax.annotate(row['Name'], (col_x['Player'], i_loc), va='center', ha='left', size=7,color = secondary,fontweight='bold')
         ax.annotate(row['Team'], (col_x['Team'], i_loc), va='center', ha='left', size=7,color = secondary)
         ax.annotate(row['Pos'], (col_x['Pos'], i_loc), va='center', ha='left', size=7,color = secondary)
-        ax.annotate(f"{row['Goals Added']:.2f}" if pd.notna(row['Goals Added']) else '', (col_x['Goals+'], i_loc), va='center', ha='left', size=7,color = secondary)
-        ax.annotate(f"{row['GA per 90']:.2f}" if pd.notna(row['GA per 90']) else '', (col_x['G+/90'], i_loc), va='center', ha='left', size=7,color = secondary)
+        ax.annotate(f"{row['MIN']:.0f}" if pd.notna(row['MIN']) else '', (col_x['MIN'], i_loc), va='center', ha='left', size=7,color = secondary)
+        ax.annotate(f"{row['GA per 90']:.2f}" if pd.notna(row['GA per 90']) else '', (col_x['Rtg'], i_loc), va='center', ha='left', size=7,color = secondary)
         # Row divider
         ax.axhline(i_loc - space/2, color='black', linewidth=0.3)
         i_loc -= space
@@ -1062,7 +1063,7 @@ def plot_xg_chart(data):
 
 def create_player_heatmap(df,matches):
     df['Dressed'] = 1
-    df = df[df.Type == 'Regular'].reset_index(drop=True)
+    df = df.reset_index(drop=True)
     df.loc[df.Out > 90,'In'] = df.In - df.MIN
     df.loc[df.Out > 90,'Out'] = df.In + df.MIN
     df['Season'] = df.Date.dt.year
@@ -1229,7 +1230,7 @@ with tab_standings:
     col1, col2 = st.columns([2,3])
     # --- COLUMN 1: LEFT ---
     with col1:
-        subcol1, subcol2, subcol3 = st.columns([0.5,1,1])
+        subcol1, subcol2, subcol3 = st.columns([1,1,1])
         with subcol1:
             season = sorted(standings_sims['season'].unique(), reverse=True)
             selected_season = st.selectbox("Select Year", options=season, index=0, key="season_picker",label_visibility="collapsed")
@@ -1244,6 +1245,7 @@ with tab_standings:
         st.markdown("<p style='font-size:14px; font-weight:bold; margin-bottom:2px;'>Results</p>", unsafe_allow_html=True)
         scrollable_plot(fig, height=200)
         fig = create_schedule_figure(matches_df)
+        st.markdown("<p style='font-size:14px; font-weight:bold; margin-bottom:2px;'></p>", unsafe_allow_html=True)
         st.markdown("<p style='font-size:14px; font-weight:bold; margin-bottom:2px;'>Schedule</p>", unsafe_allow_html=True)
         scrollable_plot(fig, height=200)
 
@@ -1264,7 +1266,7 @@ with tab_standings:
         with subcol2:
 #            fig_heatmap = plot_position_heatmap(standings_sims, standings_df, selected_end_date, team_colors)
 #            st.plotly_chart(fig_heatmap)
-            mvp_df = create_player_mvps(player_stats,matches_df,int(selected_season),selected_end_date)
+            mvp_df = create_player_mvps(player_stats,matches_df,selected_season,selected_end_date)
             st.markdown("<p style='font-size:14px; font-weight:bold; margin-bottom:2px;'>Best Players</p>", unsafe_allow_html=True)
             fig = create_mvp_figure(mvp_df)
             scrollable_plot(fig, height=400)
