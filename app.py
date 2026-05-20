@@ -615,7 +615,7 @@ def create_player_mvps(player_stats,matches_df,selected_season,selected_end_date
 def create_mvp_figure(plot_df):
     mvps = plot_df.sort_values('Goals Added',ascending=False)
 
-    fig, ax = plt.subplots(figsize=(6,40))
+    fig, ax = plt.subplots(figsize=(6,100))
     ax.set_xlim(0, 1)
     ax.set_ylim(0, 1)
     ax.axis('off')
