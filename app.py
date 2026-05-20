@@ -12,7 +12,7 @@ from io import BytesIO
 import numpy as np
 
 # --- 1. CONFIG & COMPACT STYLING ---
-st.set_page_config(layout="wide", page_title="Northern Super League")
+st.set_page_config(layout="wide", page_title="English Premier League")
 
 # CUSTOM CSS: Shrinks headers, table padding, and overall container gaps
 st.markdown("""
@@ -601,15 +601,17 @@ def scrollable_plot(fig, height=400):
 
 def create_player_mvps(player_stats,matches_df,selected_season,selected_end_date):
     player_stats = player_stats[(player_stats.season == selected_season) & (player_stats.Date.dt.date <= selected_end_date)].reset_index(drop=True)
+    player_stats_min = player_stats.groupby('Name').Date.count().max()
+    player_stats_rtg = np.percentile(player_stats.Rtg.dropna(),25)
     player_stats = player_stats.merge(pd.pivot_table(
         player_stats,index='Name',columns='P',values='MIN',aggfunc='sum').fillna(0).idxmax(axis=1).reset_index().rename(columns={0:'Pos'}))
     player_stats['Rtg'] *= player_stats.MIN
     player_stats = player_stats[~player_stats.Rtg.isna()]
     player_mvp = player_stats.groupby(['Name','Pos']).agg(
         {'MIN':'sum','Rtg':'sum','Team': lambda x: ', '.join(sorted(set(x)))})
-    player_mvp['per90'] = player_mvp.Rtg / player_mvp.MIN
-    player_mvp = player_mvp.rename(columns={'Rtg':'Goals Added','per90':'GA per 90'}).reset_index()
+    player_mvp['per90'] = (player_mvp.Rtg + player_stats_rtg * (player_stats_min*90 - player_mvp.MIN))/(player_stats_min*90)
     
+    player_mvp = player_mvp.rename(columns={'Rtg':'Goals Added','per90':'GA per 90'}).reset_index()
     return player_mvp.reset_index()
     
 def create_mvp_figure(plot_df):
