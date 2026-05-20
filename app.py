@@ -613,7 +613,7 @@ def create_player_mvps(player_stats,matches_df,selected_season,selected_end_date
     return player_mvp.reset_index()
     
 def create_mvp_figure(plot_df):
-    mvps = plot_df.sort_values('Goals Added',ascending=False)
+    mvps = plot_df.sort_values('GA per 90',ascending=False)
 
     fig, ax = plt.subplots(figsize=(6,100))
     ax.set_xlim(0, 1)
@@ -1252,7 +1252,7 @@ with tab_standings:
         mvp_df = create_player_mvps(player_stats,matches_df,selected_season,selected_end_date)
         st.markdown("<p style='font-size:14px; font-weight:bold; margin-bottom:2px;'>Best Players</p>", unsafe_allow_html=True)
         fig = create_mvp_figure(mvp_df)
-        scrollable_plot(fig, height=400)
+        scrollable_plot(fig, height=300)
 
     with col2:
         standings_df = create_standings_file(standings,standings_sims,team_ratings,selected_season,selected_end_date,selected_start_date).sort_values(['P','GD'],ascending=False)
