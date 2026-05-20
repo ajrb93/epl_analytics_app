@@ -323,7 +323,7 @@ def plot_ratings_scatter(standings_df, team_colors):
 def plot_position_heatmap(standings_sims, standings_df, selected_end_date, team_colors):
     # Get position probabilities for selected date, ordered by current standings
     sim_data = standings_sims[standings_sims.Sim_Date == selected_end_date].set_index('index')
-    position_cols = [str(i) for i in range(1, 7)]
+    position_cols = [str(i) for i in range(1, 20)]
     
     # Order teams by current points (same order as standings table)
     teams_ordered = standings_df['Team'].tolist()
@@ -352,7 +352,7 @@ def plot_position_heatmap(standings_sims, standings_df, selected_end_date, team_
         ),
         margin=dict(l=10, r=10, t=10, b=10),
         width=420,  # 400px plot + room for team names on left
-        height=150
+        height=400
     )
 
     return fig
@@ -1215,7 +1215,8 @@ color_map = pd.DataFrame([['Arsenal','#cc0000','#FFFFFF'],
 team_colors = color_map.to_dict('index')
 matches = pd.read_feather('data/matches.ftr')
 player_stats = pd.read_feather('data/PlayerStats.ftr')
-player_stats['season'] = player_stats.Date.dt.year
+season_temp =  pd.to_datetime(player_stats.Date).dt.year - (pd.to_datetime(player_stats.Date).dt.month <= 6).astype('int')
+player_stats['season'] = season_temp.astype('str') + '/' + (season_temp + 1).astype('str') 
 team_ratings = pd.read_feather('data/team_ratings.ftr')
 team_ratings = team_ratings[['Season','Date']].drop_duplicates().merge(team_ratings[['Season','Team']].drop_duplicates()).merge(
     team_ratings,how='outer').sort_values(['Team','Date'])
