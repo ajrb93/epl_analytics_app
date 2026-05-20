@@ -670,7 +670,7 @@ def create_mvp_figure(plot_df):
 
 def create_multi_year_standings(team_ratings,standings):
     temp1 = team_ratings.groupby('Team').head(1).reset_index()
-    temp1.Season = (temp1.Season.astype('int') - 1)
+    temp1.Season = (temp1.Season.str.split('/').str[0].astype('int') - 1).astype('str') + '/'  + (temp1.Season.str.split('/').str[1].astype('int') - 1).astype('str')
     temp2 = team_ratings.groupby(['Team','Season']).tail(1).reset_index()
     temp_season_ratings = pd.concat((temp1,temp2))[['Season','Team','A','B','C']].sort_values(['Team','Season'])
     temp_season_ratings[['A_C','B_C','C_C']] = temp_season_ratings[['A','B','C']] - temp_season_ratings.groupby('Team')[['A','B','C']].shift(periods=1)
@@ -1275,21 +1275,21 @@ with tab_standings:
             st.plotly_chart(fig_heatmap)
 
 
-#with tab_team:
-#    col1, col2 = st.columns([2,3.5])
-#    with col1:
-#        subcol1, subcol2, subcol3 = st.columns([2.5,1,1])
-#        with subcol1:
-#            teams = sorted(standings.F_team.unique())
-#            selected_team = st.selectbox('Select Team',options=teams,key='team_picker',label_visibility='collapsed')
-#        with subcol2:
-#            season = sorted(standings['season'].unique(), reverse=True)
-#            selected_season = st.selectbox("Select Year", options=season, index=0, key="season_picker2",label_visibility="collapsed")
-#            schedule_results = create_schedule_results(match_sims,matches,team_ratings,selected_season,selected_team)
-#        with subcol3:
-#            selected_visual_type = st.selectbox('Select Type',options=['Net Rtg','Off/Def','xG/xGA'],label_visibility='collapsed')
-#            multi_standings = create_multi_year_standings(team_ratings,standings)
-#            multi_standings = multi_standings[multi_standings.Team == selected_team]
+with tab_team:
+    col1, col2 = st.columns([2,3.5])
+    with col1:
+        subcol1, subcol2, subcol3 = st.columns([2.5,1,1])
+        with subcol1:
+            teams = sorted(standings.F_team.unique())
+            selected_team = st.selectbox('Select Team',options=teams,key='team_picker',label_visibility='collapsed')
+        with subcol2:
+            season = sorted(standings['season'].unique(), reverse=True)
+            selected_season = st.selectbox("Select Year", options=season, index=0, key="season_picker2",label_visibility="collapsed")
+            schedule_results = create_schedule_results(match_sims,matches,team_ratings,selected_season,selected_team)
+        with subcol3:
+            selected_visual_type = st.selectbox('Select Type',options=['Net Rtg','Off/Def','xG/xGA'],label_visibility='collapsed')
+            multi_standings = create_multi_year_standings(team_ratings,standings)
+            multi_standings = multi_standings[multi_standings.Team == selected_team]
 #        fig = plot_history_table(multi_standings)
 #        buf = BytesIO()
 #        fig.savefig(buf, format='png', bbox_inches='tight', dpi=150)
