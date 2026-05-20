@@ -1207,7 +1207,7 @@ color_map = pd.DataFrame([['Arsenal','#cc0000','#FFFFFF'],
                           ['Norwich City','#FFF200','#00A650'],
                           ['Watford','#FBEE23','#ED2127'],
                           ['AFC Bournemouth','#000000','#cc0000'],
-                          ['Nottingham Forest','#cc0000','#cc0000'],
+                          ['Nottingham Forest','#DD0000','#FFFFFF'],
                           ['Luton Town','#ff3300','#000033'],
                           ['Ipswich Town','#0000ff','#ffffff'],
                           ['Sunderland','#ffffff','#ca0000'],
@@ -1248,6 +1248,10 @@ with tab_standings:
         st.markdown("<p style='font-size:14px; font-weight:bold; margin-bottom:2px;'></p>", unsafe_allow_html=True)
         st.markdown("<p style='font-size:14px; font-weight:bold; margin-bottom:2px;'>Schedule</p>", unsafe_allow_html=True)
         scrollable_plot(fig, height=200)
+        mvp_df = create_player_mvps(player_stats,matches_df,selected_season,selected_end_date)
+        st.markdown("<p style='font-size:14px; font-weight:bold; margin-bottom:2px;'>Best Players</p>", unsafe_allow_html=True)
+        fig = create_mvp_figure(mvp_df)
+        scrollable_plot(fig, height=400)
 
     with col2:
         standings_df = create_standings_file(standings,standings_sims,team_ratings,selected_season,selected_end_date,selected_start_date).sort_values(['P','GD'],ascending=False)
@@ -1264,56 +1268,53 @@ with tab_standings:
             fig = plot_ratings_scatter(standings_df.drop(columns='season'), team_colors)
             st.plotly_chart(fig, use_container_width=False)
         with subcol2:
-#            fig_heatmap = plot_position_heatmap(standings_sims, standings_df, selected_end_date, team_colors)
-#            st.plotly_chart(fig_heatmap)
-            mvp_df = create_player_mvps(player_stats,matches_df,selected_season,selected_end_date)
-            st.markdown("<p style='font-size:14px; font-weight:bold; margin-bottom:2px;'>Best Players</p>", unsafe_allow_html=True)
-            fig = create_mvp_figure(mvp_df)
-            scrollable_plot(fig, height=400)
+            fig_heatmap = plot_position_heatmap(standings_sims, standings_df, selected_end_date, team_colors)
+            st.plotly_chart(fig_heatmap)
 
-with tab_team:
-    col1, col2 = st.columns([2,3.5])
-    with col1:
-        subcol1, subcol2, subcol3 = st.columns([2.5,1,1])
-        with subcol1:
-            teams = sorted(standings.F_team.unique())
-            selected_team = st.selectbox('Select Team',options=teams,key='team_picker',label_visibility='collapsed')
-        with subcol2:
-            season = sorted(standings['season'].unique(), reverse=True)
-            selected_season = st.selectbox("Select Year", options=season, index=0, key="season_picker2",label_visibility="collapsed")
-            schedule_results = create_schedule_results(match_sims,matches,team_ratings,selected_season,selected_team)
-        with subcol3:
-            selected_visual_type = st.selectbox('Select Type',options=['Net Rtg','Off/Def','xG/xGA'],label_visibility='collapsed')
-            multi_standings = create_multi_year_standings(team_ratings,standings)
-            multi_standings = multi_standings[multi_standings.Team == selected_team]
-        fig = plot_history_table(multi_standings)
-        buf = BytesIO()
-        fig.savefig(buf, format='png', bbox_inches='tight', dpi=150)
-        buf.seek(0)
-        img_base64 = base64.b64encode(buf.read()).decode()
-        st.markdown(f'<img src="data:image/png;base64,{img_base64}" style="width:100%;">', unsafe_allow_html=True)
-        plt.close(fig)
-        fig = create_schedule_results_figure(schedule_results,selected_team)
-        scrollable_plot(fig, height=390)
-    with col2:
-        if selected_visual_type == 'Net Rtg':
-            fig = plot_spi_chart(team_ratings[team_ratings.Team == selected_team])
-            st.plotly_chart(fig, use_container_width=True)
-        elif selected_visual_type == 'Off/Def':
-            fig = plot_offdef_chart(team_ratings[team_ratings.Team == selected_team])
-            st.plotly_chart(fig, use_container_width=True)
-        else:
-            schedule_results = []
-            for i in season:
-                schedule_results.append(create_schedule_results(match_sims,matches,team_ratings,i,selected_team))
-            schedule_results = pd.concat(schedule_results)
-            fig = plot_xg_chart(schedule_results.sort_values('Date').reset_index(drop=True))
-            st.plotly_chart(fig, use_container_width=True)
-        player_heatmaps = create_player_heatmap(player_stats,matches)
-        fig = plot_player_heatmaps(player_heatmaps,selected_team,selected_season)
-        buf = BytesIO()
-        fig.savefig(buf, format='png', bbox_inches='tight', dpi=200)
-        buf.seek(0)
-        img_base64 = base64.b64encode(buf.read()).decode()
-        st.markdown(f'<img src="data:image/png;base64,{img_base64}" style="width:100%;">', unsafe_allow_html=True)
-        plt.close(fig)
+
+#with tab_team:
+#    col1, col2 = st.columns([2,3.5])
+#    with col1:
+#        subcol1, subcol2, subcol3 = st.columns([2.5,1,1])
+#        with subcol1:
+#            teams = sorted(standings.F_team.unique())
+#            selected_team = st.selectbox('Select Team',options=teams,key='team_picker',label_visibility='collapsed')
+#        with subcol2:
+#            season = sorted(standings['season'].unique(), reverse=True)
+#            selected_season = st.selectbox("Select Year", options=season, index=0, key="season_picker2",label_visibility="collapsed")
+#            schedule_results = create_schedule_results(match_sims,matches,team_ratings,selected_season,selected_team)
+#        with subcol3:
+#            selected_visual_type = st.selectbox('Select Type',options=['Net Rtg','Off/Def','xG/xGA'],label_visibility='collapsed')
+#            multi_standings = create_multi_year_standings(team_ratings,standings)
+#            multi_standings = multi_standings[multi_standings.Team == selected_team]
+#        fig = plot_history_table(multi_standings)
+#        buf = BytesIO()
+#        fig.savefig(buf, format='png', bbox_inches='tight', dpi=150)
+#        buf.seek(0)
+#        img_base64 = base64.b64encode(buf.read()).decode()
+#        st.markdown(f'<img src="data:image/png;base64,{img_base64}" style="width:100%;">', unsafe_allow_html=True)
+#        plt.close(fig)
+#        fig = create_schedule_results_figure(schedule_results,selected_team)
+#        scrollable_plot(fig, height=390)
+#    with col2:
+#        if selected_visual_type == 'Net Rtg':
+#            fig = plot_spi_chart(team_ratings[team_ratings.Team == selected_team])
+#            st.plotly_chart(fig, use_container_width=True)
+#        elif selected_visual_type == 'Off/Def':
+#            fig = plot_offdef_chart(team_ratings[team_ratings.Team == selected_team])
+#            st.plotly_chart(fig, use_container_width=True)
+#        else:
+#            schedule_results = []
+#            for i in season:
+#                schedule_results.append(create_schedule_results(match_sims,matches,team_ratings,i,selected_team))
+#            schedule_results = pd.concat(schedule_results)
+#            fig = plot_xg_chart(schedule_results.sort_values('Date').reset_index(drop=True))
+#            st.plotly_chart(fig, use_container_width=True)
+#        player_heatmaps = create_player_heatmap(player_stats,matches)
+#        fig = plot_player_heatmaps(player_heatmaps,selected_team,selected_season)
+#        buf = BytesIO()
+#        fig.savefig(buf, format='png', bbox_inches='tight', dpi=200)
+#        buf.seek(0)
+#        img_base64 = base64.b64encode(buf.read()).decode()
+#        st.markdown(f'<img src="data:image/png;base64,{img_base64}" style="width:100%;">', unsafe_allow_html=True)
+ #       plt.close(fig)
