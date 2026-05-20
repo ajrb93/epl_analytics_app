@@ -65,8 +65,8 @@ def team_rating(xg,xga):
 matches = pd.read_csv('data/Matches.csv',sep='|').drop(columns='Unnamed: 0').sort_values('date')
 matches.match_id = matches.match_id.astype('str')
 matches.date = pd.to_datetime(matches.date).dt.date
-matches.home_xg_l = matches.home_xg_l.apply(lambda x: np.fromstring(x.strip("[]"), sep=" "))
-matches.away_xg_l = matches.away_xg_l.apply(lambda x: np.fromstring(x.strip("[]"), sep=" "))
+matches.home_xg_l = matches.home_xg_l.fillna('[0]').apply(lambda x: np.fromstring(x.strip("[]"), sep=" "))
+matches.away_xg_l = matches.away_xg_l.fillna('[0]').apply(lambda x: np.fromstring(x.strip("[]"), sep=" "))
 
 matches = create_xg(matches)
 standings = calculate_standings(matches)
