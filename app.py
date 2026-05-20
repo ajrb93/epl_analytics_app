@@ -73,7 +73,8 @@ def load_standings_sims():
     standings_sims['Last'] = standings_sims[['18','19','20']].sum(axis=1)
 
     standings_sims['range'] = standings_sims[['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20']].apply(credible_range_str, axis=1)
-    standings_sims['season'] = pd.to_datetime(standings_sims.Sim_Date).dt.year
+    season_temp =  pd.to_datetime(standings_sims.Sim_Date).dt.year - ( pd.to_datetime(standings_sims.Sim_Date).dt.month <= 6).astype('int')
+    standings_sims['season'] = season_temp.astype('str') + '/' + (season_temp + 1).astype('str') 
     match_sims = []
     for file in match_files:
         temp = pd.read_feather('data/Sim_States/'+file)
