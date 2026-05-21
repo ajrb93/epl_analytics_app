@@ -1130,15 +1130,15 @@ def plot_player_heatmaps(df,selected_team,selected_season):
     n_games = df.Date.nunique()
     names = 0.15
     header = 0.95
-    players = len(df_total) + 5
+    players = len(df_total) + 4
 
     ax.set_xlim(0,1)
     ax.set_ylim(0,1)
     ax.axis(False)
 
     cmap = plt.cm.RdYlGn
-    norm = mcolors.Normalize(vmin=-10, vmax=10)
-    norm2 = plt.Normalize(-2,2)
+    norm = mcolors.Normalize(vmin=5, vmax=8)
+    norm2 = plt.Normalize(4,9)
 
     j = 0
     for i in range(0,n_games+1):
