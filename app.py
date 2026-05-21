@@ -729,7 +729,7 @@ def plot_history_table(results):
 
 
     for _, row in results.iterrows():
-        ax.annotate(str(row['Season']), (col_x['1']+0.035, i_loc), va='center', ha='center', size=7)
+        ax.annotate(str(row['Season']).split('/')[1], (col_x['1']+0.035, i_loc), va='center', ha='center', size=7)
         ax.annotate(f"{int(row['F_p'])}", (col_x['Points']+0.035, i_loc), va='center', ha='center', size=7)
         ax.annotate(f"{row['F_xpts']:.1f}", (col_x['Points']+0.095, i_loc), va='center', ha='center', size=7)
         ax.annotate(f"{int(row['GD'])}", (col_x['GD']+0.035, i_loc), va='center', ha='center', size=7)
