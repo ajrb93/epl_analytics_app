@@ -10,6 +10,7 @@ import matplotlib.colors as mcolors
 import base64
 from io import BytesIO
 import numpy as np
+import unicodedata
 
 # --- 1. CONFIG & COMPACT STYLING ---
 st.set_page_config(layout="wide", page_title="English Premier League")
@@ -1065,34 +1066,41 @@ def plot_xg_chart(data):
 
 def create_player_heatmap(df,matches):
     df['Dressed'] = 1
+    df.Name = df.Name.apply(lambda x: unicodedata.normalize("NFKD", x).encode("ascii", "ignore").decode("utf-8"))
     df = df.reset_index(drop=True)
     df.loc[df.Out > 90,'In'] = df.In - df.MIN
     df.loc[df.Out > 90,'Out'] = df.In + df.MIN
-    df['Season'] = df.Date.dt.year
     df.Date = df.Date.dt.date
     df = pd.concat((df.merge(matches[['date','home_score','away_score','home_team','away_team']],left_on=['Date','Team'],right_on=['date','home_team']
-                                            ).drop(columns=['home_team']).rename(columns={'away_team':'Opp','home_score':'GF','away_score':'GA'}),
-                          df.merge(matches[['date','home_score','away_score','home_team','away_team']],left_on=['Date','Team'],right_on=['date','away_team']
-                                            ).drop(columns=['away_team']).rename(columns={'home_team':'Opp','away_score':'GF','home_score':'GA'})))
-    df = df.merge(pd.pivot_table(df,index=['Name','Season'],columns='P',values='MIN',aggfunc='sum').fillna(0).idxmax(axis=1).reset_index().rename(columns={0:'Pos'}))
-    df['P_Weight'] = df.P.replace({'G':1,'D':2,'M':3,'F':4,'':0}).astype('int') * df.MIN
+                                                ).drop(columns=['home_team']).rename(columns={'away_team':'Opp','home_score':'GF','away_score':'GA'}),
+                              df.merge(matches[['date','home_score','away_score','home_team','away_team']],left_on=['Date','Team'],right_on=['date','away_team']
+                                                ).drop(columns=['away_team']).rename(columns={'home_team':'Opp','away_score':'GF','home_score':'GA'})))
+    df_temp = pd.pivot_table(df,index=['Name','season'],columns='P',values='MIN',aggfunc='sum').fillna(0)
+    df_temp[''] = 0
+    df = df.merge(df_temp[['','G','D','M','F']].idxmax(axis=1).reset_index().rename(columns={0:'Pos'}))
+    df.loc[df.Pos == '','Pos'] = df.P
     return df
 
 def plot_player_heatmaps(df,selected_team,selected_season):
     fig, ax = plt.subplots(1,1,figsize=(18*4/5,9*4/5))
-    df = df[(df.Team == selected_team) & (df.season == selected_season)].reset_index(drop=True).sort_values('Date')
-    df_total = df.groupby(['Name','Pos']).agg({'MIN':'sum','Dressed':'sum','Rtg':'sum','P_Weight':'sum'}).reset_index()
-    df_total['P'] = df_total.P_Weight / df_total.MIN
-
+    df = df[(df.season == selected_season)].reset_index(drop=True).sort_values('Date')
+    df_min = df.groupby('Name').Date.count().max()
+    df_rtg = np.percentile(df.Rtg.dropna(),25)
+    df['Rtg'] *= df.MIN
+    df = df[(df.Team == selected_team)]
+    df_total = df.groupby(['Name','Pos']).agg({'MIN':'sum','Dressed':'sum','Rtg':'sum'}).reset_index()
+    df_total['Rtg'] = (df_total.Rtg + df_rtg * (df_min * 90 - df_total.MIN))/(df_min * 90)
+    df['Rtg'] /= df.MIN
+    
     df['label1'] = (df.GF.astype('int').astype('str') + '-' + df.GA.astype('int').astype('str'))
     df['label2'] =  df.Opp.str[0:3].str.upper()
     df['Result'] = (df.GF > df.GA).astype('int') * 2 + (df.GF == df.GA)
     df.loc[df.MIN == 0,'Rtg'] = np.nan
-        
+            
     df_total['90s'] = np.round(df_total.MIN / 90,0)
     df_total.Pos = df_total.Pos.replace({'':4,'G':0,'D':1,'M':2,'F':3})
     df_total = df_total.sort_values(['Pos','Rtg','90s'],ascending=[True,False,False])
-
+    
     names_index = df_total.reset_index(drop=True)
     names_index['pos2'] = names_index.Pos.shift(periods=1)
     position_breaks = names_index[names_index.Pos != names_index.pos2].iloc[1:].index.tolist()
@@ -1101,7 +1109,6 @@ def plot_player_heatmaps(df,selected_team,selected_season):
     positions_present = sorted(df_total.Pos.unique())
     pos_map = {0: 'Goalkeepers', 1: 'Defenders', 2: 'Midfielders', 3: 'Forwards', 4: 'Unknown'}
     pos_labels = [pos_map[p] for p in positions_present]
-
     for i, idx in enumerate(position_breaks):
         position_breaks[i] += i
     for i, idx in enumerate(position_breaks):
