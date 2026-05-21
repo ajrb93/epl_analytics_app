@@ -1080,7 +1080,7 @@ def create_player_heatmap(df,matches):
 
 def plot_player_heatmaps(df,selected_team,selected_season):
     fig, ax = plt.subplots(1,1,figsize=(18*4/5,9*4/5))
-    df = df[(df.Team == selected_team) & (pd.to_datetime(df.date).dt.year == selected_season)].reset_index(drop=True).sort_values('Date')
+    df = df[(df.Team == selected_team) & (df.season == selected_season)].reset_index(drop=True).sort_values('Date')
     df_total = df.groupby(['Name','Pos']).agg({'MIN':'sum','Dressed':'sum','Rtg':'sum','P_Weight':'sum'}).reset_index()
     df_total['P'] = df_total.P_Weight / df_total.MIN
 
