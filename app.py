@@ -687,7 +687,7 @@ def create_multi_year_standings(team_ratings,standings):
     return temp_season_ratings.merge(temp_standings,on=['Team','Season']).sort_values('Season',ascending=False)
 
 def plot_history_table(results):
-    fig, ax = plt.subplots(figsize=(5,1))
+    fig, ax = plt.subplots(figsize=(5,1.25))
     ax.set_xlim(0, 1)
     ax.set_ylim(0, 1)
     ax.axis('off')
@@ -925,7 +925,7 @@ def plot_spi_chart(data):
     fig.add_hline(y=0.5, line_dash='dash', line_color='gray', line_width=2)
     for year in pd.to_datetime(data.Date).dt.year.unique():
         fig.add_vline(x=pd.Timestamp(f'{year}-08-01').timestamp()*1000,line_dash='dot', line_color='black', line_width=2)
-    fig.update_layout(height=105, margin=dict(l=0, r=0, t=0, b=0),yaxis=dict(range=[0.25, 0.75], tickvals=[i/10 for i in range(3, 8)],tickformat='.0%'),
+    fig.update_layout(height=105, margin=dict(l=0, r=0, t=0, b=0),yaxis=dict(range=[0.20, 0.8], tickvals=[i/10 for i in range(3, 8)],tickformat='.0%'),
                       plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)')
     season_start = '08-01'
     season_end = '06-01'
@@ -1160,16 +1160,16 @@ def plot_player_heatmaps(df,selected_team,selected_season):
         if name not in pos_map.values():
             try:
                 box_color = cmap(norm(df_total[df_total.Name == name]['Rtg'].values[0]))
-                ax.annotate(name.split(' ')[0][0] + '. ' + name.split(' ')[-1],(0.015,k+0.005),va='bottom')
+                ax.annotate(name.split(' ')[0][0] + '. ' + name.split(' ')[-1],(0.015,k+0.0025),va='bottom')
                 ax.axhline(k,ls=':',color='grey')
                 ax.annotate(str(int(df_total[df_total.Name == name]['90s'].values[0]))+', '+str(np.round(df_total[df_total.Name == name]['Rtg'].values[0],1)),
-                            (names-0.008,k+0.005),va='bottom',fontstyle='italic',ha='right',
+                            (names-0.008,k+0.0025),va='bottom',fontstyle='italic',ha='right',
                             bbox=dict(boxstyle="round,pad=0.1",facecolor=box_color,edgecolor='black',alpha=0.5))
             except:
                 pass
         else:
-            ax.annotate(name,(0.005,k+0.005),va='bottom',fontweight='bold',color=team_colors[selected_team]['home_secondary'])
-            ax.annotate('(90s,Rtg)',(0.1,k+0.005),va='bottom',fontstyle='italic',fontweight='bold',color=team_colors[selected_team]['home_secondary'])
+            ax.annotate(name,(0.005,k+0.0025),va='bottom',fontweight='bold',color=team_colors[selected_team]['home_secondary'])
+            ax.annotate('(90s,Rtg)',(0.1,k+0.0025),va='bottom',fontstyle='italic',fontweight='bold',color=team_colors[selected_team]['home_secondary'])
             ax.add_patch(plt.Rectangle((0,k),1,(header)/players,color=team_colors[selected_team]['home_primary']))
             
         j = 0
@@ -1305,7 +1305,7 @@ with tab_team:
         st.markdown(f'<img src="data:image/png;base64,{img_base64}" style="width:100%;">', unsafe_allow_html=True)
         plt.close(fig)
         fig = create_schedule_results_figure(schedule_results,selected_team)
-        scrollable_plot(fig, height=390)
+        scrollable_plot(fig, height=370)
     with col2:
         if selected_visual_type == 'Net Rtg':
             fig = plot_spi_chart(team_ratings[team_ratings.Team == selected_team])
