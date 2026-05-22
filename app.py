@@ -925,7 +925,7 @@ def plot_spi_chart(data):
     fig.add_hline(y=0.5, line_dash='dash', line_color='gray', line_width=2)
     for year in pd.to_datetime(data.Date).dt.year.unique():
         fig.add_vline(x=pd.Timestamp(f'{year}-08-01').timestamp()*1000,line_dash='dot', line_color='black', line_width=2)
-    fig.update_layout(height=105, margin=dict(l=0, r=0, t=0, b=0),yaxis=dict(range=[0.05, 0.95], tickvals=[i/10 for i in range(1, 10, 2)],tickformat='.0%'),
+    fig.update_layout(height=105, margin=dict(l=0, r=0, t=0, b=0),yaxis=dict(range=[0.05, 0.95], tickvals=[i/10 for i in range(1, 11, 2)],tickformat='.0%'),
                       plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)')
     season_start = '08-01'
     season_end = '06-01'
