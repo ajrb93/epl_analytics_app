@@ -1185,7 +1185,7 @@ def plot_player_heatmaps(df,selected_team,selected_season):
                     ax.add_patch(plt.Rectangle((j+names+(1-names)/n_games*minutes_start_val/90,k),(1-names)/n_games*minutes_val/90,-(header)/players,color=box_color,
                                 ec='#444444',lw=0.5))
                     if minutes_val > 0:
-                        ax.annotate(str(np.round(rtg_val,1)).fillna(''),(j+names+(1-names)/n_games/2,k-(header)/players/2),ha='center',va='center')
+                        ax.annotate(np.round(rtg_val,1).fillna(np.round(df_rtg,1)),(j+names+(1-names)/n_games/2,k-(header)/players/2),ha='center',va='center')
             j += (1-names)/n_games
         k += (header)/players    
     plt.tight_layout()
