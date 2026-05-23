@@ -721,7 +721,7 @@ def plot_history_table(results):
     space = total_height / len(results)
     i_loc = top - space / 2
 
-    norm_rk = mcolors.TwoSlopeNorm(vmin=1,vcenter=3.5,vmax=6)
+    norm_rk = mcolors.TwoSlopeNorm(vmin=1,vcenter=10.5,vmax=20)
     
 
     # Vertical dividers (between groups)
@@ -1065,6 +1065,7 @@ def plot_xg_chart(data):
     return fig
 
 def create_player_heatmap(df,matches):
+    df = player_stats.copy()
     df['Dressed'] = 1
     df.Name = df.Name.apply(lambda x: unicodedata.normalize("NFKD", x).encode("ascii", "ignore").decode("utf-8"))
     df = df.reset_index(drop=True)
@@ -1072,13 +1073,16 @@ def create_player_heatmap(df,matches):
     df.loc[df.Out > 90,'Out'] = df.In + df.MIN
     df.Date = df.Date.dt.date
     df = pd.concat((df.merge(matches[['date','home_score','away_score','home_team','away_team']],left_on=['Date','Team'],right_on=['date','home_team']
-                                                ).drop(columns=['home_team']).rename(columns={'away_team':'Opp','home_score':'GF','away_score':'GA'}),
-                              df.merge(matches[['date','home_score','away_score','home_team','away_team']],left_on=['Date','Team'],right_on=['date','away_team']
-                                                ).drop(columns=['away_team']).rename(columns={'home_team':'Opp','away_score':'GF','home_score':'GA'})))
+                                                    ).drop(columns=['home_team']).rename(columns={'away_team':'Opp','home_score':'GF','away_score':'GA'}),
+                                  df.merge(matches[['date','home_score','away_score','home_team','away_team']],left_on=['Date','Team'],right_on=['date','away_team']
+                                                    ).drop(columns=['away_team']).rename(columns={'home_team':'Opp','away_score':'GF','home_score':'GA'})))
     df_temp = pd.pivot_table(df,index=['Name','season'],columns='P',values='MIN',aggfunc='sum').fillna(0)
     df_temp[''] = 0
-    df = df.merge(df_temp[['','G','D','M','F']].idxmax(axis=1).reset_index().rename(columns={0:'Pos'}))
-    df.loc[df.Pos == '','Pos'] = df.P
+    df_temp2 = pd.pivot_table(df,index=['Name','season'],columns='P',values='Dressed',aggfunc='sum').fillna(0)
+    df_temp2[''] = 0
+    df = df.merge(df_temp[['','G','D','M','F']].idxmax(axis=1).reset_index().rename(columns={0:'Pos'}),on=['Name','season'])
+    df = df.merge(df_temp2[['','G','D','M','F']].idxmax(axis=1).reset_index().rename(columns={0:'Pos2'}),on=['Name','season'])
+    df.loc[df.Pos == '','Pos'] = df.Pos2
     return df
 
 def plot_player_heatmaps(df,selected_team,selected_season):
