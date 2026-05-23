@@ -252,8 +252,8 @@ def plot_ratings_scatter(standings_df, team_colors):
 
     # Diagonal reference lines (equivalent to your matplotlib lines)
     for offset in [-2/3, -1/3, 0, 1/3, 2/3]:
-        x_start = def_mean * 1.5
-        x_end = def_mean * 0.5
+        x_start = def_mean * 2
+        x_end = def_mean * 0.25
         fig.add_trace(go.Scatter(
             x=[x_start, x_end],
             y=[x_start + offset * off_mean, x_end + offset * off_mean],
