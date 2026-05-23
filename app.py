@@ -1289,13 +1289,13 @@ with tab_standings:
 with tab_team:
     col1, col2 = st.columns([2,3.5])
     with col1:
-        subcol1, subcol2, subcol3 = st.columns([1.25,2.25,1])
+        subcol1, subcol2, subcol3 = st.columns([2.25,1.25,1])
         with subcol1:
-            season = sorted(standings['season'].unique(), reverse=True)
-            selected_season = st.selectbox("Select Year", options=season, index=0, key="season_picker2",label_visibility="collapsed")
-        with subcol2:
-            teams = sorted(standings[standings['season'] == selected_season].F_team.unique())
+            teams = sorted(standings.F_team.unique())
             selected_team = st.selectbox('Select Team',options=teams,key='team_picker',label_visibility='collapsed')
+        with subcol2:
+            season = sorted(standings[standings.F_team == selected_team]['season'].unique(), reverse=True)
+            selected_season = st.selectbox("Select Year", options=season, index=0, key="season_picker2",label_visibility="collapsed")
             schedule_results = create_schedule_results(match_sims,matches,team_ratings,selected_season,selected_team)
         with subcol3:
             selected_visual_type = st.selectbox('Select Type',options=['Net Rtg','Off/Def','xG/xGA'],label_visibility='collapsed')
