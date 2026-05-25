@@ -369,16 +369,16 @@
 367,4813736,2026-05-18,37,Arsenal,9825,Burnley,8191,True,True,2025/2026
 368,4813735,2026-05-19,37,AFC Bournemouth,8678,Manchester City,8456,True,True,2025/2026
 369,4813739,2026-05-19,37,Chelsea,8455,Tottenham Hotspur,8586,True,True,2025/2026
-370,4813745,2026-05-24,38,Brighton & Hove Albion,10204,Manchester United,10260,False,False,2025/2026
-371,4813746,2026-05-24,38,Burnley,8191,Wolverhampton Wanderers,8602,False,False,2025/2026
-372,4813747,2026-05-24,38,Crystal Palace,9826,Arsenal,9825,False,False,2025/2026
-373,4813748,2026-05-24,38,Fulham,9879,Newcastle United,10261,False,False,2025/2026
-374,4813749,2026-05-24,38,Liverpool,8650,Brentford,9937,False,False,2025/2026
-375,4813750,2026-05-24,38,Manchester City,8456,Aston Villa,10252,False,False,2025/2026
-376,4813751,2026-05-24,38,Nottingham Forest,10203,AFC Bournemouth,8678,False,False,2025/2026
-377,4813752,2026-05-24,38,Sunderland,8472,Chelsea,8455,False,False,2025/2026
-378,4813753,2026-05-24,38,Tottenham Hotspur,8586,Everton,8668,False,False,2025/2026
-379,4813754,2026-05-24,38,West Ham United,8654,Leeds United,8463,False,False,2025/2026
+370,4813745,2026-05-24,38,Brighton & Hove Albion,10204,Manchester United,10260,True,True,2025/2026
+371,4813746,2026-05-24,38,Burnley,8191,Wolverhampton Wanderers,8602,True,True,2025/2026
+372,4813747,2026-05-24,38,Crystal Palace,9826,Arsenal,9825,True,True,2025/2026
+373,4813748,2026-05-24,38,Fulham,9879,Newcastle United,10261,True,True,2025/2026
+374,4813749,2026-05-24,38,Liverpool,8650,Brentford,9937,True,True,2025/2026
+375,4813750,2026-05-24,38,Manchester City,8456,Aston Villa,10252,True,True,2025/2026
+376,4813751,2026-05-24,38,Nottingham Forest,10203,AFC Bournemouth,8678,True,True,2025/2026
+377,4813752,2026-05-24,38,Sunderland,8472,Chelsea,8455,True,True,2025/2026
+378,4813753,2026-05-24,38,Tottenham Hotspur,8586,Everton,8668,True,True,2025/2026
+379,4813754,2026-05-24,38,West Ham United,8654,Leeds United,8463,True,True,2025/2026
 380,4506263,2024-08-16,1,Manchester United,10260,Fulham,9879,True,True,2024/2025
 381,4506264,2024-08-17,1,Ipswich Town,9902,Liverpool,8650,True,True,2024/2025
 382,4506265,2024-08-17,1,Arsenal,9825,Wolverhampton Wanderers,8602,True,True,2024/2025
