@@ -1,9 +1,9 @@
 ,match_id,date,round,home_team,home_id,away_team,away_id,status,finished,season
 0,5795363,2026-08-21,1,Arsenal,9825,Coventry City,8669,True,True,2026/2027
-1,5795364,2026-08-22,1,Hull City,8667,Manchester United,10260,False,False,2026/2027
-2,5795365,2026-08-22,1,Everton,8668,Crystal Palace,9826,False,False,2026/2027
-3,5795366,2026-08-22,1,Ipswich Town,9902,Sunderland,8472,False,False,2026/2027
-4,5795367,2026-08-22,1,Nottingham Forest,10203,Leeds United,8463,False,False,2026/2027
+1,5795364,2026-08-22,1,Hull City,8667,Manchester United,10260,True,True,2026/2027
+2,5795365,2026-08-22,1,Everton,8668,Crystal Palace,9826,True,True,2026/2027
+3,5795366,2026-08-22,1,Ipswich Town,9902,Sunderland,8472,True,True,2026/2027
+4,5795367,2026-08-22,1,Nottingham Forest,10203,Leeds United,8463,True,True,2026/2027
 5,5795368,2026-08-22,1,Brentford,9937,Tottenham Hotspur,8586,False,False,2026/2027
 6,5795369,2026-08-23,1,Brighton & Hove Albion,10204,Aston Villa,10252,False,False,2026/2027
 7,5795370,2026-08-23,1,Manchester City,8456,AFC Bournemouth,8678,False,False,2026/2027
