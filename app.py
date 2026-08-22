@@ -1201,7 +1201,7 @@ color_map = pd.DataFrame([['Arsenal','#cc0000','#FFFFFF'],
                           ['Brighton & Hove Albion','#0054a6','#ffffff'],
                           ['Burnley','#81204c','#8fd2f4'],
                           ['Chelsea','#0310a7','#ffffff'],
-                          ['Coventry City','#059DD9','#FFFFFF']
+                          ['Coventry City','#059DD9','#FFFFFF'],
                           ['Crystal Palace','#0033ff','#b90d2b'],
                           ['Everton','#274488','#ffffff'],
                           ['Fulham','#ffffff','#000000'],
