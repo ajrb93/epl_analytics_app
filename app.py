@@ -1225,7 +1225,6 @@ color_map = pd.DataFrame([['Arsenal','#cc0000','#FFFFFF'],
                           ['AFC Bournemouth','#000000','#cc0000'],
                           ['Nottingham Forest','#DD0000','#FFFFFF'],
                           ['Luton Town','#ff3300','#000033'],
-                          ['Ipswich Town','#0000ff','#ffffff'],
                           ['Sunderland','#ffffff','#ca0000'],
                           ],columns=['team','home_primary','home_secondary']).set_index('team')
 team_colors = color_map.to_dict('index')
