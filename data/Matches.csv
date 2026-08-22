@@ -8791,3 +8791,383 @@
  0.0319 0.1013 0.03   0.1437 0.0472 0.0671 0.0881]"|2020/2021|True|True
 0|3411728|2021-05-23|38|Wolverhampton Wanderers|Manchester United|1.0|2.0|0.86|2.06|"[0.0494 0.0605 0.07   0.0364 0.1437 0.1639 0.0254 0.0377 0.0689 0.0688
  0.0262 0.0614 0.0274 0.0227]"|[0.1347 0.3111 0.0626 0.2301 0.0316 0.0247 0.7884 0.4432 0.0304]|2020/2021|True|True
+0|5795363|2026-08-21|1|Arsenal|Coventry City|||||||2026/2027|True|True
+1|5795364|2026-08-22|1|Hull City|Manchester United|||||||2026/2027|False|False
+2|5795365|2026-08-22|1|Everton|Crystal Palace|||||||2026/2027|False|False
+3|5795366|2026-08-22|1|Ipswich Town|Sunderland|||||||2026/2027|False|False
+4|5795367|2026-08-22|1|Nottingham Forest|Leeds United|||||||2026/2027|False|False
+5|5795368|2026-08-22|1|Brentford|Tottenham Hotspur|||||||2026/2027|False|False
+6|5795369|2026-08-23|1|Brighton & Hove Albion|Aston Villa|||||||2026/2027|False|False
+7|5795370|2026-08-23|1|Manchester City|AFC Bournemouth|||||||2026/2027|False|False
+8|5795371|2026-08-23|1|Newcastle United|Liverpool|||||||2026/2027|False|False
+9|5795372|2026-08-24|1|Fulham|Chelsea|||||||2026/2027|False|False
+10|5795429|2026-08-28|2|Crystal Palace|Manchester City|||||||2026/2027|False|False
+11|5795431|2026-08-29|2|Liverpool|Nottingham Forest|||||||2026/2027|False|False
+12|5795425|2026-08-29|2|AFC Bournemouth|Everton|||||||2026/2027|False|False
+13|5795428|2026-08-29|2|Coventry City|Hull City|||||||2026/2027|False|False
+14|5795434|2026-08-29|2|Tottenham Hotspur|Newcastle United|||||||2026/2027|False|False
+15|5795427|2026-08-30|2|Chelsea|Brighton & Hove Albion|||||||2026/2027|False|False
+16|5795430|2026-08-30|2|Leeds United|Brentford|||||||2026/2027|False|False
+17|5795433|2026-08-30|2|Sunderland|Fulham|||||||2026/2027|False|False
+18|5795432|2026-08-30|2|Manchester United|Ipswich Town|||||||2026/2027|False|False
+19|5795426|2026-08-31|2|Aston Villa|Arsenal|||||||2026/2027|False|False
+20|5795441|2026-09-04|3|Ipswich Town|Liverpool|||||||2026/2027|False|False
+21|5795443|2026-09-05|3|Newcastle United|AFC Bournemouth|||||||2026/2027|False|False
+22|5795436|2026-09-05|3|Brentford|Sunderland|||||||2026/2027|False|False
+23|5795437|2026-09-05|3|Brighton & Hove Albion|Leeds United|||||||2026/2027|False|False
+24|5795439|2026-09-05|3|Fulham|Crystal Palace|||||||2026/2027|False|False
+25|5795442|2026-09-05|3|Manchester City|Coventry City|||||||2026/2027|False|False
+26|5795444|2026-09-05|3|Nottingham Forest|Tottenham Hotspur|||||||2026/2027|False|False
+27|5795440|2026-09-05|3|Hull City|Aston Villa|||||||2026/2027|False|False
+28|5795438|2026-09-06|3|Everton|Manchester United|||||||2026/2027|False|False
+29|5795435|2026-09-06|3|Arsenal|Chelsea|||||||2026/2027|False|False
+30|5795445|2026-09-12|4|AFC Bournemouth|Brentford|||||||2026/2027|False|False
+31|5795446|2026-09-12|4|Aston Villa|Nottingham Forest|||||||2026/2027|False|False
+32|5795447|2026-09-12|4|Chelsea|Hull City|||||||2026/2027|False|False
+33|5795449|2026-09-12|4|Crystal Palace|Ipswich Town|||||||2026/2027|False|False
+34|5795451|2026-09-12|4|Liverpool|Fulham|||||||2026/2027|False|False
+35|5795454|2026-09-12|4|Tottenham Hotspur|Everton|||||||2026/2027|False|False
+36|5795453|2026-09-12|4|Sunderland|Arsenal|||||||2026/2027|False|False
+37|5795448|2026-09-13|4|Coventry City|Brighton & Hove Albion|||||||2026/2027|False|False
+38|5795452|2026-09-13|4|Manchester United|Manchester City|||||||2026/2027|False|False
+39|5795450|2026-09-14|4|Leeds United|Newcastle United|||||||2026/2027|False|False
+40|5795456|2026-09-18|5|Brentford|Chelsea|||||||2026/2027|False|False
+41|5795464|2026-09-19|5|Tottenham Hotspur|Aston Villa|||||||2026/2027|False|False
+42|5795457|2026-09-19|5|Brighton & Hove Albion|Arsenal|||||||2026/2027|False|False
+43|5795458|2026-09-19|5|Everton|Ipswich Town|||||||2026/2027|False|False
+44|5795460|2026-09-19|5|Leeds United|Crystal Palace|||||||2026/2027|False|False
+45|5795461|2026-09-19|5|Manchester City|Sunderland|||||||2026/2027|False|False
+46|5795462|2026-09-19|5|Newcastle United|Hull City|||||||2026/2027|False|False
+47|5795463|2026-09-19|5|Nottingham Forest|Coventry City|||||||2026/2027|False|False
+48|5795455|2026-09-20|5|AFC Bournemouth|Liverpool|||||||2026/2027|False|False
+49|5795459|2026-09-20|5|Fulham|Manchester United|||||||2026/2027|False|False
+50|5795465|2026-10-10|6|Arsenal|Leeds United|||||||2026/2027|False|False
+51|5795466|2026-10-10|6|Aston Villa|Brentford|||||||2026/2027|False|False
+52|5795467|2026-10-10|6|Chelsea|AFC Bournemouth|||||||2026/2027|False|False
+53|5795471|2026-10-10|6|Ipswich Town|Fulham|||||||2026/2027|False|False
+54|5795474|2026-10-10|6|Sunderland|Brighton & Hove Albion|||||||2026/2027|False|False
+55|5795473|2026-10-10|6|Manchester United|Tottenham Hotspur|||||||2026/2027|False|False
+56|5795469|2026-10-11|6|Crystal Palace|Nottingham Forest|||||||2026/2027|False|False
+57|5795470|2026-10-11|6|Hull City|Everton|||||||2026/2027|False|False
+58|5795472|2026-10-11|6|Liverpool|Manchester City|||||||2026/2027|False|False
+59|5795468|2026-10-12|6|Coventry City|Newcastle United|||||||2026/2027|False|False
+60|5795478|2026-10-17|7|Everton|Chelsea|||||||2026/2027|False|False
+61|5795476|2026-10-17|7|Brentford|Liverpool|||||||2026/2027|False|False
+62|5795479|2026-10-17|7|Fulham|Hull City|||||||2026/2027|False|False
+63|5795481|2026-10-17|7|Manchester City|Ipswich Town|||||||2026/2027|False|False
+64|5795482|2026-10-17|7|Newcastle United|Aston Villa|||||||2026/2027|False|False
+65|5795475|2026-10-18|7|AFC Bournemouth|Sunderland|||||||2026/2027|False|False
+66|5795477|2026-10-18|7|Brighton & Hove Albion|Crystal Palace|||||||2026/2027|False|False
+67|5795480|2026-10-18|7|Leeds United|Manchester United|||||||2026/2027|False|False
+68|5795483|2026-10-18|7|Nottingham Forest|Arsenal|||||||2026/2027|False|False
+69|5795484|2026-10-19|7|Tottenham Hotspur|Coventry City|||||||2026/2027|False|False
+70|5795491|2026-10-23|8|Ipswich Town|Nottingham Forest|||||||2026/2027|False|False
+71|5795486|2026-10-24|8|Aston Villa|Manchester City|||||||2026/2027|False|False
+72|5795485|2026-10-24|8|Arsenal|Everton|||||||2026/2027|False|False
+73|5795488|2026-10-24|8|Coventry City|Fulham|||||||2026/2027|False|False
+74|5795492|2026-10-24|8|Liverpool|Brighton & Hove Albion|||||||2026/2027|False|False
+75|5795487|2026-10-24|8|Chelsea|Tottenham Hotspur|||||||2026/2027|False|False
+76|5795489|2026-10-25|8|Crystal Palace|Newcastle United|||||||2026/2027|False|False
+77|5795490|2026-10-25|8|Hull City|Brentford|||||||2026/2027|False|False
+78|5795493|2026-10-25|8|Manchester United|AFC Bournemouth|||||||2026/2027|False|False
+79|5795494|2026-10-25|8|Sunderland|Leeds United|||||||2026/2027|False|False
+80|5795498|2026-10-31|9|Chelsea|Manchester United|||||||2026/2027|False|False
+81|5795495|2026-10-31|9|AFC Bournemouth|Leeds United|||||||2026/2027|False|False
+82|5795497|2026-10-31|9|Brentford|Nottingham Forest|||||||2026/2027|False|False
+83|5795499|2026-10-31|9|Coventry City|Sunderland|||||||2026/2027|False|False
+84|5795500|2026-10-31|9|Hull City|Ipswich Town|||||||2026/2027|False|False
+85|5795502|2026-10-31|9|Manchester City|Brighton & Hove Albion|||||||2026/2027|False|False
+86|5795504|2026-10-31|9|Tottenham Hotspur|Crystal Palace|||||||2026/2027|False|False
+87|5795496|2026-11-01|9|Aston Villa|Fulham|||||||2026/2027|False|False
+88|5795501|2026-11-01|9|Liverpool|Arsenal|||||||2026/2027|False|False
+89|5795503|2026-11-02|9|Newcastle United|Everton|||||||2026/2027|False|False
+90|5795505|2026-11-07|10|Arsenal|Hull City|||||||2026/2027|False|False
+91|5795506|2026-11-07|10|Brighton & Hove Albion|Brentford|||||||2026/2027|False|False
+92|5795507|2026-11-07|10|Crystal Palace|Liverpool|||||||2026/2027|False|False
+93|5795508|2026-11-07|10|Everton|Coventry City|||||||2026/2027|False|False
+94|5795509|2026-11-07|10|Fulham|Newcastle United|||||||2026/2027|False|False
+95|5795510|2026-11-07|10|Ipswich Town|AFC Bournemouth|||||||2026/2027|False|False
+96|5795511|2026-11-07|10|Leeds United|Tottenham Hotspur|||||||2026/2027|False|False
+97|5795512|2026-11-07|10|Manchester United|Aston Villa|||||||2026/2027|False|False
+98|5795513|2026-11-07|10|Nottingham Forest|Manchester City|||||||2026/2027|False|False
+99|5795514|2026-11-07|10|Sunderland|Chelsea|||||||2026/2027|False|False
+100|5795515|2026-11-21|11|AFC Bournemouth|Nottingham Forest|||||||2026/2027|False|False
+101|5795516|2026-11-21|11|Aston Villa|Sunderland|||||||2026/2027|False|False
+102|5795517|2026-11-21|11|Brentford|Everton|||||||2026/2027|False|False
+103|5795518|2026-11-21|11|Chelsea|Leeds United|||||||2026/2027|False|False
+104|5795519|2026-11-21|11|Coventry City|Crystal Palace|||||||2026/2027|False|False
+105|5795520|2026-11-21|11|Hull City|Brighton & Hove Albion|||||||2026/2027|False|False
+106|5795521|2026-11-21|11|Liverpool|Manchester United|||||||2026/2027|False|False
+107|5795522|2026-11-21|11|Manchester City|Fulham|||||||2026/2027|False|False
+108|5795523|2026-11-21|11|Newcastle United|Arsenal|||||||2026/2027|False|False
+109|5795524|2026-11-21|11|Tottenham Hotspur|Ipswich Town|||||||2026/2027|False|False
+110|5795525|2026-11-28|12|Arsenal|Manchester City|||||||2026/2027|False|False
+111|5795526|2026-11-28|12|Brighton & Hove Albion|Newcastle United|||||||2026/2027|False|False
+112|5795527|2026-11-28|12|Crystal Palace|Hull City|||||||2026/2027|False|False
+113|5795528|2026-11-28|12|Everton|Liverpool|||||||2026/2027|False|False
+114|5795529|2026-11-28|12|Fulham|AFC Bournemouth|||||||2026/2027|False|False
+115|5795530|2026-11-28|12|Ipswich Town|Aston Villa|||||||2026/2027|False|False
+116|5795531|2026-11-28|12|Leeds United|Coventry City|||||||2026/2027|False|False
+117|5795532|2026-11-28|12|Manchester United|Brentford|||||||2026/2027|False|False
+118|5795533|2026-11-28|12|Nottingham Forest|Chelsea|||||||2026/2027|False|False
+119|5795534|2026-11-28|12|Sunderland|Tottenham Hotspur|||||||2026/2027|False|False
+120|5795535|2026-12-02|13|AFC Bournemouth|Brighton & Hove Albion|||||||2026/2027|False|False
+121|5795536|2026-12-02|13|Aston Villa|Everton|||||||2026/2027|False|False
+122|5795537|2026-12-02|13|Brentford|Arsenal|||||||2026/2027|False|False
+123|5795538|2026-12-02|13|Chelsea|Crystal Palace|||||||2026/2027|False|False
+124|5795539|2026-12-02|13|Coventry City|Ipswich Town|||||||2026/2027|False|False
+125|5795540|2026-12-02|13|Hull City|Nottingham Forest|||||||2026/2027|False|False
+126|5795541|2026-12-02|13|Liverpool|Sunderland|||||||2026/2027|False|False
+127|5795542|2026-12-02|13|Manchester City|Leeds United|||||||2026/2027|False|False
+128|5795543|2026-12-02|13|Newcastle United|Manchester United|||||||2026/2027|False|False
+129|5795544|2026-12-02|13|Tottenham Hotspur|Fulham|||||||2026/2027|False|False
+130|5795545|2026-12-05|14|AFC Bournemouth|Hull City|||||||2026/2027|False|False
+131|5795546|2026-12-05|14|Aston Villa|Crystal Palace|||||||2026/2027|False|False
+132|5795547|2026-12-05|14|Brentford|Manchester City|||||||2026/2027|False|False
+133|5795548|2026-12-05|14|Chelsea|Liverpool|||||||2026/2027|False|False
+134|5795549|2026-12-05|14|Everton|Fulham|||||||2026/2027|False|False
+135|5795550|2026-12-05|14|Leeds United|Ipswich Town|||||||2026/2027|False|False
+136|5795551|2026-12-05|14|Manchester United|Coventry City|||||||2026/2027|False|False
+137|5795552|2026-12-05|14|Newcastle United|Sunderland|||||||2026/2027|False|False
+138|5795553|2026-12-05|14|Nottingham Forest|Brighton & Hove Albion|||||||2026/2027|False|False
+139|5795554|2026-12-05|14|Tottenham Hotspur|Arsenal|||||||2026/2027|False|False
+140|5795555|2026-12-12|15|Arsenal|AFC Bournemouth|||||||2026/2027|False|False
+141|5795556|2026-12-12|15|Brighton & Hove Albion|Everton|||||||2026/2027|False|False
+142|5795557|2026-12-12|15|Coventry City|Aston Villa|||||||2026/2027|False|False
+143|5795558|2026-12-12|15|Crystal Palace|Manchester United|||||||2026/2027|False|False
+144|5795559|2026-12-12|15|Fulham|Brentford|||||||2026/2027|False|False
+145|5795560|2026-12-12|15|Hull City|Tottenham Hotspur|||||||2026/2027|False|False
+146|5795561|2026-12-12|15|Ipswich Town|Newcastle United|||||||2026/2027|False|False
+147|5795562|2026-12-12|15|Liverpool|Leeds United|||||||2026/2027|False|False
+148|5795563|2026-12-12|15|Manchester City|Chelsea|||||||2026/2027|False|False
+149|5795564|2026-12-12|15|Sunderland|Nottingham Forest|||||||2026/2027|False|False
+150|5795565|2026-12-19|16|AFC Bournemouth|Coventry City|||||||2026/2027|False|False
+151|5795566|2026-12-19|16|Arsenal|Manchester United|||||||2026/2027|False|False
+152|5795567|2026-12-19|16|Brentford|Newcastle United|||||||2026/2027|False|False
+153|5795568|2026-12-19|16|Brighton & Hove Albion|Ipswich Town|||||||2026/2027|False|False
+154|5795569|2026-12-19|16|Chelsea|Aston Villa|||||||2026/2027|False|False
+155|5795570|2026-12-19|16|Leeds United|Fulham|||||||2026/2027|False|False
+156|5795571|2026-12-19|16|Liverpool|Tottenham Hotspur|||||||2026/2027|False|False
+157|5795572|2026-12-19|16|Manchester City|Hull City|||||||2026/2027|False|False
+158|5795573|2026-12-19|16|Nottingham Forest|Everton|||||||2026/2027|False|False
+159|5795574|2026-12-19|16|Sunderland|Crystal Palace|||||||2026/2027|False|False
+160|5795575|2026-12-26|17|Aston Villa|Leeds United|||||||2026/2027|False|False
+161|5795576|2026-12-26|17|Coventry City|Chelsea|||||||2026/2027|False|False
+162|5795577|2026-12-26|17|Crystal Palace|Arsenal|||||||2026/2027|False|False
+163|5795578|2026-12-26|17|Everton|Sunderland|||||||2026/2027|False|False
+164|5795579|2026-12-26|17|Fulham|Brighton & Hove Albion|||||||2026/2027|False|False
+165|5795580|2026-12-26|17|Hull City|Liverpool|||||||2026/2027|False|False
+166|5795581|2026-12-26|17|Ipswich Town|Brentford|||||||2026/2027|False|False
+167|5795582|2026-12-26|17|Manchester United|Nottingham Forest|||||||2026/2027|False|False
+168|5795583|2026-12-26|17|Newcastle United|Manchester City|||||||2026/2027|False|False
+169|5795584|2026-12-26|17|Tottenham Hotspur|AFC Bournemouth|||||||2026/2027|False|False
+170|5795585|2026-12-30|18|Aston Villa|Liverpool|||||||2026/2027|False|False
+171|5795586|2026-12-30|18|Coventry City|Brentford|||||||2026/2027|False|False
+172|5795587|2026-12-30|18|Crystal Palace|AFC Bournemouth|||||||2026/2027|False|False
+173|5795588|2026-12-30|18|Everton|Manchester City|||||||2026/2027|False|False
+174|5795589|2026-12-30|18|Fulham|Arsenal|||||||2026/2027|False|False
+175|5795590|2026-12-30|18|Hull City|Leeds United|||||||2026/2027|False|False
+176|5795591|2026-12-30|18|Ipswich Town|Chelsea|||||||2026/2027|False|False
+177|5795592|2026-12-30|18|Manchester United|Sunderland|||||||2026/2027|False|False
+178|5795593|2026-12-30|18|Newcastle United|Nottingham Forest|||||||2026/2027|False|False
+179|5795594|2026-12-30|18|Tottenham Hotspur|Brighton & Hove Albion|||||||2026/2027|False|False
+180|5795595|2027-01-02|19|AFC Bournemouth|Aston Villa|||||||2026/2027|False|False
+181|5795596|2027-01-02|19|Arsenal|Ipswich Town|||||||2026/2027|False|False
+182|5795597|2027-01-02|19|Brentford|Crystal Palace|||||||2026/2027|False|False
+183|5795598|2027-01-02|19|Brighton & Hove Albion|Manchester United|||||||2026/2027|False|False
+184|5795599|2027-01-02|19|Chelsea|Newcastle United|||||||2026/2027|False|False
+185|5795600|2027-01-02|19|Leeds United|Everton|||||||2026/2027|False|False
+186|5795601|2027-01-02|19|Liverpool|Coventry City|||||||2026/2027|False|False
+187|5795602|2027-01-02|19|Manchester City|Tottenham Hotspur|||||||2026/2027|False|False
+188|5795603|2027-01-02|19|Nottingham Forest|Fulham|||||||2026/2027|False|False
+189|5795604|2027-01-02|19|Sunderland|Hull City|||||||2026/2027|False|False
+190|5795605|2027-01-06|20|Arsenal|Brentford|||||||2026/2027|False|False
+191|5795606|2027-01-06|20|Brighton & Hove Albion|AFC Bournemouth|||||||2026/2027|False|False
+192|5795607|2027-01-06|20|Crystal Palace|Chelsea|||||||2026/2027|False|False
+193|5795608|2027-01-06|20|Everton|Aston Villa|||||||2026/2027|False|False
+194|5795609|2027-01-06|20|Fulham|Tottenham Hotspur|||||||2026/2027|False|False
+195|5795610|2027-01-06|20|Ipswich Town|Coventry City|||||||2026/2027|False|False
+196|5795611|2027-01-06|20|Leeds United|Manchester City|||||||2026/2027|False|False
+197|5795612|2027-01-06|20|Manchester United|Newcastle United|||||||2026/2027|False|False
+198|5795613|2027-01-06|20|Nottingham Forest|Hull City|||||||2026/2027|False|False
+199|5795614|2027-01-06|20|Sunderland|Liverpool|||||||2026/2027|False|False
+200|5795615|2027-01-16|21|AFC Bournemouth|Ipswich Town|||||||2026/2027|False|False
+201|5795616|2027-01-16|21|Aston Villa|Manchester United|||||||2026/2027|False|False
+202|5795617|2027-01-16|21|Brentford|Brighton & Hove Albion|||||||2026/2027|False|False
+203|5795618|2027-01-16|21|Chelsea|Sunderland|||||||2026/2027|False|False
+204|5795619|2027-01-16|21|Coventry City|Everton|||||||2026/2027|False|False
+205|5795620|2027-01-16|21|Hull City|Arsenal|||||||2026/2027|False|False
+206|5795621|2027-01-16|21|Liverpool|Crystal Palace|||||||2026/2027|False|False
+207|5795622|2027-01-16|21|Manchester City|Nottingham Forest|||||||2026/2027|False|False
+208|5795623|2027-01-16|21|Newcastle United|Fulham|||||||2026/2027|False|False
+209|5795624|2027-01-16|21|Tottenham Hotspur|Leeds United|||||||2026/2027|False|False
+210|5795625|2027-01-23|22|Arsenal|Newcastle United|||||||2026/2027|False|False
+211|5795626|2027-01-23|22|Brighton & Hove Albion|Manchester City|||||||2026/2027|False|False
+212|5795627|2027-01-23|22|Crystal Palace|Tottenham Hotspur|||||||2026/2027|False|False
+213|5795628|2027-01-23|22|Everton|Brentford|||||||2026/2027|False|False
+214|5795629|2027-01-23|22|Fulham|Aston Villa|||||||2026/2027|False|False
+215|5795630|2027-01-23|22|Ipswich Town|Hull City|||||||2026/2027|False|False
+216|5795631|2027-01-23|22|Leeds United|Chelsea|||||||2026/2027|False|False
+217|5795632|2027-01-23|22|Manchester United|Liverpool|||||||2026/2027|False|False
+218|5795633|2027-01-23|22|Nottingham Forest|AFC Bournemouth|||||||2026/2027|False|False
+219|5795634|2027-01-23|22|Sunderland|Coventry City|||||||2026/2027|False|False
+220|5795635|2027-01-30|23|AFC Bournemouth|Fulham|||||||2026/2027|False|False
+221|5795636|2027-01-30|23|Aston Villa|Ipswich Town|||||||2026/2027|False|False
+222|5795637|2027-01-30|23|Brentford|Manchester United|||||||2026/2027|False|False
+223|5795638|2027-01-30|23|Chelsea|Nottingham Forest|||||||2026/2027|False|False
+224|5795639|2027-01-30|23|Coventry City|Leeds United|||||||2026/2027|False|False
+225|5795640|2027-01-30|23|Hull City|Crystal Palace|||||||2026/2027|False|False
+226|5795641|2027-01-30|23|Liverpool|Everton|||||||2026/2027|False|False
+227|5795642|2027-01-30|23|Manchester City|Arsenal|||||||2026/2027|False|False
+228|5795643|2027-01-30|23|Newcastle United|Brighton & Hove Albion|||||||2026/2027|False|False
+229|5795644|2027-01-30|23|Tottenham Hotspur|Sunderland|||||||2026/2027|False|False
+230|5795645|2027-02-06|24|Arsenal|Liverpool|||||||2026/2027|False|False
+231|5795646|2027-02-06|24|Brighton & Hove Albion|Hull City|||||||2026/2027|False|False
+232|5795647|2027-02-06|24|Crystal Palace|Coventry City|||||||2026/2027|False|False
+233|5795648|2027-02-06|24|Everton|Newcastle United|||||||2026/2027|False|False
+234|5795649|2027-02-06|24|Fulham|Manchester City|||||||2026/2027|False|False
+235|5795650|2027-02-06|24|Ipswich Town|Tottenham Hotspur|||||||2026/2027|False|False
+236|5795651|2027-02-06|24|Leeds United|AFC Bournemouth|||||||2026/2027|False|False
+237|5795652|2027-02-06|24|Manchester United|Chelsea|||||||2026/2027|False|False
+238|5795653|2027-02-06|24|Nottingham Forest|Brentford|||||||2026/2027|False|False
+239|5795654|2027-02-06|24|Sunderland|Aston Villa|||||||2026/2027|False|False
+240|5795655|2027-02-10|25|Aston Villa|AFC Bournemouth|||||||2026/2027|False|False
+241|5795656|2027-02-10|25|Coventry City|Liverpool|||||||2026/2027|False|False
+242|5795657|2027-02-10|25|Crystal Palace|Brentford|||||||2026/2027|False|False
+243|5795658|2027-02-10|25|Everton|Leeds United|||||||2026/2027|False|False
+244|5795659|2027-02-10|25|Fulham|Nottingham Forest|||||||2026/2027|False|False
+245|5795660|2027-02-10|25|Hull City|Sunderland|||||||2026/2027|False|False
+246|5795661|2027-02-10|25|Ipswich Town|Arsenal|||||||2026/2027|False|False
+247|5795662|2027-02-10|25|Manchester United|Brighton & Hove Albion|||||||2026/2027|False|False
+248|5795663|2027-02-10|25|Newcastle United|Chelsea|||||||2026/2027|False|False
+249|5795664|2027-02-10|25|Tottenham Hotspur|Manchester City|||||||2026/2027|False|False
+250|5795665|2027-02-20|26|AFC Bournemouth|Crystal Palace|||||||2026/2027|False|False
+251|5795666|2027-02-20|26|Arsenal|Fulham|||||||2026/2027|False|False
+252|5795667|2027-02-20|26|Brentford|Coventry City|||||||2026/2027|False|False
+253|5795668|2027-02-20|26|Brighton & Hove Albion|Tottenham Hotspur|||||||2026/2027|False|False
+254|5795669|2027-02-20|26|Chelsea|Ipswich Town|||||||2026/2027|False|False
+255|5795670|2027-02-20|26|Leeds United|Aston Villa|||||||2026/2027|False|False
+256|5795671|2027-02-20|26|Liverpool|Hull City|||||||2026/2027|False|False
+257|5795672|2027-02-20|26|Manchester City|Newcastle United|||||||2026/2027|False|False
+258|5795673|2027-02-20|26|Nottingham Forest|Manchester United|||||||2026/2027|False|False
+259|5795674|2027-02-20|26|Sunderland|Everton|||||||2026/2027|False|False
+260|5795675|2027-02-27|27|Aston Villa|Chelsea|||||||2026/2027|False|False
+261|5795676|2027-02-27|27|Coventry City|AFC Bournemouth|||||||2026/2027|False|False
+262|5795677|2027-02-27|27|Crystal Palace|Sunderland|||||||2026/2027|False|False
+263|5795678|2027-02-27|27|Everton|Nottingham Forest|||||||2026/2027|False|False
+264|5795679|2027-02-27|27|Fulham|Leeds United|||||||2026/2027|False|False
+265|5795680|2027-02-27|27|Hull City|Manchester City|||||||2026/2027|False|False
+266|5795681|2027-02-27|27|Ipswich Town|Brighton & Hove Albion|||||||2026/2027|False|False
+267|5795682|2027-02-27|27|Manchester United|Arsenal|||||||2026/2027|False|False
+268|5795683|2027-02-27|27|Newcastle United|Brentford|||||||2026/2027|False|False
+269|5795684|2027-02-27|27|Tottenham Hotspur|Liverpool|||||||2026/2027|False|False
+270|5795685|2027-03-03|28|AFC Bournemouth|Tottenham Hotspur|||||||2026/2027|False|False
+271|5795686|2027-03-03|28|Arsenal|Crystal Palace|||||||2026/2027|False|False
+272|5795687|2027-03-03|28|Brentford|Ipswich Town|||||||2026/2027|False|False
+273|5795688|2027-03-03|28|Brighton & Hove Albion|Fulham|||||||2026/2027|False|False
+274|5795689|2027-03-03|28|Chelsea|Coventry City|||||||2026/2027|False|False
+275|5795690|2027-03-03|28|Leeds United|Hull City|||||||2026/2027|False|False
+276|5795691|2027-03-03|28|Liverpool|Aston Villa|||||||2026/2027|False|False
+277|5795692|2027-03-03|28|Manchester City|Everton|||||||2026/2027|False|False
+278|5795693|2027-03-03|28|Nottingham Forest|Newcastle United|||||||2026/2027|False|False
+279|5795694|2027-03-03|28|Sunderland|Manchester United|||||||2026/2027|False|False
+280|5795695|2027-03-13|29|AFC Bournemouth|Newcastle United|||||||2026/2027|False|False
+281|5795696|2027-03-13|29|Aston Villa|Hull City|||||||2026/2027|False|False
+282|5795697|2027-03-13|29|Chelsea|Arsenal|||||||2026/2027|False|False
+283|5795698|2027-03-13|29|Coventry City|Manchester City|||||||2026/2027|False|False
+284|5795699|2027-03-13|29|Crystal Palace|Fulham|||||||2026/2027|False|False
+285|5795700|2027-03-13|29|Leeds United|Brighton & Hove Albion|||||||2026/2027|False|False
+286|5795701|2027-03-13|29|Liverpool|Ipswich Town|||||||2026/2027|False|False
+287|5795702|2027-03-13|29|Manchester United|Everton|||||||2026/2027|False|False
+288|5795703|2027-03-13|29|Sunderland|Brentford|||||||2026/2027|False|False
+289|5795704|2027-03-13|29|Tottenham Hotspur|Nottingham Forest|||||||2026/2027|False|False
+290|5795705|2027-03-20|30|Arsenal|Sunderland|||||||2026/2027|False|False
+291|5795706|2027-03-20|30|Brentford|AFC Bournemouth|||||||2026/2027|False|False
+292|5795707|2027-03-20|30|Brighton & Hove Albion|Coventry City|||||||2026/2027|False|False
+293|5795708|2027-03-20|30|Everton|Tottenham Hotspur|||||||2026/2027|False|False
+294|5795709|2027-03-20|30|Fulham|Liverpool|||||||2026/2027|False|False
+295|5795710|2027-03-20|30|Hull City|Chelsea|||||||2026/2027|False|False
+296|5795711|2027-03-20|30|Ipswich Town|Crystal Palace|||||||2026/2027|False|False
+297|5795712|2027-03-20|30|Manchester City|Manchester United|||||||2026/2027|False|False
+298|5795713|2027-03-20|30|Newcastle United|Leeds United|||||||2026/2027|False|False
+299|5795714|2027-03-20|30|Nottingham Forest|Aston Villa|||||||2026/2027|False|False
+300|5795715|2027-04-10|31|AFC Bournemouth|Manchester City|||||||2026/2027|False|False
+301|5795716|2027-04-10|31|Aston Villa|Brighton & Hove Albion|||||||2026/2027|False|False
+302|5795717|2027-04-10|31|Chelsea|Fulham|||||||2026/2027|False|False
+303|5795718|2027-04-10|31|Coventry City|Arsenal|||||||2026/2027|False|False
+304|5795719|2027-04-10|31|Crystal Palace|Everton|||||||2026/2027|False|False
+305|5795720|2027-04-10|31|Leeds United|Nottingham Forest|||||||2026/2027|False|False
+306|5795721|2027-04-10|31|Liverpool|Newcastle United|||||||2026/2027|False|False
+307|5795722|2027-04-10|31|Manchester United|Hull City|||||||2026/2027|False|False
+308|5795723|2027-04-10|31|Sunderland|Ipswich Town|||||||2026/2027|False|False
+309|5795724|2027-04-10|31|Tottenham Hotspur|Brentford|||||||2026/2027|False|False
+310|5795725|2027-04-17|32|Arsenal|Aston Villa|||||||2026/2027|False|False
+311|5795726|2027-04-17|32|Brentford|Leeds United|||||||2026/2027|False|False
+312|5795727|2027-04-17|32|Brighton & Hove Albion|Chelsea|||||||2026/2027|False|False
+313|5795728|2027-04-17|32|Everton|AFC Bournemouth|||||||2026/2027|False|False
+314|5795729|2027-04-17|32|Fulham|Sunderland|||||||2026/2027|False|False
+315|5795730|2027-04-17|32|Hull City|Coventry City|||||||2026/2027|False|False
+316|5795731|2027-04-17|32|Ipswich Town|Manchester United|||||||2026/2027|False|False
+317|5795732|2027-04-17|32|Manchester City|Crystal Palace|||||||2026/2027|False|False
+318|5795733|2027-04-17|32|Newcastle United|Tottenham Hotspur|||||||2026/2027|False|False
+319|5795734|2027-04-17|32|Nottingham Forest|Liverpool|||||||2026/2027|False|False
+320|5795735|2027-04-24|33|AFC Bournemouth|Arsenal|||||||2026/2027|False|False
+321|5795736|2027-04-24|33|Aston Villa|Coventry City|||||||2026/2027|False|False
+322|5795737|2027-04-24|33|Brentford|Fulham|||||||2026/2027|False|False
+323|5795738|2027-04-24|33|Chelsea|Manchester City|||||||2026/2027|False|False
+324|5795739|2027-04-24|33|Everton|Brighton & Hove Albion|||||||2026/2027|False|False
+325|5795740|2027-04-24|33|Leeds United|Liverpool|||||||2026/2027|False|False
+326|5795741|2027-04-24|33|Manchester United|Crystal Palace|||||||2026/2027|False|False
+327|5795742|2027-04-24|33|Newcastle United|Ipswich Town|||||||2026/2027|False|False
+328|5795743|2027-04-24|33|Nottingham Forest|Sunderland|||||||2026/2027|False|False
+329|5795744|2027-04-24|33|Tottenham Hotspur|Hull City|||||||2026/2027|False|False
+330|5795745|2027-05-01|34|Arsenal|Tottenham Hotspur|||||||2026/2027|False|False
+331|5795746|2027-05-01|34|Brighton & Hove Albion|Nottingham Forest|||||||2026/2027|False|False
+332|5795747|2027-05-01|34|Coventry City|Manchester United|||||||2026/2027|False|False
+333|5795748|2027-05-01|34|Crystal Palace|Aston Villa|||||||2026/2027|False|False
+334|5795749|2027-05-01|34|Fulham|Everton|||||||2026/2027|False|False
+335|5795750|2027-05-01|34|Hull City|AFC Bournemouth|||||||2026/2027|False|False
+336|5795751|2027-05-01|34|Ipswich Town|Leeds United|||||||2026/2027|False|False
+337|5795752|2027-05-01|34|Liverpool|Chelsea|||||||2026/2027|False|False
+338|5795753|2027-05-01|34|Manchester City|Brentford|||||||2026/2027|False|False
+339|5795754|2027-05-01|34|Sunderland|Newcastle United|||||||2026/2027|False|False
+340|5795755|2027-05-08|35|AFC Bournemouth|Manchester United|||||||2026/2027|False|False
+341|5795756|2027-05-08|35|Brentford|Aston Villa|||||||2026/2027|False|False
+342|5795757|2027-05-08|35|Brighton & Hove Albion|Sunderland|||||||2026/2027|False|False
+343|5795771|2027-05-08|35|Everton|Hull City|||||||2026/2027|False|False
+344|5795772|2027-05-08|35|Fulham|Ipswich Town|||||||2026/2027|False|False
+345|5795773|2027-05-08|35|Leeds United|Arsenal|||||||2026/2027|False|False
+346|5795774|2027-05-08|35|Manchester City|Liverpool|||||||2026/2027|False|False
+347|5795775|2027-05-08|35|Newcastle United|Coventry City|||||||2026/2027|False|False
+348|5795776|2027-05-08|35|Nottingham Forest|Crystal Palace|||||||2026/2027|False|False
+349|5795777|2027-05-08|35|Tottenham Hotspur|Chelsea|||||||2026/2027|False|False
+350|5795778|2027-05-15|36|Arsenal|Nottingham Forest|||||||2026/2027|False|False
+351|5795779|2027-05-15|36|Aston Villa|Newcastle United|||||||2026/2027|False|False
+352|5795780|2027-05-15|36|Chelsea|Everton|||||||2026/2027|False|False
+353|5795781|2027-05-15|36|Coventry City|Tottenham Hotspur|||||||2026/2027|False|False
+354|5795782|2027-05-15|36|Crystal Palace|Brighton & Hove Albion|||||||2026/2027|False|False
+355|5795783|2027-05-15|36|Hull City|Fulham|||||||2026/2027|False|False
+356|5795784|2027-05-15|36|Ipswich Town|Manchester City|||||||2026/2027|False|False
+357|5795785|2027-05-15|36|Liverpool|Brentford|||||||2026/2027|False|False
+358|5795786|2027-05-15|36|Manchester United|Leeds United|||||||2026/2027|False|False
+359|5795787|2027-05-15|36|Sunderland|AFC Bournemouth|||||||2026/2027|False|False
+360|5795788|2027-05-23|37|AFC Bournemouth|Chelsea|||||||2026/2027|False|False
+361|5795789|2027-05-23|37|Brentford|Hull City|||||||2026/2027|False|False
+362|5795790|2027-05-23|37|Brighton & Hove Albion|Liverpool|||||||2026/2027|False|False
+363|5795791|2027-05-23|37|Everton|Arsenal|||||||2026/2027|False|False
+364|5795792|2027-05-23|37|Fulham|Coventry City|||||||2026/2027|False|False
+365|5795793|2027-05-23|37|Leeds United|Sunderland|||||||2026/2027|False|False
+366|5795794|2027-05-23|37|Manchester City|Aston Villa|||||||2026/2027|False|False
+367|5795795|2027-05-23|37|Newcastle United|Crystal Palace|||||||2026/2027|False|False
+368|5795796|2027-05-23|37|Nottingham Forest|Ipswich Town|||||||2026/2027|False|False
+369|5795797|2027-05-23|37|Tottenham Hotspur|Manchester United|||||||2026/2027|False|False
+370|5795798|2027-05-30|38|Arsenal|Brighton & Hove Albion|||||||2026/2027|False|False
+371|5795799|2027-05-30|38|Aston Villa|Tottenham Hotspur|||||||2026/2027|False|False
+372|5795800|2027-05-30|38|Chelsea|Brentford|||||||2026/2027|False|False
+373|5795801|2027-05-30|38|Coventry City|Nottingham Forest|||||||2026/2027|False|False
+374|5795802|2027-05-30|38|Crystal Palace|Leeds United|||||||2026/2027|False|False
+375|5795803|2027-05-30|38|Hull City|Newcastle United|||||||2026/2027|False|False
+376|5795804|2027-05-30|38|Ipswich Town|Everton|||||||2026/2027|False|False
+377|5795805|2027-05-30|38|Liverpool|AFC Bournemouth|||||||2026/2027|False|False
+378|5795806|2027-05-30|38|Manchester United|Fulham|||||||2026/2027|False|False
+379|5795807|2027-05-30|38|Sunderland|Manchester City|||||||2026/2027|False|False
