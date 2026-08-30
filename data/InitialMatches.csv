@@ -9,11 +9,11 @@
 7,5795370,2026-08-23,1,Manchester City,8456,AFC Bournemouth,8678,True,True,2026/2027
 8,5795371,2026-08-23,1,Newcastle United,10261,Liverpool,8650,True,True,2026/2027
 9,5795372,2026-08-24,1,Fulham,9879,Chelsea,8455,True,True,2026/2027
-10,5795429,2026-08-28,2,Crystal Palace,9826,Manchester City,8456,False,False,2026/2027
-11,5795431,2026-08-29,2,Liverpool,8650,Nottingham Forest,10203,False,False,2026/2027
-12,5795425,2026-08-29,2,AFC Bournemouth,8678,Everton,8668,False,False,2026/2027
-13,5795428,2026-08-29,2,Coventry City,8669,Hull City,8667,False,False,2026/2027
-14,5795434,2026-08-29,2,Tottenham Hotspur,8586,Newcastle United,10261,False,False,2026/2027
+10,5795429,2026-08-28,2,Crystal Palace,9826,Manchester City,8456,True,True,2026/2027
+11,5795431,2026-08-29,2,Liverpool,8650,Nottingham Forest,10203,True,True,2026/2027
+12,5795425,2026-08-29,2,AFC Bournemouth,8678,Everton,8668,True,True,2026/2027
+13,5795428,2026-08-29,2,Coventry City,8669,Hull City,8667,True,True,2026/2027
+14,5795434,2026-08-29,2,Tottenham Hotspur,8586,Newcastle United,10261,True,True,2026/2027
 15,5795427,2026-08-30,2,Chelsea,8455,Brighton & Hove Albion,10204,False,False,2026/2027
 16,5795430,2026-08-30,2,Leeds United,8463,Brentford,9937,False,False,2026/2027
 17,5795433,2026-08-30,2,Sunderland,8472,Fulham,9879,False,False,2026/2027
@@ -44,10 +44,10 @@
 42,5795457,2026-09-19,5,Brighton & Hove Albion,10204,Arsenal,9825,False,False,2026/2027
 43,5795458,2026-09-19,5,Everton,8668,Ipswich Town,9902,False,False,2026/2027
 44,5795460,2026-09-19,5,Leeds United,8463,Crystal Palace,9826,False,False,2026/2027
-45,5795461,2026-09-19,5,Manchester City,8456,Sunderland,8472,False,False,2026/2027
-46,5795462,2026-09-19,5,Newcastle United,10261,Hull City,8667,False,False,2026/2027
-47,5795463,2026-09-19,5,Nottingham Forest,10203,Coventry City,8669,False,False,2026/2027
-48,5795455,2026-09-20,5,AFC Bournemouth,8678,Liverpool,8650,False,False,2026/2027
+45,5795462,2026-09-19,5,Newcastle United,10261,Hull City,8667,False,False,2026/2027
+46,5795463,2026-09-19,5,Nottingham Forest,10203,Coventry City,8669,False,False,2026/2027
+47,5795455,2026-09-20,5,AFC Bournemouth,8678,Liverpool,8650,False,False,2026/2027
+48,5795461,2026-09-20,5,Manchester City,8456,Sunderland,8472,False,False,2026/2027
 49,5795459,2026-09-20,5,Fulham,9879,Manchester United,10260,False,False,2026/2027
 50,5795465,2026-10-10,6,Arsenal,9825,Leeds United,8463,False,False,2026/2027
 51,5795466,2026-10-10,6,Aston Villa,10252,Brentford,9937,False,False,2026/2027
