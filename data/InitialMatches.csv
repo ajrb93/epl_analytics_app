@@ -29,22 +29,22 @@
 27,5795440,2026-09-05,3,Hull City,8667,Aston Villa,10252,True,True,2026/2027
 28,5795438,2026-09-06,3,Everton,8668,Manchester United,10260,True,True,2026/2027
 29,5795435,2026-09-06,3,Arsenal,9825,Chelsea,8455,True,True,2026/2027
-30,5795445,2026-09-12,4,AFC Bournemouth,8678,Brentford,9937,False,False,2026/2027
-31,5795446,2026-09-12,4,Aston Villa,10252,Nottingham Forest,10203,False,False,2026/2027
-32,5795447,2026-09-12,4,Chelsea,8455,Hull City,8667,False,False,2026/2027
-33,5795449,2026-09-12,4,Crystal Palace,9826,Ipswich Town,9902,False,False,2026/2027
-34,5795451,2026-09-12,4,Liverpool,8650,Fulham,9879,False,False,2026/2027
-35,5795454,2026-09-12,4,Tottenham Hotspur,8586,Everton,8668,False,False,2026/2027
-36,5795453,2026-09-12,4,Sunderland,8472,Arsenal,9825,False,False,2026/2027
-37,5795448,2026-09-13,4,Coventry City,8669,Brighton & Hove Albion,10204,False,False,2026/2027
-38,5795452,2026-09-13,4,Manchester United,10260,Manchester City,8456,False,False,2026/2027
-39,5795450,2026-09-14,4,Leeds United,8463,Newcastle United,10261,False,False,2026/2027
-40,5795456,2026-09-18,5,Brentford,9937,Chelsea,8455,False,False,2026/2027
-41,5795464,2026-09-19,5,Tottenham Hotspur,8586,Aston Villa,10252,False,False,2026/2027
-42,5795457,2026-09-19,5,Brighton & Hove Albion,10204,Arsenal,9825,False,False,2026/2027
-43,5795458,2026-09-19,5,Everton,8668,Ipswich Town,9902,False,False,2026/2027
-44,5795462,2026-09-19,5,Newcastle United,10261,Hull City,8667,False,False,2026/2027
-45,5795463,2026-09-19,5,Nottingham Forest,10203,Coventry City,8669,False,False,2026/2027
+30,5795445,2026-09-12,4,AFC Bournemouth,8678,Brentford,9937,True,True,2026/2027
+31,5795446,2026-09-12,4,Aston Villa,10252,Nottingham Forest,10203,True,True,2026/2027
+32,5795447,2026-09-12,4,Chelsea,8455,Hull City,8667,True,True,2026/2027
+33,5795449,2026-09-12,4,Crystal Palace,9826,Ipswich Town,9902,True,True,2026/2027
+34,5795451,2026-09-12,4,Liverpool,8650,Fulham,9879,True,True,2026/2027
+35,5795454,2026-09-12,4,Tottenham Hotspur,8586,Everton,8668,True,True,2026/2027
+36,5795453,2026-09-12,4,Sunderland,8472,Arsenal,9825,True,True,2026/2027
+37,5795448,2026-09-13,4,Coventry City,8669,Brighton & Hove Albion,10204,True,True,2026/2027
+38,5795452,2026-09-13,4,Manchester United,10260,Manchester City,8456,True,True,2026/2027
+39,5795450,2026-09-14,4,Leeds United,8463,Newcastle United,10261,True,True,2026/2027
+40,5795456,2026-09-18,5,Brentford,9937,Chelsea,8455,True,True,2026/2027
+41,5795464,2026-09-19,5,Tottenham Hotspur,8586,Aston Villa,10252,True,True,2026/2027
+42,5795457,2026-09-19,5,Brighton & Hove Albion,10204,Arsenal,9825,True,True,2026/2027
+43,5795458,2026-09-19,5,Everton,8668,Ipswich Town,9902,True,True,2026/2027
+44,5795462,2026-09-19,5,Newcastle United,10261,Hull City,8667,True,True,2026/2027
+45,5795463,2026-09-19,5,Nottingham Forest,10203,Coventry City,8669,True,True,2026/2027
 46,5795455,2026-09-20,5,AFC Bournemouth,8678,Liverpool,8650,False,False,2026/2027
 47,5795460,2026-09-20,5,Leeds United,8463,Crystal Palace,9826,False,False,2026/2027
 48,5795461,2026-09-20,5,Manchester City,8456,Sunderland,8472,False,False,2026/2027
@@ -160,45 +160,45 @@
 158,5795573,2026-12-19,16,Nottingham Forest,10203,Everton,8668,False,False,2026/2027
 159,5795574,2026-12-19,16,Sunderland,8472,Crystal Palace,9826,False,False,2026/2027
 160,5795575,2026-12-26,17,Aston Villa,10252,Leeds United,8463,False,False,2026/2027
-161,5795576,2026-12-26,17,Coventry City,8669,Chelsea,8455,False,False,2026/2027
-162,5795577,2026-12-26,17,Crystal Palace,9826,Arsenal,9825,False,False,2026/2027
-163,5795578,2026-12-26,17,Everton,8668,Sunderland,8472,False,False,2026/2027
-164,5795579,2026-12-26,17,Fulham,9879,Brighton & Hove Albion,10204,False,False,2026/2027
+161,5795578,2026-12-26,17,Everton,8668,Sunderland,8472,False,False,2026/2027
+162,5795579,2026-12-26,17,Fulham,9879,Brighton & Hove Albion,10204,False,False,2026/2027
+163,5795581,2026-12-26,17,Ipswich Town,9902,Brentford,9937,False,False,2026/2027
+164,5795584,2026-12-26,17,Tottenham Hotspur,8586,AFC Bournemouth,8678,False,False,2026/2027
 165,5795580,2026-12-26,17,Hull City,8667,Liverpool,8650,False,False,2026/2027
-166,5795581,2026-12-26,17,Ipswich Town,9902,Brentford,9937,False,False,2026/2027
-167,5795582,2026-12-26,17,Manchester United,10260,Nottingham Forest,10203,False,False,2026/2027
-168,5795583,2026-12-26,17,Newcastle United,10261,Manchester City,8456,False,False,2026/2027
-169,5795584,2026-12-26,17,Tottenham Hotspur,8586,AFC Bournemouth,8678,False,False,2026/2027
-170,5795585,2026-12-30,18,Aston Villa,10252,Liverpool,8650,False,False,2026/2027
-171,5795586,2026-12-30,18,Coventry City,8669,Brentford,9937,False,False,2026/2027
-172,5795587,2026-12-30,18,Crystal Palace,9826,AFC Bournemouth,8678,False,False,2026/2027
-173,5795588,2026-12-30,18,Everton,8668,Manchester City,8456,False,False,2026/2027
-174,5795589,2026-12-30,18,Fulham,9879,Arsenal,9825,False,False,2026/2027
-175,5795590,2026-12-30,18,Hull City,8667,Leeds United,8463,False,False,2026/2027
-176,5795591,2026-12-30,18,Ipswich Town,9902,Chelsea,8455,False,False,2026/2027
-177,5795592,2026-12-30,18,Manchester United,10260,Sunderland,8472,False,False,2026/2027
-178,5795593,2026-12-30,18,Newcastle United,10261,Nottingham Forest,10203,False,False,2026/2027
-179,5795594,2026-12-30,18,Tottenham Hotspur,8586,Brighton & Hove Albion,10204,False,False,2026/2027
-180,5795595,2027-01-02,19,AFC Bournemouth,8678,Aston Villa,10252,False,False,2026/2027
-181,5795596,2027-01-02,19,Arsenal,9825,Ipswich Town,9902,False,False,2026/2027
-182,5795597,2027-01-02,19,Brentford,9937,Crystal Palace,9826,False,False,2026/2027
-183,5795598,2027-01-02,19,Brighton & Hove Albion,10204,Manchester United,10260,False,False,2026/2027
-184,5795599,2027-01-02,19,Chelsea,8455,Newcastle United,10261,False,False,2026/2027
-185,5795600,2027-01-02,19,Leeds United,8463,Everton,8668,False,False,2026/2027
-186,5795601,2027-01-02,19,Liverpool,8650,Coventry City,8669,False,False,2026/2027
-187,5795602,2027-01-02,19,Manchester City,8456,Tottenham Hotspur,8586,False,False,2026/2027
-188,5795603,2027-01-02,19,Nottingham Forest,10203,Fulham,9879,False,False,2026/2027
-189,5795604,2027-01-02,19,Sunderland,8472,Hull City,8667,False,False,2026/2027
-190,5795605,2027-01-06,20,Arsenal,9825,Brentford,9937,False,False,2026/2027
-191,5795606,2027-01-06,20,Brighton & Hove Albion,10204,AFC Bournemouth,8678,False,False,2026/2027
-192,5795607,2027-01-06,20,Crystal Palace,9826,Chelsea,8455,False,False,2026/2027
-193,5795608,2027-01-06,20,Everton,8668,Aston Villa,10252,False,False,2026/2027
-194,5795609,2027-01-06,20,Fulham,9879,Tottenham Hotspur,8586,False,False,2026/2027
-195,5795610,2027-01-06,20,Ipswich Town,9902,Coventry City,8669,False,False,2026/2027
-196,5795611,2027-01-06,20,Leeds United,8463,Manchester City,8456,False,False,2026/2027
-197,5795612,2027-01-06,20,Manchester United,10260,Newcastle United,10261,False,False,2026/2027
-198,5795613,2027-01-06,20,Nottingham Forest,10203,Hull City,8667,False,False,2026/2027
-199,5795614,2027-01-06,20,Sunderland,8472,Liverpool,8650,False,False,2026/2027
+166,5795583,2026-12-26,17,Newcastle United,10261,Manchester City,8456,False,False,2026/2027
+167,5795576,2026-12-27,17,Coventry City,8669,Chelsea,8455,False,False,2026/2027
+168,5795582,2026-12-27,17,Manchester United,10260,Nottingham Forest,10203,False,False,2026/2027
+169,5795577,2026-12-27,17,Crystal Palace,9826,Arsenal,9825,False,False,2026/2027
+170,5795590,2026-12-29,18,Hull City,8667,Leeds United,8463,False,False,2026/2027
+171,5795594,2026-12-29,18,Tottenham Hotspur,8586,Brighton & Hove Albion,10204,False,False,2026/2027
+172,5795588,2026-12-29,18,Everton,8668,Manchester City,8456,False,False,2026/2027
+173,5795586,2026-12-30,18,Coventry City,8669,Brentford,9937,False,False,2026/2027
+174,5795587,2026-12-30,18,Crystal Palace,9826,AFC Bournemouth,8678,False,False,2026/2027
+175,5795589,2026-12-30,18,Fulham,9879,Arsenal,9825,False,False,2026/2027
+176,5795592,2026-12-30,18,Manchester United,10260,Sunderland,8472,False,False,2026/2027
+177,5795593,2026-12-30,18,Newcastle United,10261,Nottingham Forest,10203,False,False,2026/2027
+178,5795585,2026-12-30,18,Aston Villa,10252,Liverpool,8650,False,False,2026/2027
+179,5795591,2026-12-30,18,Ipswich Town,9902,Chelsea,8455,False,False,2026/2027
+180,5795600,2027-01-01,19,Leeds United,8463,Everton,8668,False,False,2026/2027
+181,5795598,2027-01-02,19,Brighton & Hove Albion,10204,Manchester United,10260,False,False,2026/2027
+182,5795596,2027-01-02,19,Arsenal,9825,Ipswich Town,9902,False,False,2026/2027
+183,5795597,2027-01-02,19,Brentford,9937,Crystal Palace,9826,False,False,2026/2027
+184,5795601,2027-01-02,19,Liverpool,8650,Coventry City,8669,False,False,2026/2027
+185,5795603,2027-01-02,19,Nottingham Forest,10203,Fulham,9879,False,False,2026/2027
+186,5795604,2027-01-02,19,Sunderland,8472,Hull City,8667,False,False,2026/2027
+187,5795595,2027-01-02,19,AFC Bournemouth,8678,Aston Villa,10252,False,False,2026/2027
+188,5795599,2027-01-03,19,Chelsea,8455,Newcastle United,10261,False,False,2026/2027
+189,5795602,2027-01-03,19,Manchester City,8456,Tottenham Hotspur,8586,False,False,2026/2027
+190,5795605,2027-01-05,20,Arsenal,9825,Brentford,9937,False,False,2026/2027
+191,5795606,2027-01-05,20,Brighton & Hove Albion,10204,AFC Bournemouth,8678,False,False,2026/2027
+192,5795608,2027-01-05,20,Everton,8668,Aston Villa,10252,False,False,2026/2027
+193,5795613,2027-01-05,20,Nottingham Forest,10203,Hull City,8667,False,False,2026/2027
+194,5795614,2027-01-05,20,Sunderland,8472,Liverpool,8650,False,False,2026/2027
+195,5795607,2027-01-06,20,Crystal Palace,9826,Chelsea,8455,False,False,2026/2027
+196,5795609,2027-01-06,20,Fulham,9879,Tottenham Hotspur,8586,False,False,2026/2027
+197,5795610,2027-01-06,20,Ipswich Town,9902,Coventry City,8669,False,False,2026/2027
+198,5795611,2027-01-06,20,Leeds United,8463,Manchester City,8456,False,False,2026/2027
+199,5795612,2027-01-07,20,Manchester United,10260,Newcastle United,10261,False,False,2026/2027
 200,5795615,2027-01-16,21,AFC Bournemouth,8678,Ipswich Town,9902,False,False,2026/2027
 201,5795616,2027-01-16,21,Aston Villa,10252,Manchester United,10260,False,False,2026/2027
 202,5795617,2027-01-16,21,Brentford,9937,Brighton & Hove Albion,10204,False,False,2026/2027
